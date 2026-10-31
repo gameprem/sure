@@ -1,0 +1,10 @@
+---
+th:
+  activerecord:
+    attributes:
+      family:
+        ai_prompt_chat_system: "พรอมต์ระบบของแชต"
+        ai_prompt_categorizer_openai: "พรอมต์ตัวจัดหมวดหมู่รายการธุรกรรม (OpenAI)"
+        ai_prompt_categorizer_anthropic: "พรอมต์ตัวจัดหมวดหมู่รายการธุรกรรม (Anthropic)"
+        ai_prompt_merchant_openai: "พรอมต์ตัวตรวจจับร้านค้า (OpenAI)"
+        ai_prompt_merchant_anthropic: "พรอมต์ตัวตรวจจับร้านค้า (Anthropic)"

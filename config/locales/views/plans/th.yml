@@ -1,0 +1,39 @@
+---
+th:
+  plans:
+    show:
+      title: แผน
+      subtitle: ตัดสินใจว่าเงินของคุณไปไหน — ใช้จ่ายเท่าไรและออมเท่าไร
+    budget_card:
+      title: เดือนนี้
+      edit_budget: แก้ไขงบประมาณ
+      of_total: จาก %{total}
+      days_left:
+        one: เหลือ 1 วัน
+        other: "เหลือ %{count} วัน"
+      percent_used: "ใช้ไป %{percent}%"
+      top_categories: หมวดหมู่สูงสุด
+      view_budget: ดูงบประมาณทั้งหมด
+      empty_body: ตั้งเป้าหมายการใช้จ่ายรายเดือนและวงเงินแต่ละหมวดหมู่เพื่อดูว่าเดือนนี้เป็นอย่างไร
+      set_up: ตั้งค่างบประมาณของเดือนนี้
+    goals_card:
+      title: เป้าหมายของคุณ
+      currency_warning:
+        one: "1 เป้าหมายไม่รวมยอดคงเหลือ %{currencies} (ยังไม่มีอัตราแลกเปลี่ยน)"
+        other: "%{count} เป้าหมายไม่รวมยอดคงเหลือ %{currencies} (ยังไม่มีอัตราแลกเปลี่ยน)"
+      new_goal: เป้าหมายใหม่
+      active_count:
+        one: ใช้งานอยู่ 1
+        other: "ใช้งานอยู่ %{count}"
+      of_targets: จาก %{total} ในทุกเป้าหมาย
+      behind_count:
+        one: ตามหลังแผน 1
+        other: "ตามหลังแผน %{count}"
+      pending_count:
+        one: คำมั่นที่รอดำเนินการ 1
+        other: "คำมั่นที่รอดำเนินการ %{count}"
+      all_on_pace: ทุกอย่างเป็นไปตามแผน
+      active_goals: เป้าหมายที่ใช้งานอยู่
+      pending_marker: รอดำเนินการ
+      runway: "ใช้ได้ %{months} เดือน · %{pace}/เดือน"
+      all_goals: เป้าหมายทั้งหมด

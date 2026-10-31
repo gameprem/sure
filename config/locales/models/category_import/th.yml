@@ -1,0 +1,8 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        category_import:
+          own_parent: "หมวดหมู่ '%{name}' ไม่สามารถเป็นหมวดหมู่แม่ของตัวเองได้"
+          missing_columns: "ขาดคอลัมน์ที่จำเป็น: %{columns}"

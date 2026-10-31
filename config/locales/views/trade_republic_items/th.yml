@@ -1,0 +1,179 @@
+---
+th:
+  providers:
+    trade_republic:
+      name: Trade Republic
+      connection_description: เชื่อมต่อบัญชีลงทุน Trade Republic ผ่านการเข้าสู่ระบบเว็บที่ปลอดภัย
+      institution_name: Trade Republic
+  trade_republic_items:
+    portfolio_categories:
+      brokerage: บัญชีนายหน้า
+      private_markets: ตลาดเอกชน
+      interest_products: ผลิตภัณฑ์ดอกเบี้ย
+      crypto_wallet: กระเป๋าคริปโต
+    duplicate_connection: "บัญชี Trade Republic นี้เชื่อมต่ออยู่แล้ว การเชื่อมต่อใหม่ถูกนำออก"
+    defaults:
+      name: Trade Republic
+    trade_republic_item:
+      deletion_in_progress: กำลังลบ
+      syncing: กำลังซิงค์
+      requires_update: ต้องยืนยันตัวตนใหม่
+      session_expires_in: "การเข้าสู่ระบบหมดอายุใน %{time} (%{at})"
+      error: ข้อผิดพลาด
+      synced: ซิงค์เมื่อ %{time} ที่แล้ว %{summary}
+      never_synced: ไม่เคยซิงค์
+      setup_accounts: ตั้งค่าบัญชี
+      delete: ลบ
+      accounts_need_setup: บัญชีต้องตั้งค่า
+      accounts_need_setup_description: บัญชี Trade Republic ของคุณต้องเชื่อมโยงกับบัญชี Sure
+      no_accounts_discovered: ยังไม่พบบัญชี Trade Republic
+      no_accounts_discovered_description: ทำการเข้าสู่ระบบให้เสร็จแล้วรันการซิงค์เพื่อค้นหาบัญชีของคุณ
+      data_quality:
+        title: คุณภาพข้อมูลและรายละเอียดการซิงค์
+        repair: ซ่อมแซมข้อมูลที่นำเข้า
+        positions:
+          one: "%{count} สถานะ"
+          other: "%{count} สถานะ"
+        unpriced:
+          one: "%{count} รายการที่ไม่มีราคาปัจจุบัน"
+          other: "%{count} รายการที่ไม่มีราคาปัจจุบัน"
+        events:
+          one: "%{count} กิจกรรม"
+          other: "%{count} กิจกรรม"
+        unknown:
+          one: "%{count} กิจกรรมที่ไม่ทราบ"
+          other: "%{count} กิจกรรมที่ไม่ทราบ"
+        pending_trade_details:
+          one: "%{count} กิจกรรมการลงทุนที่รอรายละเอียด"
+          other: "%{count} กิจกรรมการลงทุนที่รอรายละเอียด"
+        expenses:
+          one: "%{count} รายจ่ายใน 30 วันที่ผ่านมา (%{amount})"
+          other: "%{count} รายจ่ายใน 30 วันที่ผ่านมา (%{amount})"
+        reconciliation: "กระทบยอดยอดคงเหลือบัญชีแล้ว %{matched}/%{total}"
+        sync_history: การซิงค์ล่าสุด
+        sync_status:
+          completed: เสร็จสมบูรณ์
+          failed: ล้มเหลว
+          pending: รอดำเนินการ
+          syncing: กำลังซิงค์
+          stale: ล้าสมัย
+    setup_accounts:
+      page_title: ตั้งค่าบัญชี Trade Republic
+      dialog_title: ตั้งค่าบัญชี Trade Republic ของคุณ
+      subtitle: เชื่อมโยงบัญชีลงทุน Trade Republic ของคุณ
+      info_box:
+        title: การนำเข้า Trade Republic
+        items:
+          item_1: สถานะปัจจุบันพร้อมราคาและจำนวน
+          item_2: การซื้อขายที่ดำเนินการแล้ว (ซื้อและขาย)
+          item_3: การฝาก การถอน และการจ่ายดอกเบี้ย
+      status:
+        fetching_accounts: กำลังดึงบัญชีจาก Trade Republic...
+        no_accounts_found_title: ไม่พบบัญชี
+        no_accounts_found_description: Sure ไม่พบบัญชี Trade Republic ตรวจสอบว่าเซสชันของคุณยังใช้ได้
+      available_accounts:
+        title: บัญชีที่ใช้ได้
+        account_type_investment: พอร์ตการลงทุน
+        account_type_cash: บัญชีเงินสด
+        account_type_crypto: บัญชีคริปโต
+        account_summary: "%{account_type} • ยอดคงเหลือ: %{balance}"
+        account_id: "Account ID: %{account_id}"
+      link_existing:
+        description: หรือเชื่อมโยงบัญชี Trade Republic ที่พบกับบัญชีลงทุนแบบกรอกเองที่มีอยู่
+        manual_account_option: "%{name} (%{balance})"
+        select_prompt: เลือกบัญชี...
+      linked_accounts:
+        title: เชื่อมโยงแล้ว
+        linked_to_html: "เชื่อมโยงกับ: %{account}"
+      buttons:
+        refresh: รีเฟรช
+        cancel: ยกเลิก
+        back_to_settings: กลับไปที่การตั้งค่า
+        create_selected_accounts: สร้างบัญชีที่เลือก
+        link: เชื่อมโยง
+        done: เสร็จสิ้น
+    sync:
+      errors:
+        phone_number_missing: ไม่มีหมายเลขโทรศัพท์ Trade Republic
+        reauthentication_required: เซสชัน Trade Republic หายไปหรือหมดอายุ เชื่อมต่อใหม่จาก การตั้งค่า > ผู้ให้บริการ
+      status:
+        checking_credentials: กำลังตรวจสอบข้อมูลรับรอง Trade Republic...
+        importing_account: กำลังนำเข้าบัญชี Trade Republic...
+        checking_configuration: กำลังตรวจสอบการตั้งค่าบัญชี...
+        accounts_need_setup:
+          one: บัญชี Trade Republic 1 บัญชีต้องตั้งค่า...
+          other: "บัญชี Trade Republic %{count} บัญชีต้องตั้งค่า..."
+        processing_activity: กำลังประมวลผลสถานะและกิจกรรม...
+        calculating_balances: กำลังคำนวณยอดคงเหลือ...
+    repair:
+      scheduled: ตั้งเวลาซ่อมแซมข้อมูล Trade Republic แล้ว
+    sync_status:
+      no_accounts: ยังไม่พบบัญชี Trade Republic
+      all_linked:
+        one: เชื่อมโยง 1 บัญชีแล้ว
+        other: "เชื่อมโยง %{count} บัญชีแล้ว"
+      partial: "เชื่อมโยงแล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    select_existing_account:
+      title: เชื่อมโยงบัญชี Trade Republic
+      no_accounts_available: ยังไม่มีบัญชี Trade Republic ที่ยังไม่เชื่อมโยง
+      run_sync_hint: "ทำการเข้าสู่ระบบให้เสร็จแล้วรันการซิงค์จาก การตั้งค่า > ผู้ให้บริการ"
+      wait_for_sync: รอให้การซิงค์ค้นหาบัญชีเสร็จ
+      balance: ยอดคงเหลือ
+      link: เชื่อมโยง
+      cancel: ยกเลิก
+    create:
+      success: บันทึก Trade Republic แล้ว ยืนยันการเข้าสู่ระบบในแอป Trade Republic เพื่อเชื่อมต่อให้เสร็จ
+    update:
+      success: อัปเดตการตั้งค่า Trade Republic สำเร็จ
+      pin_required: กรอก PIN หรือรหัสผ่าน Trade Republic ของคุณเพื่อยืนยันตัวตนใหม่
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Trade Republic แล้ว
+      unlink_failed: ยกเลิกการเชื่อมต่อ Trade Republic ไม่สมบูรณ์ การเชื่อมต่อถูกเก็บไว้เพื่อให้ลองใหม่ได้อย่างปลอดภัย
+    select_accounts:
+      not_configured: ยังไม่ได้ตั้งค่า Trade Republic
+    initiate_login:
+      not_configured: ยังไม่ได้ตั้งค่า Trade Republic
+      pin_required: กรอก PIN หรือรหัสผ่าน Trade Republic ของคุณเพื่อเริ่มการเข้าสู่ระบบใหม่
+      verification_required: "เริ่มการเข้าสู่ระบบแล้ว ยืนยันผ่าน %{method} แล้วกดยืนยันการเข้าสู่ระบบ"
+    initiate_qr_login:
+      not_configured: ยังไม่ได้ตั้งค่า Trade Republic
+    poll_login:
+      no_pending_login: ขณะนี้ไม่มีการเข้าสู่ระบบที่รอดำเนินการ เริ่มการเข้าสู่ระบบใหม่ก่อน
+      login_expired: คำขอเข้าสู่ระบบหมดอายุ โปรดเริ่มใหม่
+    poll_qr_login:
+      no_pending_login: ไม่มีการเข้าสู่ระบบด้วยคิวอาร์ที่รอดำเนินการ
+      success: เชื่อมต่อ Trade Republic สำเร็จ
+    complete_login:
+      no_pending_login: ขณะนี้ไม่มีการเข้าสู่ระบบที่รอดำเนินการ เริ่มการเข้าสู่ระบบใหม่ก่อน
+      approval_pending: ยังไม่ได้ยืนยัน อนุมัติการเข้าสู่ระบบในแอป Trade Republic แล้วลองอีกครั้ง
+      still_pending: ยังไม่ได้ยืนยัน อนุมัติการเข้าสู่ระบบในแอป Trade Republic แล้วลองอีกครั้ง
+      success: เชื่อมต่อ Trade Republic สำเร็จ
+      login_expired: คำขอเข้าสู่ระบบหมดอายุ โปรดเริ่มใหม่
+    link_existing_account:
+      not_found: ไม่พบบัญชีหรือการตั้งค่า Trade Republic
+      only_manual_investment: เชื่อมโยงกับ Trade Republic ได้เฉพาะบัญชีลงทุนแบบกรอกเอง
+      already_linked: บัญชี Trade Republic นี้เชื่อมโยงแล้ว
+      success: เชื่อมโยงกับบัญชี Trade Republic สำเร็จ
+      processing_failed: เชื่อมโยงบัญชีแล้ว แต่การประมวลผลข้อมูลเบื้องต้นล้มเหลว ตั้งเวลาซิงค์แล้ว ตรวจสอบบันทึกดีบักหากยังไม่สมบูรณ์
+      failed: เชื่อมโยงบัญชี Trade Republic ไม่สำเร็จ
+    complete_account_setup:
+      success:
+        one: สร้างบัญชี Trade Republic %{count} บัญชีสำเร็จ
+        other: สร้างบัญชี Trade Republic %{count} บัญชีสำเร็จ
+      none_selected: ไม่ได้เลือกบัญชี
+      none_created: ไม่ได้สร้างบัญชี
+      partial_failure:
+        one: ทำบัญชี Trade Republic ที่เลือกหนึ่งบัญชีให้เสร็จไม่ได้ ตรวจสอบบันทึกดีบักแล้วลองอีกครั้ง
+        other: "ทำบัญชี Trade Republic ที่เลือก %{count} บัญชีให้เสร็จไม่ได้ ตรวจสอบบันทึกดีบักแล้วลองอีกครั้ง"
+    activities:
+      labels:
+        contribution: เงินสมทบ
+        withdrawal: ถอน
+        interest: ดอกเบี้ย
+        dividend: เงินปันผล
+        card_payment: ชำระด้วยบัตร
+        cash_withdrawal: ถอนเงินสด
+        card_fee: ค่าธรรมเนียมบัตร
+        card_refund: คืนเงินบัตร
+        tax_refund: คืนภาษี
+        round_up: ปัดเศษ

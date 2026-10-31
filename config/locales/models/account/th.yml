@@ -1,0 +1,37 @@
+---
+th:
+  account_order:
+    balance_asc:
+      label: ยอดคงเหลือ (น้อยไปมาก)
+      label_short: ยอดคงเหลือ ↑
+    balance_desc:
+      label: ยอดคงเหลือ (มากไปน้อย)
+      label_short: ยอดคงเหลือ ↓
+    manual:
+      label: กำหนดเอง (ลากเพื่อจัดเรียง)
+      label_short: กำหนดเอง
+    name_asc:
+      label: ชื่อ (ก-ฮ)
+      label_short: ชื่อ ↑
+    name_desc:
+      label: ชื่อ (ฮ-ก)
+      label_short: ชื่อ ↓
+  activerecord:
+    attributes:
+      account:
+        balance: ยอดคงเหลือ
+        currency: สกุลเงิน
+        family: "%{moniker}"
+        family_id: "%{moniker}"
+        name: ชื่อ
+        subtype: ประเภทย่อย
+    models:
+      account: บัญชี
+      account/credit: บัตรเครดิต
+      account/depository: บัญชีธนาคาร
+      account/investment: การลงทุน
+      account/loan: สินเชื่อ
+      account/other_asset: สินทรัพย์อื่น ๆ
+      account/other_liability: หนี้สินอื่น ๆ
+      account/property: อสังหาริมทรัพย์
+      account/vehicle: ยานพาหนะ

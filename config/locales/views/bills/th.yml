@@ -1,0 +1,331 @@
+---
+th:
+  bills:
+    row_overdue: เลยกำหนด
+    row_today: วันนี้
+    detect:
+      found:
+        one: พบ 1 บิลที่เป็นไปได้ ตรวจสอบด้านล่าง
+        other: พบ %{count} บิลที่เป็นไปได้ ตรวจสอบด้านล่าง
+      none_found: ไม่พบรูปแบบรายการประจำใหม่ คุณเพิ่มบิลเองได้
+      already_running: กำลังตรวจจับอยู่แล้ว โปรดกลับมาดูในสักครู่
+    feed:
+      calendar_name: บิลของ Sure
+    ai_prompts:
+      due_before_paycheck: อะไรครบกำหนดก่อนเงินเดือนงวดหน้า?
+      subscriptions_up: ค่าสมาชิกรายการไหนขึ้นราคาในปีนี้?
+      monthly_subscriptions: ฉันจ่ายค่าสมาชิกรายเดือนเท่าไร?
+      safe_to_spend: ในช่วงนี้ใช้จ่ายได้อย่างปลอดภัยเท่าไร?
+    smart_configurations:
+      show:
+        trigger: ให้ AI ตั้งค่า
+        title: "ข้อเสนอแนะจาก AI สำหรับ %{name}"
+        intro: ตรวจสอบการเปลี่ยนแปลงที่จะใช้ รายการที่ไม่ได้เลือกจะคงไว้ตามเดิม
+        no_changes: บิลนี้ตรงกับประวัติการชำระเงินอยู่แล้ว ไม่มีอะไรต้องเปลี่ยน
+        failed: ตอนนี้วิเคราะห์บิลนี้ไม่ได้ การตั้งค่าของบิลไม่ถูกแตะต้อง
+        field_name: ชื่อ
+        field_amount: จำนวนเงิน
+        field_schedule: กำหนดการ
+        field_category: หมวดหมู่
+        field_kind: ประเภท
+        field_autopay: ตัดเงินอัตโนมัติ
+        uncategorized: ไม่ได้จัดหมวดหมู่
+        autopay_off: "ปิด"
+        autopay_on: "เปิด"
+        apply: ใช้ที่เลือก
+    detail:
+      current: ปัจจุบัน
+      next_payment: การชำระเงินครั้งถัดไป
+      around: "ราว %{date}"
+      overview: ภาพรวม
+      rules: วิธีจับคู่บิลนี้
+      rule_named: "%{name}"
+      rule_amount_range: "ตั้งแต่ %{min} ถึง %{max}"
+      rule_aliases: "จับคู่กับ %{names} ด้วย"
+      rule_detected: "จับคู่กับรายการธุรกรรมชื่อ %{name}"
+      rule_learned_tolerance: "จำนวนเงินที่ต่างจากปกติไม่เกิน %{percent} จะจับคู่กับบิลนี้"
+      history_title: 12 เดือนที่ผ่านมา
+      history_aria: การชำระเงินในรอบสิบสองเดือนที่ผ่านมา
+      key_metrics: ต่อปี
+      year: ปี
+      spent_per_year: ใช้จ่าย
+      avg_payment: ค่าเฉลี่ยต่อครั้ง
+      average: ค่าเฉลี่ยที่จ่าย
+      range: "%{min} ถึง %{max}"
+      annualized: ต่อปี
+      ytd: จ่ายในปีนี้
+      last_account: บัญชีที่ใช้ล่าสุด
+      upcoming: กำลังจะมาถึง
+      manual_payment: การชำระเงินด้วยตนเอง
+      history: ประวัติ
+      payment_count:
+        one: "1 ครั้ง"
+        other: "%{count} ครั้ง"
+      notes: บันทึก
+      trial_chip: "ทดลองใช้สิ้นสุด %{date}"
+      renews_chip: "ต่ออายุ %{date}"
+      cancelled_chip: "ยกเลิก %{date}"
+      price_changes: การเปลี่ยนราคา
+      price_change_line: "%{from} → %{to}"
+    month_pulse:
+      bill_count:
+        one: 1 บิล
+        other: "%{count} บิล"
+      left_to_pay: ที่เหลือต้องจ่าย
+      pulse_paid: จ่ายแล้ว
+      pulse_overdue: เลยกำหนด
+      pulse_next_seven: 7 วันข้างหน้า
+      pulse_until: ถึง %{date}
+      pulse_bar_aria: "จ่ายบิลของเดือนนี้แล้ว %{percent}%"
+      next_up: ถัดไป
+      view_calendar: ดูปฏิทิน
+      # The strip has a column to itself, so the date stands alone rather than
+      # reading as a sentence the way the row sublines do.
+      date_today: วันนี้
+      date_tomorrow: พรุ่งนี้
+      unconvertible:
+        one: "ไม่รวม 1 บิล เพราะไม่มีอัตราแลกเปลี่ยน"
+        other: "ไม่รวม %{count} บิล เพราะไม่มีอัตราแลกเปลี่ยน"
+    summary:
+      remaining: "คงเหลือ %{amount}"
+      paid_headline: "จ่ายแล้ว %{amount}"
+    add_bill: เพิ่มบิล
+    manage: ดู
+    find_payment: ค้นหาการชำระเงิน
+    add_payment: เพิ่มการชำระเงิน
+    review_match: ตรวจสอบการจับคู่
+    resolve: แก้ไข
+    manage_payments: จัดการการชำระเงิน
+    match:
+      same_merchant: ร้านค้าเดียวกัน
+      name_matches: ชื่อตรงกัน
+      same_transfer: โอนไปบัญชีเดียวกัน
+      exact_amount: จำนวนเงินตรงกัน
+      amount_off: "ต่างกัน %{amount}"
+      due_date: ตรงกับวันครบกำหนด
+      days_before:
+        one: ก่อนครบกำหนด 1 วัน
+        other: "ก่อนครบกำหนด %{count} วัน"
+      days_after:
+        one: หลังครบกำหนด 1 วัน
+        other: "หลังครบกำหนด %{count} วัน"
+    attention:
+      paused: หยุดชั่วคราว
+      needs_review: ต้องตรวจสอบการจับคู่
+      partial: ชำระบางส่วน
+      amount_changed: จำนวนเงินเปลี่ยน
+      overdue:
+        one: เลยกำหนด 1 วัน
+        other: "เลยกำหนด %{count} วัน"
+    paid_label: จ่ายแล้ว
+    paid_over_short: จ่ายเกิน
+    installment_progress: "งวดที่ %{done_plus_one} จาก %{total}"
+    partial_progress: "จ่ายแล้ว %{paid} จาก %{expected}"
+    cancelled_still_scheduled: "คุณทำเครื่องหมายว่ายกเลิกเมื่อ %{date} แต่ยังมีกำหนดการอยู่ บิลในอนาคตจึงจะยังปรากฏต่อไป"
+    paid_over: "จ่าย %{paid} มากกว่าที่คาดไว้"
+    remaining_label: คงเหลือ
+    debt_payment: ชำระหนี้
+    paid_from: "จาก %{account}"
+    amount_range: "ช่วง %{min} ถึง %{max}"
+    possible_duplicate: อาจซ้ำ
+    due_label:
+      overdue:
+        one: "เลยกำหนด 1 วัน ครบกำหนด %{date}"
+        other: "เลยกำหนด %{count} วัน ครบกำหนด %{date}"
+      today: "ครบกำหนดวันนี้"
+      settled: "ครบกำหนด %{date}"
+      due_since: "ครบกำหนด %{date}"
+      snoozed: "เลื่อนการเตือนถึง %{date}"
+      upcoming:
+        one: "ครบกำหนดพรุ่งนี้ %{date}"
+        other: "ครบกำหนดใน %{count} วัน %{date}"
+    views:
+      aria_label: มุมมองบิล
+      overview: ภาพรวม
+      calendar: ปฏิทิน
+      # Named for income rather than for a paycheck: a declared income series
+      # can be a pension, an invoice or a benefit, and this is the only place
+      # in the app where income is added or managed. "Plan" keeps it from
+      # promising the earnings reporting that Reports already owns.
+      paycheck: แผนรายรับ
+      all: บิลทั้งหมด
+    pay_period:
+      paycheck_on: "เงินเดือน %{date}"
+      before_next_paycheck: ก่อนเงินเดือนงวดหน้า
+      due_before_date: "%{amount} ครบกำหนดก่อน %{date}"
+    paycheck:
+      unconvertible:
+        one: "ไม่รวม 1 ภาระ เพราะไม่มีอัตราแลกเปลี่ยน"
+        other: "ไม่รวม %{count} ภาระ เพราะไม่มีอัตราแลกเปลี่ยน"
+      income_section_title: กำหนดการรายรับ
+      manage: จัดการ
+      add_income: เพิ่มรายรับ
+      income_paused: หยุดชั่วคราว ไม่อยู่ในแผน
+      income_detected: ตรวจพบอัตโนมัติ ไม่ใช้กำหนดวันรับเงิน
+      income_next_payday: "ถัดไป %{date}"
+      income_source_count:
+        one: "%{count} แหล่งรายรับ"
+        other: "%{count} แหล่งรายรับ"
+      next_on: "ถัดไป %{date}"
+      no_upcoming_income: ไม่มีรายรับตามกำหนดนับจากนี้
+      empty:
+        title: กำหนดตารางรายรับของคุณ
+        description: เพิ่มรายรับของคุณเพื่อดูว่าแต่ละวันรับเงินต้องครอบคลุมอะไรบ้าง เงินเข้าที่ตรวจพบจะไม่กำหนดวันรับเงินของคุณเอง — คุณเป็นผู้กำหนด
+        action: เพิ่มรายรับ
+      all_clear:
+        title: ไม่มีอะไรต้องครอบคลุม
+        description: "ไม่มีบิลครบกำหนดตั้งแต่ตอนนี้ถึง %{date} จึงไม่มีสิ่งใดในช่วงนั้นถูกจองไว้"
+      # The three words the page is built on: due now, reserved for later,
+      # safe after bills. Anything that adds two of them together needs a very
+      # good reason, because the whole job here is keeping them apart.
+      safe_after_bills: ปลอดภัยหลังหักบิล
+      short_after_bills: ขาดหลังหักบิล
+      period_source: " · %{source}"
+      period_source_multiple: " · %{count} แหล่งรายรับ"
+      before_next_paycheck: "ก่อน %{date}"
+      no_income_arriving: ไม่มีรายรับเข้า
+      income_amount: "รายรับ %{amount}"
+      due_this_period: ครบกำหนดในช่วงนี้
+      reserved_ahead: จองไว้ล่วงหน้า
+      # The bar's key uses the short forms so three columns fit a phone; the
+      # header carries the full phrase.
+      safe_short: ปลอดภัย
+      short_short: ขาด
+      reserved_footer:
+        one: จองไว้ล่วงหน้าสำหรับ 1 บิลถัดไป
+        other: "จองไว้ล่วงหน้าสำหรับ %{count} บิลถัดไป"
+      bills_this_period:
+        one: บิลในช่วงนี้ · 1
+        other: "บิลในช่วงนี้ · %{count}"
+      bills_before_payday:
+        one: บิลก่อนวันรับเงินงวดหน้า · 1
+        other: "บิลก่อนวันรับเงินงวดหน้า · %{count}"
+      of_total: "จาก %{amount}"
+      # The gap before the next payday, said as news rather than drawn as a
+      # pay period. Compact on purpose: it has to be noticeable without
+      # becoming the identity of the page.
+      bridge_label: ก่อนเงินเดือนงวดหน้า
+      bridge_amount: "· ครบกำหนด %{amount}"
+      bridge_split: "ครบกำหนดก่อน %{date} ครอบคลุมด้วย %{cash} ในบัญชีของคุณ"
+      bridge_left: "เหลือ %{amount} หลังหักบิล"
+      bridge_show_more:
+        one: แสดงอีก 1
+        other: "แสดงอีก %{count}"
+      bridge_allocation_aria: "จาก %{cash} ในบัญชีของคุณ %{due} ครบกำหนดก่อนเงินเดือนงวดหน้า และเหลือ %{left}"
+      item_overdue: เลยกำหนด
+      shortfall_label: ขาดก่อนวันรับเงินงวดหน้า
+      shortfall_amount: "· %{amount}"
+      shortfall_split: "%{obligations} ครบกำหนดก่อน %{date} และบัญชีของคุณมี %{cash}"
+      shortfall_largest: "ภาระที่ใหญ่ที่สุดที่กำลังจะมาถึง:"
+      review_plan: ตรวจสอบแผน
+      allocation_aria: "จากรายรับ %{income} มี %{due} ครบกำหนดตอนนี้ %{reserved} จองไว้ภายหลัง และ %{safe} ใช้จ่ายได้อย่างปลอดภัย"
+      allocation_aria_short: "รายรับ %{income} ถูกใช้กับสิ่งที่ผูกพันที่นี่ และต้องการอีก %{short}"
+    reset_feed_token:
+      done: รีเซ็ตลิงก์ฟีดแล้ว แอปปฏิทินที่ใช้ลิงก์เดิมจะหยุดอัปเดต โปรดสมัครรับใหม่ด้วยลิงก์ใหม่
+      confirm: รีเซ็ตลิงก์ฟีดปฏิทิน? ลิงก์ที่แชร์ไว้ก่อนหน้าทั้งหมดจะใช้ไม่ได้
+    calendar:
+      subscribe_ical: สมัครรับ (iCal)
+      reset_feed: รีเซ็ตลิงก์
+      previous_month: เดือนก่อนหน้า
+      next_month: เดือนถัดไป
+      today: วันนี้
+      month_totals: "คาดไว้ %{expected} · จ่ายแล้ว %{paid}"
+      empty_month: ไม่มีบิลครบกำหนดเดือนนี้
+    all:
+      search_placeholder: ค้นหาบิล
+      current_bills: บิลปัจจุบัน
+      dismissed_hidden_description: ซ่อนบิลที่ปิดไปแล้ว
+      status_filters:
+        overdue: เลยกำหนด
+        due: ใกล้ครบกำหนด
+        partial: จ่ายบางส่วน
+        paid: จ่ายแล้ว
+        paused: หยุดชั่วคราว
+        ended: ปิดแล้ว
+      subscription_monthly: ต่อเดือน
+      subscription_annual: ต่อปี
+      subscription_active: ใช้งานอยู่
+      subscription_price_changes: การเปลี่ยนราคาในปีนี้
+      subscription_price_change_line: "%{from} → %{to} (%{percent}%)"
+      any_type: ทุกประเภท
+      sort_due: ตามกำหนดถัดไป
+      sort_name: ตามชื่อ
+      sort_amount: ตามจำนวนเงิน
+      no_matches_title: ไม่มีรายการที่ตรงกัน
+      no_matches_description: ลองล้างตัวกรองหรือการค้นหา
+      col_name: ชื่อ
+      col_amount: จำนวนเงิน
+      col_next: ครบกำหนดถัดไป
+      col_actions: การดำเนินการ
+      monthly_equivalent: "%{amount}/เดือน"
+      types:
+        bill: บิล
+        subscription: ค่าสมาชิก
+        installment: แผนผ่อนชำระ
+        income: รายรับ
+        transfer: โอน
+        other: อื่น ๆ
+    show:
+      edit: แก้ไขบิล
+    index:
+      left_to_pay: ที่เหลือต้องจ่าย
+      paid_so_far: จ่ายแล้วจนถึงตอนนี้
+      hero_past_due: "เลยกำหนด %{amount}"
+      hero_next_seven: "ครบกำหนดใน 7 วันข้างหน้า %{amount}"
+      add_bill: บิลใหม่
+      add_income: รายรับใหม่
+      review_with_ai: ตรวจสอบด้วย AI
+      detected_review:
+        one: เราพบการชำระเงินประจำ 1 รายการในรายการธุรกรรมของคุณ ตรวจสอบเพื่อให้ยอดรวมที่นี่ตรงกับที่คุณจ่ายจริง
+        other: เราพบการชำระเงินประจำ %{count} รายการในรายการธุรกรรมของคุณ ตรวจสอบเพื่อให้ยอดรวมที่นี่ตรงกับที่คุณจ่ายจริง
+      detected_review_action: ตรวจสอบ
+      notices_heading: การเปลี่ยนแปลง
+      needs_review: ต้องตรวจสอบ
+      notice_trial: "การทดลองใช้ %{name} สิ้นสุด %{date}"
+      notice_renewal: "%{name} ต่ออายุ %{date}"
+      notice_price: "%{name} เปลี่ยนราคา: %{from} → %{to} (%{percent})"
+      notices_routine:
+        one: "การเปลี่ยนแปลงเล็กน้อย 1 รายการ"
+        other: "การเปลี่ยนแปลงเล็กน้อย %{count} รายการ"
+      suggestion_line: "%{entry} ดูเหมือนการชำระ %{bill}"
+      suggestion_unknown_entry: รายการธุรกรรม
+      confidence: "ตรงกัน %{percent}%"
+      accept: ใช้
+      reject: ไม่ใช่บิลนี้
+      title: บิล
+      summary_label: ครบกำหนดเดือนนี้
+      summary_count:
+        one: "ครบกำหนด 1 บิล"
+        other: "ครบกำหนด %{count} บิล"
+      summary_needs_action:
+        one: "1 รายการต้องการคุณ"
+        other: "%{count} รายการต้องการคุณ"
+      all_automatic: "ตัดเงินอัตโนมัติทั้งหมด"
+      recurring_label: ภาระผูกพันประจำ
+      recurring_monthly: "%{amount} ต่อเดือน"
+      recurring_annual: "%{amount} ต่อปี"
+      unconvertible:
+        one: "ไม่รวม 1 บิล เพราะไม่มีอัตราแลกเปลี่ยน"
+        other: "ไม่รวม %{count} บิล เพราะไม่มีอัตราแลกเปลี่ยน"
+      overdue: เลยกำหนด
+      needs_attention: ต้องดูแล
+      attention_overdue_total: "เลยกำหนด %{amount}"
+      this_month: เดือนนี้
+      later: หลังเดือนนี้
+      paid_this_month: จ่ายแล้วเดือนนี้
+      dormant: หยุดชั่วคราว
+      kpi_remaining: คงเหลือเดือนนี้
+      kpi_paid: จ่ายแล้วเดือนนี้
+      kpi_next_seven: ครบกำหนดใน 7 วัน
+      kpi_past_due: เลยกำหนด
+      paid_count:
+        one: "ชำระ 1 บิลแล้ว"
+        other: "ชำระ %{count} บิลแล้ว"
+      needs_action_count:
+        one: "1 รายการต้องการคุณ"
+        other: "%{count} รายการต้องการคุณ"
+      empty:
+        title: ยังไม่มีบิล
+        description: บิลคือรายจ่ายประจำของคุณ Sure ค้นหาให้อัตโนมัติจากประวัติรายการธุรกรรม และคุณเพิ่มลิงก์ชำระเงินให้แต่ละบิลเพื่อจ่ายได้จากที่นี่
+        action: ค้นหารายการประจำ
+        no_history_description: ยังไม่มีรายการธุรกรรม เชื่อมต่อบัญชีหรือนำเข้าประวัติแล้ว Sure จะค้นหาบิลให้อัตโนมัติ หรือเพิ่มเอง

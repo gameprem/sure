@@ -1,0 +1,15 @@
+---
+th:
+  demo_family_refresh_mailer:
+    completed:
+      subject: การรีเฟรชครอบครัวเดโมเสร็จสมบูรณ์
+      activity_heading: กิจกรรมในช่วงเวลานี้
+      sessions_label: จำนวนเซสชันเข้าสู่ระบบที่ไม่ซ้ำของครอบครัวเดโมก่อนหน้า
+      families_label: บัญชีครอบครัวใหม่ที่สร้างขึ้น
+      period_heading: ช่วงเวลาที่รายงาน (UTC)
+      from_label: "จาก:"
+      to_label: "ถึง:"
+      time_format: "%-d %b %Y เวลา %H:%M:%S UTC"
+      family_heading: ครอบครัวเดโมก่อนหน้า
+      family_not_found: ไม่พบ
+      id_label: "ID:"

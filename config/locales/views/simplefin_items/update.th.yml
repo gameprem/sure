@@ -1,0 +1,7 @@
+th:
+  simplefin_items:
+    update:
+      success: "อัปเดตการเชื่อมต่อ SimpleFIN แล้ว"
+      errors:
+        blank_token: "ไม่มีโทเคนการเข้าถึง SimpleFIN โปรดระบุโทเคนหรือใช้ เชื่อมโยงบัญชีที่มีอยู่ เพื่อดำเนินการต่อ"
+        update_failed: "อัปเดตการเชื่อมต่อ SimpleFIN ไม่สำเร็จ: %{message}"

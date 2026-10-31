@@ -1,0 +1,10 @@
+---
+th:
+  invite_codes:
+    create:
+      success: "สร้างรหัสแล้ว"
+    destroy:
+      success: "ลบรหัสแล้ว"
+    index:
+      invite_code_description: สร้างรหัสใหม่เพื่อให้แสดงที่นี่ รหัสที่สร้างและถูกใช้แล้วจะไม่แสดงอีก
+      no_invite_codes: ไม่มีรหัสให้แสดง

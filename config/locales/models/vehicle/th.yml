@@ -1,0 +1,15 @@
+---
+th:
+  activerecord:
+    attributes:
+      # How the account form names the vehicle's field in its error messages.
+      account/accountable:
+        purchase_date: วันที่ซื้อ
+      vehicle:
+        purchase_date: วันที่ซื้อ
+    errors:
+      models:
+        vehicle:
+          attributes:
+            purchase_date:
+              must_precede_entries: ต้องอยู่ก่อนรายการที่เก่าที่สุดของบัญชี

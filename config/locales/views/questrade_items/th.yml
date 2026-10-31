@@ -1,0 +1,282 @@
+---
+th:
+  questrade_items:
+    default_name: "การเชื่อมต่อ Questrade"
+    # Model method strings (i18n for item_model.rb)
+    sync_status:
+      no_accounts: "ไม่พบบัญชี"
+      synced:
+        one: "ซิงค์ %{count} บัญชีแล้ว"
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      synced_with_setup: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    institution_summary:
+      none: "ไม่มีสถาบันที่เชื่อมต่อ"
+      count:
+        one: "%{count} สถาบัน"
+        other: "%{count} สถาบัน"
+    errors:
+      provider_not_configured: "ยังไม่ได้ตั้งค่าผู้ให้บริการ Questrade"
+
+    # Syncer status messages
+    sync:
+      status:
+        importing: "กำลังนำเข้าบัญชีจาก Questrade..."
+        processing: "กำลังประมวลผลสินทรัพย์ที่ถือครองและกิจกรรม..."
+        calculating: "กำลังคำนวณยอดคงเหลือ..."
+        importing_data: "กำลังนำเข้าข้อมูลบัญชี..."
+        checking_setup: "กำลังตรวจสอบการตั้งค่าบัญชี..."
+        needs_setup: "%{count} บัญชีต้องตั้งค่า..."
+      success: "เริ่มซิงค์แล้ว"
+
+    # Panel (settings view)
+    panel:
+      eyebrow: "ตั้งค่า · เฉพาะเดสก์ท็อป"
+      help_text: "เอกสาร Questrade API"
+      disconnect: "ยกเลิกการเชื่อมต่อ"
+      disconnect_confirm: "ยกเลิกการเชื่อมต่อ Questrade? การดำเนินการนี้นำการเชื่อมต่อออกและยกเลิกการเชื่อมโยงบัญชีที่ซิงค์ไว้"
+      steps:
+        s1_html: 'เข้าสู่ระบบ<a href="https://my.questrade.com" target="_blank" rel="noopener noreferrer" class="text-primary font-medium underline">พอร์ทัล Questrade</a>บนเบราว์เซอร์เดสก์ท็อป การตั้งค่า API ไม่มีในแอปมือถือ'
+        s2: "เปิด Settings และใต้ General settings ให้แก้ไขการตั้งค่า IQ API"
+        s3_html: "ในหน้าต่าง API access คลิก <strong>Manage</strong> ใต้ <strong>My applications</strong>"
+        s4: "ลงทะเบียนแอปส่วนบุคคลพร้อมชื่อและคำอธิบาย แล้วบันทึก"
+        s5: "เพิ่มอุปกรณ์ใหม่และสร้างโทเคน"
+        s6: "วางโทเคนที่สร้างด้านล่างแล้วบันทึก"
+      setup_instructions: "วิธีการตั้งค่า:"
+      step_1: "ไปที่แดชบอร์ด Questrade ของคุณเพื่อรับข้อมูลรับรอง"
+      step_2: "กรอกข้อมูลรับรองของคุณด้านล่างแล้วคลิกปุ่มบันทึก"
+      step_3: "หลังเชื่อมต่อสำเร็จ ไปที่แท็บบัญชีเพื่อตั้งค่าบัญชีใหม่"
+      field_descriptions: "คำอธิบายช่อง:"
+      optional: "(ไม่บังคับ)"
+      required: "(จำเป็น)"
+      optional_with_default: "(ไม่บังคับ ค่าเริ่มต้นคือ %{default_value})"
+      save_button: "บันทึกการตั้งค่า"
+      update_button: "อัปเดตการตั้งค่า"
+      token_refresh_hint: "โทเคน Questrade ต่ออายุอัตโนมัติทุกครั้งที่บัญชีของคุณซิงค์ หากการเชื่อมต่อไม่ได้ใช้นานเกิน 7 วันและหมดอายุ ให้วางโทเคนใหม่ที่นี่เพื่อกลับมาใช้โดยไม่ต้องยกเลิกการเชื่อมต่อ"
+      status_configured_html: "ตั้งค่าแล้วและพร้อมใช้งาน ไปที่แท็บ<a href=\"%{accounts_path}\" class=\"link\">บัญชี</a>เพื่อจัดการและตั้งค่าบัญชี"
+      status_not_configured: "ยังไม่ได้ตั้งค่า"
+      fields:
+        refresh_token:
+          label: "Refresh Token"
+          description: "refresh token ของ Questrade ของคุณ"
+          placeholder_new: "วาง refresh token ที่นี่"
+          placeholder_update: "กรอก refresh token ใหม่เพื่ออัปเดต"
+        api_server:
+          label: "Api Server"
+          description: "api server ของ Questrade ของคุณ"
+          placeholder_new: "วาง api server ที่นี่"
+          placeholder_update: "กรอก api server ใหม่เพื่ออัปเดต"
+
+    # CRUD success messages
+    create:
+      success: "สร้างการเชื่อมต่อ Questrade เรียบร้อยแล้ว"
+    update:
+      success: "อัปเดตการเชื่อมต่อ Questrade แล้ว"
+    destroy:
+      success: "นำการเชื่อมต่อ Questrade ออกแล้ว"
+    index:
+      title: "การเชื่อมต่อ Questrade"
+
+    # Loading states
+    loading:
+      loading_message: "กำลังโหลดบัญชี Questrade..."
+      loading_title: "กำลังโหลด"
+
+    # Account linking
+    link_accounts:
+      all_already_linked:
+        one: "บัญชีที่เลือก (%{names}) เชื่อมโยงแล้ว"
+        other: "บัญชีที่เลือกทั้ง %{count} บัญชีเชื่อมโยงแล้ว: %{names}"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      invalid_account_names:
+        one: "เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้"
+        other: "เชื่อมโยง %{count} บัญชีที่ไม่มีชื่อไม่ได้"
+      link_failed: "เชื่อมโยงบัญชีไม่สำเร็จ"
+      no_accounts_selected: "โปรดเลือกอย่างน้อยหนึ่งบัญชี"
+      no_api_key: "ไม่พบคีย์ API ของ Questrade โปรดตั้งค่าในการตั้งค่าผู้ให้บริการ"
+      partial_invalid: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว %{invalid_count} บัญชีมีชื่อไม่ถูกต้อง"
+      partial_success: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว: %{already_linked_names}"
+      success:
+        one: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+        other: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+
+    # Provider item display (used in _item partial)
+    questrade_item:
+      kind: บัญชีนายหน้า
+      accounts_need_setup: "บัญชีต้องตั้งค่า"
+      delete: "ลบการเชื่อมต่อ"
+      deletion_in_progress: "กำลังลบ..."
+      error: "ข้อผิดพลาด"
+      more_accounts_available:
+        one: "มีอีก %{count} บัญชีที่เลือกได้"
+        other: "มีอีก %{count} บัญชีที่เลือกได้"
+      no_accounts_description: "การเชื่อมต่อนี้ยังไม่มีบัญชีที่เชื่อมโยง"
+      no_accounts_title: "ไม่มีบัญชี"
+      provider_name: "Questrade"
+      requires_update: "การเชื่อมต่อต้องอัปเดต"
+      setup_action: "ตั้งค่าบัญชีใหม่"
+      setup_description: "เชื่อมโยง %{linked} จาก %{total} บัญชี เลือกประเภทบัญชีสำหรับบัญชี Questrade ที่เพิ่งนำเข้า"
+      setup_needed: "บัญชีใหม่พร้อมตั้งค่า"
+      status: "ซิงค์เมื่อ %{timestamp} ที่แล้ว"
+      status_never: "ไม่เคยซิงค์"
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว - %{summary}"
+      syncing: "กำลังซิงค์..."
+      total: "ทั้งหมด"
+      unlinked: "ยังไม่เชื่อมโยง"
+      update_credentials: "อัปเดตข้อมูลรับรอง"
+
+    # Select accounts view
+    select_accounts:
+      accounts_selected: "บัญชีที่เลือก"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      cancel: "ยกเลิก"
+      configure_name_in_provider: "นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Questrade"
+      description: "เลือกบัญชีที่คุณต้องการเชื่อมโยงกับบัญชี %{product_name} ของคุณ"
+      link_accounts: "เชื่อมโยงบัญชีที่เลือก"
+      no_accounts_found: "ไม่พบบัญชี โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ"
+      no_api_key: "ยังไม่ได้ตั้งค่าคีย์ API ของ Questrade โปรดตั้งค่าในการตั้งค่า"
+      no_credentials_configured: "โปรดตั้งค่าข้อมูลรับรอง Questrade ในการตั้งค่าผู้ให้บริการก่อน"
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      title: "เลือกบัญชี Questrade"
+
+    # Select existing account view
+    select_existing_account:
+      page_title: "เชื่อมโยงบัญชี Questrade"
+      dialog_title: "เชื่อมโยงกับบัญชี Questrade"
+      linking_label: "กำลังเชื่อมโยง"
+      none_available: "ไม่มีบัญชี Questrade ที่ยังไม่เชื่อมโยง"
+      buttons:
+        cancel: "ยกเลิก"
+        link: "เชื่อมโยง"
+      account_already_linked: "บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว"
+      all_accounts_already_linked: "บัญชี Questrade ทั้งหมดเชื่อมโยงแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      balance_label: "ยอดคงเหลือ:"
+      cancel: "ยกเลิก"
+      cancel_button: "ยกเลิก"
+      configure_name_in_provider: "นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Questrade"
+      connect_hint: "เชื่อมต่อบัญชี Questrade เพื่อเปิดใช้การซิงค์อัตโนมัติ"
+      description: "เลือกบัญชี Questrade เพื่อเชื่อมโยงกับบัญชีนี้ รายการธุรกรรมจะถูกซิงค์และกำจัดรายการซ้ำโดยอัตโนมัติ"
+      header: "เชื่อมโยงกับ Questrade"
+      link_account: "เชื่อมโยงบัญชี"
+      link_button: "เชื่อมโยงบัญชีนี้"
+      linking_to: "เชื่อมโยงกับ:"
+      no_account_specified: "ไม่ได้ระบุบัญชี"
+      no_accounts: "ไม่พบบัญชี Questrade ที่ยังไม่เชื่อมโยง"
+      no_accounts_found: "ไม่พบบัญชี Questrade โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ"
+      no_api_key: "ยังไม่ได้ตั้งค่าคีย์ API ของ Questrade โปรดตั้งค่าในการตั้งค่า"
+      no_credentials_configured: "โปรดตั้งค่าข้อมูลรับรอง Questrade ในการตั้งค่าผู้ให้บริการก่อน"
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      settings_link: "ไปที่การตั้งค่าผู้ให้บริการ"
+      subtitle: "เชื่อมต่อบัญชีนี้กับหนึ่งในบัญชี Questrade ของคุณ"
+      title: "เชื่อมโยง %{account_name} กับ Questrade"
+
+    # Link existing account
+    link_existing_account:
+      account_already_linked: "บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      invalid_account_name: "เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้"
+      provider_account_already_linked: "บัญชี Questrade นี้เชื่อมโยงกับบัญชีอื่นแล้ว"
+      provider_account_not_found: "ไม่พบบัญชี Questrade"
+      missing_parameters: "ขาดพารามิเตอร์ที่จำเป็น"
+      no_api_key: "ไม่พบคีย์ API ของ Questrade โปรดตั้งค่าในการตั้งค่าผู้ให้บริการ"
+      success: "เชื่อมโยง %{account_name} กับ Questrade สำเร็จ"
+
+    # Setup accounts wizard
+    setup_accounts:
+      page_title: "ตั้งค่าบัญชี Questrade"
+      dialog_title: "ตั้งค่าบัญชี Questrade ของคุณ"
+      all_linked: "บัญชี Questrade ทั้งหมดเชื่อมโยงแล้ว"
+      import_as: "นำเข้าเป็น"
+      buttons:
+        cancel: "ยกเลิก"
+        create: "สร้างบัญชี"
+        done: "เสร็จสิ้น"
+      types:
+        investment: "การลงทุน"
+        depository: "เงินสด / เงินฝาก"
+        skip: "ข้ามบัญชีนี้"
+      account_type_label: "ประเภทบัญชี:"
+      accounts_count:
+        one: "มี %{count} บัญชีให้เลือก"
+        other: "มี %{count} บัญชีให้เลือก"
+      all_accounts_linked: "บัญชี Questrade ทั้งหมดของคุณถูกตั้งค่าแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      creating: "กำลังสร้างบัญชี..."
+      fetch_failed: "ดึงบัญชีไม่สำเร็จ"
+      import_selected: "นำเข้าบัญชีที่เลือก"
+      instructions: "เลือกบัญชีที่คุณต้องการนำเข้าจาก Questrade เลือกได้หลายบัญชี"
+      no_accounts: "ไม่พบบัญชีที่ยังไม่เชื่อมโยงจากการเชื่อมต่อ Questrade นี้"
+      no_accounts_to_setup: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      no_api_key: "ยังไม่ได้ตั้งค่าคีย์ API ของ Questrade โปรดตรวจสอบการตั้งค่าการเชื่อมต่อของคุณ"
+      select_all: "เลือกทั้งหมด"
+      account_types:
+        skip: "ข้ามบัญชีนี้"
+        depository: "บัญชีกระแสรายวันหรือออมทรัพย์"
+        credit_card: "บัตรเครดิต"
+        investment: "บัญชีลงทุน"
+        crypto: "บัญชีคริปโต"
+        loan: "สินเชื่อหรือสินเชื่อบ้าน"
+        other_asset: "สินทรัพย์อื่น ๆ"
+      subtype_labels:
+        depository: "ประเภทย่อยของบัญชี:"
+        credit_card: ""
+        investment: "ประเภทการลงทุน:"
+        crypto: ""
+        loan: "ประเภทสินเชื่อ:"
+        other_asset: ""
+      subtype_messages:
+        credit_card: "บัตรเครดิตจะถูกตั้งค่าเป็นบัญชีบัตรเครดิตโดยอัตโนมัติ"
+        other_asset: "สินทรัพย์อื่น ๆ ไม่ต้องมีตัวเลือกเพิ่มเติม"
+        crypto: "บัญชีคริปโตจะถูกตั้งค่าเพื่อติดตามสินทรัพย์ที่ถือครองและรายการธุรกรรม"
+      subtypes:
+        depository:
+          checking: "กระแสรายวัน"
+          savings: "ออมทรัพย์"
+          hsa: "บัญชีออมเพื่อสุขภาพ"
+          cd: "ใบรับฝากเงิน"
+          money_market: "ตลาดเงิน"
+        investment:
+          brokerage: "บัญชีนายหน้า"
+          pension: "บำนาญ"
+          retirement: "เกษียณ"
+          "401k": "401(k)"
+          roth_401k: "Roth 401(k)"
+          "403b": "403(b)"
+          tsp: "Thrift Savings Plan"
+          "529_plan": "529 Plan"
+          hsa: "บัญชีออมเพื่อสุขภาพ"
+          mutual_fund: "กองทุนรวม"
+          ira: "Traditional IRA"
+          roth_ira: "Roth IRA"
+          angel: "เอ็นเจิล"
+        loan:
+          mortgage: "สินเชื่อบ้าน"
+          student: "สินเชื่อการศึกษา"
+          auto: "สินเชื่อรถยนต์"
+          other: "สินเชื่ออื่น ๆ"
+      balance: "ยอดคงเหลือ"
+      cancel: "ยกเลิก"
+      choose_account_type: "เลือกประเภทบัญชีที่ถูกต้องสำหรับแต่ละบัญชี Questrade:"
+      create_accounts: "สร้างบัญชี"
+      creating_accounts: "กำลังสร้างบัญชี..."
+      historical_data_range: "ช่วงข้อมูลย้อนหลัง:"
+      subtitle: "เลือกวิธีนำเข้าแต่ละบัญชี"
+      sync_start_date_help: "เลือกว่าจะซิงค์ประวัติรายการธุรกรรมย้อนหลังไปไกลแค่ไหน"
+      sync_start_date_label: "เริ่มซิงค์รายการธุรกรรมตั้งแต่:"
+      title: "ตั้งค่าบัญชี Questrade ของคุณ"
+
+    # Complete account setup
+    setup_required:
+      title: เชื่อมต่อ Questrade ก่อน
+      not_configured_title: ยังไม่ได้เชื่อมต่อ Questrade
+      not_configured_description: เพิ่มการเชื่อมต่อ Questrade ของคุณในการตั้งค่าผู้ให้บริการ แล้วกลับมาที่นี่เพื่อเชื่อมโยงบัญชี
+      go_to_provider_settings: ไปที่การตั้งค่าผู้ให้บริการ
+    complete_account_setup:
+      all_skipped: "ข้ามบัญชีทั้งหมด ไม่ได้สร้างบัญชี"
+      creation_failed: "สร้างบัญชีไม่สำเร็จ: %{error}"
+      no_accounts: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      success: "สร้าง %{count} บัญชีสำเร็จ"
+
+    # Preload accounts
+    preload_accounts:
+      no_credentials_configured: "โปรดตั้งค่าข้อมูลรับรอง Questrade ในการตั้งค่าผู้ให้บริการก่อน"

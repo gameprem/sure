@@ -1,0 +1,12 @@
+---
+th:
+  activerecord:
+    attributes:
+      wise_item:
+        sca_private_key: คีย์ส่วนตัว SCA
+    errors:
+      models:
+        wise_item:
+          attributes:
+            sca_private_key:
+              encryption_unavailable: ไม่สามารถจัดเก็บได้เนื่องจากยังไม่ได้ตั้งค่าการเข้ารหัสของ Active Record ในการติดตั้งนี้

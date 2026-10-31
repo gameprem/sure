@@ -1,0 +1,28 @@
+---
+th:
+  invitations:
+    accept_choice:
+      create_account: สร้างบัญชีใหม่
+      joined_household: คุณเข้าร่วมครัวเรือนแล้ว
+      message: "%{inviter} เชิญคุณเข้าร่วมในฐานะ%{role}"
+      sign_in_existing: ฉันมีบัญชีอยู่แล้ว
+      title: เข้าร่วม %{family}
+    create:
+      existing_user_added: เพิ่มผู้ใช้เข้าครัวเรือนของคุณแล้ว
+      existing_user_has_family_data: ผู้ใช้รายนั้นเป็นเจ้าของครัวเรือนที่มีบัญชีอยู่แล้ว ต้องลบหรือโอนบัญชีเหล่านั้นก่อนจึงจะเข้าร่วมครัวเรือนของคุณได้
+      failure: ไม่สามารถส่งคำเชิญได้
+      success: ส่งคำเชิญเรียบร้อยแล้ว
+    destroy:
+      failure: เกิดปัญหาในการลบคำเชิญ
+      not_authorized: คุณไม่ได้รับอนุญาตให้จัดการคำเชิญ
+      success: ลบคำเชิญเรียบร้อยแล้ว
+    new:
+      email_label: ที่อยู่อีเมล
+      email_placeholder: กรอกที่อยู่อีเมล
+      role_admin: ผู้ดูแลระบบ
+      role_guest: ผู้เยี่ยมชม
+      role_label: บทบาท
+      role_member: สมาชิก
+      submit: ส่งคำเชิญ
+      subtitle: ส่งคำเชิญให้เข้าร่วมบัญชี%{moniker}ของคุณบน %{product_name}
+      title: เชิญใครสักคน

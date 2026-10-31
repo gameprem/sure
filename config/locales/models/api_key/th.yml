@@ -1,0 +1,7 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        api_key:
+          cannot_destroy_demo_key: "ไม่สามารถลบคีย์ API สำหรับตรวจสอบระบบเดโมได้"

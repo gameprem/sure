@@ -1,0 +1,205 @@
+---
+th:
+  snaptrade_items:
+    default_name: "การเชื่อมต่อ SnapTrade"
+    destroy:
+      success: "จัดคิวลบการเชื่อมต่อ SnapTrade แล้ว"
+    connect:
+      decryption_failed: "อ่านข้อมูลรับรอง SnapTrade ไม่ได้ โปรดลบและสร้างการเชื่อมต่อนี้ใหม่"
+      connection_failed: "เชื่อมต่อ SnapTrade ไม่สำเร็จ: %{message}"
+    callback:
+      success: "เชื่อมต่อนายหน้าแล้ว! โปรดเลือกบัญชีที่จะเชื่อมโยง"
+      no_item: "ไม่พบการตั้งค่า SnapTrade"
+    complete_account_setup:
+      success:
+        one: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+        other: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+      partial_success:
+        one: "เชื่อมโยง %{count} บัญชี เชื่อมโยงไม่สำเร็จ %{failed_count}"
+        other: "เชื่อมโยง %{count} บัญชี เชื่อมโยงไม่สำเร็จ %{failed_count}"
+      link_failed: "เชื่อมโยงบัญชีไม่สำเร็จ: %{errors}"
+      no_accounts: "ไม่ได้เลือกบัญชีที่จะเชื่อมโยง"
+    preload_accounts:
+      not_configured: "ยังไม่ได้ตั้งค่า SnapTrade"
+    select_accounts:
+      not_configured: "ยังไม่ได้ตั้งค่า SnapTrade"
+    oauth_authorize:
+      not_configured: "การอนุญาตผ่านเบราว์เซอร์ของ SnapTrade ต้องมี SNAPTRADE_OAUTH_CLIENT_SECRET นอกเหนือจาก SNAPTRADE_OAUTH_CLIENT_ID ตั้งค่าแล้วรีสตาร์ท หรืออนุญาตด้วยรหัสอุปกรณ์แทน"
+    oauth_callback:
+      success: "การอนุญาต SnapTrade เสร็จสมบูรณ์"
+      access_denied: "ยกเลิกการอนุญาต SnapTrade แล้ว"
+      state_mismatch: "การอนุญาต SnapTrade ไม่ผ่านการตรวจสอบความปลอดภัย โปรดลองอีกครั้ง"
+      failed: "ทำการอนุญาต SnapTrade ให้เสร็จสมบูรณ์ไม่ได้ โปรดลองอีกครั้ง"
+    oauth_device_flow:
+      title: "เชื่อมต่อ SnapTrade"
+      subtitle: "อนุญาต Sure สำหรับ SnapTrade ด้วยรหัสอุปกรณ์"
+      instructions: "เปิด SnapTrade ยืนยันรหัสอุปกรณ์นี้ แล้วกลับมาที่นี่เพื่อทำให้เสร็จ"
+      code_label: "รหัสอุปกรณ์"
+      open_snaptrade: "เปิด SnapTrade"
+      start_button: "เริ่มการอนุญาต"
+      complete_button: "ฉันอนุญาต SnapTrade แล้ว"
+      cancel_button: "ยกเลิก"
+      missing_client_id: "ยังไม่ได้ตั้งค่า SnapTrade OAuth เพิ่ม SNAPTRADE_OAUTH_CLIENT_ID ใน .env.local รีสตาร์ทแอป แล้วลองอีกครั้ง"
+    start_oauth_device_flow:
+      failed: "เริ่มการอนุญาตอุปกรณ์ SnapTrade ไม่ได้ โปรดลองอีกครั้ง"
+    complete_oauth_device_flow:
+      success: "การอนุญาต SnapTrade เสร็จสมบูรณ์"
+      device_code_required: "ไม่มีการอนุญาตอุปกรณ์ SnapTrade ที่กำลังดำเนินอยู่สำหรับการเชื่อมต่อนี้ เริ่มใหม่เพื่อรับรหัสใหม่"
+      authorization_pending: "SnapTrade ยังไม่เห็นการยืนยันของคุณ อนุมัติรหัสใน SnapTrade แล้วลองอีกครั้ง"
+      expired: "รหัสอุปกรณ์นี้หมดอายุ เริ่มการอนุญาตอีกครั้ง"
+      access_denied: "การอนุญาต SnapTrade ถูกปฏิเสธ"
+      failed: "ทำการอนุญาตอุปกรณ์ SnapTrade ให้เสร็จสมบูรณ์ไม่ได้ โปรดลองอีกครั้ง"
+    select_existing_account:
+      not_found: "ไม่พบบัญชีหรือการตั้งค่า SnapTrade"
+      title: "เชื่อมโยงกับบัญชี SnapTrade"
+      header: "เชื่อมโยงบัญชีที่มีอยู่"
+      subtitle: "เลือกบัญชี SnapTrade ที่จะเชื่อมโยง"
+      no_accounts: "ไม่มีบัญชี SnapTrade ที่ยังไม่เชื่อมโยง"
+      connect_hint: "คุณอาจต้องเชื่อมต่อนายหน้าก่อน"
+      settings_link: "ไปที่การตั้งค่าผู้ให้บริการ"
+      linking_to: "เชื่อมโยงกับบัญชี:"
+      balance_label: "ยอดคงเหลือ:"
+      link_button: "เชื่อมโยง"
+      cancel_button: "ยกเลิก"
+    link_existing_account:
+      success: "เชื่อมโยงกับบัญชี SnapTrade สำเร็จ"
+      failed: "เชื่อมโยงบัญชีไม่สำเร็จ: %{message}"
+      not_found: "ไม่พบบัญชี"
+    connections:
+      unknown_brokerage: "นายหน้าที่ไม่ทราบ"
+    delete_connection:
+      success: "ลบการเชื่อมต่อเรียบร้อยแล้ว ว่างขึ้นหนึ่งช่อง"
+      failed: "ลบการเชื่อมต่อไม่สำเร็จ: %{message}"
+      missing_authorization_id: "ไม่มี authorization ID"
+      api_deletion_failed: "ลบการเชื่อมต่อจาก SnapTrade ไม่ได้ - รายการนี้ไม่ได้รับอนุญาต การเชื่อมต่ออาจยังอยู่ในบัญชี SnapTrade ของคุณ"
+    setup_accounts:
+      title: "ตั้งค่าบัญชี SnapTrade"
+      header: "ตั้งค่าบัญชี SnapTrade ของคุณ"
+      subtitle: "เลือกบัญชีนายหน้าที่จะเชื่อมโยง"
+      syncing: "กำลังดึงบัญชีของคุณ..."
+      loading: "กำลังดึงบัญชีจาก SnapTrade..."
+      loading_hint: "คลิกรีเฟรชเพื่อตรวจสอบบัญชี"
+      refresh: "รีเฟรช"
+      info_title: "ข้อมูลการลงทุนจาก SnapTrade"
+      info_holdings: "สินทรัพย์ที่ถือครองพร้อมราคาและจำนวนปัจจุบัน"
+      info_cost_basis: "ต้นทุนต่อสถานะ (เมื่อมี)"
+      info_activities: "ประวัติการซื้อขายพร้อมป้ายกำกับกิจกรรม (ซื้อ ขาย เงินปันผล ฯลฯ)"
+      info_history: "ประวัติรายการธุรกรรมสูงสุด 3 ปี"
+      free_tier_note: "แพ็กเกจฟรีของ SnapTrade อนุญาต 20 การเชื่อมต่อนายหน้า"
+      no_accounts_title: "ไม่พบบัญชี"
+      no_accounts_message: "ไม่พบบัญชีนายหน้า อาจเกิดขึ้นหากคุณยกเลิกการเชื่อมต่อหรือนายหน้าของคุณไม่รองรับ"
+      try_again: "เชื่อมต่อนายหน้า"
+      back_to_settings: "กลับไปที่การตั้งค่า"
+      available_accounts: "บัญชีที่ใช้ได้"
+      balance_label: "ยอดคงเหลือ:"
+      account_number: "บัญชี:"
+      account_type_label: "ประเภทบัญชี"
+      account_types:
+        depository: "บัญชีกระแสรายวันหรือออมทรัพย์"
+        credit_card: "บัตรเครดิต"
+        investment: "บัญชีลงทุน"
+        crypto: "บัญชีคริปโต"
+        loan: "สินเชื่อหรือวงเงินสินเชื่อ"
+        other_asset: "สินทรัพย์อื่น ๆ"
+      sync_start_date_label: "นำเข้ารายการธุรกรรมตั้งแต่:"
+      sync_start_date_help: "เว้นว่างไว้เพื่อใช้ประวัติทั้งหมดที่มี"
+      create_button: "สร้างบัญชีที่เลือก"
+      cancel_button: "ยกเลิก"
+      creating: "กำลังสร้างบัญชี..."
+      done_button: "เสร็จสิ้น"
+      or_link_existing: "หรือเชื่อมโยงกับบัญชีที่มีอยู่แทนการสร้างใหม่:"
+      select_account: "เลือกบัญชี..."
+      link_button: "เชื่อมโยง"
+      linked_accounts: "เชื่อมโยงแล้ว"
+      linked_to: "เชื่อมโยงกับ:"
+    snaptrade_item:
+      accounts_need_setup:
+        one: "%{count} บัญชีต้องตั้งค่า"
+        other: "%{count} บัญชีต้องตั้งค่า"
+      deletion_in_progress: "กำลังลบ..."
+      syncing: "กำลังซิงค์..."
+      requires_update: "การเชื่อมต่อต้องอัปเดต"
+      error: "ข้อผิดพลาดการซิงค์"
+      status: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว - %{summary}"
+      status_never: "ไม่เคยซิงค์"
+      reconnect: "เชื่อมต่อใหม่"
+      connect_brokerage: "เชื่อมต่อนายหน้า"
+      add_another_brokerage: "เชื่อมต่อนายหน้าอื่น"
+      delete: "ลบ"
+      setup_needed: "บัญชีต้องตั้งค่า"
+      setup_description: "บัญชีบางส่วนจาก SnapTrade ต้องเชื่อมโยงกับบัญชี Sure"
+      setup_action: "ตั้งค่าบัญชี"
+      setup_accounts_menu: "ตั้งค่าบัญชี"
+      manage_connections: "จัดการการเชื่อมต่อ"
+      more_accounts_available:
+        one: "มีอีก %{count} บัญชีที่ตั้งค่าได้"
+        other: "มีอีก %{count} บัญชีที่ตั้งค่าได้"
+      no_accounts_title: "ยังไม่พบบัญชี"
+      no_accounts_description: "เชื่อมต่อนายหน้าเพื่อนำเข้าบัญชีลงทุนของคุณ"
+
+  providers:
+    snaptrade:
+      name: "SnapTrade"
+      connection_description: "เชื่อมต่อกับนายหน้าของคุณผ่าน SnapTrade (รองรับนายหน้า 25+ ราย)"
+      description: "SnapTrade เชื่อมต่อกับนายหน้าหลักกว่า 25 ราย (Fidelity, Vanguard, Schwab, Robinhood ฯลฯ) และให้ประวัติการซื้อขายเต็มรูปแบบพร้อมป้ายกำกับกิจกรรมและต้นทุน"
+      oauth_setup_step_1_html: "ลงทะเบียนแอป OAuth ที่ <a href=\"https://dashboard.snaptrade.com\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"underline\">dashboard.snaptrade.com</a>"
+      oauth_setup_step_2_html: "เฉพาะ flow ผ่านเบราว์เซอร์: เพิ่ม callback URL ของแอปนี้ (<code>%{callback_url}</code>) เป็น redirect URI ที่ลงทะเบียน"
+      oauth_setup_step_3: "ตั้ง SNAPTRADE_OAUTH_CLIENT_ID ในสภาพแวดล้อมของคุณแล้วรีสตาร์ท เท่านี้ก็เปิดใช้ flow แบบรหัสอุปกรณ์ได้ เพิ่ม SNAPTRADE_OAUTH_CLIENT_SECRET สำหรับ flow ผ่านเบราว์เซอร์ด้วย"
+      free_tier_warning: "แพ็กเกจฟรีของ SnapTrade ครอบคลุม 20 การเชื่อมต่อนายหน้า"
+      oauth_title: "SnapTrade OAuth"
+      oauth_status_ready: "อนุญาตให้ Sure อ่านข้อมูลบัญชี SnapTrade ของคุณ"
+      oauth_status_ready_device: "อนุญาตให้ Sure ด้วยรหัสอุปกรณ์เพื่ออ่านข้อมูลบัญชี SnapTrade ของคุณ"
+      oauth_status_authorized: "อนุญาตกับ SnapTrade แล้ว"
+      oauth_connect_button: "เชื่อมต่อกับ SnapTrade"
+      oauth_device_button: "ใช้รหัสอุปกรณ์"
+      oauth_reauthorize_button: "อนุญาตใหม่"
+      status_connected:
+        one: "%{count} บัญชีจาก SnapTrade"
+        other: "%{count} บัญชีจาก SnapTrade"
+      needs_setup:
+        one: "%{count} ต้องตั้งค่า"
+        other: "%{count} ต้องตั้งค่า"
+      status_ready: "พร้อมเชื่อมต่อนายหน้า"
+      setup_accounts_button: "ตั้งค่าบัญชี"
+      connect_button: "เชื่อมต่อนายหน้า"
+      connected_brokerages: "เชื่อมต่อแล้ว:"
+      manage_connections: "จัดการการเชื่อมต่อ"
+      loading_connections: "กำลังโหลดการเชื่อมต่อ..."
+      connections_error: "โหลดการเชื่อมต่อไม่สำเร็จ: %{message}"
+      accounts_count:
+        one: "%{count} บัญชี"
+        other: "%{count} บัญชี"
+      orphaned_connection: "การเชื่อมต่อที่กำพร้า (ไม่ได้ซิงค์ในเครื่อง)"
+      needs_linking: "ต้องเชื่อมโยง"
+      no_connections: "ไม่พบการเชื่อมต่อนายหน้า"
+      delete_connection: "ลบ"
+      delete_connection_title: "ลบการเชื่อมต่อนายหน้า?"
+      delete_connection_body: "การดำเนินการนี้จะนำการเชื่อมต่อ %{brokerage} ออกจาก SnapTrade อย่างถาวร บัญชีทั้งหมดจากนายหน้านี้จะถูกยกเลิกการเชื่อมโยง คุณต้องเชื่อมต่อใหม่เพื่อซิงค์บัญชีเหล่านี้อีกครั้ง"
+      delete_connection_confirm: "ลบการเชื่อมต่อ"
+      manage_at_snaptrade: "จัดการการเชื่อมต่อที่ SnapTrade"
+
+  snaptrade_item:
+    sync_status:
+      no_accounts: "ไม่พบบัญชี"
+      synced:
+        one: "ซิงค์ %{count} บัญชีแล้ว"
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      synced_with_setup: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    institution_summary:
+      none: "ไม่มีสถาบันที่เชื่อมต่อ"
+      count:
+        one: "%{count} สถาบัน"
+        other: "%{count} สถาบัน"
+    brokerage_summary:
+      none: "ไม่มีนายหน้าที่เชื่อมต่อ"
+      count:
+        one: "%{count} นายหน้า"
+        other: "%{count} นายหน้า"
+    syncer:
+      discovering: "กำลังค้นหาบัญชี..."
+      importing: "กำลังนำเข้าบัญชีจาก SnapTrade..."
+      processing: "กำลังประมวลผลสินทรัพย์ที่ถือครองและกิจกรรม..."
+      calculating: "กำลังคำนวณยอดคงเหลือ..."
+      checking_config: "กำลังตรวจสอบการตั้งค่าบัญชี..."
+      needs_setup: "%{count} บัญชีต้องตั้งค่า..."
+      activities_fetching_async: "กำลังดึงกิจกรรมเบื้องหลัง อาจใช้เวลาถึงหนึ่งนาทีสำหรับการเชื่อมต่อนายหน้าใหม่"

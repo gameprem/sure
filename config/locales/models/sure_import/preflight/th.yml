@@ -1,0 +1,9 @@
+---
+th:
+  sure_import:
+    preflight:
+      missing_reference: "บรรทัดที่ %{line} %{type} อ้างอิง %{field} %{value} ที่ไม่มีอยู่"
+      skipped_missing_reference: "บรรทัดที่ %{line} %{type} อ้างอิง %{field} %{value} ที่ไม่มีอยู่ จะถูกข้ามระหว่างการนำเข้า"
+      skipped_missing_merchant_reference: "บรรทัดที่ %{line} %{type} อ้างอิงร้านค้า (%{value}) ที่ไม่รวมอยู่ในไฟล์ส่งออกนี้ อาจเกิดขึ้นได้กับไฟล์ที่ส่งออกก่อนที่ Sure จะเพิ่มร้านค้าที่ผู้ให้บริการกำหนด รายการนี้จะถูกนำเข้าโดยไม่มีร้านค้าดังกล่าว"
+      skipped_unnamed_recurring: "บรรทัดที่ %{line} %{type} ไม่มีชื่อและอ้างอิงร้านค้า (%{value}) ที่ไม่รวมอยู่ในไฟล์ส่งออกนี้ จะถูกข้ามระหว่างการนำเข้า"
+      provider_merchant_diff: "บรรทัดที่ %{line} ProviderMerchant %{name} มีอยู่แล้วแต่ %{fields} ต่างกัน จะคงร้านค้าเดิมไว้"

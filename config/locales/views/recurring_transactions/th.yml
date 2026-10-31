@@ -1,0 +1,228 @@
+---
+th:
+  recurring_transactions:
+    title: รายการธุรกรรมประจำ
+    upcoming: รายการธุรกรรมประจำที่กำลังจะมาถึง
+    projected: คาดการณ์
+    recurring: ประจำ
+    expected_today: "คาดว่าวันนี้"
+    expected_in:
+      one: "คาดว่าใน %{count} วัน"
+      other: "คาดว่าใน %{count} วัน"
+    day_of_month: วันที่ %{day} ของเดือน
+    frequency_presets:
+      monthly: รายเดือน
+      weekly: รายสัปดาห์
+      biweekly: ทุก 2 สัปดาห์
+      semimonthly: เดือนละสองครั้ง
+      quarterly: รายไตรมาส
+      semiannual: ทุก 6 เดือน
+      annual: รายปี
+      custom: กำหนดเอง
+      interval: ช่วงห่างที่กำหนดเอง
+    frequency_interval_units:
+      weekly: สัปดาห์
+      monthly: เดือน
+      yearly: ปี
+    frequency:
+      monthly: "ทุกเดือนวันที่ %{day}"
+      weekly: "ทุกสัปดาห์วัน%{weekday}"
+      biweekly: "ทุก 2 สัปดาห์วัน%{weekday}"
+      semimonthly: "เดือนละสองครั้ง วันที่ %{first} และ %{second}"
+      quarterly: "ทุกไตรมาสวันที่ %{day}"
+      semiannual: "ทุก 6 เดือนวันที่ %{day}"
+      annual: "ทุกปี %{month} วันที่ %{day}"
+      every_n_weeks: "ทุก %{interval} สัปดาห์วัน%{weekday}"
+      every_n_months: "ทุก %{interval} เดือนวันที่ %{day}"
+      every_n_years: "ทุก %{interval} ปี %{month} วันที่ %{day}"
+      custom: กำหนดเอง
+      last_day: วันสุดท้าย
+    identify_patterns: ระบุรูปแบบ
+    cleanup_stale: ล้างรายการเก่า
+    actions:
+      edit_payment_link: แก้ไขลิงก์ชำระเงิน
+      pause: หยุดชั่วคราว
+      resume: ดำเนินต่อ
+      delete: นำออก
+    pay_action:
+      pay: ชำระ
+      pay_aria: "ชำระ %{name} (เปิดในแท็บใหม่)"
+      add_link: เพิ่มลิงก์
+      add_link_aria: "เพิ่มลิงก์ชำระเงินสำหรับ %{name}"
+      autopay: ตัดเงินอัตโนมัติ
+      autopay_aria: "%{name} ชำระอัตโนมัติ เปิดพอร์ทัลในแท็บใหม่"
+    new:
+      title: บิลใหม่
+      income_title: รายรับใหม่
+      start_from_title: เริ่มจากรายการเรียกเก็บประจำที่เราพบ
+      start_from_income_title: เริ่มจากเงินเข้าประจำที่เราพบ
+      start_from_hint: ไม่บังคับ การเลือกจะเติมแบบฟอร์มให้เท่านั้น คุณยังเปลี่ยนอะไรก็ได้
+      candidate_meta: "%{count}× · ล่าสุด %{date}"
+      search_all_prompt: ไม่เห็นสิ่งที่คุณมองหา?
+      search_all_cta: ค้นหารายการธุรกรรมทั้งหมดของคุณ
+      pick_different: เริ่มจากรายการธุรกรรมอื่น
+      smart_fill: เติมอัตโนมัติด้วย AI
+      smart_fill_applied: AI แนะนำค่าเหล่านี้จากประวัติการเรียกเก็บ โปรดตรวจสอบก่อนบันทึก
+      covered_title: รายการธุรกรรมนี้เป็นของบิลหนึ่งอยู่แล้ว
+      covered_body: "%{name} ติดตามการชำระเงินนี้อยู่แล้ว บิลใหม่จึงจะนับซ้ำ"
+      covered_open: เปิดบิล
+      covered_suggested_title: Sure เคยแนะนำบิลสำหรับการชำระเงินนี้แล้ว
+      covered_suggested_body: "%{name} รออยู่ในข้อเสนอแนะของคุณ ยืนยันเพื่อเริ่มติดตาม บิลใหม่จะได้ไม่นับการชำระเงินนี้ซ้ำ การชำระเงินที่ตรงกันจะเชื่อมโยงอัตโนมัติ และคุณเชื่อมโยงรายการนี้จากบิลได้"
+      covered_confirm: ยืนยันบิล
+      covered_create_anyway: สร้างบิลแยกอยู่ดี
+      covered_income_title: เงินเข้ารายการนี้เป็นของรายรับหนึ่งอยู่แล้ว
+      covered_income_body: "%{name} ติดตามเงินเข้ารายการนี้อยู่แล้ว การเพิ่มอีกครั้งจะนับซ้ำ"
+      covered_income_open: เปิดรายรับ
+      covered_income_suggested_title: Sure เคยแนะนำรายรับนี้แล้ว
+      covered_income_suggested_body: "%{name} รออยู่ในข้อเสนอแนะของคุณ เพิ่มเพื่อเริ่มติดตาม เงินเข้ารายการนี้จะได้ไม่ถูกนับซ้ำ เงินเข้าที่ตรงกันจะเชื่อมโยงอัตโนมัติ และคุณเชื่อมโยงรายการนี้จากรายรับได้"
+      covered_income_confirm: เพิ่มรายรับ
+      covered_income_create_anyway: เพิ่มรายรับแยกอยู่ดี
+    smart_fills:
+      create:
+        failed: ตอนนี้วิเคราะห์ประวัติการเรียกเก็บไม่ได้ แบบฟอร์มคงค่าของรายการธุรกรรมไว้
+    pick_entry:
+      title: ค้นหารายการธุรกรรมที่จะเริ่มต้น
+      income_title: ค้นหาเงินเข้าที่จะเริ่มต้น
+      hint: การเลือกจะเติมแบบฟอร์มให้เท่านั้น คุณยังเปลี่ยนอะไรก็ได้
+      search_placeholder: ค้นหาตามชื่อ บันทึก หรือร้านค้า
+      back: กลับไปที่แบบฟอร์ม
+      showing_recent: แสดง %{count} รายการล่าสุดของคุณ ค้นหาเพื่อจำกัดให้แคบลง
+      no_results: ไม่มีรายการที่ตรงกับ “%{query}” ลองใช้คำน้อยลง หรือกลับไปกรอกแบบฟอร์มเอง
+    picker_row:
+      claimed: เป็นส่วนหนึ่งของ %{name}
+    create:
+      success: เพิ่มบิลแล้ว
+      success_income: เพิ่มรายรับแล้ว
+      due_date_required: "กรอกวันครบกำหนดถัดไปของบิล"
+      amount_invalid: "กรอกจำนวนเงินเป็นตัวเลขธรรมดา"
+      amount_too_precise: ใช้ทศนิยมไม่เกิน 4 ตำแหน่ง
+      account_invalid: "เลือกบัญชีที่คุณเพิ่มบิลได้ หรือเว้นว่างไว้"
+      category_invalid: "เลือกหนึ่งในหมวดหมู่ของคุณ หรือเว้นว่างไว้"
+      already_exists: "บิลนี้มีอยู่แล้ว"
+    edit:
+      trigger_label: แก้ไขบิล
+      title: "แก้ไข %{name}"
+      income_title: "แก้ไขรายรับ · %{name}"
+    form:
+      payment_url_label: ลิงก์ชำระเงิน
+      payment_url_placeholder: bank.example.com/pay
+      payment_url_hint: ที่ที่คุณไปชำระบิลนี้ เปิดในแท็บใหม่จากรายการประจำและรายการที่กำลังจะมาถึง
+      autopay_label: ตัดเงินอัตโนมัติ
+      autopay_hint: เก็บไว้ในรายการบิล แต่เลิกถือว่าเป็นสิ่งที่ต้องทำ
+      more_options: ตัวเลือกเพิ่มเติม
+      notes_label: บันทึก
+      notes_placeholder: บัญชี 4821 ตัดบัตร Amex
+      notes_hint: สิ่งที่คุณอยากเห็นตอนชำระเงิน แสดงอยู่ที่บิล
+      apply_to_siblings:
+        one: "ใช้ลิงก์นี้กับบิล %{name} อีกใบด้วย"
+        other: "ใช้ลิงก์นี้กับบิล %{name} อีก %{count} ใบด้วย"
+      submit: บันทึกบิล
+      submit_income: บันทึกรายรับ
+      income_name_label: แหล่งที่มา
+      income_name_placeholder: นายจ้าง ลูกค้า งานเสริม
+      income_amount_label: จำนวนเงินต่องวด
+      income_due_on_label: วันรับเงินครั้งถัดไป
+      income_account_label: เงินฝากเข้า
+      income_frequency_hint: คุณได้รับเงินบ่อยแค่ไหน เลือกรายละเอียดวันให้ตรงกับวันรับเงินของคุณ
+      income_frequency_label: คุณได้รับเงินบ่อยแค่ไหน
+      income_frequency_new_hint: รายละเอียดวันรับเงินมาจากวันที่ด้านบน คุณปรับกำหนดการได้หลังบันทึก
+      income_notes_placeholder: โอนเข้าบัญชี แบ่งเข้าสองบัญชี
+      income_notes_hint: สิ่งที่ควรจำเกี่ยวกับรายรับนี้
+      name_label: ชื่อ
+      name_placeholder: ค่าเช่า, ค่าไฟ, Netflix
+      amount_label: จำนวนเงิน
+      first_due_on_label: ครบกำหนดถัดไป
+      account_label: ชำระจาก
+      account_blank: บัญชีใดก็ได้
+      bill_type_label: ประเภท
+      installment_count_label: จำนวนงวด
+      installment_count_hint: แผนจะสิ้นสุดหลังชำระครบจำนวนงวดนี้ และแสดงความคืบหน้าจนกว่าจะถึงตอนนั้น
+      renews_on_label: ต่ออายุ
+      trial_ends_on_label: การทดลองใช้สิ้นสุด
+      amount_edit_hint: ใช้กับบิลที่ครบกำหนดตั้งแต่นี้ไป รายการที่ครบกำหนดแล้วคงจำนวนเงินเดิม
+      income_amount_edit_hint: ใช้กับวันรับเงินตั้งแต่นี้ไป รายการที่ครบกำหนดแล้วคงจำนวนเงินเดิม
+      cancelled_on_label: ยกเลิก
+      cancelled_on_hint: การบันทึกวันที่ไว้เพื่ออ้างอิงของคุณเอง หยุดบิลชั่วคราวเพื่อไม่ให้บิลในอนาคตปรากฏ
+      category_blank: ไม่มีหมวดหมู่
+      frequency_new_hint: รายละเอียดวันมาจากวันครบกำหนดด้านบน คุณปรับกำหนดการได้หลังบันทึก
+      frequency_label: บ่อยแค่ไหน
+      frequency_hint: บิลนี้ครบกำหนดบ่อยแค่ไหน เลือกรายละเอียดวันให้ตรงกับใบแจ้งยอดของคุณ
+      frequency_day_label: ในวันที่
+      frequency_interval_label: ทำซ้ำทุก
+      frequency_interval_unit_label: หน่วย
+      frequency_second_day_label: และวันที่
+      frequency_weekday_label: "ในวัน"
+      frequency_month_label: "ในเดือน"
+    update:
+      success: อัปเดตบิลแล้ว
+      success_with_siblings:
+        one: "อัปเดตบิลแล้ว และคัดลอกลิงก์ชำระเงินไปยังอีก 1 บิล"
+        other: "อัปเดตบิลแล้ว และคัดลอกลิงก์ชำระเงินไปยังอีก %{count} บิล"
+    manage:
+      title: บิลของคุณอยู่ในหน้าบิล
+      description: ประกาศ แก้ไข หยุดชั่วคราว และชำระทุกอย่างจากที่นั่น หน้านี้ควบคุมการตรวจจับ
+      cta: เปิดบิลทั้งหมด
+    settings:
+      enable_label: เปิดใช้รายการธุรกรรมประจำ
+      enable_description: ตรวจจับรูปแบบรายการธุรกรรมประจำโดยอัตโนมัติและแสดงรายการธุรกรรมที่คาดการณ์ไว้
+    settings_updated: อัปเดตการตั้งค่ารายการธุรกรรมประจำแล้ว
+    info:
+      title: การตรวจจับรูปแบบอัตโนมัติ
+      manual_description: คุณระบุรูปแบบเองหรือล้างรายการธุรกรรมประจำเก่าได้ด้วยปุ่มด้านบน
+      automatic_description: "การระบุอัตโนมัติจะทำงานหลังจาก:"
+      triggers:
+        - การนำเข้า CSV เสร็จสิ้น (รายการธุรกรรม การซื้อขาย บัญชี ฯลฯ)
+        - การซิงค์ผู้ให้บริการใด ๆ เสร็จสิ้น (Plaid, SimpleFIN ฯลฯ)
+    identified: ระบุรูปแบบรายการธุรกรรมประจำได้ %{count} รูปแบบ
+    identify_already_running: กำลังตรวจจับอยู่แล้ว โปรดกลับมาดูในสักครู่
+    cleaned_up: ล้างรายการธุรกรรมประจำเก่า %{count} รายการแล้ว
+    marked_inactive: หยุดชั่วคราวแล้ว จะไม่ปรากฏอีกจนกว่าคุณจะดำเนินต่อ
+    marked_active: ดำเนินต่อแล้ว
+    deleted: นำบิลออกแล้ว รายการธุรกรรมของคุณไม่ถูกแตะต้อง
+    deleted_income: นำรายรับออกแล้ว รายการธุรกรรมของคุณไม่ถูกแตะต้อง
+    confirm_delete: "นำ %{name} ออกจากบิลของคุณ? รายการธุรกรรมของคุณคงอยู่ตามเดิม การดำเนินการนี้นำออกเฉพาะบิลและกำหนดการชำระเงิน"
+    confirm_delete_income: "นำ %{name} ออกจากรายรับ? รายการธุรกรรมของคุณคงอยู่ตามเดิม การดำเนินการนี้นำออกเฉพาะรายรับและกำหนดการ"
+    marked_as_recurring: ทำเครื่องหมายรายการธุรกรรมเป็นรายการประจำแล้ว
+    already_exists: มีรายการธุรกรรมประจำที่สร้างเองสำหรับรูปแบบนี้อยู่แล้ว
+    already_covered: รายการธุรกรรมนี้ตรงกับรายการธุรกรรมประจำอยู่แล้ว
+    creation_failed: สร้างรายการธุรกรรมประจำไม่สำเร็จ โปรดตรวจสอบรายละเอียดรายการธุรกรรมแล้วลองอีกครั้ง
+    unexpected_error: เกิดข้อผิดพลาดที่ไม่คาดคิดขณะสร้างรายการธุรกรรมประจำ
+    amount_range: "ช่วง: %{min} ถึง %{max}"
+    empty:
+      title: ไม่พบรายการธุรกรรมประจำ
+      description: คลิก "ระบุรูปแบบ" เพื่อตรวจจับรายการธุรกรรมประจำจากประวัติรายการธุรกรรมของคุณโดยอัตโนมัติ
+    table:
+      merchant: ชื่อ
+      amount: จำนวนเงิน
+      frequency: ความถี่
+      next_date: วันที่ถัดไป
+      last_occurrence: ครั้งล่าสุด
+      status: สถานะ
+      actions: การดำเนินการ
+    status:
+      active: ใช้งานอยู่
+      inactive: หยุดชั่วคราว
+      suggested: บิลที่เป็นไปได้
+      paused: หยุดชั่วคราว
+      ended: ปิดแล้ว
+    suggested:
+      title: บิลใหม่ที่เป็นไปได้
+      seen_count:
+        one: "พบครั้งเดียว"
+        other: "พบ %{count} ครั้ง"
+      collapsed_hint: แตะเพื่อตรวจสอบ
+      confirm: เพิ่มบิล
+      dismiss: ไม่ใช่บิล
+    suggested_income:
+      title: รายรับใหม่ที่เป็นไปได้
+      confirm: เพิ่มรายรับ
+      dismiss: ไม่ใช่รายรับ
+    confirmed: เพิ่มบิลในรายการธุรกรรมประจำของคุณแล้ว
+    confirmed_income: เพิ่มรายรับในรายการธุรกรรมประจำของคุณแล้ว
+    dismissed: "ปิดแล้ว จะไม่แนะนำรูปแบบนี้อีก"
+    badges:
+      manual: ด้วยตนเอง
+    transfer_marked_as_recurring: ทำเครื่องหมายการโอนเป็นรายการประจำแล้ว
+    transfer_already_exists: มีการโอนประจำสำหรับคู่บัญชีนี้อยู่แล้ว
+    transfer_creation_failed: สร้างการโอนประจำไม่สำเร็จ โปรดตรวจสอบรายละเอียดการโอนแล้วลองอีกครั้ง
+    transfer_feature_disabled: ปิดใช้รายการธุรกรรมประจำสำหรับครอบครัวนี้

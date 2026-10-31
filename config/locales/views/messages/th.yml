@@ -1,0 +1,9 @@
+---
+th:
+  messages:
+    create:
+      chat_not_found: แชตนี้ไม่พร้อมใช้งานอีกต่อไป
+    chat_form:
+      placeholder: "ถามอะไรก็ได้ ..."
+      disclaimer: "คำตอบจาก AI เป็นข้อมูลเพื่อการอ้างอิงเท่านั้น ไม่ใช่คำแนะนำทางการเงิน!"
+      coming_soon: เร็ว ๆ นี้

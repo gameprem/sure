@@ -1,0 +1,14 @@
+---
+th:
+  activerecord:
+    attributes:
+      brex_item:
+        base_url: Base URL
+        name: ชื่อการเชื่อมต่อ
+        token: โทเคน
+    errors:
+      models:
+        brex_item:
+          attributes:
+            base_url:
+              official_hosts_only: ต้องเว้นว่าง หรือเป็น https://api.brex.com หรือ https://api-staging.brex.com

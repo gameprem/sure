@@ -1,0 +1,5 @@
+---
+th:
+  coinbase:
+    processor:
+      paid_via: "ชำระผ่าน %{method}"

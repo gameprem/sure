@@ -1,0 +1,17 @@
+---
+th:
+  pdf_import_mailer:
+    next_steps:
+      greeting: "สวัสดี %{name},"
+      intro: "เราวิเคราะห์เอกสาร PDF ที่คุณอัปโหลดไปยัง %{product} เสร็จแล้ว"
+      document_type_label: ประเภทเอกสาร
+      summary_label: สรุปโดย AI
+      transactions_note: เอกสารนี้ดูเหมือนจะมีรายการธุรกรรม คุณสามารถดึงข้อมูลและตรวจสอบได้ทันที
+      document_stored_note: เอกสารนี้ถูกเก็บไว้เพื่อการอ้างอิงของคุณ และสามารถใช้เป็นบริบทในการสนทนากับ AI ในอนาคตได้
+      next_steps_label: ขั้นตอนต่อไป
+      next_steps_intro: "คุณมีหลายทางเลือก:"
+      option_extract_transactions: ดึงรายการธุรกรรมจากใบแจ้งยอดนี้
+      option_keep_reference: เก็บเอกสารนี้ไว้อ้างอิงในการสนทนากับ AI ในอนาคต
+      option_delete: ลบการนำเข้านี้หากไม่ต้องการแล้ว
+      view_import_button: ดูรายละเอียดการนำเข้า
+      footer_note: นี่เป็นข้อความอัตโนมัติ โปรดอย่าตอบกลับอีเมลนี้โดยตรง

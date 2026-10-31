@@ -1,0 +1,67 @@
+---
+th:
+  credit_cards:
+    due:
+      in_days:
+        zero: ครบกำหนดวันนี้
+        one: ครบกำหนดพรุ่งนี้
+        other: ครบกำหนดใน %{count} วัน
+      overdue:
+        one: ครบกำหนดเมื่อวาน
+        other: "เลยกำหนด %{count} วัน"
+    edit:
+      edit: แก้ไข %{account}
+    form:
+      annual_fee: ค่าธรรมเนียมรายปี
+      annual_fee_placeholder: '99'
+      apr: APR
+      apr_placeholder: '15.99'
+      available_credit: วงเงินที่ใช้ได้
+      available_credit_placeholder: '10000'
+      due_day: วันครบกำหนดชำระ
+      expiration_date: วันหมดอายุ
+      minimum_payment: ชำระขั้นต่ำ
+      minimum_payment_placeholder: '100'
+      statement_close_day: ปิดใบแจ้งยอดวันที่
+      statement_cycle_description: วันของเดือนที่ใบแจ้งยอดปิดและวันครบกำหนดชำระ เมื่อกำหนดแล้ว แท็บภาพรวมจะแสดงยอดใบแจ้งยอดครั้งล่าสุดและยอดที่กำลังสะสมสำหรับครั้งถัดไป บัตรที่เชื่อมโยงจะเติมค่าเหล่านี้ให้อัตโนมัติและคงค่าที่คุณตั้งเองไว้
+      sophtron_balance_sign_auto: อัตโนมัติ
+      sophtron_balance_sign_credit: เครดิต (ธนาคารเป็นหนี้คุณ)
+      sophtron_balance_sign_debt: หนี้ (คุณเป็นหนี้ธนาคาร)
+      sophtron_balance_sign_description: ใช้การแทนที่เฉพาะเมื่อ Sophtron รายงานเครื่องหมายที่กำกวม โหมดอัตโนมัติยังคงกลับเครื่องหมายยอดบัตรเครดิต
+      sophtron_balance_sign_label: ความหมายของยอดคงเหลือจาก Sophtron
+      simplefin_balance_sign_auto: อัตโนมัติ
+      simplefin_balance_sign_credit: เครดิต (ธนาคารเป็นหนี้คุณ)
+      simplefin_balance_sign_debt: หนี้ (คุณเป็นหนี้ธนาคาร)
+      simplefin_balance_sign_description: ใช้การแทนที่เฉพาะเมื่อ SimpleFIN รายงานเครื่องหมายที่กำกวม โหมดอัตโนมัติยังคงใช้ประวัติรายการธุรกรรมและยอดคงเหลือจากผู้ให้บริการ
+      simplefin_balance_sign_label: ความหมายของยอดคงเหลือจาก SimpleFIN
+      treat_balance_as_available_credit_description: เปิดใช้หากธนาคารของคุณรายงานยอดคงเหลือของบัตรนี้เป็นวงเงินที่ใช้ได้ที่เหลือ แทนที่จะเป็นจำนวนที่ค้างชำระ หนี้จะคำนวณจากวงเงินที่ธนาคารรายงาน หรือจากช่องวงเงินที่ใช้ได้ หากธนาคารไม่ได้ให้ข้อมูลนั้น
+      treat_balance_as_available_credit_label: ยอดคงเหลือคือวงเงินที่ใช้ได้
+    tabs:
+      overview:
+        above_minimum: ใบแจ้งยอดนี้มียอด %{balance} สูงกว่ายอดขั้นต่ำ %{minimum} การชำระเพียงขั้นต่ำจะทำให้ยอดคงเหลือค้างอยู่บนบัตรที่ APR นี้
+        annual_percentage_rate: อัตราดอกเบี้ยต่อปี
+        apr: APR
+        balance_carried_label: ยอดยกมา
+        charges: ค่าใช้จ่าย
+        estimated_interest_label: ดอกเบี้ยโดยประมาณ
+        monthly_rate_label: อัตรารายเดือน
+        per_month: "%{amount}/เดือน"
+        closes_on: ใบแจ้งยอดถัดไปปิด %{date}
+        credit_toward_next: เครดิตสำหรับใบแจ้งยอดถัดไป
+        due_on: "ครบกำหนด %{date}"
+        edit_card_details: แก้ไขรายละเอียดบัตร
+        payments_credits: การชำระเงิน/เครดิต
+        remaining_due: ค้างชำระ %{amount}
+        scheduled_payment: ตั้งเวลาชำระ %{amount} วันที่ %{date}
+        since_last_statement: ตั้งแต่ใบแจ้งยอดล่าสุด
+        statement_balance: ยอดใบแจ้งยอด
+        status_paid: จ่ายแล้ว
+        status_partial: จ่ายบางส่วน
+        multi_currency_unavailable: ใบแจ้งยอดนี้รวมรายการที่บันทึกมากกว่าหนึ่งสกุลเงิน ซึ่งรวมที่นี่ไม่ได้หากไม่มีอัตราแลกเปลี่ยนของทุกสกุล จึงเว้นว่างยอดคงเหลือไว้แทนการเดา
+        no_cycle_description: กำหนดวันที่ใบแจ้งยอดปิดและวันครบกำหนดชำระ แท็บนี้จะแสดงยอดใบแจ้งยอดครั้งล่าสุดและยอดที่กำลังสะสมสำหรับครั้งถัดไป บัตรที่เชื่อมโยงมักเติมให้คุณอัตโนมัติ
+        no_cycle_title: ยังไม่ได้กำหนดรอบใบแจ้งยอด
+        unknown: ไม่ทราบ
+    new:
+      title: กรอกรายละเอียดบัตรเครดิต
+    update:
+      sophtron_balance_sign_error: ใช้ความหมายของยอดคงเหลือจาก Sophtron ไม่สำเร็จ คงการตั้งค่าเดิมไว้ โปรดลองอีกครั้ง

@@ -1,0 +1,205 @@
+---
+th:
+  redbark_items:
+    default_name: "การเชื่อมต่อ Redbark"
+    # Model method strings (i18n for item_model.rb)
+    sync_status:
+      no_accounts: "ไม่พบบัญชี"
+      synced:
+        one: "ซิงค์ %{count} บัญชีแล้ว"
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      synced_with_setup: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    institution_summary:
+      none: "ไม่มีสถาบันที่เชื่อมต่อ"
+      count:
+        one: "%{count} สถาบัน"
+        other: "%{count} สถาบัน"
+    errors:
+      provider_not_configured: "ยังไม่ได้ตั้งค่าผู้ให้บริการ Redbark"
+
+    # Syncer status messages
+    sync:
+      status:
+        importing: "กำลังนำเข้าบัญชีจาก Redbark..."
+        processing: "กำลังประมวลผลรายการธุรกรรม..."
+        calculating: "กำลังคำนวณยอดคงเหลือ..."
+        importing_data: "กำลังนำเข้าข้อมูลบัญชี..."
+        checking_setup: "กำลังตรวจสอบการตั้งค่าบัญชี..."
+        needs_setup: "%{count} บัญชีต้องตั้งค่า..."
+      success: "เริ่มซิงค์แล้ว"
+
+    # Panel (settings view)
+    panel:
+      step_1: "สร้างคีย์ API ที่ app.redbark.com ใต้ Settings"
+      step_2: "กรอกคีย์ API ของคุณด้านล่างแล้วคลิกปุ่มบันทึก"
+      step_3: "หลังเชื่อมต่อสำเร็จ ไปที่แท็บบัญชีเพื่อตั้งค่าบัญชีใหม่"
+      optional: "(ไม่บังคับ)"
+      optional_with_default: "(ไม่บังคับ ค่าเริ่มต้นคือ %{default_value})"
+      save_button: "บันทึกการตั้งค่า"
+      update_button: "อัปเดตการตั้งค่า"
+      fields:
+        api_key:
+          label: "คีย์ API"
+          placeholder_new: "rbk_live_..."
+          placeholder_update: "กรอกคีย์ API ใหม่เพื่ออัปเดต"
+
+    # CRUD success messages
+    create:
+      success: "สร้างการเชื่อมต่อ Redbark เรียบร้อยแล้ว"
+    update:
+      success: "อัปเดตการเชื่อมต่อ Redbark แล้ว"
+    destroy:
+      success: "นำการเชื่อมต่อ Redbark ออกแล้ว"
+      unlink_failed:
+        one: "ยกเลิกการเชื่อมโยง %{count} บัญชีไม่ได้ โปรดลองอีกครั้ง"
+        other: "ยกเลิกการเชื่อมโยง %{count} บัญชีไม่ได้ โปรดลองอีกครั้ง"
+    index:
+      title: "การเชื่อมต่อ Redbark"
+
+    # Loading states
+    loading:
+      loading_message: "กำลังโหลดบัญชี Redbark..."
+      loading_title: "กำลังโหลด"
+
+    # Provider item display (used in _item partial)
+    redbark_item:
+      accounts_need_setup: "บัญชีต้องตั้งค่า"
+      delete: "ลบการเชื่อมต่อ"
+      deletion_in_progress: "กำลังลบ..."
+      error: "ข้อผิดพลาด"
+      more_accounts_available:
+        one: "มีอีก %{count} บัญชีที่เลือกได้"
+        other: "มีอีก %{count} บัญชีที่เลือกได้"
+      no_accounts_description: "การเชื่อมต่อนี้ยังไม่มีบัญชีที่เชื่อมโยง"
+      no_accounts_title: "ไม่มีบัญชี"
+      provider_name: "Redbark"
+      requires_update: "การเชื่อมต่อต้องอัปเดต"
+      setup_action: "ตั้งค่าบัญชีใหม่"
+      setup_description: "เชื่อมโยง %{linked} จาก %{total} บัญชี เลือกประเภทบัญชีสำหรับบัญชี Redbark ที่เพิ่งนำเข้า"
+      setup_needed: "บัญชีใหม่พร้อมตั้งค่า"
+      status: "ซิงค์เมื่อ %{timestamp} ที่แล้ว"
+      status_never: "ไม่เคยซิงค์"
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว - %{summary}"
+      syncing: "กำลังซิงค์..."
+      total: "ทั้งหมด"
+      unlinked: "ยังไม่เชื่อมโยง"
+      update_credentials: "อัปเดตข้อมูลรับรอง"
+
+    # Select accounts view
+    select_accounts:
+      accounts_selected: "บัญชีที่เลือก"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      cancel: "ยกเลิก"
+      configure_name_in_provider: "นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Redbark"
+      description: "เลือกบัญชีที่คุณต้องการเชื่อมโยงกับบัญชี %{product_name} ของคุณ"
+      link_accounts: "เชื่อมโยงบัญชีที่เลือก"
+      no_accounts_found: "ไม่พบบัญชี โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ"
+      no_api_key: "ยังไม่ได้ตั้งค่าคีย์ API ของ Redbark โปรดตั้งค่าในการตั้งค่า"
+      no_credentials_configured: "โปรดตั้งค่าข้อมูลรับรอง Redbark ในการตั้งค่าผู้ให้บริการก่อน"
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      title: "เลือกบัญชี Redbark"
+
+    # Select existing account view
+    select_existing_account:
+      account_already_linked: "บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว"
+      all_accounts_already_linked: "บัญชี Redbark ทั้งหมดเชื่อมโยงแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      balance_label: "ยอดคงเหลือ:"
+      cancel: "ยกเลิก"
+      cancel_button: "ยกเลิก"
+      configure_name_in_provider: "นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Redbark"
+      connect_hint: "เชื่อมต่อบัญชี Redbark เพื่อเปิดใช้การซิงค์อัตโนมัติ"
+      description: "เลือกบัญชี Redbark เพื่อเชื่อมโยงกับบัญชีนี้ รายการธุรกรรมจะถูกซิงค์และกำจัดรายการซ้ำโดยอัตโนมัติ"
+      header: "เชื่อมโยงกับ Redbark"
+      link_account: "เชื่อมโยงบัญชี"
+      link_button: "เชื่อมโยงบัญชีนี้"
+      linking_to: "เชื่อมโยงกับ:"
+      no_account_specified: "ไม่ได้ระบุบัญชี"
+      no_accounts: "ไม่พบบัญชี Redbark ที่ยังไม่เชื่อมโยง"
+      no_accounts_found: "ไม่พบบัญชี Redbark โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ"
+      no_api_key: "ยังไม่ได้ตั้งค่าคีย์ API ของ Redbark โปรดตั้งค่าในการตั้งค่า"
+      no_credentials_configured: "โปรดตั้งค่าข้อมูลรับรอง Redbark ในการตั้งค่าผู้ให้บริการก่อน"
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      settings_link: "ไปที่การตั้งค่าผู้ให้บริการ"
+      subtitle: "เลือกบัญชี Redbark"
+      title: "เชื่อมโยง %{account_name} กับ Redbark"
+
+    # Link existing account
+    link_existing_account:
+      account_already_linked: "บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      invalid_account_name: "เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้"
+      provider_account_already_linked: "บัญชี Redbark นี้เชื่อมโยงกับบัญชีอื่นแล้ว"
+      provider_account_not_found: "ไม่พบบัญชี Redbark"
+      missing_parameters: "ขาดพารามิเตอร์ที่จำเป็น"
+      no_api_key: "ไม่พบคีย์ API ของ Redbark โปรดตั้งค่าในการตั้งค่าผู้ให้บริการ"
+      success: "เชื่อมโยง %{account_name} กับ Redbark สำเร็จ"
+
+    # Setup accounts wizard
+    setup_accounts:
+      account_type_label: "ประเภทบัญชี:"
+      accounts_count:
+        one: "มี %{count} บัญชีให้เลือก"
+        other: "มี %{count} บัญชีให้เลือก"
+      all_accounts_linked: "บัญชี Redbark ทั้งหมดของคุณถูกตั้งค่าแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      creating: "กำลังสร้างบัญชี..."
+      fetch_failed: "ดึงบัญชีไม่สำเร็จ"
+      import_selected: "นำเข้าบัญชีที่เลือก"
+      instructions: "เลือกบัญชีที่คุณต้องการนำเข้าจาก Redbark เลือกได้หลายบัญชี"
+      no_accounts: "ไม่พบบัญชีที่ยังไม่เชื่อมโยงจากการเชื่อมต่อ Redbark นี้"
+      no_accounts_to_setup: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      no_api_key: "ยังไม่ได้ตั้งค่าคีย์ API ของ Redbark โปรดตรวจสอบการตั้งค่าการเชื่อมต่อของคุณ"
+      select_all: "เลือกทั้งหมด"
+      account_types:
+        skip: "ข้ามบัญชีนี้"
+        depository: "บัญชีกระแสรายวันหรือออมทรัพย์"
+        credit_card: "บัตรเครดิต"
+        loan: "สินเชื่อหรือสินเชื่อบ้าน"
+        other_asset: "สินทรัพย์อื่น ๆ"
+      subtype_labels:
+        depository: "ประเภทย่อยของบัญชี:"
+        credit_card: ""
+        loan: "ประเภทสินเชื่อ:"
+        other_asset: ""
+      subtype_messages:
+        credit_card: "บัตรเครดิตจะถูกตั้งค่าเป็นบัญชีบัตรเครดิตโดยอัตโนมัติ"
+        other_asset: "สินทรัพย์อื่น ๆ ไม่ต้องมีตัวเลือกเพิ่มเติม"
+      subtypes:
+        depository:
+          checking: "กระแสรายวัน"
+          savings: "ออมทรัพย์"
+          hsa: "บัญชีออมเพื่อสุขภาพ"
+          cd: "ใบรับฝากเงิน"
+          money_market: "ตลาดเงิน"
+        loan:
+          mortgage: "สินเชื่อบ้าน"
+          student: "สินเชื่อการศึกษา"
+          auto: "สินเชื่อรถยนต์"
+          other: "สินเชื่ออื่น ๆ"
+      balance: "ยอดคงเหลือ"
+      cancel: "ยกเลิก"
+      done: "เสร็จสิ้น"
+      choose_account_type: "เลือกประเภทบัญชีที่ถูกต้องสำหรับแต่ละบัญชี Redbark:"
+      create_accounts: "สร้างบัญชี"
+      creating_accounts: "กำลังสร้างบัญชี..."
+      historical_data_range: "ช่วงข้อมูลย้อนหลัง:"
+      subtitle: "เลือกประเภทบัญชีที่ถูกต้องสำหรับบัญชีที่นำเข้า"
+      sync_start_date_help: "เลือกว่าจะซิงค์ประวัติรายการธุรกรรมย้อนหลังไปไกลแค่ไหน"
+      sync_start_date_label: "เริ่มซิงค์รายการธุรกรรมตั้งแต่:"
+      title: "ตั้งค่าบัญชี Redbark ของคุณ"
+
+    setup_required:
+      title: เชื่อมต่อ Redbark ก่อน
+      not_configured_title: ยังไม่ได้เชื่อมต่อ Redbark
+      not_configured_description: เพิ่มคีย์ API ของ Redbark ในการตั้งค่าผู้ให้บริการ แล้วกลับมาที่นี่เพื่อเชื่อมโยงบัญชี
+      go_to_provider_settings: ไปที่การตั้งค่าผู้ให้บริการ
+
+    # Complete account setup
+    complete_account_setup:
+      all_skipped: "ข้ามบัญชีทั้งหมด ไม่ได้สร้างบัญชี"
+      creation_failed: "สร้างบัญชีไม่สำเร็จ: %{error}"
+      creation_failed_generic: "สร้างบัญชีไม่สำเร็จ"
+      setup_failed: "สร้าง %{count} บัญชีไม่ได้ ไม่มีสิ่งอื่นถูกเปลี่ยน - แก้ไขปัญหาแล้วลองอีกครั้ง"
+      no_accounts: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      success: "สร้าง %{count} บัญชีสำเร็จ"

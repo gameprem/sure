@@ -1,0 +1,8 @@
+---
+th:
+  password_mailer:
+    password_reset:
+      cta: รีเซ็ตรหัสผ่านของคุณ
+      ignore_if_not_requested: หากคุณไม่ได้เป็นผู้ส่งคำขอนี้ สามารถเพิกเฉยต่ออีเมลนี้ได้
+      request_made: มีคำขอรีเซ็ตรหัสผ่าน %{product_name} ของคุณ คลิกลิงก์เพื่อรีเซ็ต
+      subject: '%{product_name}: รีเซ็ตรหัสผ่านของคุณ'

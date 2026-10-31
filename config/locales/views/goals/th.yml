@@ -1,0 +1,358 @@
+---
+th:
+  goals:
+    currency_warning:
+      title: ยอดคงเหลือบางส่วนไม่ถูกนับ
+      body:
+        one: "ยังไม่มีอัตราแลกเปลี่ยน %{from} → %{to} ยอดคงเหลือ %{from} จึงไม่ถูกรวมในยอดนี้"
+        other: "ยังไม่มีอัตราแลกเปลี่ยนจาก %{from} เป็น %{to} ยอดคงเหลือเหล่านั้นจึงไม่ถูกรวมในยอดนี้"
+      settings_link: การตั้งค่าผู้ให้บริการอัตราแลกเปลี่ยน
+    color_picker:
+      trigger_label: เลือกสีและไอคอน
+      color_heading: สี
+      icon_heading: ไอคอน
+      poor_contrast: คอนทราสต์ต่ำ เลือกสีที่เข้มกว่า หรือ
+      auto_adjust: ปรับอัตโนมัติ
+    index:
+      title: เป้าหมาย
+      subtitle: ออมเพื่อสิ่งที่สำคัญ
+      new_goal: เป้าหมายใหม่
+      empty_filtered: ไม่มีเป้าหมายที่ตรงกัน
+      pending_pledges_callout: คุณมีคำมั่นที่รอดำเนินการ Sure จะยืนยันในการซิงค์ครั้งถัดไป
+      kpi:
+        contributed_label: สมทบแล้ว · 30 วันล่าสุด
+        velocity_delta_up: "↑ %{percent}%% เทียบกับ 30 วันก่อนหน้า"
+        velocity_delta_down: "↓ %{percent}%% เทียบกับ 30 วันก่อนหน้า"
+        velocity_delta_flat: เทียบกับ 30 วันก่อนหน้า
+        velocity_delta_zero_base: 30 วันแรกของกิจกรรม
+        needs_this_month_label: ต้องทำเดือนนี้
+        needs_this_month_sub:
+          one: 1 เป้าหมายตามหลังแผน
+          other: "%{count} เป้าหมายตามหลังแผน"
+        needs_this_month_zero_sub: ไม่มีเป้าหมายที่ตามหลังแผน
+        on_track_label: เป้าหมายที่เป็นไปตามแผน
+        on_track_value: "%{on_track} จาก %{total}"
+        on_track_sub_parts:
+          reached:
+            one: ถึงเป้า 1
+            other: "ถึงเป้า %{count}"
+          behind:
+            one: ตามหลัง 1
+            other: "ตามหลัง %{count}"
+          no_date:
+            one: ไม่มีกำหนดเวลา 1
+            other: "ไม่มีกำหนดเวลา %{count}"
+          paused:
+            one: หยุดชั่วคราว 1
+            other: "หยุดชั่วคราว %{count}"
+        on_track_sub_all_good: เป้าหมายที่ใช้งานอยู่ทั้งหมดเป็นไปตามแผน
+        on_track_all_caught_up: ตามทันทั้งหมด
+      goals_section:
+        heading: เป้าหมาย
+        subtitle: ออมเพื่อสิ่งที่สำคัญ
+      ongoing_section:
+        heading: เป้าหมาย
+      archived_section:
+        heading: เก็บถาวร
+      search:
+        placeholder: ค้นหาเป้าหมาย…
+        aria_label: ค้นหาเป้าหมาย
+        empty: ไม่มีเป้าหมายที่ตรงกัน
+        empty_with_query: "ไม่มีเป้าหมายที่ตรงกับ \"%{query}\""
+        empty_with_filter: ไม่มีเป้าหมายที่ตรงกับตัวกรองนี้
+        empty_with_both: "ไม่มีเป้าหมายที่ตรงกับ \"%{query}\" ด้วยตัวกรองนี้"
+        clear_search: ล้างการค้นหา
+        show_all: แสดงทั้งหมด
+      chips_aria: กรองเป้าหมายตามสถานะ
+      chips:
+        all: ทั้งหมด
+        on_track: เป็นไปตามแผน
+        behind: ตามหลัง
+        no_target_date: ปลายเปิด
+        paused: หยุดชั่วคราว
+        completed: เสร็จสมบูรณ์
+    new:
+      heading: เป้าหมายใหม่
+      subtitle: ออมเพื่อสิ่งที่เฉพาะเจาะจง
+    edit:
+      heading: แก้ไขเป้าหมาย
+      save: บันทึกการเปลี่ยนแปลง
+    create:
+      success: สร้างเป้าหมายแล้ว
+    update:
+      success: อัปเดตเป้าหมายแล้ว
+    destroy:
+      success: ลบเป้าหมายแล้ว
+    pause:
+      success: หยุดเป้าหมายชั่วคราวแล้ว
+      invalid_transition: ไม่สามารถหยุดเป้าหมายชั่วคราวจากสถานะปัจจุบันได้
+    resume:
+      success: ดำเนินเป้าหมายต่อแล้ว
+      invalid_transition: ไม่สามารถดำเนินเป้าหมายต่อจากสถานะปัจจุบันได้
+    complete:
+      success: ทำเครื่องหมายเป้าหมายว่าเสร็จสมบูรณ์แล้ว
+      invalid_transition: ไม่สามารถทำให้เป้าหมายเสร็จสมบูรณ์จากสถานะปัจจุบันได้
+    archive:
+      success: เก็บเป้าหมายถาวรแล้ว
+      invalid_transition: ไม่สามารถเก็บเป้าหมายถาวรจากสถานะปัจจุบันได้
+    unarchive:
+      success: กู้คืนเป้าหมายแล้ว
+      invalid_transition: ไม่สามารถกู้คืนเป้าหมายจากสถานะปัจจุบันได้
+    reopen:
+      success: เปิดเป้าหมายอีกครั้งแล้ว
+      invalid_transition: ไม่สามารถเปิดเป้าหมายอีกครั้งจากสถานะปัจจุบันได้
+    consume:
+      title: บันทึกการใช้จ่าย
+      subtitle: "%{goal}"
+      amount_label: คุณใช้ไปเท่าไร?
+      amount_hint: "ขณะนี้ %{saved} หนุนเป้าหมายนี้อยู่"
+      account_label: จากบัญชีไหน?
+      earmark_note: จำนวนเงินที่คุณบันทึกจะไม่ถูกสำรองไว้ให้เป้าหมายนี้อีก เป้าหมายอื่นของคุณในบัญชีนั้นจึงได้ส่วนแบ่งคืน
+      goal_currency_hint: "กรอกจำนวนเงินเป็น %{currency} สำหรับบัญชีที่ใช้สกุลเงินอื่น จะแปลงด้วยอัตราวันนี้ก่อนหักออกจากยอดที่จัดสรรของบัญชีนั้น"
+      cancel: ยกเลิก
+      submit: บันทึก
+      success: "บันทึก %{amount} ว่าใช้ไปแล้ว"
+      errors:
+        missing_exchange_rate: ยังไม่มีอัตราแลกเปลี่ยนสำหรับสกุลเงินของบัญชีนี้ จึงบันทึกการใช้จ่ายนี้ไม่ได้
+        non_positive: กรอกจำนวนเงินที่มากกว่าศูนย์
+        maintained: เงินสำรองถูกถอนและเติมคืน ไม่ใช่ใช้ไป — ส่วนที่ขาดแสดงอยู่ที่เป้าหมายแล้ว
+        exceeds_target: มากกว่าที่เป้าหมายนี้ตั้งใจออมไว้
+        account_required: เป้าหมายนี้ได้รับเงินจากหลายบัญชี — โปรดระบุว่าเงินออกจากบัญชีไหน
+        account_not_linked: บัญชีนั้นไม่ได้สนับสนุนเป้าหมายนี้
+        not_active: เป้าหมายนี้ไม่ได้ใช้งานอีกต่อไป จึงบันทึกอะไรกับมันไม่ได้
+        exceeds_earmark: มากกว่าที่เป้าหมายจัดสรรไว้ในบัญชีนี้
+        transaction_already_claimed: เงินออกรายการนั้นถูกระบุที่มาแล้ว
+        transaction_not_found: เงินออกรายการนั้นไม่พร้อมให้ระบุที่มาอีกต่อไป
+        no_linked_account: เป้าหมายนี้ไม่มีบัญชีสนับสนุนเหลืออยู่
+    unattributed_outflows:
+      heading: เงินออกจากบัญชีเหล่านี้
+      body: หากเงินส่วนใดถูกใช้ไปกับ %{goal} โปรดระบุ แล้วจะไม่นับเป็นการลดเป้าหมาย
+      attribute: ใช่รายการนี้
+    show:
+      edit: แก้ไข
+      consume: ฉันใช้เงินส่วนนี้ไปบางส่วน
+      pause: หยุดชั่วคราว
+      resume: ดำเนินต่อ
+      complete: ทำเครื่องหมายว่าเสร็จสมบูรณ์
+      archive: เก็บถาวร
+      unarchive: กู้คืน
+      reopen: เปิดเป้าหมายอีกครั้ง
+      delete: ลบ
+      reserve_shortfall:
+        heading: เงินสำรองต่ำกว่ายอดเป้าหมาย
+        body: "คุณถือ %{saved} จาก %{target} เพิ่ม %{missing} เพื่อให้กลับสู่ยอดเป้าหมาย"
+      record_pledge_cta: บันทึกคำมั่น
+      pledge_just_transferred: บันทึกการโอนที่คุณทำ
+      pledge_just_saved: บันทึกเงินที่คุณกันไว้
+      funding_accounts_heading: บัญชีสนับสนุน
+      funding_accounts:
+        earmarked_of: "จัดสรร %{earmarked} จาก %{balance}"
+        converted: "≈ %{amount}"
+        rate_unavailable: ยังไม่มีอัตราแลกเปลี่ยน บัญชีนี้จึงไม่ถูกนับ
+        empty:
+          heading: ยังไม่ได้เชื่อมโยงบัญชีสนับสนุน
+          body: แก้ไขเป้าหมายเพื่อเชื่อมโยงบัญชีเงินฝากที่คุณออมเข้าไป
+      notes: บันทึก
+      funding_last_30d: 30 วันล่าสุด
+      funding_last_90d: 90 วันล่าสุด
+      status_callout:
+        depleted: "ต่ำกว่ายอดเป้าหมาย %{amount} — เติมเพื่อให้เงินสำรองกลับมา"
+        behind: "ออมเพิ่ม %{amount}/เดือนเพื่อตามให้ทัน"
+        behind_covered: "คำมั่นที่รอดำเนินการปิดช่องว่าง"
+        on_track: "จะถึงเป้าหมายราว %{date}"
+        no_target_date: "กำหนดวันเป้าหมายเพื่อคาดการณ์เส้นชัย"
+      pending_pledge:
+        title:
+          zero: "รอดำเนินการ: %{amount} เข้า %{account} · หมดอายุวันนี้"
+          one: "รอดำเนินการ: %{amount} เข้า %{account} · เหลือ 1 วัน"
+          other: "รอดำเนินการ: %{amount} เข้า %{account} · เหลือ %{count} วัน"
+        body_transfer: ยืนยันอัตโนมัติเมื่อ Sure พบเงินฝากที่ตรงกันในการซิงค์ครั้งถัดไป
+        body_manual: ยืนยันเมื่อคุณแก้ไขยอดคงเหลือด้วยตนเองครั้งถัดไป
+        pledged_at: "ให้คำมั่นเมื่อ %{time_ago} ที่แล้ว"
+        extend: ขยายเวลา 7 วัน
+        cancel: ยกเลิก
+        confirm_cancel_title: ยกเลิกคำมั่นนี้?
+        confirm_cancel_body: "คำมั่น %{amount} จะถูกลบ คุณบันทึกคำมั่นใหม่ได้ทุกเมื่อ"
+        confirm_cancel_cta: ยกเลิกคำมั่น
+      header:
+        target: "เป้าหมาย %{amount}"
+        target_by: "เป้าหมาย %{amount} ภายใน %{date}"
+        target_by_past: "เป้าหมาย %{amount} · ครบกำหนด %{date}"
+      ring:
+        including_used: "รวม %{amount} ที่ใช้ไปแล้ว"
+        saved: ออมแล้ว
+        of: "จาก %{target}"
+        to_go: "อีก %{amount}"
+        of_target: ของเป้าหมาย
+        market_value: "มูลค่าตลาด %{amount}"
+        aria_label: "เป้าหมายเสร็จ %{percent}% ออมแล้ว %{amount} จาก %{target}"
+        aria_label_with_used: "เป้าหมายเสร็จ %{percent}% %{amount} จาก %{target} รวม %{used} ที่ใช้ไปแล้ว"
+      projection:
+        heading: การคาดการณ์
+        legend_saved: ออมแล้ว
+        legend_projection: การคาดการณ์
+        legend_required: ที่ต้องการ
+        reserve: "เงินสำรองรักษายอดเป้าหมายไว้ จึงไม่มีเส้นชัยให้คาดการณ์"
+        reached: คุณถึงเป้าหมายแล้ว ไม่ต้องคาดการณ์
+        no_target_date: ยังไม่ได้กำหนดวันเป้าหมาย กำหนดเพื่อคาดการณ์เส้นชัย
+        no_pace: ยังไม่มีเงินฝาก เพิ่มเงินเข้าบัญชีที่เชื่อมโยงเพื่อเริ่มการคาดการณ์
+        behind: ด้วยจังหวะปัจจุบันจะไม่ถึงเป้า
+        on_track_html: ด้วยจังหวะปัจจุบัน คุณจะถึงเป้าหมายนี้ราว <strong class="text-primary whitespace-nowrap">%{date}</strong>
+        aria_label: "แผนภูมิการคาดการณ์ของ %{name}"
+        today_marker: วันนี้
+        tooltip_projected: "คาดการณ์: %{amount}"
+        tooltip_saved: "ออมแล้ว: %{amount}"
+        tooltip_target_relation: "%{percent}% ของเป้าหมาย %{target}"
+      catch_up:
+        title: "ออมเพิ่ม %{amount}/เดือนเพื่อตามให้ทัน"
+        body: "จังหวะปัจจุบัน %{avg}/เดือน · ต้องการ %{required}/เดือนเพื่อถึงเป้าหมาย"
+        adjust_target_cta: ปรับเป้าหมายแทน
+      confirm_complete_title: ทำเครื่องหมายเป้าหมายนี้ว่าเสร็จสมบูรณ์?
+      confirm_complete_body: เงินที่จัดสรรไว้จะถูกปล่อยให้เป้าหมายอื่นของคุณในบัญชีเดียวกัน เป้าหมายนี้จะออกจากรายการที่กำลังดำเนินอยู่ และคุณยังเก็บถาวรหรือกู้คืนได้ภายหลัง
+      confirm_complete_body_short: "คุณอยู่ที่ %{progress}% หรือ %{saved} จาก %{target} การทำเครื่องหมายว่าเสร็จสมบูรณ์จะบันทึกสิ่งนี้เป็นความสำเร็จแทนเป้าหมายเดิม ดำเนินการต่อ หรือปิดหน้านี้แล้วปรับเป้าหมายแทน?"
+      confirm_complete_cta: ทำเครื่องหมายว่าเสร็จสมบูรณ์
+      confirm_archive_title: เก็บเป้าหมายนี้ถาวร?
+      confirm_archive_body: เป้าหมายที่เก็บถาวรจะหายไปจากรายการหลัก คุณกู้คืนได้ภายหลัง การเก็บถาวรไม่บันทึกสิ่งที่คุณทำได้ — ทำเครื่องหมายเป้าหมายว่าเสร็จสมบูรณ์ก่อนหากต้องการเก็บไว้
+      confirm_archive_cta: เก็บถาวร
+      confirm_delete_title: ลบเป้าหมายนี้?
+      confirm_delete_body: "%{name} และประวัติคำมั่นจะถูกลบถาวร บัญชี ยอดคงเหลือ และรายการธุรกรรมที่เชื่อมโยงของคุณจะไม่ได้รับผลกระทบ หากต้องการเก็บไว้เป็นบันทึก ให้เก็บถาวรแทน"
+      confirm_delete_cta: ลบเป้าหมาย
+      paused_banner:
+        title: เป้าหมายนี้หยุดชั่วคราว
+        body: ดำเนินต่อเพื่อติดตามความคืบหน้าของคุณ
+        resume_cta: ดำเนินเป้าหมายต่อ
+      archived_banner:
+        title: เป้าหมายนี้ถูกเก็บถาวร
+        body: กู้คืนเพื่อสมทบต่อ หรือปล่อยไว้เป็นบันทึก
+        restore_cta: กู้คืนเป้าหมาย
+      celebration:
+        heading_reserve: เงินสำรองครบถ้วน
+        body_reserve: "เงินสำรองของคุณอยู่ที่ยอดเป้าหมาย %{saved} จาก %{target} ไม่ต้องทำอะไร — ยังคงถูกจัดสรรไว้"
+        heading: ถึงเป้าหมายแล้ว ทำได้ดีมาก
+        body_reached: "คุณถึงเป้าหมายที่ %{saved} จาก %{target} ยังไม่ได้ปิด — เงินยังถูกจัดสรรไว้ให้เป้าหมายนี้"
+        close_cta: ปิดเป้าหมายนี้
+        close_hint: การปิดจะปล่อยเงินที่จัดสรรไว้ให้เป้าหมายอื่นของคุณในบัญชีเดียวกัน ทำเมื่อคุณใช้เงินไปจริงแล้ว
+        frozen: "ถึงเป้าเมื่อ %{date} · %{amount}"
+        body: "ปิดเป้าหมายที่ %{saved} จาก %{target} เก็บไว้เป็นบันทึก หรือเก็บถาวรตอนนี้"
+        archive_cta: เก็บเป้าหมายถาวร
+      inactive:
+        heading_paused: เป้าหมายนี้หยุดชั่วคราว
+        heading_archived: เป้าหมายนี้ถูกเก็บถาวร
+        body: "ออมได้ %{saved} จาก %{target} จนถึงตอนนี้"
+      no_target_date:
+        heading: เพิ่มวันเป้าหมาย
+        body: กำหนดเส้นตายเพื่อคาดการณ์เส้นชัยและติดตามจังหวะที่ต้องการ
+        cta: กำหนดวันเป้าหมาย
+      empty:
+        heading: ยังไม่มีเงินฝาก
+        body: โอนเงินเข้าบัญชีที่เชื่อมโยงของคุณ Sure จะตรวจพบในการซิงค์ครั้งถัดไป หรืออัปเดตยอดคงเหลือของบัญชีที่กรอกเอง
+    errors:
+      not_found: ไม่พบเป้าหมายนี้ อาจถูกลบไปแล้ว
+    states:
+      active: ใช้งานอยู่
+      paused: หยุดชั่วคราว
+      completed: เสร็จสมบูรณ์
+      archived: เก็บถาวร
+    status:
+      funded: เงินสำรองครบถ้วน
+      depleted: ต้องเติมเงิน
+      on_track: เป็นไปตามแผน
+      behind: ตามหลัง
+      reached: ถึงเป้าแล้ว
+      completed: เสร็จสมบูรณ์
+      no_target_date: ปลายเปิด
+      paused: หยุดชั่วคราว
+      archived: เก็บถาวร
+    empty_state:
+      heading: ยังไม่มีเป้าหมาย
+      body: ตั้งเป้าหมาย เชื่อมโยงบัญชีที่คุณออมเข้าไป และดูความคืบหน้าสะสมขึ้น
+      subtitle: ตั้งเป้าหมายและเริ่มออมเพื่อมัน
+      new_goal: สร้างเป้าหมายแรกของคุณ
+      no_depository_accounts: คุณต้องมีบัญชีเงินฝากอย่างน้อยหนึ่งบัญชี (กระแสรายวัน ออมทรัพย์ HSA CD ตลาดเงิน) ก่อนสร้างเป้าหมาย
+      add_account: เพิ่มบัญชี
+    goal_card:
+      including_used: "รวม %{amount} ที่ใช้ไปแล้ว"
+      partial_total: ยอดคงเหลือบางส่วนไม่ถูกนับ (ยังไม่มีอัตราแลกเปลี่ยน)
+      no_accounts: ไม่มีบัญชีที่เชื่อมโยง
+      n_accounts: "%{first} +%{count}"
+      left: เหลือ
+      aria_progress: "%{percent}% ของ %{target}"
+      accounts:
+        one: 1 บัญชี
+        other: "%{count} บัญชี"
+      no_target_date: ปลายเปิด
+      completed: เสร็จสมบูรณ์
+      past_due: เลยกำหนด
+      days_left:
+        one: เหลือ 1 วัน
+        other: "เหลือ %{count} วัน"
+      pace_with_target: "%{avg}/เดือน · เป้าหมาย %{target}/เดือน"
+      pace_no_target: "เฉลี่ย %{avg}/เดือน"
+      footer_paused: หยุดชั่วคราว
+      footer_archived: เก็บถาวร
+      footer_reserve_intact: เงินสำรองครบถ้วน
+      footer_reserve_short: "เติมอีก %{amount}"
+      footer_reached: ถึงเป้าหมายแล้ว
+      footer_catch_up: "ออม %{amount}/เดือนเพื่อตามให้ทัน"
+      footer_no_deadline: ปลายเปิด
+      pending_pledge: คำมั่นที่รอดำเนินการ
+      pending_count:
+        one: รอดำเนินการ 1
+        other: "รอดำเนินการ %{count}"
+      footer_no_pledges: ยังไม่มีคำมั่นที่จับคู่
+      footer_last_today: คำมั่นล่าสุดจับคู่วันนี้
+      footer_last_days:
+        one: คำมั่นล่าสุดจับคู่เมื่อ 1 วันที่แล้ว
+        other: "คำมั่นล่าสุดจับคู่เมื่อ %{count} วันที่แล้ว"
+    form:
+      target_modes:
+        fixed: จำนวนเงินคงที่
+        months_of_expenses: จำนวนเดือนของค่าใช้จ่าย
+      kinds:
+        one_off:
+          hint: ออมเพื่อบางอย่าง แล้วปิดเมื่อใช้เงิน
+          label: เป้าหมายครั้งเดียว
+        maintained:
+          hint: ยอดที่ต้องรักษาไว้ เช่น เงินฉุกเฉิน ไม่เคยปิด
+          label: เงินสำรองที่รักษาไว้
+      create: สร้างเป้าหมาย
+      save: บันทึกการเปลี่ยนแปลง
+      suggested_with_date: "ออม {monthly}/เดือนใน {accounts} เพื่อให้ทันเวลา"
+      suggested_no_date: กำหนดวันเป้าหมายเพื่อคาดการณ์เส้นชัย
+      errors:
+        name_required: ตั้งชื่อเป้าหมายของคุณ
+        amount_required: ตั้งเป้าหมายให้มากกว่าศูนย์
+        accounts_required: เลือกอย่างน้อยหนึ่งบัญชีสนับสนุน
+      earmark:
+        headroom: "เหลือ {left} ให้จัดสรรในบัญชีนี้"
+        converted: "การจัดสรรนี้ ≈ {amount}"
+        prorata: "เป้าหมายของคุณในบัญชีนี้รวมเป็น {total} สำหรับยอดคงเหลือ {balance} — จะคืบหน้าตามสัดส่วน"
+        whole_balance: บัญชีนี้จะสนับสนุนส่วนที่เหลือหลังการจัดสรรอื่น
+        whole_balance_alone: "เป้าหมายนี้จะใช้ยอดคงเหลือทั้งหมดของบัญชีนี้"
+      fields:
+        target_mode: วิธีกำหนดยอดเป้าหมาย
+        target_months: จำนวนเดือนของค่าใช้จ่าย
+        target_months_hint: คำนวณใหม่ทุกวันที่ 1 ของเดือนจากค่ามัธยฐานการใช้จ่ายรายเดือนของคุณ
+        name: ชื่อ
+        name_placeholder: เงินฉุกเฉิน, เงินดาวน์บ้าน…
+        target_amount: จำนวนเงินเป้าหมาย
+        target_balance: "ยอดเป้าหมาย"
+        target_balance_pending: "คำนวณเมื่อคุณบันทึก"
+        target_balance_hint: "จากค่ามัธยฐานการใช้จ่ายรายเดือนของคุณตามจำนวนเดือนข้างต้น รีเฟรชทุกเดือน"
+        target_date: วันเป้าหมาย
+        color: สี
+        notes: บันทึก (ไม่บังคับ)
+        notes_placeholder: ข้อความเตือนตัวคุณในอนาคต…
+        funding_accounts: บัญชีสนับสนุน
+        funding_accounts_hint: ยอดของเป้าหมายนี้คือยอดคงเหลือ (หรือส่วนที่จัดสรร) ของบัญชีเหล่านี้
+        whole_balance: "เว้นว่าง: ยอดคงเหลือทั้งหมด"
+        earmark_for: จำนวนเงินที่จัดสรรสำหรับ %{account}
+        earmark_hint: เว้นจำนวนเงินว่างไว้เพื่อทุ่มยอดคงเหลือทั้งหมดของบัญชีนั้น
+        currency_conversion_hint: "บัญชีอาจใช้สกุลเงินต่างกัน ยอดรวมจะแปลงเป็น %{currency} ส่วนการจัดสรรของบัญชียังคงเป็นสกุลเงินของแต่ละบัญชี"
+      subtypes:
+        checking: กระแสรายวัน
+        savings: ออมทรัพย์
+        hsa: HSA
+        cd: CD
+        money_market: ตลาดเงิน
+        other: อื่น ๆ

@@ -1,0 +1,55 @@
+---
+th:
+  transfers:
+    create:
+      success: สร้างการโอนแล้ว
+      exchange_rate_unavailable: ไม่มีอัตราแลกเปลี่ยนสำหรับสกุลเงินและวันที่ที่เลือก
+      date_invalid: ไม่ถูกต้อง
+      stale_form: แบบฟอร์มนี้ถูกส่งไปแล้วด้วยรายละเอียดที่ต่างกัน โปรดรีเฟรชหน้าแล้วลองอีกครั้ง
+    destroy:
+      success: นำการโอนออกแล้ว
+    form:
+      amount: จำนวนเงิน
+      bank_charges: ค่าธรรมเนียมธนาคาร
+      outgoing_fee: ค่าธรรมเนียมการโอนออก
+      incoming_fee: ค่าธรรมเนียมการโอนเข้า
+      date: วันที่
+      destination_amount: จำนวนเงินปลายทาง
+      destination_amount_display: "จำนวนเงินปลายทาง: %{amount}"
+      exchange_rate_display: "อัตราแลกเปลี่ยน: %{rate}"
+      expense: รายจ่าย
+      from: จาก
+      income: รายรับ
+      select_account: เลือกบัญชี
+      source_amount: จำนวนเงินต้นทาง
+      submit: สร้างการโอน
+      to: ไปยัง
+      transfer: โอน
+    new:
+      title: การโอนใหม่
+    show:
+      delete: นำการโอนออก
+      delete_subtitle: การดำเนินการนี้นำการโอนออก แต่จะไม่ลบรายการธุรกรรมที่เกี่ยวข้อง
+      delete_title: นำการโอนออก?
+      details: รายละเอียด
+      investment_contribution_subtitle: นับการโอนนี้เป็นการใช้จ่ายในงบประมาณและรายงาน ปิดเมื่อบัญชีนายหน้าหรือคริปโตเพียงแปลงเงินเป็นอีกสกุลเงินหนึ่ง
+      investment_contribution_title: เงินสมทบการลงทุน
+      mark_recurring: ทำเครื่องหมายเป็นรายการประจำ
+      mark_recurring_subtitle: ติดตามการโอนนี้เป็นรูปแบบประจำในฟีดที่กำลังจะมาถึงและหน้ารายการประจำ
+      mark_recurring_title: ทำเครื่องหมายการโอนเป็นรายการประจำ
+      note_label: บันทึก
+      note_placeholder: เพิ่มบันทึกให้การโอนนี้
+      overview: ภาพรวม
+      settings: การตั้งค่า
+      from: จาก
+      to: ไปยัง
+      date: วันที่
+      transfer_amount: จำนวนเงินที่โอน
+      total: รวม
+      bank_charges: ค่าธรรมเนียมธนาคาร
+      source_fee: ค่าธรรมเนียมต้นทาง
+      destination_fee: ค่าธรรมเนียมปลายทาง
+      category: หมวดหมู่
+      uncategorized: ไม่ได้จัดหมวดหมู่
+    update:
+      success: อัปเดตการโอนแล้ว

@@ -1,0 +1,80 @@
+---
+th:
+  binance_items:
+    create:
+      default_name: Binance
+      success: เชื่อมต่อ Binance สำเร็จ! กำลังซิงค์บัญชีของคุณ
+    update:
+      success: อัปเดตการตั้งค่า Binance เรียบร้อยแล้ว
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Binance แล้ว
+    select_accounts:
+      connection_unavailable: การเชื่อมต่อ Binance นั้นไม่พร้อมใช้งาน เลือกหนึ่งรายการในการตั้งค่าผู้ให้บริการ
+      no_credentials_configured: เชื่อมต่อ Binance ในการตั้งค่าผู้ให้บริการก่อนเพิ่มบัญชี
+      select_connection: เลือกการเชื่อมต่อ Binance ในการตั้งค่าผู้ให้บริการ
+    setup_accounts:
+      title: นำเข้าบัญชี Binance
+      subtitle: เลือกพอร์ตที่จะติดตาม
+      instructions: เลือกพอร์ต Binance ที่คุณต้องการนำเข้า แสดงเฉพาะพอร์ตที่มียอดคงเหลือ
+      no_accounts: นำเข้าบัญชีทั้งหมดแล้ว
+      accounts_count:
+        one: "มี %{count} บัญชีให้เลือก"
+        other: "มี %{count} บัญชีให้เลือก"
+      select_all: เลือกทั้งหมด
+      import_selected: นำเข้าที่เลือก
+      cancel: ยกเลิก
+      creating: กำลังนำเข้า...
+    complete_account_setup:
+      invalid_sync_start_date: วันที่เริ่มซิงค์ต้องเป็นวันที่ที่ถูกต้องในอดีต
+      success:
+        one: "นำเข้า %{count} บัญชีแล้ว"
+        other: "นำเข้า %{count} บัญชีแล้ว"
+      none_selected: ไม่ได้เลือกบัญชี
+      no_accounts: ไม่มีบัญชีที่จะนำเข้า
+    binance_item:
+      provider_name: Binance
+      syncing: กำลังซิงค์...
+      reconnect: ต้องอัปเดตข้อมูลรับรอง
+      deletion_in_progress: กำลังลบ...
+      sync_status:
+        no_accounts: ไม่พบบัญชี
+        all_synced:
+          one: "ซิงค์ %{count} บัญชีแล้ว"
+          other: "ซิงค์ %{count} บัญชีแล้ว"
+        partial_sync: "ซิงค์แล้ว %{linked_count} ต้องตั้งค่า %{unlinked_count}"
+      status: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว"
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว - %{summary}"
+      status_never: ไม่เคยซิงค์
+      update_credentials: อัปเดตข้อมูลรับรอง
+      delete: ลบ
+      no_accounts_title: ไม่พบบัญชี
+      no_accounts_message: พอร์ต Binance ของคุณจะปรากฏที่นี่หลังซิงค์
+      setup_needed: บัญชีพร้อมนำเข้า
+      setup_description: เลือกพอร์ต Binance ที่คุณต้องการติดตาม
+      setup_action: นำเข้าบัญชี
+      import_accounts_menu: นำเข้าบัญชี
+      stale_rate_warning: "ยอดคงเหลือเป็นค่าประมาณ — ไม่มีอัตราแลกเปลี่ยนที่แน่นอนของวันที่ %{date} จะอัปเดตในการซิงค์ครั้งถัดไป"
+    select_existing_account:
+      title: เชื่อมโยงบัญชี Binance
+      no_accounts_found: ไม่พบบัญชี Binance
+      wait_for_sync: รอให้ Binance ซิงค์เสร็จ
+      check_provider_health: ตรวจสอบว่าข้อมูลรับรอง API ของ Binance ถูกต้อง
+      currently_linked_to: "เชื่อมโยงอยู่กับ: %{account_name}"
+      link: เชื่อมโยง
+      cancel: ยกเลิก
+    link_existing_account:
+      success: เชื่อมโยงกับบัญชี Binance เรียบร้อยแล้ว
+      errors:
+        only_manual: เชื่อมโยงกับ Binance ได้เฉพาะบัญชีแบบกรอกเอง
+        invalid_binance_account: บัญชี Binance ไม่ถูกต้อง
+  binance_item:
+    syncer:
+      checking_credentials: กำลังตรวจสอบข้อมูลรับรอง...
+      credentials_invalid: ข้อมูลรับรอง API ไม่ถูกต้อง โปรดตรวจสอบคีย์ API และ secret
+      importing_accounts: กำลังนำเข้าบัญชีจาก Binance...
+      checking_configuration: กำลังตรวจสอบการตั้งค่าบัญชี...
+      accounts_need_setup:
+        one: "%{count} บัญชีต้องตั้งค่า"
+        other: "%{count} บัญชีต้องตั้งค่า"
+      processing_accounts: กำลังประมวลผลข้อมูลบัญชี...
+      calculating_balances: กำลังคำนวณยอดคงเหลือ...

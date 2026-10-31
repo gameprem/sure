@@ -1,0 +1,11 @@
+---
+th:
+  address:
+    attributes:
+      country: ประเทศ
+      line1: ที่อยู่บรรทัดที่ 1
+      line2: ที่อยู่บรรทัดที่ 2
+      locality: ตำบล/อำเภอ
+      postal_code: รหัสไปรษณีย์
+      region: จังหวัด/ภูมิภาค
+    format: "%{line1} %{line2}, %{locality}, %{region} %{postal_code} %{country}"

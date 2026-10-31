@@ -1,0 +1,6 @@
+---
+th:
+  admin:
+    sso_identity_blocks:
+      destroy:
+        success: "ตัวตน SSO นี้เข้าสู่ระบบหรือสร้างบัญชีได้อีกครั้ง"

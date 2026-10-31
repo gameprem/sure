@@ -1,0 +1,209 @@
+---
+th:
+  mercury_items:
+    api_error:
+      title: ข้อผิดพลาดการเชื่อมต่อ Mercury
+      unable_to_connect: เชื่อมต่อ Mercury ไม่ได้
+      common_issues: "ปัญหาที่พบบ่อย:"
+      invalid_api_token_label: โทเคน API ไม่ถูกต้อง
+      invalid_api_token_desc: ตรวจสอบโทเคน API ของคุณในการตั้งค่าผู้ให้บริการ
+      expired_credentials_label: ข้อมูลรับรองหมดอายุ
+      expired_credentials_desc: สร้างโทเคน API ใหม่จาก Mercury
+      insufficient_permissions_label: สิทธิ์ไม่เพียงพอ
+      insufficient_permissions_desc: ตรวจสอบว่าโทเคนของคุณมีสิทธิ์อ่านอย่างเดียว
+      network_issue_label: ปัญหาเครือข่าย
+      network_issue_desc: ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ
+      service_down_label: บริการล่ม
+      service_down_desc: Mercury API อาจไม่พร้อมใช้งานชั่วคราว
+      check_provider_settings: ตรวจสอบการตั้งค่าผู้ให้บริการ
+    setup_required:
+      title: ต้องตั้งค่า Mercury
+      api_token_not_configured: ยังไม่ได้ตั้งค่าโทเคน API
+      api_token_description: ก่อนเชื่อมโยงบัญชี Mercury คุณต้องตั้งค่าโทเคน API ของ Mercury
+      setup_steps_title: "ขั้นตอนการตั้งค่า:"
+      setup_step_1_html: "ไปที่ <strong>การตั้งค่า > ผู้ให้บริการ</strong>"
+      setup_step_2_html: "ค้นหาส่วน <strong>Mercury</strong>"
+      setup_step_3: กรอกโทเคน API ของ Mercury ของคุณ
+      setup_step_4: กลับมาที่นี่เพื่อเชื่อมโยงบัญชีของคุณ
+      go_to_provider_settings: ไปที่การตั้งค่าผู้ให้บริการ
+    create:
+      success: สร้างการเชื่อมต่อ Mercury เรียบร้อยแล้ว
+    destroy:
+      success: นำการเชื่อมต่อ Mercury ออกแล้ว
+    index:
+      title: การเชื่อมต่อ Mercury
+    loading:
+      loading_message: กำลังโหลดบัญชี Mercury...
+      loading_title: กำลังโหลด
+    link_accounts:
+      all_already_linked:
+        one: "บัญชีที่เลือก (%{names}) เชื่อมโยงแล้ว"
+        other: "บัญชีที่เลือกทั้ง %{count} บัญชีเชื่อมโยงแล้ว: %{names}"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      invalid_account_names:
+        one: "เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้"
+        other: "เชื่อมโยง %{count} บัญชีที่ไม่มีชื่อไม่ได้"
+      link_failed: เชื่อมโยงบัญชีไม่สำเร็จ
+      no_accounts_selected: โปรดเลือกอย่างน้อยหนึ่งบัญชี
+      no_api_token: ไม่พบโทเคน API ของ Mercury โปรดตั้งค่าในการตั้งค่าผู้ให้บริการ
+      partial_invalid: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว %{invalid_count} บัญชีมีชื่อไม่ถูกต้อง"
+      partial_success: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว: %{already_linked_names}"
+      select_connection: เลือกการเชื่อมต่อ Mercury ก่อนเชื่อมโยงบัญชี
+      success:
+        one: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+        other: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+    mercury_item:
+      accounts_need_setup: บัญชีต้องตั้งค่า
+      delete: ลบการเชื่อมต่อ
+      deletion_in_progress: กำลังลบ...
+      error: ข้อผิดพลาด
+      no_accounts_description: การเชื่อมต่อนี้ยังไม่มีบัญชีที่เชื่อมโยง
+      no_accounts_title: ไม่มีบัญชี
+      setup_action: ตั้งค่าบัญชีใหม่
+      setup_description: "เชื่อมโยง %{linked} จาก %{total} บัญชี เลือกประเภทบัญชีสำหรับบัญชี Mercury ที่เพิ่งนำเข้า"
+      setup_needed: บัญชีใหม่พร้อมตั้งค่า
+      status: "ซิงค์เมื่อ %{timestamp} ที่แล้ว"
+      status_never: ไม่เคยซิงค์
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว - %{summary}"
+      syncing: กำลังซิงค์...
+      total: ทั้งหมด
+      unlinked: ยังไม่เชื่อมโยง
+    provider_panel:
+      add_connection: เพิ่มการเชื่อมต่อ Mercury
+      base_url_label: Base URL (ไม่บังคับ)
+      base_url_placeholder: https://api.mercury.com/api/v1 (ค่าเริ่มต้น)
+      connection_name_label: ชื่อการเชื่อมต่อ
+      connection_name_placeholder: บัญชีกระแสรายวันธุรกิจ
+      default_connection_name: การเชื่อมต่อ Mercury
+      disconnect: ยกเลิกการเชื่อมต่อ
+      disconnect_confirm: "ยกเลิกการเชื่อมต่อ %{name}?"
+      instructions:
+        copy_token_html: "คัดลอก<strong>โทเคนทั้งหมด</strong> (รวมคำนำหน้า <code>secret-token:</code>) และเพิ่มเป็นการเชื่อมต่อที่มีชื่อด้านล่าง"
+        create_token: สร้างโทเคน API ใหม่ที่มีสิทธิ์ "Read Only"
+        open_tokens: ไปที่ Settings > Developer > API Tokens
+        sign_in_html: "ไปที่ %{link} และเข้าสู่ระบบบัญชีที่คุณต้องการเชื่อมต่อ"
+        whitelist_ip_html: "<strong>สำคัญ:</strong> เพิ่มที่อยู่ IP ของเซิร์ฟเวอร์ของคุณใน whitelist ของโทเคน"
+      keep_token_placeholder: เว้นว่างไว้เพื่อใช้โทเคนเดิม
+      sandbox_note_html: "ใช้การเชื่อมต่อที่มีชื่อแยกกันสำหรับแต่ละการเข้าสู่ระบบ/โทเคน API ของ Mercury ที่คุณต้องการซิงค์ สำหรับการทดสอบแบบ sandbox ให้ใช้ <code>https://api-sandbox.mercury.com/api/v1</code> เป็น Base URL Mercury ต้องใช้ IP whitelist - อย่าลืมเพิ่ม IP ของคุณในแดชบอร์ด Mercury"
+      setup_accounts: ตั้งค่าบัญชี
+      setup_title: "วิธีการตั้งค่า:"
+      sync: ซิงค์
+      token_label: โทเคน
+      token_placeholder: วางโทเคนที่นี่
+      update_connection: อัปเดตการเชื่อมต่อ
+    provider_connection:
+      default_description: เชื่อมต่อกับธนาคารของคุณผ่าน Mercury
+      default_name: Mercury
+      description: "เชื่อมต่อโดยใช้ %{name}"
+      name: "Mercury - %{name}"
+    select_accounts:
+      accounts_selected: บัญชีที่เลือก
+      api_error: "ข้อผิดพลาด API: %{message}"
+      cancel: ยกเลิก
+      configure_name_in_mercury: นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Mercury
+      description: เลือกบัญชีที่คุณต้องการเชื่อมโยงกับบัญชี %{product_name} ของคุณ
+      link_accounts: เชื่อมโยงบัญชีที่เลือก
+      no_accounts_found: ไม่พบบัญชี โปรดตรวจสอบการตั้งค่าโทเคน API ของคุณ
+      no_api_token: ยังไม่ได้ตั้งค่าโทเคน API ของ Mercury โปรดตั้งค่าในการตั้งค่า
+      no_credentials_configured: โปรดตั้งค่าโทเคน API ของ Mercury ในการตั้งค่าผู้ให้บริการก่อน
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      select_connection: เลือกการเชื่อมต่อ Mercury ในการตั้งค่าผู้ให้บริการ
+      title: เลือกบัญชี Mercury
+    select_existing_account:
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      all_accounts_already_linked: บัญชี Mercury ทั้งหมดเชื่อมโยงแล้ว
+      api_error: "ข้อผิดพลาด API: %{message}"
+      cancel: ยกเลิก
+      configure_name_in_mercury: นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Mercury
+      description: เลือกบัญชี Mercury เพื่อเชื่อมโยงกับบัญชีนี้ รายการธุรกรรมจะถูกซิงค์และกำจัดรายการซ้ำโดยอัตโนมัติ
+      link_account: เชื่อมโยงบัญชี
+      no_account_specified: ไม่ได้ระบุบัญชี
+      no_accounts_found: ไม่พบบัญชี Mercury โปรดตรวจสอบการตั้งค่าโทเคน API ของคุณ
+      no_api_token: ยังไม่ได้ตั้งค่าโทเคน API ของ Mercury โปรดตั้งค่าในการตั้งค่า
+      no_credentials_configured: โปรดตั้งค่าโทเคน API ของ Mercury ในการตั้งค่าผู้ให้บริการก่อน
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      select_connection: เลือกการเชื่อมต่อ Mercury ในการตั้งค่าผู้ให้บริการ
+      title: "เชื่อมโยง %{account_name} กับ Mercury"
+    link_existing_account:
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      api_error: "ข้อผิดพลาด API: %{message}"
+      invalid_account_name: เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้
+      mercury_account_already_linked: บัญชี Mercury นี้เชื่อมโยงกับบัญชีอื่นแล้ว
+      mercury_account_not_found: ไม่พบบัญชี Mercury
+      missing_parameters: ขาดพารามิเตอร์ที่จำเป็น
+      no_api_token: ไม่พบโทเคน API ของ Mercury โปรดตั้งค่าในการตั้งค่าผู้ให้บริการ
+      select_connection: เลือกการเชื่อมต่อ Mercury ก่อนเชื่อมโยงบัญชี
+      success: "เชื่อมโยง %{account_name} กับ Mercury สำเร็จ"
+    setup_accounts:
+      account_type_label: "ประเภทบัญชี:"
+      all_accounts_linked: "บัญชี Mercury ทั้งหมดของคุณถูกตั้งค่าแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      fetch_failed: "ดึงบัญชีไม่สำเร็จ"
+      no_accounts_to_setup: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      no_api_token: "ยังไม่ได้ตั้งค่าโทเคน API ของ Mercury โปรดตรวจสอบการตั้งค่าการเชื่อมต่อของคุณ"
+      account_types:
+        skip: ข้ามบัญชีนี้
+        depository: บัญชีกระแสรายวันหรือออมทรัพย์
+        credit_card: บัตรเครดิต
+        investment: บัญชีลงทุน
+        loan: สินเชื่อหรือสินเชื่อบ้าน
+        other_asset: สินทรัพย์อื่น ๆ
+      subtype_labels:
+        depository: "ประเภทย่อยของบัญชี:"
+        credit_card: ""
+        investment: "ประเภทการลงทุน:"
+        loan: "ประเภทสินเชื่อ:"
+        other_asset: ""
+      subtype_messages:
+        credit_card: "บัตรเครดิตจะถูกตั้งค่าเป็นบัญชีบัตรเครดิตโดยอัตโนมัติ"
+        other_asset: "สินทรัพย์อื่น ๆ ไม่ต้องมีตัวเลือกเพิ่มเติม"
+      subtypes:
+        depository:
+          checking: กระแสรายวัน
+          savings: ออมทรัพย์
+          hsa: บัญชีออมเพื่อสุขภาพ
+          cd: ใบรับฝากเงิน
+          money_market: ตลาดเงิน
+        investment:
+          brokerage: บัญชีนายหน้า
+          pension: บำนาญ
+          retirement: เกษียณ
+          "401k": "401(k)"
+          roth_401k: "Roth 401(k)"
+          "403b": "403(b)"
+          tsp: Thrift Savings Plan
+          "529_plan": "529 Plan"
+          hsa: บัญชีออมเพื่อสุขภาพ
+          mutual_fund: กองทุนรวม
+          ira: Traditional IRA
+          roth_ira: Roth IRA
+          angel: เอ็นเจิล
+        loan:
+          mortgage: สินเชื่อบ้าน
+          student: สินเชื่อการศึกษา
+          auto: สินเชื่อรถยนต์
+          other: สินเชื่ออื่น ๆ
+      balance: ยอดคงเหลือ
+      cancel: ยกเลิก
+      choose_account_type: "เลือกประเภทบัญชีที่ถูกต้องสำหรับแต่ละบัญชี Mercury:"
+      create_accounts: สร้างบัญชี
+      creating_accounts: กำลังสร้างบัญชี...
+      historical_data_range: "ช่วงข้อมูลย้อนหลัง:"
+      subtitle: เลือกประเภทบัญชีที่ถูกต้องสำหรับบัญชีที่นำเข้า
+      sync_start_date_help: เลือกว่าจะซิงค์ประวัติรายการธุรกรรมย้อนหลังไปไกลแค่ไหน ย้อนหลังได้สูงสุด 3 ปี
+      sync_start_date_label: "เริ่มซิงค์รายการธุรกรรมตั้งแต่:"
+      title: ตั้งค่าบัญชี Mercury ของคุณ
+    complete_account_setup:
+      all_skipped: "ข้ามบัญชีทั้งหมด ไม่ได้สร้างบัญชี"
+      creation_failed: "สร้างบัญชีไม่สำเร็จ: %{error}"
+      no_accounts: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      success: "สร้าง %{count} บัญชีสำเร็จ"
+    sync:
+      success: เริ่มซิงค์แล้ว
+    update:
+      success: อัปเดตการเชื่อมต่อ Mercury แล้ว
+    mercury_item_selection_error_payload:
+      select_connection: เลือกการเชื่อมต่อ Mercury ก่อนโหลดบัญชี
+    render_mercury_item_selection_failure:
+      select_connection: เลือกการเชื่อมต่อ Mercury ในการตั้งค่าผู้ให้บริการ
+      no_credentials_configured: โปรดตั้งค่าโทเคน API ของ Mercury ในการตั้งค่าผู้ให้บริการก่อน

@@ -1,0 +1,42 @@
+---
+th:
+  layouts:
+    application:
+      insights: ข้อมูลเชิงลึก
+      privacy_mode: สลับโหมดความเป็นส่วนตัว
+      resize_left_sidebar: ปรับขนาดแถบด้านข้างบัญชี
+      resize_right_sidebar: ปรับขนาดแถบด้านข้างผู้ช่วย
+      skip_to_main: ข้ามไปยังเนื้อหาหลัก
+      release_highlight:
+        title: มีอะไรใหม่
+        done: เข้าใจแล้ว
+      nav:
+        assistant: ผู้ช่วย
+        bills: บิล
+        budgets: งบประมาณ
+        home: หน้าหลัก
+        plan: แพ็กเกจ
+        reports: รายงาน
+        goals: เป้าหมาย
+        transactions: รายการธุรกรรม
+    auth:
+      existing_account: มีบัญชีอยู่แล้ว?
+      no_account: เพิ่งเริ่มใช้ %{product_name}?
+      sign_in: เข้าสู่ระบบ
+      sign_up: สร้างบัญชี
+    shared:
+      footer:
+        privacy_policy: นโยบายความเป็นส่วนตัว
+        terms_of_service: ข้อกำหนดการให้บริการ
+      confirm_dialog:
+        are_you_sure: คุณแน่ใจหรือไม่?
+        cannot_be_undone: การดำเนินการนี้ไม่สามารถย้อนกลับได้
+        confirm: ยืนยัน
+      notification_tray:
+        download_complete: ดาวน์โหลดเสร็จสมบูรณ์
+        download_failed: ดาวน์โหลดไม่สำเร็จ โปรดลองอีกครั้ง
+        download_location: ไฟล์อยู่ในโฟลเดอร์ดาวน์โหลดของคุณ
+    trial:
+      open_demo: เปิดเดโม
+      data_deleted_in_days: ข้อมูลจะถูกลบใน %{days} วัน
+      contribute: ร่วมสนับสนุน

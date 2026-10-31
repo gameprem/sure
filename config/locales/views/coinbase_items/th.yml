@@ -1,0 +1,82 @@
+---
+th:
+  coinbase_items:
+    create:
+      default_name: Coinbase
+      success: เชื่อมต่อ Coinbase สำเร็จ! กำลังซิงค์บัญชีของคุณ
+    update:
+      success: อัปเดตการตั้งค่า Coinbase เรียบร้อยแล้ว
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Coinbase แล้ว
+    select_accounts:
+      connection_unavailable: การเชื่อมต่อ Coinbase นั้นไม่พร้อมใช้งาน เลือกหนึ่งรายการในการตั้งค่าผู้ให้บริการ
+      no_credentials_configured: เชื่อมต่อ Coinbase ในการตั้งค่าผู้ให้บริการก่อนเพิ่มกระเป๋า
+      select_connection: เลือกการเชื่อมต่อ Coinbase ในการตั้งค่าผู้ให้บริการ
+    setup_accounts:
+      title: นำเข้ากระเป๋า Coinbase
+      subtitle: เลือกกระเป๋าที่จะติดตาม
+      instructions: เลือกกระเป๋าที่คุณต้องการนำเข้า กระเป๋าที่ไม่ได้เลือกยังพร้อมให้เพิ่มภายหลัง
+      no_accounts: นำเข้ากระเป๋าทั้งหมดแล้ว
+      accounts_count:
+        one: "มี %{count} กระเป๋าให้เลือก"
+        other: "มี %{count} กระเป๋าให้เลือก"
+      select_all: เลือกทั้งหมด
+      import_selected: นำเข้าที่เลือก
+      cancel: ยกเลิก
+      creating: กำลังนำเข้า...
+    complete_account_setup:
+      success:
+        one: "นำเข้า %{count} กระเป๋าแล้ว"
+        other: "นำเข้า %{count} กระเป๋าแล้ว"
+      none_selected: ไม่ได้เลือกกระเป๋า
+      no_accounts: ไม่มีกระเป๋าที่จะนำเข้า
+    coinbase_item:
+      provider_name: Coinbase
+      syncing: กำลังซิงค์...
+      reconnect: ต้องอัปเดตข้อมูลรับรอง
+      deletion_in_progress: กำลังลบ...
+      sync_status:
+        no_accounts: ไม่พบบัญชี
+        all_synced:
+          one: "ซิงค์ %{count} บัญชีแล้ว"
+          other: "ซิงค์ %{count} บัญชีแล้ว"
+        partial_sync: "ซิงค์แล้ว %{linked_count} ต้องตั้งค่า %{unlinked_count}"
+      status: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว"
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว - %{summary}"
+      status_never: ไม่เคยซิงค์
+      update_credentials: อัปเดตข้อมูลรับรอง
+      delete: ลบ
+      no_accounts_title: ไม่พบบัญชี
+      no_accounts_message: กระเป๋า Coinbase ของคุณจะปรากฏที่นี่หลังซิงค์
+      setup_needed: กระเป๋าพร้อมนำเข้า
+      setup_description: เลือกกระเป๋า Coinbase ที่คุณต้องการติดตาม
+      setup_action: นำเข้ากระเป๋า
+      import_wallets_menu: นำเข้ากระเป๋า
+      more_wallets_available:
+        one: "มีอีก %{count} กระเป๋าที่นำเข้าได้"
+        other: "มีอีก %{count} กระเป๋าที่นำเข้าได้"
+    select_existing_account:
+      title: เชื่อมโยงบัญชี Coinbase
+      no_accounts_found: ไม่พบบัญชี Coinbase
+      wait_for_sync: รอให้ Coinbase ซิงค์เสร็จ
+      check_provider_health: ตรวจสอบว่าข้อมูลรับรอง API ของ Coinbase ถูกต้อง
+      balance: ยอดคงเหลือ
+      currently_linked_to: "เชื่อมโยงอยู่กับ: %{account_name}"
+      link: เชื่อมโยง
+      cancel: ยกเลิก
+    link_existing_account:
+      success: เชื่อมโยงกับบัญชี Coinbase เรียบร้อยแล้ว
+      errors:
+        only_manual: เชื่อมโยงกับ Coinbase ได้เฉพาะบัญชีแบบกรอกเอง
+        invalid_coinbase_account: บัญชี Coinbase ไม่ถูกต้อง
+  coinbase_item:
+    syncer:
+      checking_credentials: กำลังตรวจสอบข้อมูลรับรอง...
+      credentials_invalid: ข้อมูลรับรอง API ไม่ถูกต้อง โปรดตรวจสอบคีย์ API และ secret
+      importing_accounts: กำลังนำเข้าบัญชีจาก Coinbase...
+      checking_configuration: กำลังตรวจสอบการตั้งค่าบัญชี...
+      accounts_need_setup:
+        one: "%{count} บัญชีต้องตั้งค่า"
+        other: "%{count} บัญชีต้องตั้งค่า"
+      processing_accounts: กำลังประมวลผลข้อมูลบัญชี...
+      calculating_balances: กำลังคำนวณยอดคงเหลือ...

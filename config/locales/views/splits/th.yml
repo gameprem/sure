@@ -1,0 +1,50 @@
+---
+th:
+  splits:
+    new:
+      title: แบ่งรายการธุรกรรม
+      description: แบ่งรายการธุรกรรมนี้เป็นหลายรายการที่มีหมวดหมู่และจำนวนเงินต่างกัน
+      submit: แบ่งรายการธุรกรรม
+      cancel: ยกเลิก
+      add_row: เพิ่มส่วนแบ่ง
+      remove_row: ลบ
+      remaining: คงเหลือ
+      amounts_must_match: จำนวนเงินที่แบ่งต้องเท่ากับจำนวนเงินของรายการธุรกรรมเดิม
+      name_label: ชื่อ
+      name_placeholder: ชื่อส่วนแบ่ง
+      amount_label: จำนวนเงิน
+      category_label: หมวดหมู่
+      uncategorized: "(ไม่ได้จัดหมวดหมู่)"
+      merchant_label: ร้านค้า
+      no_merchant: "(ร้านค้าของรายการธุรกรรม)"
+      tags_label: แท็ก
+      original_name: "ชื่อ:"
+      original_date: "วันที่:"
+      original_amount: "จำนวนเงิน"
+      split_number: "ส่วนแบ่งที่ %{number}"
+    create:
+      success: แบ่งรายการธุรกรรมเรียบร้อยแล้ว
+      not_splittable: ไม่สามารถแบ่งรายการธุรกรรมนี้ได้
+    destroy:
+      success: ยกเลิกการแบ่งรายการธุรกรรมเรียบร้อยแล้ว
+    show:
+      title: รายการที่แบ่ง
+      description: รายการธุรกรรมนี้ถูกแบ่งเป็นรายการต่อไปนี้
+      button_title: แบ่งรายการธุรกรรม
+      button_description: แบ่งรายการธุรกรรมนี้เป็นหลายรายการที่มีหมวดหมู่และจำนวนเงินต่างกัน
+      button: แบ่ง
+      unsplit_title: ยกเลิกการแบ่งรายการธุรกรรม
+      unsplit_button: ยกเลิกการแบ่ง
+      unsplit_confirm: การดำเนินการนี้จะลบรายการที่แบ่งทั้งหมดและคืนรายการธุรกรรมเดิม
+    edit:
+      title: แก้ไขการแบ่ง
+      description: แก้ไขรายการที่แบ่งของรายการธุรกรรมนี้
+      submit: อัปเดตการแบ่ง
+      not_split: รายการธุรกรรมนี้ไม่ได้ถูกแบ่ง
+    update:
+      success: อัปเดตการแบ่งเรียบร้อยแล้ว
+    child:
+      title: ส่วนหนึ่งของการแบ่ง
+      description: รายการนี้เป็นส่วนหนึ่งของรายการธุรกรรมที่แบ่ง
+      edit_split: แก้ไขการแบ่ง
+      unsplit: ยกเลิกการแบ่ง

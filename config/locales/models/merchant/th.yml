@@ -1,0 +1,13 @@
+---
+th:
+  models:
+    merchant:
+      no_merchant: ไม่มีร้านค้า
+  activerecord:
+    errors:
+      models:
+        family_merchant:
+          attributes:
+            logo:
+              invalid_content_type: ต้องเป็นรูปภาพ JPEG, PNG หรือ WebP
+              invalid_file_size: ขนาดไฟล์ต้องน้อยกว่า %{max_megabytes}MB

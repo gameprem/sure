@@ -1,0 +1,13 @@
+---
+th:
+  activemodel:
+    errors:
+      models:
+        trend:
+          attributes:
+            current:
+              must_be_of_the_same_type_as_previous: ต้องเป็นชนิดเดียวกับค่าก่อนหน้า
+              must_be_of_type_money_numeric_or_nil: ต้องเป็นชนิด Money, Numeric หรือ nil
+            previous:
+              must_be_of_the_same_type_as_current: ต้องเป็นชนิดเดียวกับค่าปัจจุบัน
+              must_be_of_type_money_numeric_or_nil: ต้องเป็นชนิด Money, Numeric หรือ nil

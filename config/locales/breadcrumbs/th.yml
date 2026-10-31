@@ -1,0 +1,95 @@
+---
+th:
+  breadcrumbs:
+    account_sharings: การแชร์บัญชี
+    account_statements: คลังใบแจ้งยอด
+    accounts: บัญชี
+    ai_prompts: พรอมต์ AI
+    api_key: คีย์ API
+    api_keys: คีย์ API
+    appearance: การแสดงผล
+    appearances: การแสดงผล
+    bank_sync: การซิงค์ธนาคาร
+    binance_items: Binance
+    brex_items: Brex
+    budget_categories: หมวดหมู่งบประมาณ
+    budgets: งบประมาณ
+    categories: หมวดหมู่
+    categorize: จัดหมวดหมู่
+    changelog: มีอะไรใหม่
+    chats: แชต
+    classifier: ตัวจัดประเภท
+    coinbase_items: Coinbase
+    coinstats_items: CoinStats
+    credit_cards: บัตรเครดิต
+    cryptos: คริปโต
+    dashboard: แดชบอร์ด
+    debug: ดีบัก
+    debugs: ดีบัก
+    depositories: บัญชีเงินสด
+    enable_banking_items: Enable Banking
+    exports: การส่งออก
+    family_exports: การส่งออก
+    family_merchants: ร้านค้า
+    feedback: ข้อเสนอแนะ
+    guides: คู่มือ
+    holdings: สินทรัพย์ที่ถือครอง
+    home: หน้าหลัก
+    hostings: การโฮสต์เอง
+    ibkr_items: Interactive Brokers
+    impersonation_sessions: การสวมสิทธิ์ผู้ใช้
+    imports: การนำเข้า
+    indexa_capital_items: Indexa Capital
+    intro: แนะนำ
+    investments: การลงทุน
+    invitations: คำเชิญ
+    invite_codes: รหัสเชิญ
+    kraken_items: Kraken
+    llm_usage: การใช้งาน LLM
+    llm_usages: การใช้งาน LLM
+    loans: สินเชื่อ
+    lunchflow_items: Lunch Flow
+    mcp: เซิร์ฟเวอร์ MCP
+    merchants: ร้านค้า
+    mercury_items: Mercury
+    messages: ข้อความ
+    mfa: การยืนยันตัวตนสองขั้นตอน
+    monobank_items: Monobank
+    oidc_accounts: บัญชี SSO
+    onboardings: การเริ่มต้นใช้งาน
+    other_assets: สินทรัพย์อื่น ๆ
+    other_liabilities: หนี้สินอื่น ๆ
+    payments: การชำระเงิน
+    pending_duplicate_merges: ตรวจสอบรายการซ้ำ
+    plaid_items: Plaid
+    plan: แพ็กเกจ
+    preferences: การตั้งค่าส่วนตัว
+    profile: ข้อมูลโปรไฟล์
+    profiles: ข้อมูลโปรไฟล์
+    properties: อสังหาริมทรัพย์
+    providers: ผู้ให้บริการ
+    recurring_transactions: รายการประจำ
+    redbark_items: Redbark
+    registrations: สมัครสมาชิก
+    reports: รายงาน
+    rules: กฎ
+    securities: ความปลอดภัย
+    security: ความปลอดภัย
+    self_hosting: การโฮสต์เอง
+    sessions: เข้าสู่ระบบ
+    simplefin_items: SimpleFIN
+    snaptrade_items: SnapTrade
+    sophtron_items: Sophtron
+    splits: แบ่งรายการ
+    sso_identities: การเชื่อมต่อ SSO
+    sso_providers: ผู้ให้บริการ SSO
+    subscriptions: การสมัครใช้งาน
+    system_health: สถานะระบบ
+    tags: แท็ก
+    trades: การซื้อขาย
+    transactions: รายการธุรกรรม
+    transfer_matches: การจับคู่การโอน
+    transfers: การโอน
+    users: ผู้ใช้
+    valuations: การประเมินมูลค่า
+    vehicles: ยานพาหนะ

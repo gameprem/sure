@@ -1,0 +1,9 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        rule_import:
+          unsupported_resource_type: "ไม่รองรับประเภททรัพยากร: %{resource_type}"
+          invalid_json: "JSON ในเงื่อนไขหรือการดำเนินการไม่ถูกต้อง: %{message}"
+          min_actions: "กฎต้องมีอย่างน้อยหนึ่งการดำเนินการ"

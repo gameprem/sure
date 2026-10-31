@@ -1,0 +1,9 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        entry:
+          attributes:
+            base:
+              invalid_sell_quantity: ไม่สามารถขาย %{ticker} จำนวน %{sell_qty} หุ้นได้ เนื่องจากคุณมีเพียง %{current_qty} หุ้น

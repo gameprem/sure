@@ -1,0 +1,178 @@
+---
+th:
+  simplefin_items:
+    new:
+      title: เชื่อมต่อ SimpleFIN
+      setup_token: โทเคนตั้งค่า
+      setup_token_placeholder: วางโทเคนตั้งค่า SimpleFIN ของคุณ
+      connect: เชื่อมต่อ
+      cancel: ยกเลิก
+    create:
+      success: เพิ่มการเชื่อมต่อ SimpleFIN เรียบร้อยแล้ว! บัญชีของคุณจะปรากฏในไม่ช้าเมื่อซิงค์เบื้องหลัง
+      errors:
+        blank_token: โปรดกรอกโทเคนตั้งค่า SimpleFIN
+        invalid_token: โทเคนตั้งค่าไม่ถูกต้อง โปรดตรวจสอบว่าคุณคัดลอกโทเคนครบถ้วนจาก SimpleFIN Bridge
+        token_compromised: โทเคนตั้งค่าอาจถูกเปิดเผย หมดอายุ หรือถูกใช้ไปแล้ว โปรดสร้างโทเคนใหม่
+        create_failed: "เชื่อมต่อไม่สำเร็จ: %{message}"
+        unexpected: เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดลองอีกครั้ง
+    destroy:
+      success: การเชื่อมต่อ SimpleFIN จะถูกนำออก
+    update:
+      success: อัปเดตการเชื่อมต่อ SimpleFIN เรียบร้อยแล้ว! กำลังเชื่อมต่อบัญชีของคุณใหม่
+      errors:
+        blank_token: โปรดกรอกโทเคนตั้งค่า SimpleFIN
+        invalid_token: โทเคนตั้งค่าไม่ถูกต้อง โปรดตรวจสอบว่าคุณคัดลอกโทเคนครบถ้วนจาก SimpleFIN Bridge
+        token_compromised: โทเคนตั้งค่าอาจถูกเปิดเผย หมดอายุ หรือถูกใช้ไปแล้ว โปรดสร้างโทเคนใหม่
+        update_failed: "อัปเดตการเชื่อมต่อไม่สำเร็จ: %{message}"
+        unexpected: เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดลองอีกครั้ง
+    edit:
+      setup_token:
+        label: "โทเคนตั้งค่า SimpleFIN:"
+        placeholder: "วางโทเคนตั้งค่า SimpleFIN ของคุณที่นี่..."
+        help_text: "โทเคนควรเป็นสตริงยาวที่ขึ้นต้นด้วยตัวอักษรและตัวเลข"
+      title: อัปเดตการเชื่อมต่อ SimpleFIN
+      header_subtitle: รับโทเคนตั้งค่าใหม่เพื่อเชื่อมต่อบัญชี SimpleFIN ของคุณอีกครั้ง
+      connection_needs_update: "การเชื่อมต่อ SimpleFIN ของคุณต้องอัปเดต:"
+      step_1_html: "ไปที่ <a href=\"https://bridge.simplefin.org/simplefin/create\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-link hover:text-link underline\">SimpleFIN Bridge</a> เพื่อสร้างโทเคนตั้งค่าใหม่"
+      step_2: คัดลอกโทเคนแล้ววางด้านล่าง
+      step_3: "คลิก \"อัปเดต\" เพื่อกู้คืนการเข้าถึง"
+      update: อัปเดต
+      cancel: ยกเลิก
+    setup_accounts:
+      title: ตั้งค่าบัญชี SimpleFIN ของคุณ
+      header_subtitle: เลือกประเภทบัญชีที่ถูกต้องสำหรับบัญชีที่นำเข้า
+      choose_account_type: "เลือกประเภทบัญชีที่ถูกต้องสำหรับแต่ละบัญชี SimpleFIN:"
+      account_type_checking_savings: กระแสรายวันหรือออมทรัพย์
+      account_type_checking_savings_desc: บัญชีธนาคารทั่วไป
+      account_type_credit_card: บัตรเครดิต
+      account_type_credit_card_desc: บัญชีบัตรเครดิต
+      account_type_investment: การลงทุน
+      account_type_investment_desc: "บัญชีนายหน้า 401(k) IRA"
+      account_type_loan: สินเชื่อหรือสินเชื่อบ้าน
+      account_type_loan_desc: บัญชีหนี้
+      account_type_other_asset: สินทรัพย์อื่น ๆ
+      account_type_other_asset_desc: อื่น ๆ ทั้งหมด
+      transaction_history_title: "ประวัติรายการธุรกรรม:"
+      transaction_history_description_html: "SimpleFIN มักให้ประวัติรายการธุรกรรม <strong>60-90 วัน</strong> ขึ้นอยู่กับธนาคารของคุณ หลังตั้งค่าครั้งแรก รายการธุรกรรมใหม่จะซิงค์อัตโนมัติต่อไป ข้อมูลย้อนหลังที่มีขึ้นอยู่กับสถาบันและประเภทบัญชี"
+      account_type_label: "ประเภทบัญชี:"
+      create_accounts: สร้างบัญชี
+      creating_accounts: กำลังสร้างบัญชี...
+      cancel: ยกเลิก
+      account_card:
+        balance: "ยอดคงเหลือ"
+      activity:
+        recent:
+          one: "1 รายการธุรกรรม • ล่าสุด %{when}"
+          other: "%{count} รายการธุรกรรม • ล่าสุด %{when}"
+        dormant: "ไม่มีกิจกรรมใน %{days} วัน"
+        empty: "ยังไม่ได้นำเข้ารายการธุรกรรม"
+        likely_closed: "ไม่มีกิจกรรมล่าสุดและยอดคงเหลือเป็นศูนย์ — อาจเป็นบัตรที่ถูกปิดหรือเปลี่ยนแล้ว"
+        today: "วันนี้"
+        yesterday: "เมื่อวาน"
+        days_ago:
+          one: "1 วันที่แล้ว"
+          other: "%{count} วันที่แล้ว"
+      stale_accounts:
+        title: "บัญชีที่ไม่อยู่ใน SimpleFIN อีกต่อไป"
+        description: "บัญชีเหล่านี้มีอยู่ในฐานข้อมูลของคุณแต่ SimpleFIN ไม่ได้ให้อีกต่อไป อาจเกิดขึ้นเมื่อการตั้งค่าบัญชีเปลี่ยนที่ต้นทาง"
+        action_prompt: "คุณต้องการทำอย่างไร?"
+        action_delete: "ลบบัญชีและรายการธุรกรรมทั้งหมด"
+        action_move: "ย้ายรายการธุรกรรมไปที่:"
+        action_skip: "ข้ามไปก่อน"
+        transaction_count:
+          one: "%{count} รายการธุรกรรม"
+          other: "%{count} รายการธุรกรรม"
+    complete_account_setup:
+      all_skipped: "ข้ามบัญชีทั้งหมด ไม่ได้สร้างบัญชี"
+      no_accounts: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      success:
+        one: "สร้างบัญชี SimpleFIN %{count} บัญชีสำเร็จ! กำลังนำเข้ารายการธุรกรรมและสินทรัพย์ที่ถือครองของคุณเบื้องหลัง"
+        other: "สร้างบัญชี SimpleFIN %{count} บัญชีสำเร็จ! กำลังนำเข้ารายการธุรกรรมและสินทรัพย์ที่ถือครองของคุณเบื้องหลัง"
+      stale_accounts_processed: "บัญชีเก่า: ลบ %{deleted} ย้าย %{moved}"
+      stale_accounts_errors:
+        one: "การดำเนินการกับบัญชีเก่า %{count} รายการล้มเหลว ตรวจสอบบันทึกเพื่อดูรายละเอียด"
+        other: "การดำเนินการกับบัญชีเก่า %{count} รายการล้มเหลว ตรวจสอบบันทึกเพื่อดูรายละเอียด"
+    sync_status:
+      no_accounts: ไม่พบบัญชี
+      synced:
+        one: "ซิงค์ %{count} บัญชีแล้ว"
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      partial_setup:
+        one: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+        other: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    institution_summary:
+      none: ไม่มีสถาบันที่เชื่อมต่อ
+      count:
+        one: "%{count} สถาบัน"
+        other: "%{count} สถาบัน"
+    rate_limited:
+      daily_refresh: "คุณถึงขีดจำกัดการรีเฟรชรายวันของ SimpleFIN แล้ว โปรดลองอีกครั้งหลัง bridge รีเฟรช (สูงสุด 24 ชั่วโมง)"
+    stale_sync:
+      last_successful: "ซิงค์สำเร็จล่าสุดเมื่อ %{count} วันที่แล้ว การเชื่อมต่อ SimpleFIN ของคุณอาจต้องตรวจสอบ"
+      no_transactions: "ไม่มีรายการธุรกรรมใหม่ใน %{count} วัน ตรวจสอบแดชบอร์ด SimpleFIN ของคุณเพื่อให้แน่ใจว่าการเชื่อมต่อธนาคารยังใช้งานอยู่"
+    simplefin_item:
+      add_new: เพิ่มการเชื่อมต่อใหม่
+      confirm_accept: ลบการเชื่อมต่อ
+      confirm_body: การดำเนินการนี้จะลบบัญชีทั้งหมดในกลุ่มนี้และข้อมูลที่เกี่ยวข้องทั้งหมดอย่างถาวร
+      confirm_title: ลบการเชื่อมต่อ SimpleFIN?
+      delete: ลบ
+      deletion_in_progress: "(กำลังลบ...)"
+      error: เกิดข้อผิดพลาดขณะซิงค์ข้อมูล
+      no_accounts_description: การเชื่อมต่อนี้ยังไม่มีบัญชีที่ซิงค์
+      no_accounts_title: ไม่พบบัญชี
+      requires_update: เชื่อมต่อใหม่
+      setup_needed: บัญชีใหม่พร้อมตั้งค่า
+      setup_description: เลือกประเภทบัญชีสำหรับบัญชี SimpleFIN ที่เพิ่งนำเข้า
+      setup_action: ตั้งค่าบัญชีใหม่
+      setup_accounts_menu: ตั้งค่าบัญชี
+      more_accounts_available:
+        one: "มีอีก %{count} บัญชีที่ตั้งค่าได้"
+        other: "มีอีก %{count} บัญชีที่ตั้งค่าได้"
+      accounts_skipped_tooltip: "บางบัญชีถูกข้ามเนื่องจากข้อผิดพลาดระหว่างการซิงค์"
+      accounts_skipped_label: "ข้าม: %{count}"
+      rate_limited_ago: "ถูกจำกัดอัตรา (%{time} ที่แล้ว)"
+      rate_limited_recently: "เพิ่งถูกจำกัดอัตรา"
+      status: ซิงค์ล่าสุด %{timestamp} ที่แล้ว
+      status_never: ไม่เคยซิงค์
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว • %{summary}"
+      syncing: กำลังซิงค์...
+      update: อัปเดต
+      stale_pending_note: "(ไม่รวมในงบประมาณ)"
+      stale_pending_accounts: "ใน: %{accounts}"
+      reconciled_details_note: "(ดูสรุปการซิงค์เพื่อดูรายละเอียด)"
+      duplicate_accounts_skipped: "บางบัญชีถูกข้ามเพราะซ้ำ — ใช้ 'เชื่อมโยงบัญชีที่มีอยู่' เพื่อรวม"
+    select_existing_account:
+      title: "เชื่อมโยง %{account_name} กับ SimpleFIN"
+      description: เลือกบัญชี SimpleFIN เพื่อเชื่อมโยงกับบัญชีที่มีอยู่ของคุณ
+      cancel: ยกเลิก
+      link_account: เชื่อมโยงบัญชี
+      no_accounts_found: "ไม่พบบัญชี SimpleFIN สำหรับ%{moniker}นี้"
+      wait_for_sync: หากเพิ่งเชื่อมต่อหรือซิงค์ ให้ลองอีกครั้งหลังซิงค์เสร็จ
+      check_provider_health: ตรวจสอบว่าการเชื่อมต่อ SimpleFIN ของคุณทำงานปกติที่ การตั้งค่า → ผู้ให้บริการ
+      unlink_to_move: หากต้องการย้ายการเชื่อมโยง ให้ยกเลิกการเชื่อมโยงจากเมนูการดำเนินการของบัญชีก่อน
+      all_accounts_already_linked: บัญชี SimpleFIN ทั้งหมดดูเหมือนจะเชื่อมโยงแล้ว
+      currently_linked_to: "เชื่อมโยงอยู่กับ: %{account_name}"
+
+    link_existing_account:
+      success: เชื่อมโยงบัญชีกับ SimpleFIN เรียบร้อยแล้ว
+      errors:
+        only_manual: เชื่อมโยงได้เฉพาะบัญชีแบบกรอกเอง
+        different_provider: บัญชีนี้เชื่อมโยงกับผู้ให้บริการอื่นอยู่ ยกเลิกการเชื่อมโยงจากผู้ให้บริการนั้นก่อน แล้วจึงเชื่อมโยงกับ SimpleFIN
+        invalid_simplefin_account: เลือกบัญชี SimpleFIN ไม่ถูกต้อง
+    dismiss_replacement_suggestion:
+      dismissed: ปิดข้อเสนอแนะการแทนที่แล้ว
+    replacement_prompt:
+      title: "บัตร %{institution} ของคุณอาจถูกเปลี่ยนแล้ว"
+      description: "“%{account_name}” เชื่อมโยงกับ “%{old_name}” ซึ่งไม่มีกิจกรรมล่าสุดและยอดคงเหลือเป็นศูนย์ ขณะนี้มีบัตรใหม่ “%{new_name}” ใช้งานอยู่ที่สถาบันเดียวกัน เชื่อมโยงใหม่เพื่อคงประวัติของคุณไว้"
+      relink: เชื่อมโยงกับบัตรใหม่
+      confirm_title: เชื่อมโยงกับบัตรใหม่?
+      confirm_body: "“%{account_name}” จะถูกเชื่อมโยงกับ “%{new_name}” ประวัติรายการธุรกรรมของคุณคงอยู่ รายการธุรกรรมในอนาคตมาจากบัตรใหม่"
+      dismiss_aria: ปิดข้อเสนอแนะการแทนที่
+    reconciled_status:
+      message:
+        one: "กระทบยอดรายการที่รอดำเนินการซ้ำ %{count} รายการแล้ว"
+        other: "กระทบยอดรายการที่รอดำเนินการซ้ำ %{count} รายการแล้ว"
+    stale_pending_status:
+      message:
+        one: "มี %{count} รายการที่รอดำเนินการเก่ากว่า %{days} วัน"
+        other: "มี %{count} รายการที่รอดำเนินการเก่ากว่า %{days} วัน"

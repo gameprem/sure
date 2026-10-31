@@ -1,0 +1,7 @@
+---
+th:
+  settings:
+    sso_identities:
+      destroy:
+        cannot_unlink_last: ไม่สามารถยกเลิกการเชื่อมโยงตัวตนสุดท้ายได้
+        success: สำเร็จ

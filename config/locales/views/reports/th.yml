@@ -1,0 +1,273 @@
+---
+th:
+  reports:
+    index:
+      title: รายงาน
+      subtitle: ข้อมูลเชิงลึกครบถ้วนเกี่ยวกับสุขภาพทางการเงินของคุณ
+      export: ส่งออก CSV
+      print_report: พิมพ์รายงาน
+      sections_aria: ส่วนต่าง ๆ ของรายงาน
+      toggle_section: "สลับการแสดงส่วนนี้"
+      periods:
+        monthly: รายเดือน
+        quarterly: รายไตรมาส
+        ytd: ตั้งแต่ต้นปีถึงปัจจุบัน
+        last_6_months: 6 เดือนที่ผ่านมา
+        custom: กำหนดช่วงเอง
+      date_range:
+        from: ตั้งแต่
+        to: ถึง
+      showing_period: "แสดงข้อมูลตั้งแต่ %{start} ถึง %{end}"
+      previous_period: "ช่วงก่อนหน้า"
+      next_period: "ช่วงถัดไป"
+      shortcut_hint: "%{action} (%{key})"
+      today: "วันนี้"
+      period_label:
+        quarterly: "ไตรมาส %{quarter} ปี %{year}"
+        ytd: "ต้นปีถึงปัจจุบัน %{year}"
+        past_year: "%{year}"
+        last_6_months: "%{start} – %{end}"
+      period_picker:
+        quarter: "ไตรมาส %{quarter} ปี %{year}"
+        ytd: "ต้นปีถึงปัจจุบัน %{year}"
+      previous_year: "ปีก่อนหน้า"
+      next_year: "ปีถัดไป"
+      previous_decade: "ทศวรรษก่อนหน้า"
+      next_decade: "ทศวรรษถัดไป"
+    invalid_date_range: "วันสิ้นสุดต้องไม่อยู่ก่อนวันเริ่มต้น ระบบสลับวันที่ให้แล้ว"
+    summary:
+      total_income: รายรับรวม
+      total_expenses: รายจ่ายรวม
+      net_savings: เงินออมสุทธิ
+      budget_performance: ผลการใช้งบประมาณ
+      vs_previous: เทียบกับช่วงก่อนหน้า
+      income_minus_expenses: รายรับลบรายจ่าย
+      of_budget_used: ของงบประมาณที่ใช้ไป
+      no_budget_data: ไม่มีข้อมูลงบประมาณสำหรับช่วงนี้
+    budget_performance:
+      title: ผลการใช้งบประมาณ
+      spent: ใช้ไปแล้ว
+      budgeted: ตั้งงบไว้
+      remaining: คงเหลือ
+      over_by: เกินไป
+      shared: ใช้ร่วม
+      suggested_daily: "แนะนำ %{amount} ต่อวัน สำหรับ %{days} วันที่เหลือ"
+      no_budgets: ไม่ได้ตั้งหมวดหมู่งบประมาณสำหรับเดือนนี้
+      status:
+        good: เป็นไปตามแผน
+        warning: ใกล้ถึงขีดจำกัด
+        over: เกินงบ
+    trends:
+      title: แนวโน้มและข้อมูลเชิงลึก
+      monthly_breakdown: สรุปรายเดือน
+      month: เดือน
+      income: รายรับ
+      expenses: รายจ่าย
+      net: สุทธิ
+      savings_rate: อัตราการออม
+      current: ปัจจุบัน
+      avg_monthly_income: รายรับเฉลี่ยต่อเดือน
+      avg_monthly_expenses: รายจ่ายเฉลี่ยต่อเดือน
+      avg_monthly_savings: เงินออมเฉลี่ยต่อเดือน
+      no_data: ไม่มีข้อมูลแนวโน้ม
+      spending_patterns: รูปแบบการใช้จ่าย
+      weekday_spending: การใช้จ่ายวันธรรมดา
+      weekend_spending: การใช้จ่ายวันหยุดสุดสัปดาห์
+      total: รวม
+      avg_per_transaction: เฉลี่ยต่อรายการธุรกรรม
+      transactions: รายการธุรกรรม
+      insight_title: ข้อมูลเชิงลึก
+      insight_higher_weekend: "คุณใช้จ่ายต่อรายการธุรกรรมในวันหยุดสุดสัปดาห์มากกว่าวันธรรมดา %{percent}%"
+      insight_higher_weekday: "คุณใช้จ่ายต่อรายการธุรกรรมในวันธรรมดามากกว่าวันหยุดสุดสัปดาห์ %{percent}%"
+      insight_similar: "การใช้จ่ายต่อรายการธุรกรรมของคุณใกล้เคียงกันทั้งวันธรรมดาและวันหยุดสุดสัปดาห์"
+      no_spending_data: ไม่มีข้อมูลการใช้จ่ายสำหรับช่วงนี้
+    empty_state:
+      title: ไม่มีข้อมูล
+      description: เริ่มติดตามการเงินของคุณด้วยการเพิ่มรายการธุรกรรมหรือเชื่อมต่อบัญชีเพื่อดูรายงานฉบับสมบูรณ์
+      add_transaction: เพิ่มรายการธุรกรรม
+      add_account: เพิ่มบัญชี
+    transactions_breakdown:
+      title: สรุปกิจกรรม
+      no_transactions: ไม่พบกิจกรรมสำหรับช่วงเวลาและตัวกรองที่เลือก
+      filters:
+        title: ตัวกรอง
+        category: หมวดหมู่
+        account: บัญชี
+        tag: แท็ก
+        amount_min: จำนวนเงินต่ำสุด
+        amount_max: จำนวนเงินสูงสุด
+        date_range: ช่วงวันที่
+        all_categories: ทุกหมวดหมู่
+        all_accounts: ทุกบัญชี
+        all_tags: ทุกแท็ก
+        apply: ใช้ตัวกรอง
+        clear: ล้างตัวกรอง
+      sort:
+        label: เรียงตาม
+        date_desc: วันที่ (ใหม่สุด)
+        amount_desc: จำนวนเงิน (มากไปน้อย)
+        amount_asc: จำนวนเงิน (น้อยไปมาก)
+      export:
+        label: ส่งออก
+        csv: CSV
+        excel: Excel
+        pdf: PDF
+        google_sheets: เปิดใน Google Sheets
+      table:
+        category: หมวดหมู่
+        amount: จำนวนเงิน
+        type: ประเภท
+        expense: รายจ่าย
+        income: รายรับ
+        uncategorized: ไม่ได้จัดหมวดหมู่
+        entries:
+          one: "%{count} รายการ"
+          other: "%{count} รายการ"
+        percentage: "% ของทั้งหมด"
+      pagination:
+        showing:
+          one: แสดง %{count} รายการ
+          other: แสดง %{count} รายการ
+        previous: ก่อนหน้า
+        next: ถัดไป
+    net_worth:
+      title: มูลค่าสุทธิ
+      current_net_worth: มูลค่าสุทธิปัจจุบัน
+      period_change: การเปลี่ยนแปลงในช่วงเวลา
+      assets_vs_liabilities: สินทรัพย์เทียบกับหนี้สิน
+      total_assets: สินทรัพย์
+      total_liabilities: หนี้สิน
+      no_assets: ไม่มีสินทรัพย์
+      no_liabilities: ไม่มีหนี้สิน
+    spending_vs_normal:
+      title: การใช้จ่ายเทียบกับปกติ
+      summary_html: "ใช้จ่ายไป %{total} ในช่วงนี้ ค่าปกติของช่วงที่ยาวเท่านี้คือ %{normal} อิงจาก %{baseline_start} ถึง %{baseline_end}"
+      summary_so_far_html: "ใช้จ่ายไปแล้ว %{total} ค่าปกติสำหรับจำนวนวันเท่านี้คือ %{normal} อิงจาก %{baseline_start} ถึง %{baseline_end}"
+      no_history_html: "ใช้จ่ายไป %{total} ในช่วงนี้ ยังมีประวัติก่อนหน้าไม่พอที่จะบอกว่าอะไรคือปกติ"
+      no_history_short: ยังมีประวัติก่อนหน้าไม่พอที่จะเปรียบเทียบ
+      no_spending: ไม่มีการใช้จ่ายในช่วงนี้
+      no_changes: การใช้จ่ายเป็นปกติในทุกหมวดหมู่
+      treemap_title: เงินไปอยู่ที่ไหน
+      changes_title: อะไรเปลี่ยนไป
+      direct: "%{category} (ไม่มีหมวดหมู่ย่อย)"
+      tooltip:
+        path: "%{parent} › %{category}"
+        total: "%{category}: %{amount}"
+        normal: "ปกติ: %{amount}"
+        more: "มากกว่าปกติ %{amount} (%{percent})"
+        less: "น้อยกว่าปกติ %{amount} (%{percent})"
+        more_no_percent: "มากกว่าปกติ %{amount}"
+        less_no_percent: "น้อยกว่าปกติ %{amount}"
+        no_normal: ไม่มีประวัติก่อนหน้าให้เปรียบเทียบ
+        open: เลือกเพื่อดูรายการธุรกรรมเหล่านี้
+      legend:
+        less: น้อยกว่า 50–100%
+        slightly_less: น้อยกว่า 15–50%
+        normal: ใกล้เคียงปกติ
+        slightly_more: มากกว่า 15–50%
+        more: มากกว่า 50–100%
+        much_more: มากกว่า 100%+
+    investment_performance:
+      title: ผลการลงทุน
+      portfolio_value: มูลค่าพอร์ต
+      total_return: ผลตอบแทนรวม
+      period_return: ผลตอบแทนในช่วงเวลา
+      contributions: เงินสมทบในช่วงเวลา
+      withdrawals: การถอนในช่วงเวลา
+      top_holdings: สินทรัพย์ที่ถือครองสูงสุด
+      holding: สินทรัพย์ที่ถือ
+      weight: สัดส่วน
+      value: มูลค่า
+      return: ผลตอบแทน
+      accounts: บัญชีลงทุน
+      gains_by_tax_treatment: กำไรตามการปฏิบัติทางภาษี
+      unrealized_gains: กำไรที่ยังไม่รับรู้
+      realized_gains: กำไรที่รับรู้แล้ว
+      total_gains: กำไรรวม
+      taxable_realized_note: กำไรเหล่านี้อาจต้องเสียภาษี
+      no_data: "-"
+      view_details: ดูรายละเอียด
+      holdings_count:
+        one: "ถือครอง %{count} รายการ"
+        other: "ถือครอง %{count} รายการ"
+      sells_count:
+        one: "ขาย %{count} ครั้ง"
+        other: "ขาย %{count} ครั้ง"
+      holdings: สินทรัพย์ที่ถือครอง
+      sell_trades: การขาย
+      and_more: "+อีก %{count}"
+    investment_flows:
+      title: กระแสเงินลงทุน
+      description: ติดตามเงินที่ไหลเข้าและออกจากบัญชีลงทุนของคุณผ่านเงินสมทบและการถอน
+      contributions: เงินสมทบ
+      contributions_description: เงินที่เพิ่มเข้าการลงทุน
+      withdrawals: การถอน
+      withdrawals_description: เงินที่ถอนจากการลงทุน
+      net_flow: กระแสสุทธิ
+      net_flow_description: การเปลี่ยนแปลงสุทธิรวม
+    google_sheets_instructions:
+      title_no_key: "ต้องมีคีย์ API"
+      need_key: หากต้องการนำเข้าข้อมูลไปยัง Google Sheets คุณต้องมีคีย์ API
+      step1: "ไปที่ การตั้งค่า → คีย์ API"
+      step2: "สร้างคีย์ API ใหม่ที่มีสิทธิ์ \"read\""
+      step3: คัดลอกคีย์ API
+      step4: "เพิ่มลงใน URL นี้ในรูปแบบ: &api_key=YOUR_KEY"
+      example: ตัวอย่าง
+      then_use: จากนั้นใช้ URL เต็มกับ =IMPORTDATA() ใน Google Sheets
+      go_to_api_keys: ไปที่คีย์ API
+      close: เข้าใจแล้ว
+    print:
+      document_title: รายงานการเงิน
+      title: รายงานการเงิน
+      generated_on: "สร้างเมื่อ %{date}"
+      # Summary section
+      summary:
+        title: สรุป
+        income: รายรับ
+        expenses: รายจ่าย
+        net_savings: เงินออมสุทธิ
+        budget: งบประมาณ
+        vs_prior: "%{percent}% เทียบกับก่อนหน้า"
+        of_income: "%{percent}% ของรายรับ"
+        used: ใช้ไป
+      # Net Worth section
+      net_worth:
+        title: มูลค่าสุทธิ
+        current_balance: ยอดคงเหลือปัจจุบัน
+        this_period: ช่วงเวลานี้
+        assets: สินทรัพย์
+        liabilities: หนี้สิน
+        no_liabilities: ไม่มีหนี้สิน
+      # Monthly Trends section
+      trends:
+        title: แนวโน้มรายเดือน
+        month: เดือน
+        income: รายรับ
+        expenses: รายจ่าย
+        net: สุทธิ
+        savings_rate: อัตราการออม
+        average: ค่าเฉลี่ย
+        current_month_note: "* เดือนปัจจุบัน (ข้อมูลบางส่วน)"
+      # Investments section
+      investments:
+        title: การลงทุน
+        portfolio_value: มูลค่าพอร์ต
+        total_return: ผลตอบแทนรวม
+        period_return: ผลตอบแทนในช่วงเวลา
+        contributions: เงินสมทบ
+        withdrawals: การถอน
+        this_period: ช่วงเวลานี้
+        top_holdings: สินทรัพย์ที่ถือครองสูงสุด
+        holding: สินทรัพย์ที่ถือ
+        weight: สัดส่วน
+        value: มูลค่า
+        return: ผลตอบแทน
+      # Spending by Category section
+      spending:
+        title: การใช้จ่ายตามหมวดหมู่
+        income: รายรับ
+        expenses: รายจ่าย
+        category: หมวดหมู่
+        amount: จำนวนเงิน
+        percent: "%"
+        more_categories: "+ อีก %{count} หมวดหมู่"

@@ -1,0 +1,25 @@
+---
+th:
+  impersonation_sessions:
+    approve:
+      success: อนุมัติคำขอแล้ว
+    complete:
+      success: เซสชันเสร็จสมบูรณ์
+    create:
+      success: ส่งคำขอไปยังผู้ใช้แล้ว กำลังรอการอนุมัติ
+    join:
+      success: เข้าร่วมเซสชันแล้ว
+    leave:
+      success: ออกจากเซสชันแล้ว
+    reject:
+      success: ปฏิเสธคำขอแล้ว
+    super_admin_bar:
+      super_admin: ซูเปอร์แอดมิน
+      jobs: งานเบื้องหลัง
+      impersonating: กำลังสวมสิทธิ์
+      leave: ออก
+      terminate: ยุติ
+      join_a_session: เข้าร่วมเซสชัน
+      join: เข้าร่วม
+      uuid_placeholder: UUID
+      request_impersonation: ขอสวมสิทธิ์

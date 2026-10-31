@@ -1,0 +1,432 @@
+---
+th:
+  admin:
+    system_health:
+      hosted_usage:
+        loading: "กำลังโหลดการใช้งานแบบโฮสต์…"
+        title: "การใช้งานแบบโฮสต์"
+        snapshot: "สแนปช็อตฐานข้อมูลแบบอ่านอย่างเดียว ณ %{time}"
+        summary:
+          trial_households_count: "ครัวเรือนที่ทดลองใช้ (30 วันที่ผ่านมา)"
+          trial_members_count: "บัญชีสมาชิกที่ทดลองใช้ในปัจจุบัน"
+          trials_expiring_soon_count: "การทดลองใช้ที่จะหมดอายุใน 7 วันข้างหน้า"
+          cleanup_eligible_count: "ครัวเรือนที่เข้าเกณฑ์ล้างข้อมูล"
+          active_supporter_households_count: "ครัวเรือนผู้สนับสนุนที่ใช้งานอยู่ (ในเครื่อง)"
+          supporter_subscription_count: "แถวการสมัครที่เชื่อมกับ Stripe"
+        summary_help: "ยอดรวมการทดลองใช้ครอบคลุมการสมัครที่บันทึกใน 30 วันที่ผ่านมา ยอดรวมการทดลองใช้ที่ใกล้หมดอายุ การล้างข้อมูล และผู้สนับสนุนครอบคลุมทุกแถวปัจจุบันที่ตรงกัน โดยไม่จำกัดขนาดตาราง"
+        limitations_title: "ตัวเลขเหล่านี้บอกอะไรเราได้"
+        limitations: "ตารางปัจจุบันไม่เก็บประวัติการทดลองใช้ การชำระเงิน หรือกิจกรรมเซสชันทั้งหมด การสร้างการสมัครอาจสะท้อนการนำเข้า บัญชีสมาชิกไม่ได้ยืนยันว่าเป็นคนที่ไม่ซ้ำกัน มุมมองนี้ไม่เปลี่ยนข้อมูลครัวเรือนหรือการสมัครใดๆ การรีเซ็ตเดโมที่ใช้ร่วมกันลบครัวเรือนและเซสชันเก่า จึงสร้างประวัติผู้เยี่ยมชมขึ้นใหม่ไม่ได้"
+        trials:
+          title: "ครัวเรือนที่ทดลองใช้ล่าสุด"
+          description: "การสมัครที่บันทึกตั้งแต่ %{date} ซึ่งยังมีวันสิ้นสุดการทดลองใช้ รวมการทดลองใช้ที่แปลงเป็นแบบชำระเงินแล้ว แสดงสูงสุด %{limit} ครัวเรือน"
+          sessions_help: "เซสชันคือบันทึกการเข้าสู่ระบบที่เก็บไว้ของผู้ใช้ที่เปิดใช้งาน ไม่ใช่ผู้ใช้ที่ออนไลน์อยู่หรือการเข้าชม การออกจากระบบจะลบบันทึกหนึ่งรายการ เวลาสร้างล่าสุดไม่ใช่เวลาที่เห็นล่าสุด"
+          empty: "ไม่มีครัวเรือนที่ทดลองใช้ที่บันทึกไว้ในช่วงนี้"
+        cleanup:
+          title: "คุณสมบัติการล้างข้อมูล"
+          description: "ตรงกับขอบเขตการล้างข้อมูลที่มีอยู่: การสมัครที่หยุดชั่วคราวหรือกำลังทดลองใช้สิ้นสุดมากกว่า 14 วันก่อน หรือไม่มีการสมัครและครัวเรือนที่เก่ากว่า 45 + 14 วัน แสดงสูงสุด %{limit} ครัวเรือน"
+          eligibility_help: "การเข้าสู่ระบบล่าสุดไม่ได้ป้องกันการตรงเงื่อนไข การเข้าเกณฑ์ไม่ได้ยืนยันการลบ 90 วันคือระยะเก็บถาวร ไม่ใช่เกณฑ์ล้างข้อมูลการทดลองใช้"
+          disabled: "ปิดการล้างข้อมูลการทดลองใช้ตามกำหนดนอกโหมดที่จัดการ เหล่านี้เป็นเพียงรายการที่ตรงขอบเขต"
+          empty: "ไม่มีครัวเรือนที่ตรงกับขอบเขตการล้างข้อมูล"
+          reasons:
+            expired_trial_grace_elapsed: "การทดลองใช้สิ้นสุด; พ้นช่วงผ่อนผัน 14 วันแล้ว"
+            no_subscription_grace_elapsed: "ไม่มีการสมัคร; ผ่านไป 45 + 14 วันแล้ว"
+        supporters:
+          title: "สถานะผู้สนับสนุนในเครื่อง"
+          description: "แถวการสมัครในเครื่องปัจจุบันที่มี ID ลูกค้าและการสมัครรูปแบบ Stripe; ไม่รวมการสมัครเดโมสังเคราะห์ สถานะไม่ได้ยืนยันการรับชำระเงินหรือวันชำระครั้งแรก ไม่มีการส่งคำขอไปยัง Stripe"
+          empty: "ไม่มีแถวการสมัครที่เชื่อมกับ Stripe"
+        columns:
+          household: "ID ครัวเรือน"
+          recorded_at: "บันทึกการสมัครเมื่อ"
+          trial_ends_at: "การทดลองใช้สิ้นสุด"
+          status: "สถานะปัจจุบัน"
+          members: "บัญชีสมาชิก"
+          retained_sessions: "เซสชันเข้าสู่ระบบที่เก็บไว้"
+          recent_sessions: "เซสชันที่เก็บไว้ซึ่งสร้างใน 30 วันที่ผ่านมา"
+          latest_session: "การเข้าสู่ระบบที่เก็บไว้ล่าสุด"
+          cleanup_eligible: "เข้าเกณฑ์ล้างข้อมูล"
+          cleanup_reason: "เหตุผล"
+          subscription_rows: "แถวการสมัคร"
+        statuses:
+          unknown: "ไม่ทราบ"
+          incomplete: "ไม่สมบูรณ์"
+          incomplete_expired: "ไม่สมบูรณ์ หมดอายุ"
+          trialing: "กำลังทดลองใช้"
+          active: "ใช้งานอยู่"
+          past_due: "เลยกำหนดชำระ"
+          canceled: "ยกเลิกแล้ว"
+          unpaid: "ยังไม่ชำระ"
+          paused: "หยุดชั่วคราว"
+          no_subscription: "ไม่มีการสมัคร"
+        not_recorded: "ไม่ได้บันทึก"
+        eligible: "เข้าเกณฑ์"
+        not_eligible: "ไม่เข้าเกณฑ์"
+        synthetic_demo: "เดโมสังเคราะห์"
+      push_notifications:
+        send_test: "ส่งการแจ้งเตือนพุชทดสอบ"
+        queueing: "กำลังจัดคิว…"
+        title: "การแจ้งเตือนพุช"
+        requested_at: "ขอการทดสอบล่าสุดเมื่อ %{time}"
+        result_help: "การที่ APNs รับไม่ได้ยืนยันว่าส่งถึงอุปกรณ์ของคุณ รีเฟรชเพื่อดูผลจาก worker ผลลัพธ์เก็บไว้ 24 ชั่วโมง"
+        results_label: "ผลการทดสอบ"
+        device: "อุปกรณ์ %{number}"
+        pending: "รอดำเนินการ"
+        refresh: "รีเฟรชผลลัพธ์"
+        columns:
+          device: "อุปกรณ์"
+          environment: "สภาพแวดล้อม APNs"
+          status: "ผลลัพธ์"
+          checked_at: "อัปเดตล่าสุด"
+        environments:
+          sandbox: "Sandbox"
+          production: "Production"
+        messages:
+          enqueue_failed: "จัดคิวการทดสอบไม่ได้ ตรวจสอบ Sidekiq แล้วรีเฟรชผลลัพธ์ด้านล่าง"
+          ready: "ส่งการแจ้งเตือนทดสอบไปยังอุปกรณ์ iOS ที่เปิดใช้งานซึ่งลงทะเบียนกับบัญชีของคุณ"
+          queued: "จัดคิวการแจ้งเตือนทดสอบแล้ว รีเฟรชผลลัพธ์ด้านล่างเพื่อตรวจสอบสถานะ"
+          hosted_only: "การแจ้งเตือนพุชใช้ได้เฉพาะในโหมดโฮสต์"
+          ineligible: "เฉพาะซูเปอร์แอดมินที่ใช้งานอยู่เท่านั้นที่ส่งการแจ้งเตือนทดสอบได้"
+          no_devices: "เปิดการแจ้งเตือนพุชในแอป Sure บน iOS สำหรับบัญชีนี้เพื่อส่งการทดสอบ"
+          disabled: "ผู้ดูแลปิดการส่งพุชแล้ว"
+          not_configured: "ยังไม่ได้ตั้งค่าข้อมูลรับรอง APNs"
+          cooldown: "โปรดรอ 30 วินาทีก่อนส่งการทดสอบอีกครั้ง"
+          storage_unavailable: "บันทึกคำขอทดสอบไม่ได้ ตรวจสอบการตั้งค่าแคชที่ใช้ร่วมกัน"
+        statuses:
+          queued: "อยู่ในคิว"
+          accepted: "APNs รับแล้ว"
+          skipped: "ข้าม: ไม่เข้าเกณฑ์อีกต่อไป"
+          rejected: "APNs ปฏิเสธ; ตรวจสอบบันทึกดีบักพุช"
+          unregistered: "การลงทะเบียนอุปกรณ์ใช้ไม่ได้อีกต่อไป"
+          retrying: "กำลังลองใหม่หลังความล้มเหลวชั่วคราว"
+          failed: "ล้มเหลว; ตรวจสอบบันทึกดีบักพุช"
+          enqueue_failed: "จัดคิวไม่ได้; ตรวจสอบ Sidekiq"
+          expired: "หมดอายุโดยไม่มีผลลัพธ์สุดท้าย"
+      push_notification:
+        title: "การแจ้งเตือนทดสอบ Sure"
+        body: "นี่คือการแจ้งเตือนพุชทดสอบสำหรับบัญชี Sure ของคุณ"
+      verify_worker_ai:
+        queued: "จัดคิวการตรวจสอบ worker แล้ว จะปรากฏด้านล่างเมื่อโพรเซส worker รับไป ปกติภายในไม่กี่วินาที"
+      optional_services:
+        title: บริการเสริม
+        description: "การเชื่อมต่อเสริมของผู้ดูแล บริการที่ยังไม่ได้ตั้งค่าแสดงเพื่อทราบเท่านั้น การตรวจสอบเหล่านี้ดูเฉพาะการตั้งค่า ไม่ทดสอบการเชื่อมต่อ ไม่ส่งเหตุการณ์ทดสอบ และไม่เปลี่ยนความยินยอมการวิเคราะห์ ขยายบริการเพื่อดูรายละเอียดการตั้งค่า"
+        missing_settings: "การตั้งค่าที่ขาด: %{settings}"
+        statuses:
+          configured: ตั้งค่าแล้ว
+          not_configured: ยังไม่ได้ตั้งค่า
+          incomplete: การตั้งค่าไม่สมบูรณ์
+          disabled: ปิดใช้งานในโพรเซสนี้
+          not_checked: ยังไม่ได้ตรวจสอบ
+        notes:
+          environment_disabled: "การเชื่อมต่อที่โหลดอยู่ถูกปิดสำหรับสภาพแวดล้อม Rails นี้"
+          explicitly_disabled: "SKYLIGHT_ENABLED ปิด instrumentation อย่างชัดเจน"
+          self_hosted_checkout_disabled: "ปิดการชำระเงินสมัครใช้งานและพอร์ทัลเรียกเก็บเงินในโหมดโฮสต์เอง ยังตั้งค่า Stripe webhook ได้ ไม่ต้องใช้ price ID ของการชำระเงินที่นี่"
+          browser_analytics_disabled: "ปิดการวิเคราะห์ในเบราว์เซอร์สำหรับสภาพแวดล้อมนี้ ไม่ได้ปิดไคลเอนต์ฝั่งเซิร์ฟเวอร์ที่ตั้งค่าแยก"
+          shared_feedback_configured: "ข้อเสนอแนะแบบโฮสต์เองมีโปรเจกต์ที่รวมมาแยกต่างหากและเปิดใช้ตามการตั้งค่า ไม่ต้องใช้ POSTHOG_KEY ของผู้ดูแล ไม่ตรวจสอบการปิดในเบราว์เซอร์และความพร้อมของ SDK"
+          shared_feedback_disabled: "โปรเจกต์ข้อเสนอแนะแบบโฮสต์เองที่แยกต่างหากถูกปิดโดยการตั้งค่าข้อเสนอแนะหรือสภาพแวดล้อม ไม่ได้ปิดการวิเคราะห์ที่ผู้ดูแลเป็นเจ้าของ"
+          production_only: "การเชื่อมต่อนี้ใช้เฉพาะใน production ตามการตั้งค่าปัจจุบันของแอปพลิเคชัน"
+        services:
+          langfuse:
+            title: Langfuse
+            description: "การติดตามและรายงานการประเมิน AI แบบเสริม การตรวจสอบนี้ไม่ส่งทรซหรือคำขอประเมิน"
+            guidance: "ตั้ง LANGFUSE_PUBLIC_KEY และ LANGFUSE_SECRET_KEY พร้อมกัน LANGFUSE_HOST ไม่บังคับ รีสตาร์ทบริการที่เกี่ยวข้องหลังเปลี่ยนการตั้งค่าเหล่านี้"
+          sentry:
+            title: Sentry
+            description: "การรายงานข้อผิดพลาดและประสิทธิภาพแบบเสริม initializer ปัจจุบันเปิดการรายงานเฉพาะ production"
+            guidance: "ตั้ง SENTRY_DSN และรีสตาร์ทบริการที่เกี่ยวข้อง การตรวจสอบนี้ดูการตั้งค่า SDK ที่โหลดโดยไม่จับข้อผิดพลาดหรือส่งเหตุการณ์"
+          skylight:
+            title: Skylight
+            description: "instrumentation ประสิทธิภาพแอปพลิเคชันแบบเสริม การมีการตั้งค่าไม่ได้ยืนยันว่าเอเจนต์ทำงานหรือรายงานอยู่"
+            guidance: "ตั้ง SKYLIGHT_AUTHENTICATION และตรวจสอบว่าโหลด Skylight ในสภาพแวดล้อม Rails ที่ต้องการ SKYLIGHT_ENABLED=false ปิด instrumentation; แฟลกเพียงอย่างเดียวไม่ได้โหลด gem รีสตาร์ทหลังเปลี่ยนแปลง"
+          stripe:
+            title: Stripe
+            description: "การเรียกเก็บเงินสมัครใช้งานและ webhook การชำระเงินแบบเสริม การตรวจสอบนี้ไม่สร้างไคลเอนต์ Stripe ไม่ตรวจสอบข้อมูลรับรอง และไม่ส่งคำขอชำระเงิน"
+            guidance: "ตั้ง STRIPE_SECRET_KEY และ STRIPE_WEBHOOK_SECRET พร้อมกัน การชำระเงินสมัครใช้งานแบบจัดการยังต้องมี STRIPE_MONTHLY_PRICE_ID และ STRIPE_ANNUAL_PRICE_ID"
+          posthog:
+            title: PostHog
+            description: "การวิเคราะห์ที่ผู้ดูแลเป็นเจ้าของแบบเสริม โดยใช้การตั้งค่าที่โหลดตอนบูต การตั้งค่าแล้วไม่ได้หมายความว่าผู้ใช้ยินยอมให้วิเคราะห์"
+            guidance: "ตั้ง POSTHOG_KEY และ POSTHOG_HOST ที่ไม่ว่าง หรือไม่ตั้ง host เพื่อใช้ค่าเริ่มต้น การวิเคราะห์ในเบราว์เซอร์ต้องใช้ production หรือ POSTHOG_DEVELOPMENT_ENABLED ในโหมดพัฒนา POSTHOG_FEEDBACK_ENABLED ควบคุมข้อเสนอแนะแบบโฮสต์เองที่แยกต่างหาก ไม่ใช่การวิเคราะห์ของผู้ดูแล"
+          logtail:
+            title: Logtail
+            description: "การส่งต่อบันทึกใน production แบบเสริม เมื่อยังไม่ได้ตั้งค่า แอปพลิเคชันจะบันทึกไปยังเอาต์พุตมาตรฐานต่อไป"
+            guidance: "ตั้ง LOGTAIL_API_KEY และ LOGTAIL_INGESTING_HOST พร้อมกันและรีสตาร์ทบริการที่เกี่ยวข้อง การตรวจสอบนี้ไม่ส่งบันทึกทดสอบ"
+      configuration:
+        description: "การตั้งค่าที่โพรเซสเว็บนี้มองเห็น การตรวจสอบเหล่านี้ไม่ส่งอีเมล ไม่ติดต่อผู้ให้บริการ และไม่อัปโหลดหรือดาวน์โหลดไฟล์ ตั้งค่าแล้วหมายถึงมีการตั้งค่าอยู่ ไม่ได้ยืนยันการส่ง การเข้าถึงผู้ให้บริการ หรือการเข้าถึงพื้นที่เก็บข้อมูล"
+        statuses:
+          configured: ตั้งค่าแล้ว
+          not_configured: ยังไม่ได้ตั้งค่า
+          incomplete: การตั้งค่าไม่สมบูรณ์
+          disabled: ปิดใช้งาน
+          not_checked: ยังไม่ได้ตรวจสอบ
+        settings_needed: การตั้งค่าที่ต้องตรวจสอบ
+        unknown_provider: ตัวเลือกผู้ให้บริการที่ไม่รู้จัก
+        provider_statuses:
+          configured: ตั้งค่าแล้ว
+          not_configured: ไม่มีคีย์ API
+          invalid: ตัวเลือกไม่ถูกต้อง
+        configure_providers: เปิดการตั้งค่าการโฮสต์เอง
+        storage_backend: "พื้นที่เก็บข้อมูลที่เลือก: %{backend}"
+        storage_backends:
+          local: ดิสก์ในเครื่อง
+          test: ดิสก์ทดสอบ
+          amazon: Amazon S3
+          cloudflare: Cloudflare R2
+          generic_s3: พื้นที่เก็บข้อมูลที่เข้ากันได้กับ S3
+          google: Google Cloud Storage
+          other: แบ็กเอนด์ที่กำหนดเองหรือไม่รู้จัก
+        checks:
+          smtp:
+            title: อีเมล (SMTP)
+            statuses:
+              configured: "มีการตั้งค่า SMTP แล้ว"
+              not_configured: "ยังไม่ได้ตั้งค่า SMTP ส่งการรีเซ็ตรหัสผ่าน คำเชิญ และอีเมลระบบอื่นผ่าน SMTP ไม่ได้"
+              incomplete: "การตั้งค่าอีเมลบางส่วนขาดหรือไม่สมบูรณ์ อีเมลระบบหรือลิงก์ในอีเมลอาจใช้ไม่ได้"
+              disabled: "ปิดการส่งอีเมลในการตั้งค่า mailer ที่กำลังทำงาน"
+              not_checked: "โพรเซสนี้ใช้วิธีส่งอื่นที่ไม่ใช่ SMTP เช่นตัวอย่างสำหรับการพัฒนา จึงไม่ประเมินการส่งผ่าน SMTP"
+            guidance: "ตั้งค่า SMTP ในหน้าผู้ดูแลไม่ได้ ตั้งตัวแปรสภาพแวดล้อมอีเมลสำหรับทั้งบริการเว็บและ worker แล้วรีสตาร์ททั้งสอง SMTP_USERNAME และ SMTP_PASSWORD เว้นทั้งคู่ได้สำหรับรีเลย์ที่ไม่ต้องยืนยันตัวตน"
+            issues:
+              address: SMTP_ADDRESS
+              port: SMTP_PORT (ตัวเลข 1 ถึง 65535)
+              sender: EMAIL_SENDER (แทนที่ sender@sure.local ค่าเริ่มต้น)
+              app_domain: APP_DOMAIN (ใช้ในลิงก์อีเมล)
+              authentication: SMTP_USERNAME และ SMTP_PASSWORD (ระบุทั้งคู่หรือไม่ระบุเลย)
+          securities:
+            title: ราคาตลาด
+            statuses:
+              configured: "ผู้ให้บริการราคาตลาดที่เปิดใช้ทั้งหมดมีการตั้งค่า"
+              not_configured: "ผู้ให้บริการราคาตลาดที่เปิดใช้ไม่มีคีย์ API การค้นหาหลักทรัพย์และการดูราคาอัตโนมัติผ่านผู้ให้บริการเหล่านี้ใช้ไม่ได้"
+              incomplete: "ผู้ให้บริการราคาตลาดที่เปิดใช้อย่างน้อยหนึ่งรายมีการตั้งค่าขาดหายหรือตัวเลือกไม่ถูกต้อง หลักทรัพย์ที่กำหนดให้ผู้ให้บริการนั้นอาจไม่ได้รับการอัปเดตราคา"
+              disabled: "ไม่มีผู้ให้บริการราคาตลาดที่เปิดใช้ การค้นหาหลักทรัพย์และการดูราคาอัตโนมัติใช้ไม่ได้"
+            guidance: "เลือกผู้ให้บริการและเพิ่มคีย์ API ที่จำเป็นในการตั้งค่าการโฮสต์เอง หรือตั้งค่าในสภาพแวดล้อมการติดตั้ง ตัวแปรสภาพแวดล้อมมีลำดับก่อน ผู้ให้บริการสาธารณะไม่ต้องใช้คีย์ API"
+          exchange_rates:
+            title: อัตราแลกเปลี่ยนเงินตราต่างประเทศ
+            statuses:
+              configured: "ผู้ให้บริการอัตราแลกเปลี่ยนที่เลือกมีการตั้งค่า"
+              not_configured: "ไม่มีผู้ให้บริการอัตราแลกเปลี่ยนที่ใช้ได้ การแปลงสกุลเงินอัตโนมัติอาจใช้ไม่ได้เมื่อไม่มีอัตราที่เก็บไว้"
+            guidance: "เลือกผู้ให้บริการอัตราแลกเปลี่ยนและเพิ่มคีย์ API หากจำเป็นในการตั้งค่าการโฮสต์เอง หรือตั้งค่าในสภาพแวดล้อมการติดตั้ง EXCHANGE_RATE_PROVIDER และตัวแปรสภาพแวดล้อมคีย์ API ของผู้ให้บริการมีลำดับก่อน"
+            issues:
+              invalid_provider: "ไม่รู้จักผู้ให้บริการอัตราแลกเปลี่ยนที่เลือก การค้นหาอัตราอัตโนมัติจะล้มเหลวจนกว่าจะเลือกผู้ให้บริการที่รองรับ"
+          storage:
+            title: การอัปโหลดไฟล์และพื้นที่เก็บข้อมูล
+            statuses:
+              configured: "มีการตั้งค่าพื้นที่เก็บข้อมูลแล้ว; ดิสก์ในเครื่องไม่ต้องใช้ข้อมูลรับรองคลาวด์"
+              not_configured: "แบ็กเอนด์พื้นที่เก็บข้อมูลที่เลือกไม่มีการตั้งค่าที่ตรงกัน การอัปโหลดไฟล์อาจใช้ไม่ได้"
+              incomplete: "การตั้งค่าพื้นที่เก็บข้อมูลที่จำเป็นขาดหายหรือไม่สมบูรณ์ การอัปโหลดหรือดึงไฟล์อาจใช้ไม่ได้"
+              not_checked: "แบ็กเอนด์นี้ใช้การค้นหาข้อมูลรับรองภายนอกหรือการตั้งค่าที่กำหนดเอง ตรวจสอบการเข้าถึงจากการตั้งค่าเหล่านี้เพียงอย่างเดียวไม่ได้"
+            guidance: "ตรวจสอบ ACTIVE_STORAGE_SERVICE และการตั้งค่าการติดตั้งของแบ็กเอนด์ที่เลือก ดิสก์ในเครื่องต้องใช้พื้นที่เก็บข้อมูลถาวรที่ใช้ร่วมกันระหว่างบริการเว็บและ worker การเปลี่ยนแบ็กเอนด์ไม่ย้ายไฟล์ที่มีอยู่ วางแผนการย้ายแยกต่างหาก"
+            issues:
+              root: รูท พื้นที่เก็บข้อมูลในเครื่อง
+              bucket: บักเก็ตพื้นที่เก็บข้อมูล
+              region: ภูมิภาคพื้นที่เก็บข้อมูล
+              credentials: คีย์การเข้าถึงและ secret key ของพื้นที่เก็บข้อมูล (ระบุทั้งคู่หรือใช้การค้นหาข้อมูลรับรองภายนอก)
+              endpoint: endpoint ของพื้นที่เก็บข้อมูล (และ CLOUDFLARE_ACCOUNT_ID สำหรับ R2)
+      show:
+        title: สถานะระบบ
+        tabs:
+          hosted_usage: "การใช้งาน"
+          background_jobs: "งาน"
+          ai: "AI"
+          configuration: "การตั้งค่า"
+        alert:
+          title: งานเบื้องหลังไม่ทำงาน
+        status_section_title: สถานะ Sidekiq
+        status_section_description: สถานะปัจจุบันของ worker เบื้องหลังที่ขับเคลื่อนการซิงค์ ยอดคงเหลือ และการคำนวณมูลค่าสุทธิ
+        counters_section_title: ตัวนับงาน
+        counters_section_description: ตัวนับ Sidekiq รวมของทุกคิว
+        queues_section_title: คิว
+        queues_section_description: ความลึกและอายุงานเก่าสุดของแต่ละคิว ความหน่วงคือจำนวนวินาทีที่งานเก่าสุดรออยู่
+        labels:
+          status: สถานะ
+          processes: โพรเซส worker
+          last_heartbeat: สัญญาณชีพล่าสุด
+          max_queue_latency: อายุงานเก่าสุด
+          enqueued: อยู่ในคิว
+          retries: ลองใหม่
+          failed: ล้มเหลว
+          processed_total: ประมวลผลทั้งหมด
+          queue: คิว
+          size: ขนาด
+          latency: ความหน่วง
+        values:
+          healthy: ปกติ
+          unhealthy: ด้อยประสิทธิภาพ
+          time_ago: "%{time_ago} ที่แล้ว"
+          never: ไม่เคย
+          seconds: "%{seconds} วินาที"
+          no_queues: "ไม่มีคิวที่ลงทะเบียน worker อาจไม่ได้ทำงาน"
+        ai:
+          run_checks: รันการตรวจสอบอีกครั้ง
+          last_checked: "การตรวจสอบสดเสร็จสิ้นเมื่อ %{time_ago} ที่แล้ว ผลลัพธ์ถูกแคชชั่วคราว"
+          not_checked_help: เปิด URL สถานะ AI โดยตรงหรือรันการตรวจสอบเพื่อยืนยันว่าบริการทำงานอยู่
+          loading: "กำลังรันการตรวจสอบสด…"
+          alerts:
+            custom_openai:
+              title: การตรวจสอบ vector-store ที่โฮสต์ล้มเหลวที่ endpoint ที่กำหนดเองนี้
+              message: endpoint ที่ตั้งค่าไม่ผ่านการตรวจสอบ /v1/vector_stores endpoint ในเครื่องและที่เข้ากันได้กับ OpenAI ส่วนใหญ่ไม่ได้ติดตั้ง API นั้น แชตและการประมวลผล PDF อาจยังใช้ได้ ใช้ pgvector ร่วมกับ endpoint embeddings แยกสำหรับการตั้งค่าในเครื่องโดยทั่วไป ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            function_calling_unsupported:
+              title: โมเดลไม่รองรับการเรียกฟังก์ชัน
+              message: endpoint ตอบคำขอแชตธรรมดาได้ แต่ปฏิเสธคำขอเดียวกันที่มีพารามิเตอร์ tools ผู้ช่วย AI อ่านบัญชี รายการธุรกรรม และสินทรัพย์ที่ถือครองผ่านการเรียกฟังก์ชัน แชตจึงล้มเหลวต่อไป — มักเป็น 404 ที่ไม่ช่วยอะไร — จนกว่าจะใช้โมเดลที่รองรับ tools เลือกโมเดลที่ผู้ให้บริการระบุว่ารองรับการเรียกฟังก์ชัน ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            function_calling_not_used:
+              title: โมเดลตอบโดยไม่เรียกเครื่องมือที่ถูกขอให้เรียก
+              message: endpoint รับพารามิเตอร์ tools แต่โมเดลตอบเป็นข้อความแทนที่จะเรียกเครื่องมือตรวจสุขภาพ ผู้ช่วย AI อ่านข้อมูลการเงินโดยไม่มีการเรียกเครื่องมือไม่ได้ แชตจึงอาจตอบว่างเปล่าหรือใช้ตัวเลขที่แต่งขึ้น แนะนำโมเดลที่ผู้ให้บริการระบุว่ารองรับการเรียกฟังก์ชัน
+            llm_probe_failed:
+              title: การตรวจสอบ LLM สดล้มเหลว
+              message: Sure ยืนยัน endpoint และโมเดลที่ตั้งค่าไว้ทั้งสองไม่ได้ ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            llm_model_not_available:
+              title: โมเดล AI ที่ตั้งค่าไว้ไม่พร้อมใช้งาน
+              message: endpoint ตอบ แต่ไม่ได้แสดงหรือให้บริการโมเดลที่ตั้งค่าไว้ เลือกโมเดลที่ใช้งานอยู่ของผู้ให้บริการที่เลือก แล้วรันการตรวจสอบอีกครั้ง สำหรับ Gemini ผ่านชั้นแปลที่เข้ากันได้กับ OpenAI ให้ใช้โมเดลที่รองรับอยู่ปัจจุบัน เช่น gemini-3.8-flash
+            pdf_text_extraction_failed:
+              title: การตรวจสอบดึงข้อความ PDF สังเคราะห์ล้มเหลว
+              message: Sure ทำเส้นทางที่เน้นข้อความให้เสร็จไม่ได้ ซึ่งดึงข้อความที่ฝังใน PDF ในเครื่องแล้วส่งให้โมเดลที่ตั้งค่าไว้ ไม่มีข้อมูลลูกค้าถูกส่ง ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            pdf_vision_processing_failed:
+              title: การตรวจสอบ PDF แบบ vision/native สังเคราะห์ล้มเหลว
+              message: Sure ทำเส้นทาง PDF แบบรูปภาพหรือเอกสารเนทีฟผ่านโมเดลที่ตั้งค่าไว้ให้เสร็จไม่ได้ ไม่มีข้อมูลลูกค้าถูกส่ง ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            vector_probe_failed:
+              title: การตรวจสอบสดของการค้นหาเอกสารล้มเหลว
+              message: Sure ยืนยัน vector store ที่เลือกและบริการ embedding ที่จำเป็นทุกตัวไม่ได้ ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            pgvector_extension_not_enabled:
+              title: ไม่ได้เปิดส่วนขยาย vector ของ PostgreSQL
+              message: เลือกอะแดปเตอร์ pgvector แล้ว แต่ PostgreSQL ยังไม่ได้เปิดส่วนขยาย vector สำหรับฐานข้อมูลนี้ ใช้อิมเมจ PostgreSQL ที่มี pgvector แล้วเปิดส่วนขยายในฐานะเจ้าของฐานข้อมูลหรือ superuser และรัน migration ใหม่ด้วย VECTOR_STORE_PROVIDER=pgvector
+            pgvector_table_not_found:
+              title: ไม่พบตาราง vector_store_chunks
+              message: เปิดส่วนขยาย pgvector แล้ว แต่ไม่พบตาราง chunks ตรวจสอบสถานะ migration แล้วรัน migration ของ vector-store ใหม่ด้วย VECTOR_STORE_PROVIDER=pgvector เพื่อให้ Sure สร้าง vector_store_chunks
+            pgvector_probe_failed:
+              title: การตรวจสอบพื้นที่เก็บข้อมูล pgvector ล้มเหลว
+              message: Sure คิวรีตาราง chunks ของ pgvector ไม่ได้ ตรวจสอบสิทธิ์ PostgreSQL ส่วนขยาย vector และ migration ของ vector_store_chunks ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            embedding_dimensions_mismatch:
+              title: ขนาดมิติ embedding ไม่ตรงกัน
+              message: endpoint embedding ส่งเวกเตอร์ที่มีความยาวไม่ตรงกับ EMBEDDING_DIMENSIONS ตั้ง EMBEDDING_MODEL และ EMBEDDING_DIMENSIONS เป็นขนาดเวกเตอร์ที่เอกสารของโมเดลระบุ รีสตาร์ท Sure เพื่อให้สภาพแวดล้อมคงอยู่ แล้วแก้ไขหรือสร้างคอลัมน์/ตาราง embedding ของ pgvector ใหม่และ embed เอกสารใหม่หากข้อมูลเดิมใช้ขนาดต่างกัน
+            embedding_probe_timeout:
+              title: การตรวจสอบสดของ embedding หมดเวลา
+              message: endpoint embedding ไม่ตอบก่อน AI_HEALTH_PROBE_TIMEOUT เพิ่มเวลาหมดอายุการตรวจสุขภาพนั้นหากผู้ให้บริการช้า แล้วรีสตาร์ท Sure เพื่อให้สภาพแวดล้อมคงอยู่ในทุกโพรเซส หากการเรียกแชต AI ปกติก็หมดเวลาด้วย ให้เพิ่ม OPENAI_REQUEST_TIMEOUT แยกต่างหาก
+            embedding_probe_failed:
+              title: การตรวจสอบสดของ embedding ล้มเหลว
+              message: Sure สร้าง embedding ทดสอบสั้น ๆ ผ่าน endpoint และโมเดลที่ตั้งค่าไว้ไม่ได้ ตรวจสอบ EMBEDDING_URI_BASE, EMBEDDING_MODEL, EMBEDDING_ACCESS_TOKEN และบันทึกของผู้ให้บริการ embedding ความล้มเหลวถูกบันทึกใน การตั้งค่า → บันทึกดีบัก และ Rails.logger
+            qdrant:
+              title: ยังไม่ได้ติดตั้งการรองรับ Qdrant
+              message: อะแดปเตอร์ Qdrant เป็นเพียงโครงร่าง การอัปโหลดและค้นหาเอกสารจึงล้มเหลวในขณะนี้ เลือก OpenAI หรือ pgvector สำหรับการค้นหาเอกสาร
+            missing_vector_store:
+              title: ยังไม่ได้ตั้งค่า vector store
+              message: เอกสารที่อัปโหลดจะจัดทำดัชนีหรือค้นหาไม่ได้จนกว่าจะตั้งค่าอะแดปเตอร์ vector-store และข้อกำหนดของมัน
+            unavailable_vector_store:
+              title: vector store ที่เลือกไม่พร้อมใช้งาน
+              message: ตรวจสอบข้อกำหนดของอะแดปเตอร์ด้านล่าง สำหรับ pgvector ฐานข้อมูลต้องมีส่วนขยาย vector หรือตาราง vector_store_chunks ที่มีอยู่
+          llm:
+            title: LLM และการประมวลผล PDF
+            description: การตรวจสอบสดยืนยันโมเดลที่ตั้งค่าไว้ ขอให้มันเรียกฟังก์ชันง่าย ๆ หนึ่งครั้งเหมือนที่ผู้ช่วยทำ จากนั้นทดสอบการดึงข้อความและการประมวลผลแบบ vision/native แยกกันด้วย PDF สังเคราะห์หนึ่งหน้าที่ไม่มีข้อมูลลูกค้า ค่าข้อมูลรับรองไม่ถูกแสดง
+          vector_store:
+            title: Vector store และการค้นหาเอกสาร
+            description: การตรวจสอบสดคิวรี API vector-store ที่โฮสต์ หรือทดสอบตาราง pgvector และสร้าง embedding สั้น ๆ หนึ่งรายการโดยไม่จัดเก็บ
+          labels:
+            selected_provider: ผู้ให้บริการที่เลือก
+            effective_provider: ผู้ให้บริการที่มีผลจริง
+            model: โมเดล
+            endpoint: Endpoint
+            function_calling: การเรียกฟังก์ชัน (tools)
+            pdf_text_extraction: เส้นทางดึงข้อความ PDF
+            pdf_vision_processing: เส้นทาง PDF แบบ vision/native
+            llm_request_timeout: เวลาหมดอายุคำขอ LLM
+            probe_request_timeout: เวลาหมดอายุการตรวจสุขภาพ
+            openai_credentials: ข้อมูลรับรอง OpenAI
+            openai_compatible_credentials: ข้อมูลรับรอง API ที่เข้ากันได้กับ OpenAI
+            anthropic_credentials: ข้อมูลรับรอง Anthropic
+            adapter: อะแดปเตอร์
+            adapter_available: อะแดปเตอร์พร้อมใช้งาน
+            pgvector_extension: ส่วนขยาย vector ของ PostgreSQL
+            pgvector_table: ตาราง vector chunks
+            embedding_model: โมเดล embedding
+            embedding_endpoint: Endpoint ของ embedding
+            embedding_dimensions: มิติ embedding
+            function_calling_failure_reason: เหตุผลที่การเรียกฟังก์ชันล้มเหลว
+            pdf_text_extraction_failure_reason: เหตุผลที่การดึงข้อความล้มเหลว
+            pdf_vision_processing_failure_reason: เหตุผลที่ vision/native ล้มเหลว
+            storage_probe: การตรวจสอบพื้นที่เก็บข้อมูล pgvector
+            embedding_probe: การตรวจสอบ endpoint ของ embedding
+            failure_reason: เหตุผลที่ล้มเหลว
+          providers:
+            openai: OpenAI
+            openai_compatible: เข้ากันได้กับ OpenAI
+            anthropic: Anthropic
+            ollama: Ollama
+            openrouter: OpenRouter
+            together: Together
+            kilo: Kilo
+            cloudflare: Cloudflare
+            custom_openai_compatible: Endpoint ที่กำหนดเอง
+          adapters:
+            openai: Vector store ที่โฮสต์โดย OpenAI
+            pgvector: pgvector
+            qdrant: Qdrant
+          values:
+            configured: ตั้งค่าแล้ว
+            not_configured: ยังไม่ได้ตั้งค่า
+            fallback: "(สำรอง)"
+            not_set: ไม่ได้ตั้ง
+            "yes": "ใช่"
+            "no": "ไม่"
+            enabled: เปิดใช้งาน
+            available_not_enabled: ใช้ได้ แต่ไม่ได้เปิดใช้
+            not_available: ใช้ไม่ได้
+            available: ใช้ได้
+            not_found: ไม่พบ
+          function_calling_statuses:
+            supported: เรียกเครื่องมือสดสำเร็จ
+            unsupported: ผู้ให้บริการ/โมเดลที่มีผลจริงไม่รองรับ
+            not_used: รับ tools แล้ว แต่โมเดลไม่ได้เรียกเครื่องมือใด
+            failing: การตรวจสอบสดล้มเหลว
+            not_checked: ยังไม่ได้ตรวจสอบ
+            unavailable: ใช้ไม่ได้จนกว่าจะตั้งค่าผู้ให้บริการ LLM
+          pdf_statuses:
+            supported: การตรวจสอบ PDF สังเคราะห์ผ่าน
+            failing: การตรวจสอบ PDF สังเคราะห์ล้มเหลว
+            unsupported: ปิดใช้งานหรือผู้ให้บริการ/โมเดลที่มีผลจริงไม่รองรับ
+            not_checked: ยังไม่ได้ตรวจสอบ
+            unavailable: ใช้ไม่ได้จนกว่าจะตั้งค่าผู้ให้บริการ LLM
+          probe_statuses:
+            passing: การตรวจสอบสดผ่าน
+            failing: การตรวจสอบสดล้มเหลว
+            not_checked: ยังไม่ได้ตรวจสอบ
+            not_configured: ยังไม่ได้ตั้งค่า
+          vector_statuses:
+            passing: การตรวจสอบสดผ่าน
+            failing: การตรวจสอบสดล้มเหลว
+            not_checked: ยังไม่ได้ตรวจสอบ
+            not_configured: ยังไม่ได้ตั้งค่า
+            scaffolded: เป็นเพียงโครงร่าง
+            missing: ยังไม่ได้ตั้งค่า
+          failure_codes:
+            model_not_available: ผู้ให้บริการไม่ได้ส่งโมเดลที่ตั้งค่าไว้กลับมา
+            no_tool_call: โมเดลตอบโดยไม่เรียกเครื่องมือตรวจสุขภาพ
+            tools_refused: บริการตอบคำขอเดียวกันเมื่อไม่มี tools แต่ปฏิเสธเมื่อมี tools
+            invalid_response: บริการส่งการตอบกลับที่ไม่คาดคิด
+            dimensions_mismatch: มิติเวกเตอร์ embedding ไม่ตรงกับมิติที่ตั้งค่า
+            extension_not_enabled: ไม่ได้เปิดส่วนขยาย vector ของ PostgreSQL
+            table_not_found: ไม่พบตาราง vector_store_chunks
+            render_missing_binary: ไม่มีตัวเรนเดอร์ pdftoppm (poppler-utils) ในคอนเทนเนอร์นี้
+            timeout: บริการไม่ตอบก่อนเวลาหมดอายุของการตรวจสอบ
+            request_failed: คำขอไปยังบริการล้มเหลว
+            unsupported_provider: ผู้ให้บริการไม่รองรับการตรวจสอบนี้
+          worker:
+            title: การตรวจสอบ worker
+            description: การตรวจสอบด้านบนรันจากโพรเซสเว็บนี้ งาน AI ส่วนใหญ่ -- คำตอบของผู้ช่วย การประมวลผล PDF embeddings การจัดหมวดหมู่อัตโนมัติ และการตรวจจับร้านค้า -- ทำงานจริงในโพรเซส worker ของ Sidekiq ซึ่งอาจต่างกันในเรื่องการเข้าถึงเครือข่าย DNS กฎพร็อกซี หรือแม้แต่ข้อมูลรับรองที่โหลด จัดคิวการตรวจสอบเพื่อยืนยันการตั้งค่าและการเชื่อมต่อของ worker เอง
+            verify_button: ตรวจสอบการตั้งค่า worker
+            coverage_notice: การตรวจสอบแต่ละครั้งยืนยันโพรเซส worker เพียงหนึ่งตัว -- ตัวใดก็ตามที่ดึงไปทำ เมื่อมี worker มากกว่าหนึ่งแบบจำลอง ผลที่ผ่านไม่ได้ยืนยันว่าทุก worker ปกติ จัดคิวการตรวจสอบอีกครั้งเพื่อสุ่มตัวอื่น
+            empty:
+              title: ยังไม่มี worker เช็กอิน
+              description: คลิก "ตรวจสอบการตั้งค่า worker" เพื่อจัดคิวการตรวจสอบแบบอะซิงโครนัส ผลลัพธ์จะปรากฏที่นี่เมื่อโพรเซส worker รับไป
+            labels:
+              process: โพรเซส worker
+              checked_at: ตรวจสอบเมื่อ
+              configuration: การตั้งค่า
+            configuration_statuses:
+              match: ตรงกับเว็บ
+              mismatch: ต่างจากเว็บ
+            statuses:
+              passing: ผ่าน
+              failing: ไม่ผ่าน
+              stale: ล้าสมัย
+            settings_origin:
+              title: การตั้งค่าใดต้องรีสตาร์ท?
+              database_backed: "การตั้งค่าผู้ให้บริการ โมเดล และคีย์ API ที่เปลี่ยนใน การตั้งค่า → การโฮสต์เอง ถูกเก็บในฐานข้อมูล rails-settings-cached ทำให้แคชที่ใช้ร่วมกันเป็นโมฆะเมื่อเขียน ทั้งเว็บและ worker จึงได้ค่าใหม่สำหรับคำขอหรืองานในคิวถัดไป -- ไม่ต้องรีสตาร์ท"
+              env_backed: "การตั้งค่า embedding และค่าใดก็ตามที่ตั้งผ่านตัวแปรสภาพแวดล้อมเท่านั้น ถูกกำหนดตอนแต่ละคอนเทนเนอร์เริ่มทำงาน Rails เปลี่ยนสภาพแวดล้อมของคอนเทนเนอร์อื่นไม่ได้ การเปลี่ยนค่าเหล่านี้จึงต้องรีสตาร์ทหรือสร้างบริการเว็บและ worker ใหม่ทั้งคู่ -- และเครื่องมือการติดตั้งที่รีสตาร์ทเพียงตัวเดียว (การเปิดตัวบางส่วน Secret ที่อัปเดตโดยไม่รีสตาร์ท pod) จะไม่รับการเปลี่ยนแปลง"
+          local_setup:
+            title: การตั้งค่าในเครื่องที่แนะนำ
+            description: รัน LLM ผ่าน endpoint ที่เข้ากันได้กับ OpenAI ในเครื่องของคุณ เก็บเวกเตอร์เอกสารใน pgvector และชี้การตั้งค่า embedding ไปยัง endpoint embeddings ที่เข้ากันได้กับ OpenAI อิมเมจ PostgreSQL ต้องมีส่วนขยาย vector และมิติ embedding ต้องตรงกับโมเดลที่เลือก

@@ -1,0 +1,540 @@
+---
+th:
+  import:
+    qif_category_selections:
+      update:
+        success: "บันทึกหมวดหมู่และแท็กแล้ว"
+      show:
+        title: "กำหนดค่าและเลือก"
+        description: "ตรวจสอบรูปแบบวันที่ที่ตรวจพบ จากนั้นเลือกหมวดหมู่และแท็กจากไฟล์ QIF ของคุณที่จะนำเข้า %{product_name}"
+        categories_heading: หมวดหมู่
+        categories_found:
+          one: "พบ 1 หมวดหมู่"
+          other: "พบ %{count} หมวดหมู่"
+        category_name_col: ชื่อหมวดหมู่
+        transactions_col: รายการธุรกรรม
+        tags_heading: แท็ก
+        tags_found:
+          one: "พบ 1 แท็ก"
+          other: "พบ %{count} แท็ก"
+        tag_name_col: ชื่อแท็ก
+        txn_count:
+          one: "1 รายการ"
+          other: "%{count} รายการ"
+        split_warning_title: ตรวจพบรายการธุรกรรมที่แบ่ง
+        split_warning_description: "ไฟล์ QIF นี้มีรายการธุรกรรมที่แบ่ง ตรวจสอบหมวดหมู่และแท็กของรายการที่แบ่งที่ตรวจพบด้านล่างก่อนนำเข้า"
+        split_badge: แบ่ง
+        empty_state_primary: ไม่พบหมวดหมู่หรือแท็กในไฟล์ QIF นี้
+        empty_state_secondary: รายการธุรกรรมทั้งหมดจะถูกนำเข้าโดยไม่มีหมวดหมู่หรือแท็ก
+        submit: ไปตรวจสอบต่อ
+    cleans:
+      show:
+        not_configured: "โปรดกำหนดค่าการนำเข้าของคุณก่อนดำเนินการต่อ"
+        description: แก้ไขข้อมูลของคุณในตารางด้านล่าง เซลล์สีแดงไม่ถูกต้อง
+        errors_notice: ข้อมูลของคุณมีข้อผิดพลาด วางเมาส์เหนือข้อผิดพลาดเพื่อดูรายละเอียด
+        errors_notice_mobile: ข้อมูลของคุณมีข้อผิดพลาด แตะที่คำอธิบายข้อผิดพลาดเพื่อดูรายละเอียด
+        title: ทำความสะอาดข้อมูลของคุณ
+        data_cleaned: ทำความสะอาดข้อมูลของคุณแล้ว
+        next_step: ขั้นตอนถัดไป
+        all_rows: ทุกแถว
+        error_rows: แถวที่มีข้อผิดพลาด
+    configurations:
+      update:
+        success: กำหนดค่าการนำเข้าเรียบร้อยแล้ว
+      account_import:
+        leave_empty: เว้นว่างไว้
+        default: ค่าเริ่มต้น
+        entity_type: ประเภทเอนทิตี
+        name: ชื่อ
+        balance: ยอดคงเหลือ
+        currency: สกุลเงิน
+        balance_date: วันที่ยอดคงเหลือ
+        date_format: รูปแบบวันที่
+        select_format: เลือกรูปแบบ
+        apply_configuration: ใช้การตั้งค่า
+      transaction_import:
+        date_label: วันที่
+        select_column: เลือกคอลัมน์
+        select_format: เลือกรูปแบบ
+        amount_label: จำนวนเงิน
+        default: ค่าเริ่มต้น
+        currency_label: สกุลเงิน
+        format_label: รูปแบบ
+        amount_type_strategy_label: กลยุทธ์ประเภทจำนวนเงิน
+        select_strategy: เลือกกลยุทธ์
+        set: ตั้ง
+        as_amount_type_column: เป็นคอลัมน์ประเภทจำนวนเงิน
+        select_value: เลือกค่า
+        as_identifier_value: เป็นค่าตัวระบุ
+        treat_as_html: "ถือว่า \"<span class=\"font-medium\">%{value}</span>\" เป็น"
+        income_inflow: รายรับ (เงินเข้า)
+        expense_outflow: รายจ่าย (เงินออก)
+        select_type: เลือกประเภท
+        leave_empty: เว้นว่างไว้
+        account_label: บัญชี
+        name_label: ชื่อ
+        category_label: หมวดหมู่
+        tags_label: แท็ก
+        notes_label: บันทึก
+        apply_configuration: ใช้การตั้งค่า
+        incomes_are_positive: รายรับเป็นค่าบวก
+        incomes_are_negative: รายรับเป็นค่าลบ
+        amount_type_label: ประเภทจำนวนเงิน
+        select_convention: เลือกข้อกำหนด
+        date_format_label: รูปแบบวันที่
+        rows_to_skip_label: ข้าม n แถวแรก
+      trade_import:
+        select_column: เลือกคอลัมน์
+        date_label: วันที่
+        quantity_label: จำนวน
+        buys_are_positive: การซื้อเป็นจำนวนบวก
+        buys_are_negative: การซื้อเป็นจำนวนลบ
+        default: ค่าเริ่มต้น
+        currency_label: สกุลเงิน
+        format_label: รูปแบบ
+        select_format: เลือกรูปแบบ
+        ticker_label: สัญลักษณ์
+        leave_empty: เว้นว่างไว้
+        stock_exchange_code_label: รหัสตลาดหลักทรัพย์
+        price_label: ราคา
+        account_label: บัญชี
+        name_label: ชื่อ
+        note_label: บันทึก
+        no_security_provider_warning: ยังไม่ได้ตั้งค่าผู้ให้บริการราคาหลักทรัพย์ การนำเข้าการซื้อขายของคุณยังใช้ได้ แต่ Sure จะไม่เติมประวัติราคาย้อนหลัง โปรดไปที่การตั้งค่าเพื่อกำหนดค่า
+        date_format_label: รูปแบบวันที่
+        apply_configuration: ใช้การตั้งค่า
+      category_import:
+        button_label: ดำเนินการต่อ
+        description: อัปโหลดไฟล์ CSV แบบง่าย (เช่นไฟล์ที่เราสร้างเมื่อคุณส่งออกข้อมูล) เราจะจับคู่คอลัมน์ให้อัตโนมัติ
+        instructions: เลือกดำเนินการต่อเพื่อแยกวิเคราะห์ CSV ของคุณและไปยังขั้นตอนทำความสะอาด
+      merchant_import:
+        button_label: ดำเนินการต่อ
+        description: อัปโหลดไฟล์ CSV ที่มีร้านค้าของคุณ เราจะจับคู่คอลัมน์ให้อัตโนมัติ
+        instructions: เลือกดำเนินการต่อเพื่อแยกวิเคราะห์ CSV ของคุณและไปยังขั้นตอนทำความสะอาด
+      mint_import:
+        date_format_label: รูปแบบวันที่
+        account_optional: บัญชี (ไม่บังคับ)
+        amount: จำนวนเงิน
+        apply_configuration: ใช้การตั้งค่า
+        category_optional: หมวดหมู่ (ไม่บังคับ)
+        currency: สกุลเงิน
+        date: วันที่
+        format: รูปแบบ
+        incomes_negative: รายรับเป็นค่าลบ
+        incomes_positive: รายรับเป็นค่าบวก
+        intro: เราตั้งค่าการนำเข้า Mint ของคุณไว้ล่วงหน้าให้แล้ว โปรดไปยังขั้นตอนถัดไป
+        leave_empty: เว้นว่างไว้
+        name_optional: ชื่อ (ไม่บังคับ)
+        select_format: เลือกรูปแบบ
+        tags_optional: แท็ก (ไม่บังคับ)
+      actual_import:
+        preconfigured_notice: เราตั้งค่าการนำเข้า Actual Budget ของคุณไว้ล่วงหน้าให้แล้ว โปรดไปยังขั้นตอนถัดไป
+        leave_empty: เว้นว่างไว้
+        date_label: วันที่
+        date_format_label: รูปแบบวันที่
+        amount_label: จำนวนเงิน
+        signage_convention_label: ข้อกำหนดเครื่องหมาย
+        incomes_are_negative: รายรับเป็นค่าลบ
+        incomes_are_positive: รายรับเป็นค่าบวก
+        account_label: บัญชี (ไม่บังคับ)
+        name_label: ผู้รับเงิน (ไม่บังคับ)
+        category_label: หมวดหมู่ (ไม่บังคับ)
+        notes_label: บันทึก (ไม่บังคับ)
+        apply_configuration: ใช้การตั้งค่า
+      ynab_import:
+        preconfigured_notice: เราตั้งค่าการนำเข้า YNAB ของคุณไว้ล่วงหน้าให้แล้ว โปรดไปยังขั้นตอนถัดไป
+        amount_notice: จำนวนเงินถูกตรวจจับอัตโนมัติจากคอลัมน์ Outflow และ Inflow
+        leave_empty: เว้นว่างไว้
+        date_label: วันที่
+        date_format_label: รูปแบบวันที่
+        account_label: บัญชี (ไม่บังคับ)
+        name_label: ผู้รับเงิน (ไม่บังคับ)
+        category_label: หมวดหมู่ (ไม่บังคับ)
+        notes_label: บันทึกช่วยจำ (ไม่บังคับ)
+        apply_configuration: ใช้การตั้งค่า
+      rule_import:
+        description: กำหนดค่าการนำเข้ากฎของคุณ กฎจะถูกสร้างหรืออัปเดตตามข้อมูล CSV
+        process_button: ประมวลผลกฎ
+        process_help: คลิกปุ่มด้านล่างเพื่อประมวลผล CSV ของคุณและสร้างแถวกฎ
+      show:
+        description: เลือกคอลัมน์ที่ตรงกับแต่ละช่องใน CSV ของคุณ
+        title: กำหนดค่าการนำเข้าของคุณ
+        template_found: พบการตั้งค่าแม่แบบ
+        template_description: เราพบการตั้งค่าจากการนำเข้าครั้งก่อนสำหรับบัญชีนี้ ต้องการนำมาใช้กับการนำเข้านี้หรือไม่?
+        manually_configure: กำหนดค่าด้วยตนเอง
+        apply_template: ใช้แม่แบบ
+        sample_caption: ข้อมูลตัวอย่างจาก CSV ที่คุณอัปโหลด
+    confirms:
+      sure_import:
+        title: ยืนยันการนำเข้าของคุณ
+        description: ตรวจสอบข้อมูลที่จะนำเข้าจากไฟล์ส่งออกของคุณ
+        summary: สรุปการนำเข้า
+        empty_summary: เราไม่พบระเบียนที่นำเข้าได้ในไฟล์นี้ ไฟล์อาจว่างเปล่า หรือบรรทัดอาจไม่ตรงกับรูปแบบการส่งออกที่คาดไว้ (แต่ละบรรทัดควรเป็นออบเจ็กต์ JSON ที่มีคีย์ "type" และ "data" โดยใช้ประเภทที่การนำเข้านี้รองรับ)
+        publish_button: เริ่มนำเข้า
+        cancel: ยกเลิก
+      mappings:
+        create_account: สร้างบัญชี
+        csv_mapping_label: "%{mapping} ใน CSV"
+        sure_mapping_label: "%{mapping} ใน %{product_name}"
+        no_accounts: คุณยังไม่มีบัญชี โปรดสร้างบัญชีที่เราใช้กับแถวใน CSV ของคุณที่ยังไม่ได้กำหนด หรือกลับไปขั้นตอนทำความสะอาดและระบุชื่อบัญชีที่เราใช้ได้
+        rows_label: แถว
+        unassigned_account: ต้องสร้างบัญชีใหม่สำหรับแถวที่ยังไม่ได้กำหนด?
+        next: ถัดไป
+      show:
+        invalid_data: "ข้อมูลของคุณไม่ถูกต้อง โปรดแก้ไขจนข้อผิดพลาดทั้งหมดหมดไป"
+        account_mapping_description: กำหนดบัญชีทั้งหมดในไฟล์ที่นำเข้าของคุณให้ตรงกับบัญชีที่มีอยู่ใน %{product_name} คุณเพิ่มบัญชีใหม่หรือเว้นไม่จัดหมวดหมู่ก็ได้
+        account_mapping_title: กำหนดบัญชีของคุณ
+        account_type_mapping_description: กำหนดประเภทบัญชีทั้งหมดในไฟล์ที่นำเข้าของคุณให้ตรงกับของ %{product_name}
+        account_type_mapping_title: กำหนดประเภทบัญชีของคุณ
+        category_mapping_description: กำหนดหมวดหมู่ทั้งหมดในไฟล์ที่นำเข้าของคุณให้ตรงกับหมวดหมู่ที่มีอยู่ใน %{product_name} คุณเพิ่มหมวดหมู่ใหม่หรือเว้นไม่จัดหมวดหมู่ก็ได้
+        category_mapping_title: กำหนดหมวดหมู่ของคุณ
+        tag_mapping_description: กำหนดแท็กทั้งหมดในไฟล์ที่นำเข้าของคุณให้ตรงกับแท็กที่มีอยู่ใน %{product_name} คุณเพิ่มแท็กใหม่หรือเว้นไม่จัดหมวดหมู่ก็ได้
+        tag_mapping_title: กำหนดแท็กของคุณ
+    uploads:
+      handle_qif_upload:
+        qif_uploaded: "อัปโหลดไฟล์ QIF เรียบร้อยแล้ว"
+        qif_account_required: โปรดเลือกบัญชีสำหรับการนำเข้า QIF
+      update:
+        qif_uploaded: "อัปโหลดไฟล์ QIF เรียบร้อยแล้ว"
+      show:
+        csv_invalid: "ต้องเป็น CSV ที่ถูกต้อง มีแถวหัวข้อและข้อมูลอย่างน้อยหนึ่งแถว"
+        drop_csv_title: วางไฟล์ CSV เพื่ออัปโหลด
+        drop_csv_subtitle: ไฟล์ของคุณจะถูกอัปโหลดโดยอัตโนมัติ
+        upload_csv_tab: อัปโหลด CSV
+        copy_paste_tab: คัดลอกและวาง
+        account_optional_label: บัญชี (ไม่บังคับ)
+        multi_account_import: นำเข้าหลายบัญชี
+        upload_csv_button: อัปโหลด CSV
+        paste_csv_placeholder: วางเนื้อหาไฟล์ CSV ของคุณที่นี่
+        download_sample_csv: ดาวน์โหลด CSV ตัวอย่าง
+        to_see_format: เพื่อดูรูปแบบ CSV ที่ต้องการ
+        qif_title: อัปโหลดไฟล์ QIF
+        qif_description: เลือกบัญชีสำหรับไฟล์บัญชีเดียว หรือเว้นว่างไว้เมื่อการส่งออก QIF ของคุณมีชื่อบัญชี
+        qif_account_label: บัญชี
+        qif_account_placeholder: เลือกบัญชี…
+        qif_file_prompt: เพื่อเพิ่มไฟล์ QIF ของคุณที่นี่
+        qif_file_hint: เฉพาะไฟล์ .qif
+        qif_submit: อัปโหลด QIF
+        browse: เรียกดู
+        csv_file_prompt: เพื่อเพิ่มไฟล์ CSV ของคุณที่นี่
+        description: วางหรืออัปโหลดไฟล์ CSV ของคุณด้านล่าง โปรดอ่านคำแนะนำในตารางด้านล่างก่อนเริ่ม
+        instructions_1: ด้านล่างคือ CSV ตัวอย่างที่มีคอลัมน์ที่นำเข้าได้
+        instructions_2: CSV ของคุณต้องมีแถวหัวข้อ
+        instructions_3: คุณตั้งชื่อคอลัมน์อะไรก็ได้ คุณจะจับคู่คอลัมน์ในขั้นตอนภายหลัง
+        instructions_4: คอลัมน์ที่มีเครื่องหมายดอกจัน (*) เป็นข้อมูลที่จำเป็น
+        instructions_5: ห้ามมีเครื่องหมายจุลภาค สัญลักษณ์สกุลเงิน และวงเล็บในตัวเลข
+        title: นำเข้าข้อมูลของคุณ
+      sure_import:
+        title: นำเข้าจากไฟล์ส่งออก
+        description: อัปโหลดไฟล์ all.ndjson จากการส่งออกข้อมูลของคุณเพื่อกู้คืนบัญชี รายการธุรกรรม หมวดหมู่ และอื่น ๆ
+        drop_title: วางไฟล์ NDJSON เพื่ออัปโหลด
+        drop_subtitle: ไฟล์ของคุณจะถูกอัปโหลดโดยอัตโนมัติ
+        browse: เรียกดู
+        browse_hint: เพื่อเพิ่มไฟล์ all.ndjson ของคุณที่นี่
+        upload_button: อัปโหลด NDJSON
+        hint_html: อัปโหลดไฟล์ <strong>all.ndjson</strong> จาก ZIP การส่งออกข้อมูลของคุณ
+        ndjson_invalid: ต้องเป็น NDJSON ที่ถูกต้องและมีอย่างน้อยหนึ่งระเบียน
+  imports:
+    mapping_labels:
+      account_type: "ประเภทบัญชี"
+      account: "บัญชี"
+      category: "หมวดหมู่"
+      tag: "แท็ก"
+    dry_run_resources:
+      transactions: "รายการธุรกรรม"
+      balances: "ยอดคงเหลือ"
+      accounts: "บัญชี"
+      categories: "หมวดหมู่"
+      tags: "แท็ก"
+      rules: "กฎ"
+      merchants: "ร้านค้า"
+      recurring_transactions: "รายการธุรกรรมประจำ"
+      transfers: "การโอน"
+      rejected_transfers: "การโอนที่ถูกปฏิเสธ"
+      trades: "การซื้อขาย"
+      holdings: "สินทรัพย์ที่ถือครอง"
+      valuations: "การประเมินมูลค่า"
+      budgets: "งบประมาณ"
+      budget_categories: "หมวดหมู่งบประมาณ"
+    column_labels:
+      date: "วันที่"
+      amount: "จำนวนเงิน"
+      name: "ชื่อ"
+      currency: "สกุลเงิน"
+      category: "หมวดหมู่"
+      tags: "แท็ก"
+      account: "บัญชี"
+      notes: "บันทึก"
+      qty: "จำนวน"
+      ticker: "สัญลักษณ์"
+      exchange: "ตลาด"
+      price: "ราคา"
+      entity_type: "ประเภท"
+      category_parent: "หมวดหมู่แม่"
+      category_color: "สี"
+      category_icon: "ไอคอน Lucide"
+      merchant_color: "สี"
+      merchant_website: "URL เว็บไซต์"
+    summary:
+      title: "สรุปการนำเข้า"
+      subtitle: "สิ่งที่เกิดขึ้นกับแต่ละรายการธุรกรรมในใบแจ้งยอดนี้ใน %{account}"
+      subtitle_no_account: "สิ่งที่เกิดขึ้นกับแต่ละรายการธุรกรรมในใบแจ้งยอดนี้"
+      extracted: "พบในใบแจ้งยอด"
+      already_recorded: "บันทึกไว้แล้ว"
+      already_recorded_hint: "จับคู่กับรายการธุรกรรมที่บัญชีนี้มีอยู่แล้วและทำเครื่องหมายว่ากระทบยอดแล้ว"
+      imported: "นำเข้าเป็นรายการใหม่"
+      awaiting_review: "รอการนำเข้า"
+      fully_reconciled:
+        one: "ไม่ต้องนำเข้าอะไร — รายการธุรกรรมเดียวในใบแจ้งยอดมีอยู่แล้ว"
+        other: "ไม่ต้องนำเข้าอะไร — รายการธุรกรรมทั้ง %{count} รายการมีอยู่แล้ว"
+      statement_evidence_html: "กระทบยอดกับ %{statement}"
+      close: "ปิด"
+    update:
+      account_saved: "บันทึกบัญชีแล้ว"
+      account_locked: "การนำเข้านี้เผยแพร่ไปแล้ว จึงเปลี่ยนบัญชีไม่ได้ ย้อนกลับก่อนหากต้องนำเข้าไปที่อื่น"
+      invalid_account: "ไม่พบบัญชี"
+    publish:
+      started: "การนำเข้าของคุณเริ่มทำงานเบื้องหลังแล้ว"
+      max_rows_exceeded: "การนำเข้าของคุณเกินจำนวนแถวสูงสุด %{max}"
+      guest_new_categories_or_tags: "ผู้เยี่ยมชมสร้างหมวดหมู่หรือแท็กไม่ได้ จับคู่กับที่มีอยู่หรือเว้นว่างไว้"
+    revert:
+      started: "กำลังย้อนกลับการนำเข้าเบื้องหลัง"
+    cancel:
+      cancelled: "ทำเครื่องหมายการนำเข้าว่าล้มเหลวแล้ว คุณลองใหม่ได้จากหน้าการนำเข้า"
+      not_cancellable: "ตอนนี้ไม่สามารถทำเครื่องหมายการนำเข้านี้ว่าล้มเหลวได้ — งานอาจยังทำงานอยู่ ลองอีกครั้งเมื่อไม่มีกิจกรรมมาหนึ่งชั่วโมง"
+    apply_template:
+      template_applied: "ใช้แม่แบบแล้ว"
+      no_template_found: "ไม่พบแม่แบบ โปรดกำหนดค่าการนำเข้าด้วยตนเอง"
+    destroy:
+      deleted: "ลบการนำเข้าของคุณแล้ว"
+    failure:
+      title: นำเข้าไม่สำเร็จ
+      description: โปรดตรวจสอบรูปแบบไฟล์ของคุณว่ามีข้อผิดพลาดหรือไม่ และกรอกช่องที่จำเป็นครบ แล้วกลับมาลองอีกครั้ง
+      try_again: ลองอีกครั้ง
+    success:
+      title: นำเข้าสำเร็จ
+      description: ข้อมูลที่นำเข้าของคุณถูกเพิ่มลงในแอปเรียบร้อยแล้วและพร้อมใช้งาน
+      back_to_dashboard: กลับไปที่แดชบอร์ด
+      verification:
+        title: การตรวจสอบข้อมูลย้อนกลับ
+        checked: ตรวจสอบแล้ว
+        mismatches: ไม่ตรงกัน
+        status:
+          not_verified: ยังไม่ได้ตรวจสอบ
+          matched: ตรงกัน
+          mismatch: ไม่ตรงกัน
+          failed: ล้มเหลว
+          reverted: ย้อนกลับแล้ว
+    importing:
+      title: กำลังนำเข้า
+      description: "การนำเข้าของคุณกำลังดำเนินอยู่ ตรวจสอบสถานะที่เมนูการนำเข้า หรือคลิก 'ตรวจสอบสถานะ' เพื่อรีเฟรชหน้า คุณใช้งานแอปต่อได้ตามปกติ"
+      check_status: ตรวจสอบสถานะ
+      back_to_dashboard: กลับไปที่แดชบอร์ด
+    revert_failure:
+      title: ย้อนกลับการนำเข้าไม่สำเร็จ
+      description: โปรดลองอีกครั้ง
+      try_again: ลองอีกครั้ง
+    date_format:
+      heading: รูปแบบวันที่
+      description: "ตรวจจับรูปแบบวันที่จากไฟล์ของคุณโดยอัตโนมัติ เปลี่ยนหากวันที่ดูไม่ถูกต้อง"
+      preview: "วันที่แรกที่แยกวิเคราะห์ได้"
+      error_title: "ตรวจจับรูปแบบวันที่ไม่ได้"
+      error_description: "ไม่มีรูปแบบวันที่ที่รองรับรูปแบบใดแยกวิเคราะห์วันที่ในไฟล์นี้ได้ โปรดตรวจสอบว่าไฟล์มีรายการวันที่ที่ถูกต้อง"
+    type_labels:
+      transaction_import: "นำเข้ารายการธุรกรรม"
+      trade_import: "นำเข้าการซื้อขาย"
+      account_import: "นำเข้าบัญชี"
+      mint_import: "นำเข้า Mint"
+      actual_import: "นำเข้า Actual"
+      ynab_import: "นำเข้า YNAB"
+      qif_import: "นำเข้า QIF"
+      category_import: "นำเข้าหมวดหมู่"
+      rule_import: "นำเข้ากฎ"
+      merchant_import: "นำเข้าร้านค้า"
+      pdf_import: "นำเข้า PDF"
+      document_import: "นำเข้าเอกสาร"
+      sure_import: "นำเข้า Sure"
+    steps:
+      upload: อัปโหลด
+      configure: กำหนดค่า
+      clean: ทำความสะอาด
+      map: จับคู่
+      confirm: ยืนยัน
+      select: เลือก
+      label: "ขั้นตอนที่ %{step}"
+      progress: "ขั้นตอนที่ %{step} จาก %{total}"
+    empty:
+      message: ไม่พบการนำเข้า
+    index:
+      title: การนำเข้า
+      new: การนำเข้าใหม่
+    table:
+      title: การนำเข้า
+      header:
+        date: วันที่
+        operation: การดำเนินการ
+        status: สถานะ
+        actions: การดำเนินการ
+      row:
+        type_labels:
+          transaction_import: "รายการธุรกรรม"
+          trade_import: "การซื้อขาย"
+          account_import: "บัญชี"
+          mint_import: "Mint"
+          actual_import: "Actual"
+          ynab_import: "YNAB"
+          qif_import: "QIF"
+          category_import: "หมวดหมู่"
+          rule_import: "กฎ"
+          merchant_import: "ร้านค้า"
+          pdf_import: "PDF"
+          document_import: "เอกสาร"
+          sure_import: "Sure"
+        status:
+          in_progress: กำลังดำเนินการ
+          uploading: กำลังประมวลผลแถว
+          reverting: กำลังย้อนกลับ
+          revert_failed: ย้อนกลับไม่สำเร็จ
+          complete: เสร็จสมบูรณ์
+          failed: ล้มเหลว
+        actions:
+          revert: ย้อนกลับ
+          confirm_revert: การดำเนินการนี้จะลบรายการธุรกรรมที่นำเข้า แต่คุณยังตรวจสอบและนำเข้าข้อมูลของคุณใหม่ได้ทุกเมื่อ
+          delete: ลบ
+          view: ดู
+          mark_failed: ทำเครื่องหมายว่าล้มเหลว
+          confirm_mark_failed: การนำเข้านี้ไม่มีกิจกรรมมาพักหนึ่งและงานเบื้องหลังน่าจะถูกขัดจังหวะ ทำเครื่องหมายว่าล้มเหลวเพื่อลองใหม่หรือไม่ ไม่มีข้อมูลที่นำเข้าถูกเก็บไว้
+      empty: ยังไม่มีการนำเข้า
+    new:
+      description: นำเข้าจากเครื่องมือการเงินหรืออัปโหลดไฟล์ข้อมูลดิบ
+      tab_financial_tools: เครื่องมือการเงินและไฟล์
+      tab_raw_data: ข้อมูลดิบ
+      import_ynab: นำเข้าจาก YNAB
+      import_accounts: นำเข้าบัญชี
+      import_categories: นำเข้าหมวดหมู่
+      import_merchants: นำเข้าร้านค้า
+      import_mint: นำเข้าจาก Mint
+      import_actual: นำเข้าจาก Actual Budget
+      import_portfolio: นำเข้าการลงทุน
+      import_rules: นำเข้ากฎ
+      import_transactions: นำเข้ารายการธุรกรรม
+      import_qif: นำเข้าจาก Quicken (QIF)
+      import_sure: นำเข้าจาก Sure
+      import_sure_description: ไฟล์ .ndjson ส่งออกแบบเต็ม
+      import_file: นำเข้าเอกสาร
+      import_file_description: วิเคราะห์ด้วย AI สำหรับ PDF และการอัปโหลดไฟล์ที่ค้นหาได้
+      requires_account: นำเข้าบัญชีก่อนเพื่อปลดล็อกตัวเลือกนี้
+      resume: ทำต่อ%{type}
+      sources: แหล่งที่มา
+      title: การนำเข้าใหม่
+    create:
+      file_too_large: ไฟล์ใหญ่เกินไป ขนาดสูงสุดคือ %{max_size}MB
+      invalid_file_type: ประเภทไฟล์ไม่ถูกต้อง โปรดอัปโหลดไฟล์ CSV
+      csv_uploaded: อัปโหลด CSV เรียบร้อยแล้ว
+      ndjson_uploaded: อัปโหลดไฟล์ NDJSON เรียบร้อยแล้ว
+      pdf_too_large: ไฟล์ PDF ใหญ่เกินไป ขนาดสูงสุดคือ %{max_size}MB
+      pdf_processing: กำลังประมวลผล PDF ของคุณ คุณจะได้รับอีเมลเมื่อการวิเคราะห์เสร็จสิ้น
+      invalid_pdf: ไฟล์ที่อัปโหลดไม่ใช่ PDF ที่ถูกต้อง
+      missing_upload: เราไม่ได้รับไฟล์ของคุณ โปรดลองอัปโหลดอีกครั้ง
+      duplicate_pdf_unavailable: PDF นี้ถูกเก็บเป็นใบแจ้งยอดที่คุณเข้าถึงไม่ได้
+      document_too_large: ไฟล์เอกสารใหญ่เกินไป ขนาดสูงสุดคือ %{max_size}MB
+      invalid_document_file_type: ประเภทไฟล์เอกสารไม่ถูกต้องสำหรับ vector store ที่ใช้งานอยู่
+      document_uploaded: อัปโหลดเอกสารเรียบร้อยแล้ว
+      document_upload_failed: เราอัปโหลดเอกสารไปยัง vector store ไม่ได้ โปรดลองอีกครั้ง
+      invalid_ndjson_file_type: ประเภทหรือรูปแบบไฟล์ไม่ถูกต้อง โปรดอัปโหลดไฟล์ส่งออก .ndjson หรือ .json ที่ถูกต้อง
+      document_provider_not_configured: ยังไม่ได้ตั้งค่า vector store สำหรับการอัปโหลดเอกสาร
+    show:
+      finalize_upload: โปรดสรุปการอัปโหลดไฟล์ของคุณ
+      finalize_mappings: โปรดสรุปการจับคู่ของคุณก่อนดำเนินการต่อ
+    ready:
+      description: นี่คือสรุปรายการใหม่ที่จะถูกเพิ่มลงในบัญชีของคุณเมื่อคุณเผยแพร่การนำเข้านี้
+      title: ยืนยันข้อมูลการนำเข้าของคุณ
+      summary_item_label: รายการ
+      summary_count_label: จำนวน
+      empty_summary: เราไม่พบระเบียนที่นำเข้าได้ในไฟล์นี้ ไฟล์อาจว่างเปล่า หรือบรรทัดอาจไม่ตรงกับรูปแบบการส่งออกที่คาดไว้ (แต่ละบรรทัดควรเป็นออบเจ็กต์ JSON ที่มีคีย์ "type" และ "data" โดยใช้ประเภทที่การนำเข้านี้รองรับ)
+      publish_import: เผยแพร่การนำเข้า
+      back_to_imports: กลับไปที่การนำเข้า
+      missing_merchant_warning_title: ร้านค้าบางส่วนขาดหายไปจากไฟล์ส่งออกนี้
+      missing_merchant_warning_description:
+        one: "มี 1 การอ้างอิงร้านค้าในไฟล์นี้ที่ชี้ไปยังร้านค้าที่ไม่รวมอยู่ อาจเกิดขึ้นได้กับไฟล์ส่งออกที่ทำก่อนที่ Sure จะเพิ่มร้านค้าที่ผู้ให้บริการกำหนดในการส่งออก คุณยังเผยแพร่การนำเข้านี้ได้ — ระเบียนที่ได้รับผลกระทบจะถูกนำเข้าโดยไม่มีร้านค้า และคุณติดแท็กภายหลังได้"
+        other: "มี %{count} การอ้างอิงร้านค้าในไฟล์นี้ที่ชี้ไปยังร้านค้าที่ไม่รวมอยู่ อาจเกิดขึ้นได้กับไฟล์ส่งออกที่ทำก่อนที่ Sure จะเพิ่มร้านค้าที่ผู้ให้บริการกำหนดในการส่งออก คุณยังเผยแพร่การนำเข้านี้ได้ — ระเบียนที่ได้รับผลกระทบจะถูกนำเข้าโดยไม่มีร้านค้า และคุณติดแท็กภายหลังได้"
+      skipped_recurring_description:
+        one: "มี 1 รายการธุรกรรมประจำที่ไม่มีชื่อและร้านค้าขาดหาย จึงจะถูกข้าม รายการธุรกรรมประจำที่ตรวจพบอัตโนมัติจะถูกสร้างใหม่หลังการนำเข้า"
+        other: "มี %{count} รายการธุรกรรมประจำที่ไม่มีชื่อและร้านค้าขาดหาย จึงจะถูกข้าม รายการธุรกรรมประจำที่ตรวจพบอัตโนมัติจะถูกสร้างใหม่หลังการนำเข้า"
+      reused_taxonomy_notice_title: หมวดหมู่ แท็ก หรือร้านค้าบางส่วนมีอยู่แล้ว
+      reused_taxonomy_notice_description:
+        one: "มี 1 หมวดหมู่ แท็ก หรือร้านค้าในไฟล์นี้ที่มีอยู่ในบัญชีของคุณแล้ว (เช่น จากหมวดหมู่เริ่มต้นของการเริ่มต้นใช้งาน) จะถูกนำมาใช้ซ้ำและอัปเดตด้วยข้อมูลของไฟล์นี้แทนการสร้างซ้ำ"
+        other: "มี %{count} หมวดหมู่ แท็ก หรือร้านค้าในไฟล์นี้ที่มีอยู่ในบัญชีของคุณแล้ว (เช่น จากหมวดหมู่เริ่มต้นของการเริ่มต้นใช้งาน) จะถูกนำมาใช้ซ้ำและอัปเดตด้วยข้อมูลของไฟล์นี้แทนการสร้างซ้ำ"
+      provider_merchant_diff_title: ร้านค้าบางส่วนมีอยู่แล้วแต่รายละเอียดต่างกัน
+      provider_merchant_diff_description:
+        one: "มี 1 ร้านค้าในไฟล์นี้ที่มีอยู่แล้วแต่รายละเอียดต่างกัน จะคงร้านค้าเดิมไว้และไม่ใช้ค่าของไฟล์นี้"
+        other: "มี %{count} ร้านค้าในไฟล์นี้ที่มีอยู่แล้วแต่รายละเอียดต่างกัน จะคงร้านค้าเดิมไว้และไม่ใช้ค่าของไฟล์นี้"
+      provider_merchant_diff_summary: ดูความแตกต่าง
+      provider_merchant_diff_none: ไม่มี
+      provider_merchant_diff_fields:
+        website_url: เว็บไซต์
+        name: ชื่อ
+        provider_merchant_id: ID ของผู้ให้บริการ
+      provider_merchant_diff_row: "%{field}: คงไว้ %{kept} ไฟล์มี %{imported}"
+    errors:
+      custom_column_requires_inflow: "การนำเข้าแบบคอลัมน์กำหนดเองต้องเลือกคอลัมน์เงินเข้า"
+      interrupted: "worker เบื้องหลังถูกขัดจังหวะก่อนเสร็จ ข้อมูลที่นำเข้าถูกย้อนกลับ — คุณลองใหม่ได้อย่างปลอดภัย"
+      presumed_lost: "ทำเครื่องหมายว่าล้มเหลวหลังงานเบื้องหลังถูกถือว่าสูญหาย ข้อมูลที่นำเข้าถูกย้อนกลับ — คุณลองใหม่ได้อย่างปลอดภัย"
+    document_types:
+      bank_statement: ใบแจ้งยอดธนาคาร
+      credit_card_statement: ใบแจ้งยอดบัตรเครดิต
+      investment_statement: ใบแจ้งยอดการลงทุน
+      financial_document: เอกสารทางการเงิน
+      contract: สัญญา
+      other: เอกสารอื่น ๆ
+      unknown: เอกสารที่ไม่ทราบ
+    pdf_import:
+      processing_title: กำลังประมวลผล PDF ของคุณ
+      processing_description: เรากำลังวิเคราะห์เอกสารของคุณด้วย AI อาจใช้เวลาสักครู่ คุณจะได้รับอีเมลเมื่อการวิเคราะห์เสร็จสิ้น
+      check_status: ตรวจสอบสถานะ
+      back_to_dashboard: กลับไปที่แดชบอร์ด
+      failed_title: ประมวลผลไม่สำเร็จ
+      failed_description: เราประมวลผลเอกสาร PDF ของคุณไม่ได้ โปรดลองอีกครั้งหรือติดต่อฝ่ายสนับสนุน
+      try_again: ลองอีกครั้ง
+      delete_import: ลบการนำเข้า
+      complete_title: วิเคราะห์เอกสารแล้ว
+      complete_description: เราวิเคราะห์ PDF ของคุณแล้ว และนี่คือสิ่งที่เราพบ
+      document_type_label: ประเภทเอกสาร
+      source_statement: ใบแจ้งยอดต้นทาง
+      summary_label: สรุป
+      email_sent_notice: เราส่งอีเมลพร้อมขั้นตอนถัดไปให้คุณแล้ว
+      back_to_imports: กลับไปที่การนำเข้า
+      unknown_state_title: สถานะที่ไม่ทราบ
+      unknown_state_description: การนำเข้านี้อยู่ในสถานะที่ไม่คาดคิด โปรดกลับไปที่การนำเข้า
+      processing_failed_with_message: "%{message}"
+      processing_failed_generic: "ประมวลผลไม่สำเร็จ: %{error}"
+      errors:
+        provider_not_configured: ยังไม่ได้ตั้งค่าผู้ให้บริการ AI
+        provider_no_pdf_support: ผู้ให้บริการ AI ไม่รองรับการประมวลผล PDF
+      ready_for_review_title: พร้อมให้ตรวจสอบ
+      ready_for_review_description:
+        one: "มี %{count} รายการธุรกรรมจากใบแจ้งยอดของคุณที่ยังไม่อยู่ในบัญชีนี้ ตรวจสอบและเผยแพร่เพื่อเพิ่ม"
+        other: "มี %{count} รายการธุรกรรมจากใบแจ้งยอดของคุณที่ยังไม่อยู่ในบัญชีนี้ ตรวจสอบและเผยแพร่เพื่อเพิ่ม"
+      transactions_extracted: รายการธุรกรรมที่ดึงได้
+      transactions_extracted_count:
+        one: "%{count} รายการธุรกรรม"
+        other: "%{count} รายการธุรกรรม"
+      select_account: นำเข้าไปยังบัญชี
+      select_account_placeholder: เลือกบัญชี...
+      select_account_hint: เลือกบัญชีที่จะนำเข้ารายการธุรกรรมเหล่านี้
+      no_accounts: ไม่มีบัญชี โปรดสร้างบัญชีก่อน
+      create_account: สร้างบัญชี
+      save_account: บันทึก
+      publish_transactions:
+        one: "เผยแพร่ %{count} รายการธุรกรรม"
+        other: "เผยแพร่ %{count} รายการธุรกรรม"
+      review_transactions: ตรวจสอบรายการธุรกรรม
+      view_summary: ดูสรุปการนำเข้า
+      already_recorded_note:
+        one: "%{count} รายการมีอยู่ในบัญชีนี้แล้วและถูกจับคู่กับใบแจ้งยอด"
+        other: "%{count} รายการมีอยู่ในบัญชีนี้แล้วและถูกจับคู่กับใบแจ้งยอด"
+      complete_fully_reconciled:
+        one: "ทุกรายการธุรกรรมในใบแจ้งยอดนี้มีอยู่ในบัญชีของคุณแล้ว จับคู่ %{count} รายการและทำเครื่องหมายว่ากระทบยอดแล้ว — ไม่ต้องนำเข้าอะไร"
+        other: "ทุกรายการธุรกรรมในใบแจ้งยอดนี้มีอยู่ในบัญชีของคุณแล้ว จับคู่ทั้ง %{count} รายการและทำเครื่องหมายว่ากระทบยอดแล้ว — ไม่ต้องนำเข้าอะไร"
+      select_account_to_continue: โปรดเลือกบัญชีด้านบนเพื่อดำเนินการต่อ
+      unknown_document_type: ไม่ทราบ

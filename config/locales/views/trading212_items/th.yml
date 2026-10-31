@@ -1,0 +1,102 @@
+---
+th:
+  providers:
+    trading212:
+      name: Trading 212
+      connection_description: เชื่อมต่อบัญชีลงทุน Trading 212 ผ่านคีย์ API
+      institution_name: Trading 212
+  trading212_items:
+    defaults:
+      name: Trading 212
+    trading212_item:
+      deletion_in_progress: กำลังลบ
+      environment_label_live: บัญชีจริง
+      environment_label_demo: บัญชีเดโม
+      syncing: กำลังซิงค์
+      requires_update: คีย์ API ต้องตรวจสอบ
+      error: ข้อผิดพลาด
+      synced: ซิงค์เมื่อ %{time} ที่แล้ว %{summary}
+      never_synced: ไม่เคยซิงค์
+      setup_accounts: ตั้งค่าบัญชี
+      delete: ลบ
+      accounts_need_setup: บัญชีต้องตั้งค่า
+      accounts_need_setup_description: บัญชี Trading 212 ของคุณต้องเชื่อมโยงกับบัญชี Sure
+      no_accounts_discovered: ยังไม่พบบัญชี Trading 212
+      no_accounts_discovered_description: รันการซิงค์หลังบันทึกคีย์ API เพื่อค้นหาบัญชีของคุณ
+    setup_accounts:
+      page_title: ตั้งค่าบัญชี Trading 212
+      dialog_title: ตั้งค่าบัญชี Trading 212 ของคุณ
+      subtitle: เชื่อมโยงบัญชีลงทุน Trading 212 ของคุณ
+      info_box:
+        title: การนำเข้า Trading 212 API
+        items:
+          item_1: สถานะปัจจุบันพร้อมราคาและจำนวน
+          item_2: ประวัติคำสั่งซื้อขายทั้งหมด (ซื้อและขาย)
+          item_3: เงินปันผลและรายการธุรกรรมเงินสด
+      status:
+        fetching_accounts: กำลังดึงบัญชีจาก Trading 212...
+        no_accounts_found_title: ไม่พบบัญชี
+        no_accounts_found_description: Sure ไม่พบบัญชี Trading 212 ตรวจสอบว่าคีย์ API ของคุณถูกต้อง
+      available_accounts:
+        title: บัญชีที่ใช้ได้
+        account_type_investment: การลงทุน
+        account_summary: "%{account_type} • ยอดคงเหลือ: %{balance}"
+        account_id: "Account ID: %{account_id}"
+      link_existing:
+        description: หรือเชื่อมโยงบัญชี Trading 212 ที่พบกับบัญชีลงทุนแบบกรอกเองที่มีอยู่
+        manual_account_option: "%{name} (%{balance})"
+        select_prompt: เลือกบัญชี...
+      linked_accounts:
+        title: เชื่อมโยงแล้ว
+        linked_to_html: "เชื่อมโยงกับ: %{account}"
+      buttons:
+        refresh: รีเฟรช
+        cancel: ยกเลิก
+        back_to_settings: กลับไปที่การตั้งค่า
+        create_selected_accounts: สร้างบัญชีที่เลือก
+        link: เชื่อมโยง
+        done: เสร็จสิ้น
+    sync:
+      status:
+        checking_credentials: กำลังตรวจสอบข้อมูลรับรอง Trading 212...
+        importing_account: กำลังนำเข้าบัญชี Trading 212...
+        checking_configuration: กำลังตรวจสอบการตั้งค่าบัญชี...
+        accounts_need_setup:
+          one: บัญชี Trading 212 1 บัญชีต้องตั้งค่า...
+          other: "บัญชี Trading 212 %{count} บัญชีต้องตั้งค่า..."
+        processing_activity: กำลังประมวลผลสถานะและกิจกรรม...
+        calculating_balances: กำลังคำนวณยอดคงเหลือ...
+    sync_status:
+      no_accounts: ยังไม่พบบัญชี Trading 212
+      all_linked:
+        one: เชื่อมโยง 1 บัญชีแล้ว
+        other: "เชื่อมโยง %{count} บัญชีแล้ว"
+      partial: "เชื่อมโยงแล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    select_existing_account:
+      title: เชื่อมโยงบัญชี Trading 212
+      no_accounts_available: ยังไม่มีบัญชี Trading 212 ที่ยังไม่เชื่อมโยง
+      run_sync_hint: "รันการซิงค์จาก การตั้งค่า > ผู้ให้บริการ หลังบันทึกคีย์ API ของคุณ"
+      wait_for_sync: รอให้การซิงค์ค้นหาบัญชีเสร็จ
+      balance: ยอดคงเหลือ
+      link: เชื่อมโยง
+      cancel: ยกเลิก
+    create:
+      success: ตั้งค่า Trading 212 สำเร็จ
+    update:
+      success: อัปเดตการตั้งค่า Trading 212 สำเร็จ
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Trading 212 แล้ว
+    select_accounts:
+      not_configured: ยังไม่ได้ตั้งค่า Trading 212
+    link_existing_account:
+      not_found: ไม่พบบัญชีหรือการตั้งค่า Trading 212
+      only_manual_investment: เชื่อมโยงกับ Trading 212 ได้เฉพาะบัญชีลงทุนแบบกรอกเอง
+      already_linked: บัญชี Trading 212 นี้เชื่อมโยงแล้ว
+      success: เชื่อมโยงกับบัญชี Trading 212 สำเร็จ
+      failed: เชื่อมโยงบัญชี Trading 212 ไม่สำเร็จ
+    complete_account_setup:
+      success:
+        one: สร้างบัญชี Trading 212 %{count} บัญชีสำเร็จ
+        other: สร้างบัญชี Trading 212 %{count} บัญชีสำเร็จ
+      none_selected: ไม่ได้เลือกบัญชี
+      none_created: ไม่ได้สร้างบัญชี

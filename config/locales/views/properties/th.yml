@@ -1,0 +1,135 @@
+---
+th:
+  properties:
+    edit:
+      edit: แก้ไข %{account}
+      title: กรอกอสังหาริมทรัพย์ด้วยตนเอง
+    form:
+      address_line1: ที่อยู่
+      address_line1_placeholder: 123 ถนนสุขุมวิท
+      area: พื้นที่ใช้สอย
+      area_placeholder: '2000'
+      area_unit: หน่วยวัด
+      country: ประเทศ
+      country_placeholder: TH
+      locality: เมือง
+      locality_placeholder: กรุงเทพมหานคร
+      none: ไม่มี
+      postal_code: รหัสไปรษณีย์
+      postal_code_placeholder: '10110'
+      region: จังหวัด
+      region_placeholder: กรุงเทพมหานคร
+      subtype_prompt: เลือกประเภทอสังหาริมทรัพย์
+      year_built: ปีที่สร้าง
+      year_built_placeholder: '2000'
+    avm_providers:
+      rentcast: RentCast
+      realie: Realie
+      chimnie: Chimnie
+    new:
+      title: กรอกอสังหาริมทรัพย์ด้วยตนเอง
+      next: "ถัดไป"
+      avm_option: "เพิ่มผ่าน %{provider}"
+      avm_title: "เพิ่มอสังหาริมทรัพย์ผ่าน %{provider}"
+      avm_description: "กรอกชื่อของอสังหาริมทรัพย์และที่อยู่ %{provider} จะค้นหารายละเอียดอสังหาริมทรัพย์และมูลค่าตลาดโดยประมาณให้คุณ"
+      avm_us_only: "%{provider} รองรับเฉพาะอสังหาริมทรัพย์ที่อยู่ในสหรัฐอเมริกา"
+      avm_uk_only: "%{provider} รองรับเฉพาะอสังหาริมทรัพย์เพื่อที่อยู่อาศัยในสหราชอาณาจักร"
+      avm_uprn_label: "UPRN"
+      avm_uprn_placeholder: "100023336956"
+      avm_uprn_help: "Unique Property Reference Number (ไม่เกิน 12 หลัก) ระบุทุกที่อยู่ในสหราชอาณาจักร ค้นหาได้ที่ findmyaddress.co.uk ของ GeoPlace หรือสอบถามสภาท้องถิ่น %{provider} ใช้ค่านี้ประเมินมูลค่าอสังหาริมทรัพย์ฟรี"
+      avm_county_label: "เคาน์ตี (ไม่บังคับ)"
+      avm_town_label: "เมืองหรือเมืองใหญ่"
+      avm_postcode_label: "รหัสไปรษณีย์"
+      avm_submit: "ค้นหาอสังหาริมทรัพย์"
+      avm_preview_title: "ยืนยันรายละเอียดอสังหาริมทรัพย์"
+      avm_preview_description: "นี่คือสิ่งที่ %{provider} พบ ตรวจสอบรายละเอียดก่อนเพิ่มอสังหาริมทรัพย์ — ยังไม่มีการสร้างอะไร"
+      avm_preview_no_record: "%{provider} ไม่พบระเบียนอสังหาริมทรัพย์ที่ที่อยู่นี้ ค่าที่แสดงจึงเป็นการประมาณจากพื้นที่โดยรอบ ตรวจสอบที่อยู่อีกครั้งก่อนดำเนินการต่อ"
+      avm_preview_back: "กลับ"
+      avm_preview_uprn: "UPRN"
+      avm_preview_range: "ช่วงค่าประมาณ"
+      avm_preview_confidence: "ความเชื่อมั่น"
+      avm_confidence:
+        high: "สูง"
+        medium: "ปานกลาง"
+        low: "ต่ำ"
+      avm_attribution_chimnie: "ข้อมูลการประเมินมูลค่าจาก Chimnie ประกอบด้วยข้อมูล OS © ลิขสิทธิ์ Crown และสิทธิในฐานข้อมูล ข้อมูล Royal Mail © ลิขสิทธิ์ Royal Mail และสิทธิในฐานข้อมูล และข้อมูล HM Land Registry © ลิขสิทธิ์ Crown และสิทธิในฐานข้อมูล ได้รับอนุญาตภายใต้ Open Government Licence v3.0"
+      avm_preview_confirm: "เพิ่มอสังหาริมทรัพย์"
+    address:
+      title: "กรอกอสังหาริมทรัพย์ด้วยตนเอง"
+      address_line1_label: "ที่อยู่บรรทัดที่ 1"
+      address_line1_placeholder: "123 ถนนสุขุมวิท"
+      city_label: "เมือง"
+      city_placeholder: "กรุงเทพมหานคร"
+      state_region_label: "จังหวัด/ภูมิภาค"
+      state_region_placeholder: "กรุงเทพมหานคร"
+      postal_code_label: "รหัสไปรษณีย์"
+      postal_code_placeholder: "10110"
+      country_label: "ประเทศ"
+      country_placeholder: "ไทย"
+      save: "บันทึก"
+    balances:
+      title: "กรอกอสังหาริมทรัพย์ด้วยตนเอง"
+      market_value_label: "มูลค่าตลาดโดยประมาณ"
+      market_value_tooltip: "มูลค่าตลาดโดยประมาณของอสังหาริมทรัพย์ของคุณ ตัวเลขนี้มักหาได้จากเว็บไซต์อย่าง Zillow หรือ Redfin และไม่เคยเป็นตัวเลขที่แน่นอน"
+      save: "บันทึก"
+      next: "ถัดไป"
+    overview_fields:
+      name_label: "ชื่อ"
+      name_placeholder: "บ้านพักตากอากาศ"
+      subtype_prompt: "เลือกประเภท"
+      property_type_label: "ประเภทอสังหาริมทรัพย์"
+      year_built_label: "ปีที่สร้าง (ไม่บังคับ)"
+      year_built_placeholder: "1990"
+      area_label: "พื้นที่ (ไม่บังคับ)"
+      area_placeholder: "1200"
+      square_feet: "ตารางฟุต"
+      square_meters: "ตารางเมตร"
+      area_unit_label: "หน่วยพื้นที่"
+    overview:
+      living_area: พื้นที่ใช้สอย
+      market_value: มูลค่าตลาด
+      purchase_price: ราคาซื้อ
+      trend: แนวโน้ม
+      unknown: ไม่ทราบ
+      year_built: ปีที่สร้าง
+    tabs:
+      overview:
+        living_area: พื้นที่ใช้สอย
+        market_value: มูลค่าตลาด
+        purchase_price: ราคาซื้อ
+        trend: แนวโน้ม
+        unknown: ไม่ทราบ
+        year_built: ปีที่สร้าง
+        edit_account_details: "แก้ไขรายละเอียดบัญชี"
+        refresh_valuation: "รีเฟรชการประเมินมูลค่า"
+        valuation_source: "ประเมินโดย %{provider} อัปเดตล่าสุด %{date}"
+        link_valuation: "อัปเดตมูลค่าอัตโนมัติด้วย %{provider}"
+        link_valuation_description: "มูลค่าของอสังหาริมทรัพย์นี้อัปเดตด้วยตนเองเท่านั้น"
+    refresh_valuation:
+      queued: "เริ่มรีเฟรชการประเมินมูลค่าแล้ว มูลค่าใหม่จะปรากฏในไม่ช้า"
+      not_linked: "อสังหาริมทรัพย์นี้ไม่ได้เชื่อมโยงกับผู้ให้บริการประเมินมูลค่า"
+      not_configured: "ยังไม่ได้ตั้งค่า %{provider} เพิ่มคีย์ API ใน การตั้งค่า → การโฮสต์เอง เพื่อรีเฟรชการประเมินมูลค่านี้"
+    link_valuation:
+      linked: "เชื่อมโยงกับ %{provider} และอัปเดตมูลค่าของอสังหาริมทรัพย์แล้ว"
+      link_failed: "%{provider} ประเมินมูลค่าอสังหาริมทรัพย์นี้ไม่ได้ จึงไม่ได้เชื่อมโยง ตรวจสอบว่าที่อยู่ถูกต้อง แล้วลองอีกครั้ง"
+      not_linkable: "ไม่สามารถเชื่อมโยงอสังหาริมทรัพย์นี้กับผู้ให้บริการนั้นได้ ตรวจสอบว่าที่อยู่สมบูรณ์และอยู่ในประเทศที่รองรับ และสกุลเงินของบัญชีตรงกับผู้ให้บริการ"
+    subtypes:
+      apartment:
+        short: อพาร์ตเมนต์
+        long: อพาร์ตเมนต์
+      plot:
+        short: ที่ดินแปลง
+        long: ที่ดินแปลง / ที่ดิน
+      commercial:
+        short: เชิงพาณิชย์
+        long: อสังหาริมทรัพย์เชิงพาณิชย์
+      rented:
+        short: ให้เช่า
+        long: อสังหาริมทรัพย์ให้เช่า
+      agri_land:
+        short: ที่ดินเกษตร
+        long: ที่ดินเพื่อการเกษตร
+    form_tabs:
+      address: ที่อยู่
+      overview: ภาพรวม
+      value: มูลค่า

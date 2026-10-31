@@ -1,0 +1,7 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        plaid_account:
+          no_balance: "บัญชี Plaid ต้องมียอดคงเหลือปัจจุบันหรือยอดคงเหลือที่ใช้ได้อย่างใดอย่างหนึ่ง"

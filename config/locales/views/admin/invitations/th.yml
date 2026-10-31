@@ -1,0 +1,8 @@
+---
+th:
+  admin:
+    invitations:
+      destroy:
+        success: "ลบคำเชิญแล้ว"
+      destroy_all:
+        success: "ลบคำเชิญทั้งหมดของครอบครัวนี้แล้ว"

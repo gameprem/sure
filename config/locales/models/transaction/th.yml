@@ -1,0 +1,11 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        transaction:
+          attributes:
+            attachments:
+              too_many: "แนบไฟล์ได้ไม่เกิน %{max} ไฟล์ต่อรายการธุรกรรม"
+              too_large: "ไฟล์ที่ %{index} ใหญ่เกินไป (สูงสุด %{max_mb}MB)"
+              invalid_format: "ไฟล์ที่ %{index} มีรูปแบบที่ไม่รองรับ (%{file_format})"

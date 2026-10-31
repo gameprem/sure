@@ -174,6 +174,7 @@ module LanguagesHelper
     "nl",   # Dutch
     "hu",   # Hungarian
     "vi",   # Vietnamese
+    "th",   # Thai
     "uk"    # Ukrainian
   ].freeze
 

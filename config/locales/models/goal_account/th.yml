@@ -1,0 +1,9 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        goal_account:
+          attributes:
+            base:
+              account_already_fully_earmarked: บัญชีนี้ถูกจัดสรรให้ “%{goal_name}” ทั้งหมดแล้ว โปรดกรอกจำนวนเงินเพื่อแบ่งสรร

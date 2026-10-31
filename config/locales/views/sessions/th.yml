@@ -1,0 +1,38 @@
+---
+th:
+  sessions:
+    create:
+      invalid_credentials: อีเมลหรือรหัสผ่านไม่ถูกต้อง
+      local_login_disabled: ปิดใช้งานการเข้าสู่ระบบด้วยรหัสผ่านภายในแล้ว โปรดใช้ระบบลงชื่อเข้าใช้แบบครั้งเดียว (SSO)
+      account_deactivated: บัญชีนี้ถูกปิดใช้งาน โปรดติดต่อผู้ดูแลระบบ
+    destroy:
+      logout_successful: ออกจากระบบเรียบร้อยแล้ว
+    post_logout:
+      logout_successful: ออกจากระบบเรียบร้อยแล้ว
+    openid_connect:
+      account_linked: "เชื่อมโยงบัญชีกับ %{provider} สำเร็จ"
+      failed: ไม่สามารถยืนยันตัวตนผ่าน OpenID Connect ได้
+    failure:
+      failed: ไม่สามารถยืนยันตัวตนได้
+      sso_provider_unavailable: "ผู้ให้บริการ SSO ไม่พร้อมใช้งานในขณะนี้ โปรดลองอีกครั้งภายหลังหรือติดต่อผู้ดูแลระบบ"
+      sso_invalid_response: "ได้รับการตอบกลับที่ไม่ถูกต้องจากผู้ให้บริการ SSO โปรดลองอีกครั้ง"
+      sso_failed: "การยืนยันตัวตนแบบ SSO ล้มเหลว โปรดลองอีกครั้ง"
+    mobile_sso_start:
+      redirecting_html: "กำลังเปลี่ยนเส้นทางไปเข้าสู่ระบบ... <a href=\"%{url}\">คลิกที่นี่</a> หากไม่ถูกเปลี่ยนเส้นทางโดยอัตโนมัติ"
+    new:
+      email: ที่อยู่อีเมล
+      email_placeholder: you@example.com
+      forgot_password: ลืมรหัสผ่าน?
+      password: รหัสผ่าน
+      submit: เข้าสู่ระบบ
+      title: Sure
+      password_placeholder: กรอกรหัสผ่านของคุณ
+      openid_connect: เข้าสู่ระบบด้วย OpenID Connect
+      oidc: เข้าสู่ระบบด้วย OpenID Connect
+      google_auth_connect: เข้าสู่ระบบด้วย Google
+      local_login_admin_only: การเข้าสู่ระบบภายในจำกัดเฉพาะผู้ดูแลระบบ
+      passkey_button: เข้าสู่ระบบด้วยพาสคีย์
+      passkey_unsupported: เบราว์เซอร์นี้ไม่รองรับพาสคีย์
+      no_auth_methods_enabled: ขณะนี้ไม่มีวิธียืนยันตัวตนที่เปิดใช้งาน โปรดติดต่อผู้ดูแลระบบ
+      demo_banner_title: "โหมดเดโมเปิดอยู่"
+      demo_banner_message: "นี่คือสภาพแวดล้อมสำหรับสาธิต ข้อมูลเข้าสู่ระบบถูกกรอกไว้ให้แล้วเพื่อความสะดวก โปรดอย่ากรอกข้อมูลจริงหรือข้อมูลที่ละเอียดอ่อน"

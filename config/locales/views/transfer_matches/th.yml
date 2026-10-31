@@ -1,0 +1,24 @@
+---
+th:
+  transfer_matches:
+    create:
+      success: สร้างการโอนแล้ว
+    new:
+      header:
+        title: จับคู่การโอนหรือการชำระเงิน
+        subtitle: จับคู่กับรายการธุรกรรมที่ตรงกันในบัญชีอื่น หรือสร้างใหม่หากยังไม่มี
+      from_account: จากบัญชี
+      from_account_named: "จากบัญชี: %{name}"
+      to_account: ไปยังบัญชี
+      to_account_named: "ไปยังบัญชี: %{name}"
+      outflow_transaction: รายการเงินออก
+      inflow_transaction: รายการเงินเข้า
+      create_transfer_match: สร้างการจับคู่การโอน
+    matching_fields:
+      select_method: เลือกวิธีจับคู่รายการธุรกรรมของคุณ
+      match_existing_recommended: จับคู่กับรายการธุรกรรมที่มีอยู่ (แนะนำ)
+      create_new_transaction: สร้างรายการธุรกรรมใหม่
+      matching_method: วิธีจับคู่
+      matching_transaction: รายการธุรกรรมที่จับคู่
+      target_account: บัญชีเป้าหมาย
+      no_matching_transactions: เราไม่พบรายการธุรกรรมที่จะจับคู่จากบัญชีอื่นของคุณ โปรดเลือกบัญชี แล้วเราจะสร้างรายการเงินเข้าใหม่ให้

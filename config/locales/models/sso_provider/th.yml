@@ -1,0 +1,12 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        sso_provider:
+          attributes:
+            settings:
+              saml_url_required: "ผู้ให้บริการ SAML ต้องมี IdP Metadata URL หรือ IdP SSO URL อย่างใดอย่างหนึ่ง"
+              saml_cert_required: "ต้องมี IdP Certificate หรือ Certificate Fingerprint อย่างใดอย่างหนึ่งเมื่อไม่ใช้ metadata URL"
+              metadata_url_invalid: "IdP Metadata URL ต้องเป็น URL ที่ถูกต้อง"
+              sso_url_invalid: "IdP SSO URL ต้องเป็น URL ที่ถูกต้อง"

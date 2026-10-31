@@ -1,0 +1,158 @@
+th:
+  activerecord:
+    attributes:
+      doorkeeper/application:
+        name: 'ชื่อ'
+        redirect_uri: 'Redirect URI'
+    errors:
+      models:
+        doorkeeper/application:
+          attributes:
+            redirect_uri:
+              fragment_present: 'ต้องไม่มีส่วน fragment'
+              invalid_uri: 'ต้องเป็น URI ที่ถูกต้อง'
+              unspecified_scheme: 'ต้องระบุ scheme'
+              relative_uri: 'ต้องเป็น URI แบบสมบูรณ์'
+              secured_uri: 'ต้องเป็น URI แบบ HTTPS/SSL'
+              forbidden_uri: 'ถูกเซิร์ฟเวอร์ห้ามใช้'
+            scopes:
+              not_match_configured: "ไม่ตรงกับที่ตั้งค่าไว้บนเซิร์ฟเวอร์"
+
+  doorkeeper:
+    applications:
+      confirmations:
+        destroy: 'คุณแน่ใจหรือไม่?'
+      buttons:
+        edit: 'แก้ไข'
+        destroy: 'ลบ'
+        submit: 'ส่ง'
+        cancel: 'ยกเลิก'
+        authorize: 'อนุญาต'
+      form:
+        error: 'อ๊ะ! ตรวจสอบแบบฟอร์มของคุณว่ามีข้อผิดพลาดหรือไม่'
+      help:
+        confidential: 'แอปพลิเคชันจะถูกใช้ในที่ที่สามารถเก็บ client secret เป็นความลับได้ แอปมือถือเนทีฟและ Single Page App ถือว่าไม่เป็นความลับ'
+        redirect_uri: 'ใช้หนึ่งบรรทัดต่อหนึ่ง URI'
+        blank_redirect_uri: "เว้นว่างไว้หากคุณตั้งค่าผู้ให้บริการให้ใช้ Client Credentials, Resource Owner Password Credentials หรือ grant type อื่นที่ไม่ต้องใช้ redirect URI"
+        scopes: 'คั่นขอบเขตด้วยช่องว่าง เว้นว่างไว้เพื่อใช้ขอบเขตเริ่มต้น'
+      edit:
+        title: 'แก้ไขแอปพลิเคชัน'
+      index:
+        title: 'แอปพลิเคชันของคุณ'
+        new: 'แอปพลิเคชันใหม่'
+        name: 'ชื่อ'
+        callback_url: 'Callback URL'
+        confidential: 'เป็นความลับหรือไม่?'
+        actions: 'การดำเนินการ'
+        confidentiality:
+          'yes': 'ใช่'
+          'no': 'ไม่'
+      new:
+        title: 'แอปพลิเคชันใหม่'
+      show:
+        title: 'แอปพลิเคชัน: %{name}'
+        application_id: 'UID'
+        secret: 'Secret'
+        secret_hashed: 'Secret ที่แฮชแล้ว'
+        scopes: 'ขอบเขต'
+        confidential: 'เป็นความลับ'
+        callback_urls: 'Callback URL'
+        actions: 'การดำเนินการ'
+        not_defined: 'ไม่ได้กำหนด'
+
+    authorizations:
+      buttons:
+        authorize: 'อนุญาต'
+        deny: 'ปฏิเสธ'
+      error:
+        title: 'เกิดข้อผิดพลาด'
+        go_back: 'กลับ'
+      new:
+        title: 'ต้องได้รับอนุญาต'
+        prompt: 'อนุญาตให้ %{client_name} ใช้บัญชีของคุณหรือไม่?'
+        able_to: 'แอปพลิเคชันนี้จะสามารถ'
+      show:
+        title: 'รหัสการอนุญาต'
+        authorization_code_label: 'รหัสการอนุญาต:'
+        copy_instructions: 'คัดลอกรหัสนี้แล้ววางลงในแอปพลิเคชัน'
+      form_post:
+        title: 'ส่งแบบฟอร์มนี้'
+
+    authorized_applications:
+      confirmations:
+        revoke: 'คุณแน่ใจหรือไม่?'
+      buttons:
+        revoke: 'เพิกถอน'
+      index:
+        title: 'แอปพลิเคชันที่คุณอนุญาตแล้ว'
+        application: 'แอปพลิเคชัน'
+        created_at: 'สร้างเมื่อ'
+        date_format: '%Y-%m-%d %H:%M:%S'
+
+    pre_authorization:
+      status: 'การอนุญาตล่วงหน้า'
+
+    errors:
+      messages:
+        # Common error messages
+        invalid_request:
+          unknown: 'คำขอขาดพารามิเตอร์ที่จำเป็น มีค่าพารามิเตอร์ที่ไม่รองรับ หรือรูปแบบไม่ถูกต้อง'
+          missing_param: 'ขาดพารามิเตอร์ที่จำเป็น: %{value}'
+          request_not_authorized: 'คำขอต้องได้รับอนุญาต พารามิเตอร์ที่จำเป็นสำหรับการอนุญาตคำขอหายไปหรือไม่ถูกต้อง'
+          invalid_code_challenge: 'ต้องมี code challenge'
+        invalid_redirect_uri: "redirect uri ที่ขอมีรูปแบบไม่ถูกต้องหรือไม่ตรงกับ redirect URI ของไคลเอนต์"
+        unauthorized_client: 'ไคลเอนต์ไม่ได้รับอนุญาตให้ทำคำขอนี้ด้วยวิธีนี้'
+        access_denied: 'เจ้าของทรัพยากรหรือเซิร์ฟเวอร์การอนุญาตปฏิเสธคำขอ'
+        invalid_scope: 'ขอบเขตที่ขอไม่ถูกต้อง ไม่รู้จัก หรือมีรูปแบบไม่ถูกต้อง'
+        invalid_code_challenge_method:
+          zero: 'เซิร์ฟเวอร์การอนุญาตไม่รองรับ PKCE เนื่องจากไม่มีค่า code_challenge_method ที่ยอมรับ'
+          one: 'code_challenge_method ต้องเป็น %{challenge_methods}'
+          other: 'code_challenge_method ต้องเป็นหนึ่งใน %{challenge_methods}'
+        server_error: 'เซิร์ฟเวอร์การอนุญาตพบเหตุการณ์ที่ไม่คาดคิดซึ่งทำให้ไม่สามารถดำเนินการตามคำขอได้'
+        temporarily_unavailable: 'เซิร์ฟเวอร์การอนุญาตไม่สามารถประมวลผลคำขอได้ในขณะนี้ เนื่องจากโหลดสูงเกินไปชั่วคราวหรืออยู่ระหว่างบำรุงรักษา'
+
+        # Configuration error messages
+        credential_flow_not_configured: 'ขั้นตอน Resource Owner Password Credentials ล้มเหลว เพราะไม่ได้ตั้งค่า Doorkeeper.configure.resource_owner_from_credentials'
+        resource_owner_authenticator_not_configured: 'การค้นหา Resource Owner ล้มเหลว เพราะไม่ได้ตั้งค่า Doorkeeper.configure.resource_owner_authenticator'
+        admin_authenticator_not_configured: 'ห้ามเข้าถึงแผงผู้ดูแล เพราะไม่ได้ตั้งค่า Doorkeeper.configure.admin_authenticator'
+
+        # Access grant errors
+        unsupported_response_type: 'เซิร์ฟเวอร์การอนุญาตไม่รองรับ response type นี้'
+        unsupported_response_mode: 'เซิร์ฟเวอร์การอนุญาตไม่รองรับ response mode นี้'
+
+        # Access token errors
+        invalid_client: 'การยืนยันตัวตนของไคลเอนต์ล้มเหลว เนื่องจากไม่รู้จักไคลเอนต์ ไม่มีการยืนยันตัวตนของไคลเอนต์ หรือใช้วิธียืนยันตัวตนที่ไม่รองรับ'
+        invalid_grant: 'authorization grant ที่ให้มาไม่ถูกต้อง หมดอายุ ถูกเพิกถอน ไม่ตรงกับ redirection URI ที่ใช้ในคำขออนุญาต หรือถูกออกให้ไคลเอนต์อื่น'
+        unsupported_grant_type: 'เซิร์ฟเวอร์การอนุญาตไม่รองรับ authorization grant type นี้'
+
+        invalid_token:
+          revoked: "access token ถูกเพิกถอนแล้ว"
+          expired: "access token หมดอายุแล้ว"
+          unknown: "access token ไม่ถูกต้อง"
+        revoke:
+          unauthorized: "คุณไม่ได้รับอนุญาตให้เพิกถอนโทเคนนี้"
+
+        forbidden_token:
+          missing_scope: 'การเข้าถึงทรัพยากรนี้ต้องมีขอบเขต "%{oauth_scopes}"'
+
+    flash:
+      applications:
+        create:
+          notice: 'สร้างแอปพลิเคชันแล้ว'
+        destroy:
+          notice: 'ลบแอปพลิเคชันแล้ว'
+        update:
+          notice: 'อัปเดตแอปพลิเคชันแล้ว'
+      authorized_applications:
+        destroy:
+          notice: 'เพิกถอนแอปพลิเคชันแล้ว'
+
+    layouts:
+      admin:
+        title: 'Doorkeeper'
+        nav:
+          oauth2_provider: 'ผู้ให้บริการ OAuth2'
+          applications: 'แอปพลิเคชัน'
+          home: 'หน้าหลัก'
+      application:
+        title: 'ต้องได้รับอนุญาต OAuth'

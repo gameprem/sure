@@ -1,0 +1,51 @@
+---
+th:
+  chats:
+    demo_banner_title: "โหมดเดโมเปิดอยู่"
+    demo_banner_message: "โทเคน LLM ฟรีโดยความอนุเคราะห์จาก Vercel AI Gateway ผลลัพธ์อาจแตกต่างกันเนื่องจากเราเปลี่ยนน้ำหนักโมเดลบ่อยเพื่อการทดสอบ ดูเอกสารของ Vercel เพื่อรู้ว่าบทสนทนาของคุณไปอยู่ที่ไหน! 🤖"
+    thinking: "กำลังคิด ..."
+    ai_busy: "ขอทำงานเบื้องหลังให้เสร็จก่อน แล้วจะตอบข้อความของคุณทันที"
+    reservation:
+      ready_html: "ฉันเลื่อนงานเบื้องหลังบางอย่างออกไปเพื่อตอบข้อความของคุณทันที งานเหล่านั้นจะกลับมาใน %{countdown} วินาที พิมพ์ต่อได้เลย!"
+      busy: "ขอทำงานเบื้องหลังให้เสร็จก่อน แล้วจะอยู่กับคุณเต็มที่ พิมพ์ต่อได้เลย!"
+    worker_unhealthy_warning: "ตอนนี้คำตอบจาก AI อาจส่งไม่ถึง — worker เบื้องหลังดูเหมือนจะหยุดทำงานหรือค้างคิว ตรวจสอบว่า worker ของ Sidekiq ทำงานอยู่"
+    ai_greeting:
+      greeting: "สวัสดี %{name}! ฉันเป็น AI/โมเดลภาษาขนาดใหญ่ที่ช่วยเรื่องการเงินของคุณได้ ฉันเข้าถึงเว็บและข้อมูลบัญชีของคุณได้"
+      there: "คุณ"
+      commands_hint_html: "คุณใช้ <span class=\"bg-container border border-secondary px-1.5 py-0.5 rounded font-mono text-xs\">/</span> เพื่อเรียกคำสั่งได้"
+      questions_intro: "นี่คือตัวอย่างคำถามที่คุณถามได้:"
+      evaluate_portfolio: "ประเมินพอร์ตการลงทุน"
+      spending_insights: "แสดงข้อมูลเชิงลึกการใช้จ่าย"
+      unusual_patterns: "ค้นหารูปแบบที่ผิดปกติ"
+    chat:
+      edit_chat_title: "แก้ไขชื่อแชต"
+      delete_chat: "ลบแชต"
+    chat_nav:
+      all_chats: "แชตทั้งหมด"
+      start_new_chat: "เริ่มแชตใหม่"
+      edit_chat_title: "แก้ไขชื่อแชต"
+      delete_chat: "ลบแชต"
+    error:
+      retry: "ลองอีกครั้ง"
+    destroy:
+      notice: "ลบแชตเรียบร้อยแล้ว"
+    index:
+      chats: "แชต"
+      new_chat: "แชตใหม่"
+    new:
+      default_title: "แชตใหม่ %{timestamp}"
+    update:
+      success: "อัปเดตแชตแล้ว"
+    ai_consent:
+      title: "เปิดใช้แชต AI"
+      available_description: "แชต AI ตอบคำถามทางการเงินและให้ข้อมูลเชิงลึกจากข้อมูลของคุณได้ หากต้องการใช้ฟีเจอร์นี้ คุณต้องเปิดใช้อย่างชัดเจน"
+      unavailable_description_html: "หากต้องการใช้ผู้ช่วย AI คุณต้องตั้งค่าตัวแปรสภาพแวดล้อม <code class=\"bg-surface-inset px-1 py-0.5 rounded font-mono text-xs\">OPENAI_ACCESS_TOKEN</code> หรือกำหนดค่าในการตั้งค่าการโฮสต์เองของอินสแตนซ์ของคุณ"
+      enable_button: "เปิดใช้แชต AI"
+      disable_note: "ปิดได้ทุกเมื่อ ข้อมูลทั้งหมดที่ส่งไปยังผู้ให้บริการ LLM ของเราถูกทำให้ไม่ระบุตัวตน"
+  assistant_messages:
+    assistant_message:
+      assistant_reasoning: "เหตุผลของผู้ช่วย"
+    tool_calls:
+      tool_calls: "การเรียกเครื่องมือ"
+      function: "ฟังก์ชัน:"
+      arguments: "อาร์กิวเมนต์:"

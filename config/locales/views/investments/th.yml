@@ -1,0 +1,199 @@
+---
+th:
+  investments:
+    edit:
+      edit: แก้ไข %{account}
+    form:
+      none: ไม่มี
+      subtype_prompt: เลือกประเภทการลงทุน
+    new:
+      title: กรอกยอดคงเหลือของบัญชี
+    show:
+      chart_title: มูลค่ารวม
+    subtypes:
+      # United States
+      brokerage:
+        short: บัญชีนายหน้า
+        long: บัญชีนายหน้าซื้อขายหลักทรัพย์
+      cash_management:
+        short: CMA
+        long: บัญชีบริหารเงินสด
+      401k:
+        short: 401(k)
+        long: 401(k)
+      roth_401k:
+        short: Roth 401(k)
+        long: Roth 401(k)
+      403b:
+        short: 403(b)
+        long: 403(b)
+      457b:
+        short: 457(b)
+        long: 457(b)
+      tsp:
+        short: TSP
+        long: Thrift Savings Plan
+      ira:
+        short: IRA
+        long: Traditional IRA
+      roth_ira:
+        short: Roth IRA
+        long: Roth IRA
+      sep_ira:
+        short: SEP IRA
+        long: SEP IRA
+      simple_ira:
+        short: SIMPLE IRA
+        long: SIMPLE IRA
+      529_plan:
+        short: 529 Plan
+        long: 529 Education Savings Plan
+      hsa:
+        short: HSA
+        long: บัญชีออมเพื่อสุขภาพ
+      ugma:
+        short: UGMA
+        long: บัญชีผู้ปกครองดูแล UGMA
+      utma:
+        short: UTMA
+        long: บัญชีผู้ปกครองดูแล UTMA
+      # United Kingdom
+      isa:
+        short: ISA
+        long: Individual Savings Account
+      lisa:
+        short: LISA
+        long: Lifetime ISA
+      sipp:
+        short: SIPP
+        long: Self-Invested Personal Pension
+      workplace_pension_uk:
+        short: บำนาญ
+        long: บำนาญจากที่ทำงาน
+      # Canada
+      rrsp:
+        short: RRSP
+        long: Registered Retirement Savings Plan
+      tfsa:
+        short: TFSA
+        long: Tax-Free Savings Account
+      resp:
+        short: RESP
+        long: Registered Education Savings Plan
+      lira:
+        short: LIRA
+        long: Locked-In Retirement Account
+      rrif:
+        short: RRIF
+        long: Registered Retirement Income Fund
+      # Australia
+      super:
+        short: Super
+        long: Superannuation
+      smsf:
+        short: SMSF
+        long: Self-Managed Super Fund
+      # Europe
+      pea:
+        short: PEA
+        long: Plan d'Épargne en Actions
+      pillar_3a:
+        short: Pillar 3a
+        long: บำนาญส่วนบุคคล (Pillar 3a)
+      riester:
+        short: Riester
+        long: Riester-Rente
+      # India
+      nps:
+        short: NPS
+        long: National Pension System
+      apy:
+        short: APY
+        long: Atal Pension Yojana
+      indian_stocks:
+        short: หุ้นอินเดีย
+        long: หุ้นอินเดีย (Demat)
+      indian_equity:
+        short: ตราสารทุนอินเดีย
+        long: ตราสารทุนอินเดีย
+      indian_etf:
+        short: ETF อินเดีย
+        long: ETF อินเดีย
+      life_insurance:
+        short: ประกันชีวิต
+        long: ประกันชีวิต
+      ppf:
+        short: PPF
+        long: Public Provident Fund
+      ssy:
+        short: SSY
+        long: Sukanya Samriddhi Yojana
+      nsc:
+        short: NSC
+        long: National Savings Certificate
+      scss:
+        short: SCSS
+        long: Senior Citizens' Savings Scheme
+      fd:
+        short: FD
+        long: เงินฝากประจำ
+      rd:
+        short: RD
+        long: เงินฝากสะสมรายเดือน
+      pomis:
+        short: POMIS
+        long: Post Office Monthly Income Scheme
+      kvp:
+        short: KVP
+        long: Kisan Vikas Patra
+      gold_etf:
+        short: Gold ETF
+        long: Gold ETF
+      gold_mf:
+        short: Gold MF
+        long: กองทุนรวมทองคำ
+      sgb:
+        short: SGB
+        long: พันธบัตรทองคำของรัฐ
+      g_sec:
+        short: G-Sec
+        long: หลักทรัพย์รัฐบาล (G-Secs)
+      sdl:
+        short: SDL
+        long: เงินกู้เพื่อการพัฒนาของรัฐ (SDLs)
+      corporate_bond:
+        short: หุ้นกู้
+        long: หุ้นกู้เอกชน
+      infrastructure_bond:
+        short: พันธบัตรโครงสร้างพื้นฐาน
+        long: พันธบัตรโครงสร้างพื้นฐาน
+      tax_free_bond:
+        short: พันธบัตรปลอดภาษี
+        long: พันธบัตรปลอดภาษี
+      # Generic
+      pension:
+        short: บำนาญ
+        long: บำนาญ
+      retirement:
+        short: เกษียณ
+        long: บัญชีเพื่อการเกษียณ
+      mutual_fund:
+        short: กองทุนรวม
+        long: กองทุนรวม
+      gold:
+        short: ทองคำ
+        long: ทองคำ (กายภาพหรือดิจิทัล)
+      angel:
+        short: เอ็นเจิล
+        long: การลงทุนแบบเอ็นเจิล
+      trust:
+        short: ทรัสต์
+        long: ทรัสต์
+      other:
+        short: อื่น ๆ
+        long: การลงทุนอื่น ๆ
+    value_tooltip:
+      cash: เงินสด
+      holdings: สินทรัพย์ที่ถือครอง
+      total: ยอดคงเหลือของพอร์ต
+      total_value_tooltip: ยอดคงเหลือของพอร์ตรวมคือผลรวมของเงินสดในบัญชีนายหน้า (ที่ใช้ซื้อขายได้) กับมูลค่าตลาดปัจจุบันของสินทรัพย์ที่ถือครอง

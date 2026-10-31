@@ -1,0 +1,194 @@
+---
+th:
+  UI:
+    period_picker:
+      aria_label: "ช่วงเวลา: %{period}"
+    account:
+      activity_feed:
+        toggle_selection_checkboxes: สลับการเลือก
+      balance_reconciliation:
+        labels:
+          adjustments: การปรับปรุง
+          buys: การซื้อ
+          change_in_brokerage_cash: การเปลี่ยนแปลงเงินสดในบัญชีนายหน้า
+          change_in_holdings_market: การเปลี่ยนแปลงสินทรัพย์ที่ถือครอง (ความเคลื่อนไหวราคาตลาด)
+          change_in_holdings_trades: การเปลี่ยนแปลงสินทรัพย์ที่ถือครอง (ซื้อ/ขาย)
+          charges: ค่าใช้จ่าย
+          end_balance: ยอดคงเหลือปลายงวด
+          end_principal: เงินต้นปลายงวด
+          end_value: มูลค่าปลายงวด
+          final_balance: ยอดคงเหลือสุดท้าย
+          final_principal: เงินต้นสุดท้าย
+          final_value: มูลค่าสุดท้าย
+          market_changes: การเปลี่ยนแปลงของตลาด
+          net_cash_flow: กระแสเงินสดสุทธิ
+          net_principal_change: การเปลี่ยนแปลงเงินต้นสุทธิ
+          net_value_change: การเปลี่ยนแปลงมูลค่าสุทธิ
+          payments: การชำระเงิน
+          sells: การขาย
+          start_balance: ยอดคงเหลือต้นงวด
+          start_principal: เงินต้นต้นงวด
+          start_value: มูลค่าต้นงวด
+        tooltips:
+          adjustments: การกระทบยอดด้วยตนเองหรือการปรับปรุงอื่น ๆ
+          adjustments_asset: การปรับมูลค่าด้วยตนเองหรือการประเมินราคา
+          buys: การซื้อคริปโตในระหว่างวัน
+          change_in_brokerage_cash: การเปลี่ยนแปลงสุทธิของเงินสดจากการฝาก การถอน และการซื้อขาย
+          change_in_holdings_market: การเปลี่ยนแปลงมูลค่าสินทรัพย์ที่ถือครองจากความเคลื่อนไหวของราคาตลาด
+          change_in_holdings_trades: ผลต่อสินทรัพย์ที่ถือครองจากการซื้อและขายหลักทรัพย์
+          charges: ค่าใช้จ่ายใหม่ที่เกิดขึ้นในระหว่างวัน
+          end_balance: ยอดคงเหลือที่คำนวณได้หลังรายการธุรกรรมทั้งหมด
+          end_balance_investment: ยอดคงเหลือที่คำนวณได้หลังกิจกรรมทั้งหมด
+          end_principal: เงินต้นที่คำนวณได้หลังรายการธุรกรรมทั้งหมด
+          end_value: มูลค่าที่คำนวณได้หลังการเปลี่ยนแปลงทั้งหมด
+          final_balance: ยอดคงเหลือสุดท้ายของบัญชีในวันนั้น
+          final_balance_credit: ยอดค้างชำระสุดท้ายของวันนั้น
+          final_balance_crypto: มูลค่าคริปโตที่ถือครองสุดท้ายของวันนั้น
+          final_balance_investment: มูลค่าพอร์ตสุดท้ายของวันนั้น
+          final_principal: ยอดเงินต้นสุดท้ายของวันนั้น
+          final_value: มูลค่าสินทรัพย์สุดท้ายของวันนั้น
+          market_changes: การเปลี่ยนแปลงมูลค่าจากความเคลื่อนไหวของราคาตลาด
+          net_cash_flow: การเปลี่ยนแปลงสุทธิของยอดคงเหลือจากรายการธุรกรรมทั้งหมดในระหว่างวัน
+          net_principal_change: การชำระเงินต้นและการกู้ยืมใหม่ในระหว่างวัน
+          net_value_change: การเปลี่ยนแปลงมูลค่าทั้งหมด รวมการปรับปรุงและค่าเสื่อมราคา
+          payments: การชำระเงินเข้าบัตรในระหว่างวัน
+          sells: การขายคริปโตในระหว่างวัน
+          start_balance: ยอดคงเหลือของบัญชีเมื่อต้นวันนั้น
+          start_balance_credit: ยอดค้างชำระเมื่อต้นวันนั้น
+          start_balance_crypto: มูลค่าคริปโตที่ถือครองเมื่อต้นวันนั้น
+          start_balance_investment: มูลค่าพอร์ตรวมเมื่อต้นวันนั้น
+          start_principal: ยอดเงินต้นเมื่อต้นวันนั้น
+          start_value: มูลค่าสินทรัพย์เมื่อต้นวันนั้น
+      chart:
+        loan:
+          actual: ยอดคงเหลือที่บันทึก
+          scheduled: กำหนดการเดิม
+          projected: คาดการณ์จากวันนี้
+          today: วันนี้
+          interactive_chart: แผนภูมิเชิงโต้ตอบ
+          no_payoff: ไม่เป็นไปตามการผ่อนชำระปัจจุบัน
+          aria_description: แผนภูมิยอดคงเหลือสินเชื่อ ยอดคงเหลือที่บันทึก %{current_balance} วันปิดสินเชื่อตามกำหนดการเดิม %{scheduled_payoff_date} วันปิดสินเชื่อที่คาดการณ์จากยอดคงเหลือวันนี้ %{projected_payoff_date}
+          aria_actual_history_starts: ประวัติยอดคงเหลือที่บันทึกเริ่มต้น %{date}
+          aria_interest_share: ในการผ่อนชำระปีแรก ประมาณ %{first}% ของจำนวนเงินที่จ่ายเป็นดอกเบี้ย ส่วนในปีสุดท้ายประมาณ %{last}%
+          aria_interest_share_overall: ตลอดการผ่อนชำระทั้งหมด ประมาณ %{share}% ของจำนวนเงินที่จ่ายเป็นดอกเบี้ย
+          aria_composition: คำอธิบายเครื่องมือของการชำระแต่ละงวดแบ่งเป็น %{principal} และ %{interest}
+          interest_share: สัดส่วนดอกเบี้ย
+          principal_share: สัดส่วนเงินต้น
+          projected_payoff: วันปิดสินเชื่อที่คาดการณ์
+          months_saved:
+            one: "เร็วกว่ากำหนด %{count} เดือน"
+            other: "เร็วกว่ากำหนด %{count} เดือน"
+          on_schedule: เป็นไปตามกำหนด
+          interest_saved: ดอกเบี้ยที่ประหยัดได้
+          not_converged: ด้วยการผ่อนชำระปัจจุบัน ยอดคงเหลือนี้จะไม่ถูกชำระหมดเมื่อครบกำหนดเดิม ยังค้างอีก %{balloon}
+          projection_basis: เปรียบเทียบยอดคงเหลือที่บันทึกวันนี้กับยอดคงเหลือตามกำหนดการของวันเดียวกัน การชำระที่บันทึกก่อนวันกำหนดจะแสดงว่านำหน้าจนถึงวันนั้น ส่วนที่บันทึกหลังกำหนดจะแสดงว่าตามหลัง
+          legend: ชุดข้อมูลแผนภูมิ
+          since_start: ตั้งแต่เริ่มสินเชื่อ
+        no_data_available: "ไม่มีข้อมูล"
+        title:
+          balance: ยอดคงเหลือ
+          cash_value: มูลค่าเงินสด
+          debt_balance: ยอดหนี้
+          estimated_property_value: มูลค่าอสังหาริมทรัพย์โดยประมาณ
+          estimated_vehicle_value: มูลค่ายานพาหนะโดยประมาณ
+          holdings_value: มูลค่าสินทรัพย์ที่ถือครอง
+          loan_remaining_balance: ยอดคงเหลือ
+          remaining_principal_balance: เงินต้นคงเหลือ
+          total_account_value: มูลค่าบัญชีรวม
+          total_gains: กำไรรวม
+        views:
+          cash: เงินสด
+          gains: กำไร / ROI
+          holdings: สินทรัพย์ที่ถือครอง
+          total_value: มูลค่ารวม
+        vs_available_history: เทียบกับประวัติที่มี
+      activity_date:
+        balance_tooltip: "ยอดคงเหลือสิ้นวัน หลังรายการธุรกรรมและการปรับปรุงทั้งหมด"
+        no_balance_data: "ไม่มีข้อมูลยอดคงเหลือสำหรับวันที่นี้"
+  ds:
+    alert:
+      variants:
+        info: ข้อมูล
+        success: สำเร็จ
+        warning: คำเตือน
+        error: ข้อผิดพลาด
+        destructive: ข้อผิดพลาด
+    pill:
+      aria_label: "%{label}"
+      default_label: ตัวอย่าง
+    dialog:
+      close: ปิด
+    popover:
+      avatar_default_label: เปิดเมนู
+    tooltip:
+      trigger_label: ข้อมูลเพิ่มเติม
+    link:
+      opens_in_new_tab: (เปิดในแท็บใหม่)
+    icon_picker:
+      no_matching_icons: ไม่พบไอคอนที่ตรงกัน
+      search_placeholder: ค้นหาไอคอน...
+  provider_sync_summary:
+    title: สรุปการซิงค์
+    last_sync: "ซิงค์ล่าสุด: %{time_ago} ที่แล้ว"
+    accounts:
+      title: บัญชี
+      total: "ทั้งหมด: %{count}"
+      linked: "เชื่อมโยงแล้ว: %{count}"
+      unlinked: "ยังไม่เชื่อมโยง: %{count}"
+      institutions: "สถาบัน: %{count}"
+    transactions:
+      title: รายการธุรกรรม
+      seen: "พบ: %{count}"
+      imported: "นำเข้า: %{count}"
+      updated: "อัปเดต: %{count}"
+      skipped: "ข้าม: %{count}"
+      fetching: "กำลังดึงข้อมูลจากนายหน้า..."
+      protected:
+        one: "ป้องกัน %{count} รายการ (ไม่ถูกเขียนทับ)"
+        other: "ป้องกัน %{count} รายการ (ไม่ถูกเขียนทับ)"
+      view_protected: ดูรายการที่ป้องกัน
+    skip_reasons:
+      excluded: ไม่รวม
+      user_modified: ผู้ใช้แก้ไข
+      import_locked: นำเข้า CSV
+      protected: ป้องกัน
+    holdings:
+      title: สินทรัพย์ที่ถือครอง
+      found: "พบ: %{count}"
+      processed: "ประมวลผลแล้ว: %{count}"
+    trades:
+      title: การซื้อขาย
+      imported: "นำเข้า: %{count}"
+      skipped: "ข้าม: %{count}"
+      fetching: "กำลังดึงกิจกรรมจากนายหน้า..."
+    health:
+      title: สถานะ
+      view_error_details: ดูรายละเอียดข้อผิดพลาด
+      rate_limited: "ถูกจำกัดอัตรา %{time_ago}"
+      recently: เมื่อไม่นานมานี้
+      errors: "ข้อผิดพลาด: %{count}"
+      pending_reconciled:
+        one: "กระทบยอดรายการที่รอดำเนินการซ้ำ %{count} รายการแล้ว"
+        other: "กระทบยอดรายการที่รอดำเนินการซ้ำ %{count} รายการแล้ว"
+      view_reconciled: ดูรายการธุรกรรมที่กระทบยอดแล้ว
+      duplicate_suggestions:
+        one: "มี %{count} รายการที่อาจซ้ำและต้องตรวจสอบ"
+        other: "มี %{count} รายการที่อาจซ้ำและต้องตรวจสอบ"
+      view_duplicate_suggestions: ดูรายการที่แนะนำว่าซ้ำ
+      stale_pending:
+        one: "มี %{count} รายการที่รอดำเนินการค้างนาน (ไม่รวมในงบประมาณ)"
+        other: "มี %{count} รายการที่รอดำเนินการค้างนาน (ไม่รวมในงบประมาณ)"
+      view_stale_pending: ดูบัญชีที่ได้รับผลกระทบ
+      stale_pending_count:
+        one: "%{count} รายการธุรกรรม"
+        other: "%{count} รายการธุรกรรม"
+      stale_unmatched:
+        one: "มี %{count} รายการที่รอดำเนินการและต้องตรวจสอบด้วยตนเอง"
+        other: "มี %{count} รายการที่รอดำเนินการและต้องตรวจสอบด้วยตนเอง"
+      view_stale_unmatched: ดูรายการธุรกรรมที่ต้องตรวจสอบ
+      stale_unmatched_count:
+        one: "%{count} รายการธุรกรรม"
+        other: "%{count} รายการธุรกรรม"
+      data_warnings: "คำเตือนข้อมูล: %{count}"
+      notices: "ประกาศ: %{count}"
+      view_data_quality: ดูรายละเอียดคุณภาพข้อมูล

@@ -1,0 +1,18 @@
+---
+th:
+  category:
+    dropdowns:
+      row:
+        delete: ลบหมวดหมู่
+        edit: แก้ไขหมวดหมู่
+      show:
+        assign_error: สร้างหมวดหมู่แล้วแต่กำหนดให้ไม่ได้ เลือกสร้างอีกครั้งเพื่อลองใหม่
+        back: กลับ
+        choose_parent: 'สร้าง "%{name}" ภายใต้:'
+        clear: ล้างหมวดหมู่
+        create: สร้าง "%{name}"
+        create_as_subcategory: เพิ่มเป็นหมวดหมู่ย่อย…
+        create_error: สร้างหมวดหมู่นั้นไม่สำเร็จ โปรดลองอีกครั้ง
+        no_categories: ไม่พบหมวดหมู่
+        recent: ล่าสุด
+        search_placeholder: ค้นหา

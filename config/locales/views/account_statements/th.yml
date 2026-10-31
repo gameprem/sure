@@ -1,0 +1,118 @@
+---
+th:
+  account_statements:
+    account_tab:
+      coverage_title: ความครอบคลุมของใบแจ้งยอด
+      coverage_description: เดือนย้อนหลังที่มีใบแจ้งยอดที่อัปโหลดและการตรวจสอบยอดคงเหลือรองรับ
+      coverage_range: "%{start} - %{end}"
+      empty: ยังไม่มีใบแจ้งยอดที่เชื่อมโยงกับบัญชีนี้
+      open_inbox: กล่องขาเข้า
+      statements_title: ใบแจ้งยอด
+      year_label: ปีที่ครอบคลุม
+    balance:
+      unknown: ไม่ทราบ
+    coverage:
+      status:
+        ambiguous: กำกวม
+        covered: ครอบคลุม
+        duplicate: ซ้ำ
+        mismatched: ไม่ตรงกัน
+        missing: ขาดหาย
+        not_expected: ไม่คาดหวัง
+    create:
+      duplicates:
+        one: ข้ามใบแจ้งยอดที่ซ้ำ 1 ฉบับ
+        other: "ข้ามใบแจ้งยอดที่ซ้ำ %{count} ฉบับ"
+      invalid_file_type: อัปโหลดใบแจ้งยอด PDF, CSV หรือ XLSX ที่มีขนาดไม่เกินขีดจำกัด
+      no_files: เลือกไฟล์ใบแจ้งยอดอย่างน้อยหนึ่งไฟล์
+      success:
+        one: อัปโหลดใบแจ้งยอด 1 ฉบับแล้ว
+        other: "อัปโหลดใบแจ้งยอด %{count} ฉบับแล้ว"
+    destroy:
+      failure: ลบใบแจ้งยอดไม่สำเร็จ
+      success: ลบใบแจ้งยอดแล้ว
+    form:
+      account_upload: อัปโหลดใบแจ้งยอด
+      files_hint: PDF, CSV หรือ XLSX ไม่เกิน %{max_size}MB ต่อไฟล์
+      files_label: ไฟล์ใบแจ้งยอด
+      inbox_upload: อัปโหลด
+      period_hint: "Sure อ่านช่วงเวลาจาก PDF เมื่อมีระบุไว้ หรือจากวันที่ในชื่อไฟล์ (เช่น 2026-04) คุณตั้งค่าที่ใบแจ้งยอดเองได้เช่นกัน"
+    index:
+      account_label: บัญชี
+      confidence: "ตรงกัน %{confidence}"
+      empty_linked: ยังไม่มีใบแจ้งยอดที่เชื่อมโยง
+      empty_unmatched: กล่องขาเข้าใบแจ้งยอดว่างเปล่า
+      leave_unmatched: ปล่อยไว้ไม่จับคู่
+      linked_title: ใบแจ้งยอดที่เชื่อมโยง
+      no_suggestion: ไม่มีข้อเสนอแนะ
+      storage_used: พื้นที่จัดเก็บที่ใช้
+      title: คลังใบแจ้งยอด
+      unmatched_title: กล่องขาเข้าที่ยังไม่จับคู่
+      upload_description: อัปโหลดใบแจ้งยอดไปยังกล่องขาเข้า หรือเลือกบัญชีเพื่อเชื่อมโยงทันที
+      upload_title: อัปโหลดใบแจ้งยอด
+    link:
+      no_account: เลือกบัญชีก่อนเชื่อมโยงใบแจ้งยอดนี้
+      success: เชื่อมโยงใบแจ้งยอดกับ %{account} แล้ว
+    period:
+      unknown: ไม่ทราบช่วงเวลา
+    reconciliation:
+      checks:
+        closing_balance: ยอดคงเหลือปิดงวด
+        opening_balance: ยอดคงเหลือต้นงวด
+        period_movement: ความเคลื่อนไหวในงวด
+        unknown_check: การตรวจสอบที่ไม่ทราบ
+      matched: ตรงกัน
+      mismatched: ไม่ตรงกัน
+      unavailable: ยังไม่ได้ตรวจสอบ
+    reject:
+      success: ปฏิเสธการจับคู่ใบแจ้งยอดแล้ว
+    show:
+      account_label: บัญชี
+      account_last4_hint: เลข 4 ตัวท้ายของบัญชี
+      account_name_hint: คำใบ้ชื่อบัญชี
+      closing_balance: ยอดคงเหลือปิดงวด
+      currency: สกุลเงิน
+      delete: ลบ
+      difference: ผลต่าง
+      download: ดาวน์โหลด
+      institution_name_hint: คำใบ้สถาบัน
+      ledger_amount: บัญชีแยกประเภทของ Sure
+      linked_to: เชื่อมโยงกับ %{account}
+      linking_title: การเชื่อมโยงบัญชี
+      link_suggestion: ข้อเสนอแนะการเชื่อมโยง
+      metadata_title: เมทาดาทาของใบแจ้งยอด
+      no_suggestion: ยังไม่มีข้อเสนอแนะบัญชี
+      opening_balance: ยอดคงเหลือต้นงวด
+      period_end_on: สิ้นสุดงวด
+      period_start_on: เริ่มต้นงวด
+      reconciliation_title: การกระทบยอด
+      reconciliation_unavailable: เพิ่มช่วงเวลาของใบแจ้งยอดและยอดคงเหลือต้นหรือปิดงวด แล้วตรวจสอบให้แน่ใจว่า Sure มีประวัติยอดคงเหลือของวันที่เหล่านั้น
+      reject: ปฏิเสธ
+      save: บันทึกใบแจ้งยอด
+      statement_amount: ใบแจ้งยอด
+      suggested_account: บัญชีที่แนะนำคือ %{account} (ความเชื่อมั่น %{confidence})
+      title: ใบแจ้งยอด
+      unlink: ยกเลิกการเชื่อมโยง
+      unmatched_account: กล่องขาเข้าที่ยังไม่จับคู่
+      unknown_value: ไม่ทราบ
+    status:
+      linked: เชื่อมโยงแล้ว
+      rejected: ปฏิเสธแล้ว
+      unmatched: ยังไม่จับคู่
+    table:
+      account: บัญชี
+      actions: การดำเนินการ
+      download: ดาวน์โหลด
+      edit: แก้ไข
+      file: ไฟล์
+      link_suggestion: ข้อเสนอแนะการเชื่อมโยง
+      period: ช่วงเวลา
+      reconciliation: การกระทบยอด
+      reject: ปฏิเสธข้อเสนอแนะ
+      suggestion: ข้อเสนอแนะ
+      unlink: ยกเลิกการเชื่อมโยง
+      view: ดู
+    unlink:
+      success: ย้ายใบแจ้งยอดกลับไปกล่องขาเข้าที่ยังไม่จับคู่แล้ว
+    update:
+      success: อัปเดตใบแจ้งยอดแล้ว

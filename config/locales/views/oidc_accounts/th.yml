@@ -1,0 +1,42 @@
+---
+th:
+  oidc_accounts:
+    link:
+      no_pending_oidc: ไม่พบการยืนยันตัวตน OIDC ที่รอดำเนินการ
+      title_link: เชื่อมโยงบัญชี OIDC
+      title_create: สร้างบัญชี
+      verify_heading: ยืนยันตัวตนของคุณ
+      verify_description_html: "หากต้องการเชื่อมโยงบัญชี %{provider} ของคุณ%{email_suffix} โปรดยืนยันตัวตนโดยกรอกรหัสผ่านของคุณ"
+      email_suffix_html: " (<strong>%{email}</strong>)"
+      email_label: อีเมล
+      email_placeholder: กรอกอีเมลของคุณ
+      password_label: รหัสผ่าน
+      password_placeholder: กรอกรหัสผ่านของคุณ
+      verify_hint: ช่วยให้มั่นใจว่ามีเพียงคุณที่เชื่อมโยงบัญชีภายนอกกับโปรไฟล์ของคุณได้
+      submit_link: เชื่อมโยงบัญชี
+      create_heading: สร้างบัญชีใหม่
+      create_description_html: "ไม่พบบัญชีที่ใช้อีเมล <strong>%{email}</strong> คลิกด้านล่างเพื่อสร้างบัญชีใหม่โดยใช้ตัวตน %{provider} ของคุณ"
+      info_email: "อีเมล:"
+      info_name: "ชื่อ:"
+      submit_create: สร้างบัญชี
+      submit_accept_invitation: ตอบรับคำเชิญ
+      account_creation_disabled: ปิดการสร้างบัญชีใหม่ผ่านการลงชื่อเข้าใช้แบบครั้งเดียวแล้ว โปรดติดต่อผู้ดูแลระบบเพื่อสร้างบัญชีของคุณ
+      cancel: ยกเลิก
+    create_link:
+      no_pending_oidc: ไม่พบการยืนยันตัวตน OIDC ที่รอดำเนินการ
+    new_user:
+      no_pending_oidc: ไม่พบการยืนยันตัวตน OIDC ที่รอดำเนินการ
+      title: ทำบัญชีของคุณให้เสร็จสมบูรณ์
+      heading: สร้างบัญชีของคุณ
+      description: โปรดยืนยันรายละเอียดของคุณเพื่อสร้างบัญชีให้เสร็จด้วยตัวตน %{provider} ของคุณ
+      email_label: อีเมล (จากผู้ให้บริการ SSO)
+      first_name_label: ชื่อ
+      first_name_placeholder: กรอกชื่อของคุณ
+      last_name_label: นามสกุล
+      last_name_placeholder: กรอกนามสกุลของคุณ
+      submit: สร้างบัญชี
+      cancel: ยกเลิก
+    create_user:
+      no_pending_oidc: ไม่พบการยืนยันตัวตน OIDC ที่รอดำเนินการ
+      account_creation_disabled: ปิดการสร้างบัญชี SSO แล้ว โปรดติดต่อผู้ดูแลระบบ
+      account_created: "ยินดีต้อนรับ! สร้างบัญชีของคุณแล้ว"

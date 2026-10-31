@@ -1,0 +1,163 @@
+---
+th:
+  wise_items:
+    profile_types:
+      personal: ส่วนตัว
+      business: ธุรกิจ
+    entries:
+      default_name: รายการธุรกรรม Wise
+      fee_name: ค่าธรรมเนียม Wise
+    activities:
+      jar_deposit: โอนเข้า Jar
+      jar_withdrawal: โอนจาก Jar
+      transfer_to_jar: "โอนไปที่ %{jar}"
+      transfer_from_jar: "โอนจาก %{jar}"
+      interest: ดอกเบี้ย Wise
+      asset_fee: ค่าธรรมเนียม Wise Assets
+      default_name: กิจกรรม Wise
+    sync_status:
+      no_accounts: ไม่พบบัญชี
+      all_synced:
+        one: "ซิงค์ %{count} บัญชีแล้ว"
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      partial_setup: "ซิงค์แล้ว %{synced} ต้องตั้งค่า %{pending}"
+    create:
+      no_profiles_found: ไม่พบโปรไฟล์ Wise โปรดตรวจสอบโทเคน API ของคุณ
+      invalid_token: โทเคน API ไม่ถูกต้อง โปรดตรวจสอบแล้วลองอีกครั้ง
+      connection_failed: เชื่อมต่อ Wise ไม่ได้ โปรดลองอีกครั้งภายหลัง
+    destroy:
+      success: นำการเชื่อมต่อ Wise ออกแล้ว
+    update:
+      success: อัปเดตการเชื่อมต่อ Wise แล้ว
+    sync:
+      success: เริ่มซิงค์แล้ว
+    syncer:
+      importing_accounts: กำลังนำเข้าบัญชีจาก Wise...
+      checking_account_configuration: กำลังตรวจสอบการตั้งค่าบัญชี...
+      accounts_need_setup:
+        one: "%{count} บัญชีต้องตั้งค่า..."
+        other: "%{count} บัญชีต้องตั้งค่า..."
+      processing_transactions: กำลังประมวลผลรายการธุรกรรม...
+      calculating_balances: กำลังคำนวณยอดคงเหลือ...
+      credentials_invalid: โทเคน API ของ Wise ไม่ถูกต้องหรือสิทธิ์ไม่เพียงพอ
+      failed: ซิงค์ไม่สำเร็จ โปรดลองอีกครั้งหรือติดต่อฝ่ายสนับสนุน
+      import_failed: นำเข้า Wise ไม่สำเร็จ
+      accounts_failed:
+        one: "นำเข้ายอดคงเหลือ %{count} รายการไม่สำเร็จ"
+        other: "นำเข้ายอดคงเหลือ %{count} รายการไม่สำเร็จ"
+      transactions_failed:
+        one: "ยอดคงเหลือ %{count} รายการนำเข้ารายการธุรกรรมล้มเหลว"
+        other: "ยอดคงเหลือ %{count} รายการนำเข้ารายการธุรกรรมล้มเหลว"
+      account_processing_failed:
+        one: "ประมวลผลบัญชี Wise %{count} บัญชีล้มเหลว"
+        other: "ประมวลผลบัญชี Wise %{count} บัญชีล้มเหลว"
+      account_sync_failed:
+        one: "ตั้งเวลาซิงค์บัญชี Wise %{count} บัญชีไม่ได้"
+        other: "ตั้งเวลาซิงค์บัญชี Wise %{count} บัญชีไม่ได้"
+    provider_panel:
+      add_connection: เพิ่มการเชื่อมต่อ Wise
+      token_label: โทเคน API
+      token_placeholder: วางโทเคน API ส่วนบุคคลของ Wise
+      keep_token_placeholder: เว้นว่างไว้เพื่อใช้โทเคนเดิม
+      connection_name_label: ชื่อการเชื่อมต่อ
+      connection_name_placeholder: Wise ส่วนตัว
+      sync_start_date_label: นำเข้ารายการธุรกรรมตั้งแต่
+      sync_start_date_help: ใบแจ้งยอด Wise ถูกนำเข้าตั้งแต่วันนี้เป็นต้นไป คงค่าเริ่มต้นไว้เพื่อใช้ประวัติสูงสุดหนึ่งปี
+      import_all_history_label: นำเข้าประวัติรายการธุรกรรมทั้งหมด
+      import_all_history_help: ดึงใบแจ้งยอด Wise ย้อนหลังทั้งหมดแทนที่จะเป็นเพียงปีล่าสุด
+      connect: เชื่อมต่อ Wise
+      update_connection: อัปเดตการเชื่อมต่อ
+      setup_accounts: ตั้งค่าบัญชี
+      sync: ซิงค์
+      disconnect: ยกเลิกการเชื่อมต่อ
+      disconnect_label: "ยกเลิกการเชื่อมต่อ %{name}"
+      disconnect_confirm: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ %{name} การดำเนินการนี้จะลบข้อมูลบัญชีที่ซิงค์ทั้งหมด"
+      sandbox_note_html: "ใช้ base URL แบบ <strong>sandbox</strong> (<code>https://api.wise-sandbox.com</code>) สำหรับการทดสอบ ตั้ง <code>WISE_BASE_URL</code> ในสภาพแวดล้อมของคุณ"
+      encryption_warning:
+        title: ยังไม่ได้ตั้งค่าการเข้ารหัสฐานข้อมูล
+        message: ตั้งค่าคีย์เข้ารหัส Active Record ก่อนเพิ่มโทเคน Wise ในระบบจริง หากไม่มีการเข้ารหัส โทเคนจะถูกเก็บเป็นข้อความธรรมดา
+      instructions:
+        sign_in_html: "ไปที่ %{link} และเข้าสู่ระบบบัญชีของคุณ"
+        open_tokens: "ไปที่ Settings → Connect and manage apps → Developer tools → API tokens"
+        create_token: "สร้างโทเคน API ส่วนบุคคลใหม่ที่มีสิทธิ์อ่านอย่างเดียว"
+        copy_token_html: "คัดลอกโทเคนและวางด้านล่าง Sure ใช้เพื่อซิงค์ยอดคงเหลือและรายการธุรกรรมของคุณเท่านั้น"
+      sca:
+        title: การยืนยันตัวตนลูกค้าแบบเข้มงวด (SCA)
+        description: Wise ต้องการ challenge โทเคนครั้งเดียวที่ลงนามเพื่ออ่านใบแจ้งยอดรายการธุรกรรมแบบเต็ม รวมถึงเงินเข้า สร้างคู่คีย์ที่นี่และลงทะเบียนคีย์สาธารณะกับ Wise เพื่อเปิดใช้
+        public_key_label: คีย์สาธารณะ (PEM)
+        registered_help_html: "ลงทะเบียนคีย์นี้กับ Wise: Settings → Connect and manage apps → Developer tools → Public keys → Add public key"
+        copy: คัดลอก
+        copied: คัดลอกแล้ว!
+        generate: สร้างคู่คีย์
+        regenerate: สร้างคู่คีย์ใหม่
+        regenerate_confirm: "การดำเนินการนี้สร้างคู่คีย์ใหม่ Wise จะยังรับคีย์สาธารณะเดิมจนกว่าคุณจะลบเองในบัญชี Wise ของคุณ — Sure ไม่มีวิธีเพิกถอนจากระยะไกล คุณต้องลงทะเบียนคีย์สาธารณะใหม่กับ Wise ก่อนที่ใบแจ้งยอดจะซิงค์ได้อีก ดำเนินการต่อหรือไม่?"
+    provider_connection:
+      default_name: Wise
+      default_description: เชื่อมต่อบัญชีหลายสกุลเงิน Wise ของคุณ
+      name: "Wise — %{name}"
+      description: "เชื่อมต่อโดยใช้ %{name}"
+    link_profiles:
+      session_expired: เซสชันหมดอายุ โปรดลองเชื่อมต่ออีกครั้ง
+      no_profiles_selected: โปรดเลือกอย่างน้อยหนึ่งโปรไฟล์
+      already_connected: โปรไฟล์ที่เลือกทั้งหมดเชื่อมต่ออยู่แล้ว
+      success:
+        one: "เชื่อมต่อโปรไฟล์ Wise %{count} โปรไฟล์สำเร็จ"
+        other: "เชื่อมต่อโปรไฟล์ Wise %{count} โปรไฟล์สำเร็จ"
+    select_profiles:
+      session_expired: เซสชันหมดอายุ โปรดลองเชื่อมต่ออีกครั้ง
+      title: เลือกโปรไฟล์ Wise
+      subtitle: เลือกโปรไฟล์ที่จะเชื่อมต่อ
+      description: บัญชี Wise ของคุณมีหลายโปรไฟล์ เลือกโปรไฟล์ที่คุณต้องการซิงค์กับ Sure
+      unnamed_profile: "(โปรไฟล์ที่ไม่มีชื่อ)"
+      already_connected_label: เชื่อมต่อแล้ว
+      connect: เชื่อมต่อโปรไฟล์ที่เลือก
+      cancel: ยกเลิก
+    wise_item:
+      deletion_in_progress: กำลังลบ...
+      syncing: กำลังซิงค์...
+      error: ข้อผิดพลาดการซิงค์
+      status: "ซิงค์เมื่อ %{timestamp} ที่แล้ว"
+      status_never: ไม่เคยซิงค์
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว — %{summary}"
+      delete: ยกเลิกการเชื่อมต่อ
+      setup_needed: บัญชีใหม่พร้อมตั้งค่า
+      setup_description: "เชื่อมโยง %{linked} จาก %{total} บัญชี สร้างบัญชี Sure สำหรับยอดคงเหลือสกุลเงิน Wise ของคุณ"
+      setup_action: ตั้งค่าบัญชี
+      no_accounts_title: ยังไม่มีบัญชีที่เชื่อมโยง
+      no_accounts_description: รันการซิงค์เพื่อค้นหายอดคงเหลือ Wise ของคุณ แล้วเชื่อมโยงกับบัญชี Sure
+    setup_accounts:
+      title: ตั้งค่าบัญชี Wise
+      subtitle: เชื่อมโยงยอดคงเหลือสกุลเงิน Wise ของคุณ
+      description: สร้างบัญชี Sure สำหรับยอดคงเหลือสกุลเงิน Wise แต่ละรายการที่คุณต้องการติดตาม แต่ละสกุลเงินกลายเป็นบัญชีของตัวเอง
+      no_accounts_to_setup: ตั้งค่าบัญชีทั้งหมดแล้ว
+      all_accounts_linked: ยอดคงเหลือสกุลเงิน Wise ทั้งหมดของคุณเชื่อมโยงกับบัญชี Sure แล้ว
+      create_account: สร้างบัญชี
+      done: เสร็จสิ้น
+    select_accounts:
+      title: เลือกยอดคงเหลือ Wise
+      description: เลือกยอดคงเหลือสกุลเงิน Wise ที่คุณต้องการเชื่อมโยงกับบัญชี %{product_name} ของคุณ
+      no_accounts_found: ยอดคงเหลือ Wise ทั้งหมดเชื่อมโยงกับบัญชี Sure แล้ว
+      no_connection: ไม่พบการเชื่อมต่อ Wise โปรดเชื่อมต่อ Wise ในการตั้งค่าผู้ให้บริการก่อน
+      link_account: เชื่อมโยงยอดคงเหลือ
+      cancel: ยกเลิก
+    select_existing_account:
+      title: "เชื่อมโยง %{account_name} กับ Wise"
+      description: เลือกยอดคงเหลือสกุลเงิน Wise ที่จะเชื่อมโยงกับบัญชีนี้ รายการธุรกรรมจะถูกซิงค์โดยอัตโนมัติ
+      no_accounts_found: ไม่พบยอดคงเหลือ Wise ที่ยังไม่เชื่อมโยง
+      link_account: เชื่อมโยงยอดคงเหลือ
+      cancel: ยกเลิก
+    link_accounts:
+      not_found: ไม่พบยอดคงเหลือ Wise
+      success: เชื่อมโยงยอดคงเหลือ Wise กับบัญชีสำเร็จ
+      failed: เชื่อมโยงยอดคงเหลือ Wise ไม่สำเร็จ โปรดลองอีกครั้ง
+    link_existing_account:
+      not_found: ไม่พบบัญชีหรือยอดคงเหลือ Wise
+      success: "เชื่อมโยง %{account_name} กับ Wise สำเร็จ"
+      failed: เชื่อมโยงบัญชีไม่สำเร็จ โปรดลองอีกครั้ง
+    complete_account_setup:
+      not_found: ไม่พบยอดคงเหลือ Wise
+      success: สร้างและเชื่อมโยงบัญชีสำเร็จ
+      failed: สร้างบัญชีไม่สำเร็จ โปรดลองอีกครั้ง
+    generate_sca_keypair:
+      success: สร้างคู่คีย์ SCA ใหม่แล้ว ลงทะเบียนคีย์สาธารณะกับ Wise เพื่อเปิดใช้ให้เสร็จ
+      failed: สร้างคู่คีย์ SCA ใหม่ไม่สำเร็จ โปรดลองอีกครั้ง

@@ -1,0 +1,213 @@
+---
+th:
+  account:
+    entries:
+      destroy:
+        success: "ลบรายการเรียบร้อยแล้ว"
+  accounts:
+    not_authorized: "คุณไม่มีสิทธิ์จัดการบัญชีนี้"
+    account:
+      complete_setup: ตั้งค่าให้เสร็จ
+      edit: แก้ไข
+      link_lunchflow: เชื่อมโยงกับ Lunch Flow
+      link_provider: เชื่อมโยงกับผู้ให้บริการ
+      unlink_provider: ยกเลิกการเชื่อมโยงจากผู้ให้บริการ
+      change_simplefin_account: เปลี่ยนบัญชี SimpleFIN
+      troubleshoot: แก้ไขปัญหา
+      enable: เปิดใช้งานบัญชี
+      disable: ปิดใช้งานบัญชี
+      exclude_from_reports: ไม่รวมในรายงานทั้งหมด
+      include_in_reports: รวมในรายงาน
+      excluded_from_reports_indicator: ไม่รวมในรายงาน
+      set_default: ตั้งเป็นค่าเริ่มต้น
+      remove_default: ยกเลิกค่าเริ่มต้น
+      default_label: ค่าเริ่มต้น
+      delete: ลบบัญชี
+      sharing: การแชร์
+    chart:
+      data_not_available: ไม่มีข้อมูลสำหรับช่วงเวลาที่เลือก
+    create:
+      success: "สร้างบัญชี%{type}แล้ว"
+    set_default:
+      depository_only: "ตั้งเป็นค่าเริ่มต้นได้เฉพาะบัญชีเงินสดและบัตรเครดิต"
+    destroy:
+      success: "จัดคิวลบบัญชี%{type}แล้ว"
+      cannot_delete_linked: "ไม่สามารถลบบัญชีที่เชื่อมโยงอยู่ได้ โปรดยกเลิกการเชื่อมโยงก่อน"
+      failed: "ลบทรัพยากรไม่สำเร็จ โปรดลองอีกครั้งภายหลัง"
+    empty:
+      empty_message: เพิ่มบัญชีผ่านการเชื่อมต่อ การนำเข้า หรือกรอกเอง
+      new_account: บัญชีใหม่
+      no_accounts: ยังไม่มีบัญชี
+    form:
+      balance: "ยอดคงเหลือ ณ วันที่:"
+      opening_balance_date_label: วันที่ยอดคงเหลือเริ่มต้น
+      name_label: ชื่อบัญชี
+      name_placeholder: ชื่อบัญชีตัวอย่าง
+      additional_details: รายละเอียดเพิ่มเติม
+      institution_name_label: ชื่อสถาบัน
+      institution_name_placeholder: เช่น ธนาคารกสิกรไทย
+      institution_domain_label: โดเมนของสถาบัน
+      institution_domain_placeholder: เช่น kasikornbank.com
+      notes_label: บันทึก
+      notes_placeholder: เก็บข้อมูลเพิ่มเติม เช่น เลขบัญชี รหัสสาขา IBAN รหัสธนาคาร ฯลฯ
+      exclude_from_reports: ไม่รวมในรายงานทั้งหมด
+      enable_category_matcher_label: เปิดใช้ตัวจับคู่หมวดหมู่
+      enable_category_matcher_hint: เมื่อเปิดใช้ หมวดหมู่ที่ผู้ให้บริการแนะนำจะถูกนำไปใช้กับรายการธุรกรรมที่นำเข้า ปิดไว้เพื่อให้รายการธุรกรรมใหม่ไม่ถูกจัดหมวดหมู่
+    index:
+      accounts: บัญชี
+      financekit_accounts:
+        title: Apple Wallet
+        description: จัดการการเชื่อมต่อและการซิงค์ Apple Wallet ในแอป Sure บน iOS
+      cancel_sync: ยกเลิกการซิงค์
+      manual_accounts:
+        other_accounts: บัญชีอื่น ๆ
+      new_account: บัญชีใหม่
+      sync: ซิงค์ทั้งหมด
+    sync_all:
+      syncing: "กำลังซิงค์บัญชี..."
+    new:
+      import_accounts: นำเข้าบัญชี
+      container:
+        select: เลือก
+        navigate: นำทาง
+        close: ปิด
+        next: ถัดไป
+        previous: ก่อนหน้า
+      method_selector:
+        connected_entry: เชื่อมโยงบัญชี
+        connected_entry_eu: เชื่อมโยงบัญชี EU
+        link_with_provider: "เชื่อมโยงกับ %{provider}"
+        lunchflow_entry: เชื่อมโยงบัญชี Lunch Flow
+        manual_entry: กรอกยอดคงเหลือของบัญชี
+        title: คุณต้องการเพิ่มด้วยวิธีใด?
+      title: คุณต้องการเพิ่มอะไร?
+    show:
+      limited_fx_history_warning: "ประวัติอัตราแลกเปลี่ยนมีตั้งแต่วันที่ %{date} เป็นต้นไปเท่านั้น รายการธุรกรรมก่อนวันดังกล่าวใช้การแปลงสกุลเงินโดยประมาณ ซึ่งอาจเกิดขึ้นเมื่อผู้ให้บริการอัตราแลกเปลี่ยนมีข้อมูลย้อนหลังจำกัด"
+      tabs:
+        activity: กิจกรรม
+        holdings: สินทรัพย์ที่ถือครอง
+        overview: ภาพรวม
+        schedule: กำหนดการ
+        statements: ใบแจ้งยอด
+      activity:
+        amount: จำนวนเงิน
+        balance: ยอดคงเหลือ
+        date: วันที่
+        entries: รายการ
+        entry: รายการ
+        filter: กรอง
+        new: ใหม่
+        new_activity: กิจกรรมใหม่
+        new_balance: ยอดคงเหลือใหม่
+        new_trade: การซื้อขายใหม่
+        new_transaction: รายการธุรกรรมใหม่
+        new_transfer: การโอนใหม่
+        no_entries: ไม่พบรายการ
+        search:
+          placeholder: ค้นหารายการตามชื่อ
+        search_placeholder: ค้นหารายการตามชื่อ
+        title: กิจกรรม
+      chart:
+        balance: ยอดคงเหลือ
+        owed: จำนวนเงินที่ค้างชำระ
+      header:
+        complete_setup: ตั้งค่าให้เสร็จ
+      menu:
+        confirm_accept: ลบ "%{name}"
+        confirm_body_html: "<p>การลบบัญชีนี้จะลบประวัติมูลค่าของบัญชี ซึ่งส่งผลต่อหลายส่วนของบัญชีโดยรวมของคุณ การดำเนินการนี้จะกระทบการคำนวณมูลค่าสุทธิและกราฟบัญชีโดยตรง</p><br /> <p>หลังลบแล้วจะไม่สามารถกู้คืนข้อมูลบัญชีได้ คุณต้องเพิ่มเป็นบัญชีใหม่</p>"
+        confirm_title: ลบบัญชี?
+        delete_account: ลบบัญชี
+        edit: แก้ไข
+        import: นำเข้ารายการธุรกรรม
+        import_trades: นำเข้าการซื้อขาย
+        import_transactions: นำเข้ารายการธุรกรรม
+        manage: จัดการบัญชี
+        sharing: การแชร์
+        statements: ใบแจ้งยอด
+        exclude_from_reports: ไม่รวมในรายงานทั้งหมด
+        include_in_reports: รวมในรายงาน
+    update:
+      success: "อัปเดตบัญชี%{type}แล้ว"
+    sidebar:
+      missing_data: ข้อมูลย้อนหลังขาดหาย
+      missing_data_description: "%{product} ใช้ผู้ให้บริการภายนอกเพื่อดึงอัตราแลกเปลี่ยนย้อนหลัง ราคาหลักทรัพย์ และอื่น ๆ ข้อมูลนี้จำเป็นต่อการคำนวณยอดคงเหลือย้อนหลังของบัญชีให้ถูกต้อง"
+      configure_providers: ตั้งค่าผู้ให้บริการของคุณที่นี่
+      tabs:
+        all: ทั้งหมด
+        assets: สินทรัพย์
+        debts: หนี้สิน
+      new_asset: สินทรัพย์ใหม่
+      new_debt: หนี้สินใหม่
+      new_account: บัญชีใหม่
+      new_account_group: "%{account_group}ใหม่"
+      expand_all: ขยายทั้งหมด
+      collapse_all: ย่อทั้งหมด
+      reorder_account: "ย้าย %{account}"
+      reorder_hint: ลากเพื่อจัดเรียงใหม่ หากใช้แป้นพิมพ์ ให้กด Enter แล้วใช้ปุ่มลูกศร
+      sort_mode:
+        start: เรียงลำดับบัญชี
+        hint: ลากบัญชีที่ที่จับเพื่อจัดเรียงใหม่
+        done: เสร็จสิ้น
+    types:
+      depository: เงินสด
+      investment: การลงทุน
+      crypto: คริปโต
+      property: อสังหาริมทรัพย์
+      vehicle: ยานพาหนะ
+      other_asset: สินทรัพย์อื่น ๆ
+      credit_card: บัตรเครดิต
+      loan: สินเชื่อ
+      other_liability: หนี้สินอื่น ๆ
+    types_plural:
+      depository: เงินสด
+      investment: การลงทุน
+      crypto: คริปโต
+      property: อสังหาริมทรัพย์
+      vehicle: ยานพาหนะ
+      other_asset: สินทรัพย์อื่น ๆ
+      credit_card: บัตรเครดิต
+      loan: สินเชื่อ
+      other_liability: หนี้สินอื่น ๆ
+    tax_treatments:
+      taxable: ต้องเสียภาษี
+      tax_deferred: เลื่อนภาษี
+      tax_exempt: ยกเว้นภาษี
+      tax_advantaged: ได้รับสิทธิประโยชน์ทางภาษี
+    tax_treatment_descriptions:
+      taxable: เสียภาษีจากกำไรเมื่อรับรู้
+      tax_deferred: เงินสมทบหักลดหย่อนได้ เสียภาษีเมื่อถอน
+      tax_exempt: เงินสมทบเป็นเงินหลังหักภาษี กำไรไม่ถูกเก็บภาษี
+      tax_advantaged: สิทธิประโยชน์ทางภาษีพิเศษตามเงื่อนไข
+    subtype_regions:
+      us: สหรัฐอเมริกา
+      uk: สหราชอาณาจักร
+      ca: แคนาดา
+      au: ออสเตรเลีย
+      eu: ยุโรป
+      in: อินเดีย
+      generic: ทั่วไป
+    confirm_unlink:
+      title: ยกเลิกการเชื่อมโยงบัญชีจากผู้ให้บริการ?
+      description_html: "คุณกำลังจะยกเลิกการเชื่อมโยง <strong>%{account_name}</strong> จาก <strong>%{provider_name}</strong> ซึ่งจะเปลี่ยนเป็นบัญชีแบบกรอกเอง"
+      warning_title: หมายความว่าอย่างไร
+      warning_wallet_connection: บัญชีทั้งหมดในการเชื่อมต่อ Apple Wallet นี้จะถูกยกเลิกการเชื่อมโยง รายการธุรกรรมและยอดคงเหลือจะยังอยู่ คุณเชื่อมต่อใหม่ได้ผ่านแอป Sure บน iOS ด้วยการตั้งค่า Wallet ใหม่
+      warning_no_sync: บัญชีจะไม่ซิงค์กับผู้ให้บริการของคุณโดยอัตโนมัติอีกต่อไป
+      warning_manual_updates: คุณต้องเพิ่มรายการธุรกรรมและอัปเดตยอดคงเหลือด้วยตนเอง
+      warning_transactions_kept: รายการธุรกรรมและยอดคงเหลือที่มีอยู่ทั้งหมดจะยังอยู่
+      warning_can_delete: หลังยกเลิกการเชื่อมโยงแล้ว คุณลบบัญชีได้หากต้องการ
+      confirm_button: ยืนยันและยกเลิกการเชื่อมโยง
+    unlink:
+      success: "ยกเลิกการเชื่อมโยงบัญชีเรียบร้อยแล้ว ตอนนี้เป็นบัญชีแบบกรอกเอง"
+      not_linked: "บัญชีนี้ไม่ได้เชื่อมโยงกับผู้ให้บริการ"
+      error: "ยกเลิกการเชื่อมโยงบัญชีไม่สำเร็จ: %{error}"
+      generic_error: "เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดลองอีกครั้ง"
+    select_provider:
+      title: เลือกผู้ให้บริการที่จะเชื่อมโยง
+      description: "เลือกผู้ให้บริการที่คุณต้องการใช้เชื่อมโยง %{account_name}"
+      already_linked: "บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว"
+      no_providers: "ขณะนี้ยังไม่ได้ตั้งค่าผู้ให้บริการใด ๆ"
+
+  email_confirmations:
+    new:
+      invalid_token: ลิงก์ยืนยันไม่ถูกต้องหรือหมดอายุ
+      success_login: ยืนยันอีเมลของคุณแล้ว โปรดเข้าสู่ระบบด้วยที่อยู่อีเมลใหม่

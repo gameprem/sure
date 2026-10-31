@@ -1,0 +1,85 @@
+---
+th:
+  kraken_items:
+    provider_connection:
+      default_name: Kraken
+      default_description: เชื่อมโยงกับบัญชีแพลตฟอร์มแลกเปลี่ยน Kraken
+      name: "Kraken - %{name}"
+      description: "เชื่อมโยงกับ %{name}"
+    create:
+      default_name: Kraken
+      success: เชื่อมต่อ Kraken สำเร็จ กำลังซิงค์บัญชีแพลตฟอร์มแลกเปลี่ยนของคุณ
+    update:
+      success: อัปเดตการเชื่อมต่อ Kraken เรียบร้อยแล้ว
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Kraken แล้ว
+    select_accounts:
+      select_connection: เลือกการเชื่อมต่อ Kraken ในการตั้งค่าผู้ให้บริการ
+      no_credentials_configured: เพิ่มข้อมูลรับรอง API ของ Kraken ก่อนตั้งค่าบัญชี
+    link_accounts:
+      select_connection: เลือกการเชื่อมต่อ Kraken ก่อนเชื่อมโยงบัญชี
+    select_existing_account:
+      title: เชื่อมโยงบัญชี Kraken
+      no_accounts_found: ไม่พบบัญชี Kraken
+      wait_for_sync: รอให้ Kraken ซิงค์เสร็จ
+      check_provider_health: ตรวจสอบว่าข้อมูลรับรอง API ของ Kraken ถูกต้อง
+      link: เชื่อมโยง
+      cancel: ยกเลิก
+    link_existing_account:
+      success: เชื่อมโยงกับบัญชี Kraken เรียบร้อยแล้ว
+      select_connection: เลือกการเชื่อมต่อ Kraken ก่อนเชื่อมโยงบัญชี
+      errors:
+        only_manual: เชื่อมโยงกับ Kraken ได้เฉพาะบัญชีแพลตฟอร์มแลกเปลี่ยนคริปโตแบบกรอกเองที่ยังไม่มีการเชื่อมโยงผู้ให้บริการ
+        invalid_kraken_account: บัญชี Kraken ไม่ถูกต้อง
+        kraken_account_already_linked: บัญชี Kraken นี้เชื่อมโยงแล้ว
+    setup_accounts:
+      title: นำเข้าบัญชี Kraken
+      subtitle: เลือกบัญชีแพลตฟอร์มแลกเปลี่ยนที่จะติดตาม
+      instructions: Kraken นำเข้าบัญชีแพลตฟอร์มแลกเปลี่ยนคริปโตรวมหนึ่งบัญชีสำหรับการเชื่อมต่อนี้ โดยมีเฉพาะสินทรัพย์ที่ถือครองและรายการซื้อขาย spot
+      no_accounts: นำเข้าบัญชี Kraken ทั้งหมดแล้ว
+      accounts_count:
+        one: "มี %{count} บัญชีให้เลือก"
+        other: "มี %{count} บัญชีให้เลือก"
+      select_all: เลือกทั้งหมด
+      import_selected: นำเข้าที่เลือก
+      cancel: ยกเลิก
+      creating: กำลังนำเข้า...
+    complete_account_setup:
+      success:
+        one: "นำเข้า %{count} บัญชีแล้ว"
+        other: "นำเข้า %{count} บัญชีแล้ว"
+      none_selected: ไม่ได้เลือกบัญชี
+      no_accounts: ไม่มีบัญชีที่จะนำเข้า
+    kraken_item:
+      provider_name: Kraken
+      syncing: กำลังซิงค์...
+      reconnect: ต้องอัปเดตข้อมูลรับรอง
+      deletion_in_progress: กำลังลบ...
+      sync_status:
+        no_accounts: ไม่พบบัญชี
+        all_synced:
+          one: "ซิงค์ %{count} บัญชีแล้ว"
+          other: "ซิงค์ %{count} บัญชีแล้ว"
+        partial_sync: "ซิงค์แล้ว %{linked_count} ต้องตั้งค่า %{unlinked_count}"
+      status: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว"
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว - %{summary}"
+      status_never: ไม่เคยซิงค์
+      delete: ลบ
+      no_accounts_title: ไม่พบบัญชี
+      no_accounts_message: บัญชีแพลตฟอร์มแลกเปลี่ยน Kraken ของคุณจะปรากฏที่นี่หลังซิงค์
+      setup_needed: บัญชีพร้อมนำเข้า
+      setup_description: นำเข้าการเชื่อมต่อ Kraken นี้เป็นบัญชีแพลตฟอร์มแลกเปลี่ยนคริปโต
+      setup_action: นำเข้าบัญชี
+      import_accounts_menu: นำเข้าบัญชี
+      stale_rate_warning: "ยอดคงเหลือเป็นค่าประมาณเพราะไม่มีอัตราแลกเปลี่ยนที่แน่นอนของวันที่ %{date} จะอัปเดตในการซิงค์ครั้งถัดไป"
+  kraken_item:
+    syncer:
+      checking_credentials: กำลังตรวจสอบข้อมูลรับรอง...
+      credentials_invalid: ข้อมูลรับรอง API ของ Kraken ไม่ถูกต้อง โปรดตรวจสอบคีย์ API และ secret
+      importing_accounts: กำลังนำเข้าบัญชีจาก Kraken...
+      checking_configuration: กำลังตรวจสอบการตั้งค่าบัญชี...
+      accounts_need_setup:
+        one: "%{count} บัญชีต้องตั้งค่า"
+        other: "%{count} บัญชีต้องตั้งค่า"
+      processing_accounts: กำลังประมวลผลข้อมูลบัญชี...
+      calculating_balances: กำลังคำนวณยอดคงเหลือ...

@@ -1,0 +1,22 @@
+---
+th:
+  activerecord:
+    attributes:
+      user:
+        email: อีเมล
+        family: "%{moniker}"
+        family_id: "%{moniker}"
+        first_name: ชื่อ
+        last_name: นามสกุล
+        password: รหัสผ่าน
+        password_confirmation: ยืนยันรหัสผ่าน
+    errors:
+      models:
+        user:
+          attributes:
+            base:
+              cannot_deactivate_admin_with_other_users: ผู้ดูแลระบบไม่สามารถลบบัญชีได้ขณะที่ยังมีผู้ใช้อื่นอยู่ โปรดลบสมาชิกทั้งหมดก่อน
+              provider_item_has_other_accounts: ผู้ใช้เป็นเจ้าของบัญชีที่เชื่อมโยงกับการเชื่อมต่อผู้ให้บริการ ซึ่งมีบัญชีของผู้ใช้อีกคนอยู่ด้วย โปรดย้ายหรือยกเลิกการเชื่อมโยงบัญชีเหล่านั้นก่อนเปลี่ยนสมาชิกภาพของครอบครัว/กลุ่ม
+              cannot_remove_last_super_admin: ไม่สามารถลบซูเปอร์แอดมินที่ใช้งานอยู่คนสุดท้ายได้ โปรดเลื่อนระดับผู้ใช้อีกคนเป็นซูเปอร์แอดมินก่อน
+            profile_image:
+              invalid_file_size: ขนาดไฟล์ต้องน้อยกว่า %{max_megabytes}MB

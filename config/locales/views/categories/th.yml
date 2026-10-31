@@ -1,0 +1,75 @@
+---
+th:
+  categories:
+    bootstrap:
+      success: สร้างหมวดหมู่เริ่มต้นเรียบร้อยแล้ว
+    locked: หมวดหมู่ถูกล็อก ปลดล็อกเพื่อเพิ่มหมวดหมู่ใหม่
+    toggle_lock:
+      locked: ล็อกหมวดหมู่แล้ว
+      unlocked: ปลดล็อกหมวดหมู่แล้ว
+    category:
+      delete: ลบหมวดหมู่
+      edit: แก้ไขหมวดหมู่
+    create:
+      success: สร้างหมวดหมู่เรียบร้อยแล้ว
+    destroy:
+      success: ลบหมวดหมู่เรียบร้อยแล้ว
+    edit:
+      edit: แก้ไขหมวดหมู่
+    form:
+      placeholder: ชื่อหมวดหมู่
+      name_label: ชื่อ
+      unassigned: "(ไม่ได้กำหนด)"
+      parent_category_label: "หมวดหมู่แม่ (ไม่บังคับ)"
+      trigger_label: เลือกสีและไอคอน
+      color: สี
+      icon: ไอคอน
+      auto_adjust: ปรับอัตโนมัติ
+      poor_contrast: "คอนทราสต์ต่ำ เลือกสีที่เข้มกว่า หรือ"
+    destroy_all:
+      success: ลบหมวดหมู่ทั้งหมดแล้ว
+    index:
+      bootstrap: ใช้ค่าเริ่มต้น (แนะนำ)
+      categories: หมวดหมู่
+      categories_expenses: หมวดหมู่รายจ่าย
+      categories_incomes: หมวดหมู่รายรับ
+      delete_all: ลบทั้งหมด
+      empty: ไม่พบหมวดหมู่
+      lock_categories: ล็อกการสร้างหมวดหมู่
+      locked_message: การสร้างหมวดหมู่ถูกล็อก การนำเข้าและการซิงค์ธนาคารยังเพิ่มหมวดหมู่ได้
+      merge: รวมหมวดหมู่
+      new: หมวดหมู่ใหม่
+      unlock_categories: ปลดล็อกการสร้างหมวดหมู่
+    merge:
+      title: รวมหมวดหมู่
+      description: เลือกหมวดหมู่เป้าหมายและหมวดหมู่ที่จะรวมเข้าไป รายการธุรกรรมและบรรทัดงบประมาณที่ตรงกันจะย้ายไปยังเป้าหมาย
+      target_label: รวมเข้ากับ (เป้าหมาย)
+      select_target: เลือกหมวดหมู่เป้าหมาย...
+      sources_label: หมวดหมู่ที่จะรวม
+      sources_hint: หมวดหมู่ที่เลือกจะถูกลบหลังจากย้ายรายการธุรกรรมและบรรทัดงบประมาณไปยังเป้าหมาย อย่าเลือกเป้าหมายเป็นต้นทาง
+      submit: รวมที่เลือก
+    new:
+      new_category: หมวดหมู่ใหม่
+    perform_merge:
+      success:
+        one: รวม %{count} หมวดหมู่เรียบร้อยแล้ว
+        other: รวม %{count} หมวดหมู่เรียบร้อยแล้ว
+      no_categories_selected: ไม่ได้เลือกหมวดหมู่ที่จะรวม
+      target_not_found: ไม่พบหมวดหมู่เป้าหมาย
+      invalid_categories: เลือกหมวดหมู่ไม่ถูกต้อง
+      target_selected_as_source: เลือกหมวดหมู่ที่ต่างกันสำหรับเป้าหมายและต้นทาง
+    update:
+      success: อัปเดตหมวดหมู่เรียบร้อยแล้ว
+    virtual:
+      transfer: โอน
+      payment: ชำระเงิน
+      trade: การซื้อขาย
+  category:
+    dropdowns:
+      show:
+        bootstrap: สร้างหมวดหมู่เริ่มต้น
+        empty: ไม่พบหมวดหมู่
+        match_transfer: "จับคู่การโอน/การชำระเงิน"
+        one_time: "%{type}ครั้งเดียว"
+        income: "รายรับ"
+        expense: "รายจ่าย"

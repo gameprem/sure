@@ -1,0 +1,354 @@
+---
+th:
+  settings:
+    hostings:
+      invite_code_settings:
+        description: ควบคุมวิธีที่ผู้ใช้ใหม่สมัครใช้อินสแตนซ์ %{product} ของคุณ
+        email_confirmation_description: เมื่อเปิดใช้ ผู้ใช้ต้องยืนยันที่อยู่อีเมลเมื่อเปลี่ยน
+        email_confirmation_title: ต้องยืนยันอีเมล
+        default_family_title: ครอบครัวเริ่มต้นสำหรับผู้ใช้ใหม่
+        default_family_description: "ใส่ผู้ใช้ใหม่ในครอบครัว/กลุ่มนี้เฉพาะเมื่อไม่มีคำเชิญ"
+        default_family_none: ไม่มี (สร้างครอบครัวใหม่)
+        generate_tokens: สร้างรหัสใหม่
+        generated_tokens: รหัสที่สร้างแล้ว
+        title: การเริ่มต้นใช้งาน
+        states:
+          open: เปิด
+          closed: ปิด
+          invite_only: เฉพาะผู้ได้รับเชิญ
+      demo_refresh_settings:
+        description: "รีเฟรชเฉพาะครอบครัวเดโมที่เลือกโดยอัตโนมัติ ข้อมูลและการเข้าสู่ระบบทั้งหมดของครอบครัวนั้นจะถูกลบ ครอบครัวอื่นไม่ถูกแตะต้อง ต้องมี worker ที่ทำงานอยู่และมี RAM อย่างน้อย 2 GiB สร้างครอบครัวเดโมแบบใช้แล้วทิ้งด้วยตัวสร้างเดโมก่อน แล้วเลือกที่นี่ อย่าเลือกครอบครัวของผู้ใช้จริง"
+        none: ไม่ได้เลือกครอบครัวเดโม
+        family_label: ครอบครัวเดโมแบบใช้แล้วทิ้ง
+        save_family: บันทึกครอบครัวเดโม
+        enabled_label: เปิดใช้การรีเฟรชครอบครัวเดโมรายวัน
+      show:
+        demo_refresh: การรีเฟรชข้อมูลเดโม
+        general: การตั้งค่าทั่วไป
+        ai_assistant: ผู้ช่วย AI
+        financial_data_providers: ผู้ให้บริการข้อมูลการเงิน
+        property_valuation_providers: ผู้ให้บริการประเมินมูลค่าอสังหาริมทรัพย์
+        sync_settings: การตั้งค่าการซิงค์
+        invites: รหัสเชิญ
+        title: การโฮสต์เอง
+        danger_zone: โซนอันตราย
+        instance_settings_restricted: ข้อมูลรับรองผู้ให้บริการ การเชื่อมต่อ AI ที่ใช้ร่วมกัน และการตั้งค่าการซิงค์ใช้กับทุกครอบครัวในอินสแตนซ์นี้ จึงมีเพียงซูเปอร์แอดมินที่เปลี่ยนได้ ผู้ช่วยที่ครอบครัวของคุณใช้ยังตั้งค่าแยกรายครอบครัว ผู้ที่เข้าถึงเซิร์ฟเวอร์ได้สามารถเลื่อนระดับผู้ใช้เป็นซูเปอร์แอดมินได้ คู่มือโฮสต์เองด้วย Docker แสดงคำสั่งไว้ในบันทึกการอัปเกรด
+        clear_cache: ล้างแคชข้อมูล
+        clear_cache_warning: การล้างแคชข้อมูลจะลบอัตราแลกเปลี่ยน ราคาหลักทรัพย์ ยอดคงเหลือบัญชี และข้อมูลอื่น ๆ ทั้งหมด แต่จะไม่ลบบัญชี รายการธุรกรรม หมวดหมู่ หรือข้อมูลอื่นที่ผู้ใช้เป็นเจ้าของ
+        confirm_clear_cache:
+          title: ล้างแคชข้อมูล?
+          body: คุณแน่ใจหรือไม่ว่าต้องการล้างแคชข้อมูล การดำเนินการนี้จะลบอัตราแลกเปลี่ยน ราคาหลักทรัพย์ ยอดคงเหลือบัญชี และข้อมูลอื่น ๆ ทั้งหมด และไม่สามารถย้อนกลับได้
+      provider_selection:
+        exchange_rate_title: ผู้ให้บริการอัตราแลกเปลี่ยน
+        exchange_rate_description: เลือกผู้ให้บริการเพียงรายเดียวสำหรับดึงอัตราแลกเปลี่ยนสกุลเงิน
+        exchange_rate_provider_label: ผู้ให้บริการอัตราแลกเปลี่ยน
+        securities_title: ผู้ให้บริการหลักทรัพย์
+        securities_description: เปิดใช้ผู้ให้บริการอย่างน้อยหนึ่งรายสำหรับดึงราคาหุ้น ETF และกองทุนรวม เมื่อค้นหา จะสอบถามผู้ให้บริการที่เปิดใช้ทั้งหมดและรวมผลลัพธ์
+        env_configured_message: ปิดการเลือกผู้ให้บริการเพราะมีการตั้งค่าตัวแปรสภาพแวดล้อม หากต้องการเปิดการเลือกที่นี่ ให้ลบตัวแปรสภาพแวดล้อมเหล่านี้ออกจากการตั้งค่าของคุณ
+        twelve_data_hint: ต้องมีคีย์ API 800 เครดิต/วัน
+        yahoo_finance_hint: ฟรี ไม่ต้องมีคีย์ API
+        requires_api_key: ต้องมีคีย์ API
+        requires_api_key_eodhd: ต้องมีคีย์ API จำกัด 20 ครั้ง/วัน
+        requires_api_key_alpha_vantage: ต้องมีคีย์ API จำกัด 25 ครั้ง/วัน
+        mfapi_hint: ฟรี ไม่ต้องมีคีย์ API -- เฉพาะกองทุนรวมอินเดีย
+        binance_public_hint: ฟรี ไม่ต้องมีคีย์ API -- เฉพาะคริปโต (BTC, ETH ฯลฯ)
+        moex_public_hint: ฟรี ไม่ต้องมีคีย์ API -- หุ้น กองทุน และพันธบัตรรัสเซีย (MOEX) รวมอัตราแลกเปลี่ยน RUB
+        tinkoff_invest_hint: ต้องมีโทเคนแบบอ่านอย่างเดียว -- ราคาหุ้น/กองทุน/พันธบัตรรัสเซีย และโลโก้แบรนด์
+        requires_api_key_mansa: ต้องมีคีย์ API แพ็กเกจฟรี 100 ครั้ง/วัน -- เฉพาะ NGX (ตลาดหลักทรัพย์ไนจีเรีย)
+        providers:
+          twelve_data: Twelve Data
+          yahoo_finance: Yahoo Finance
+          tiingo: Tiingo
+          eodhd: EODHD
+          alpha_vantage: Alpha Vantage
+          mfapi: MFAPI.in
+          binance_public: Binance
+          moex_public: MOEX
+          tinkoff_invest: T-Invest (T-Bank)
+          frankfurter: Frankfurter
+          mansa: Mansa
+      assistant_settings:
+        title: ผู้ช่วย AI
+        description: เลือกวิธีที่ผู้ช่วยแชตตอบสนอง แบบ Builtin ใช้ผู้ให้บริการ LLM ที่คุณตั้งค่าไว้โดยตรง แบบ External มอบหมายให้เอเจนต์ AI ระยะไกลที่เรียกเครื่องมือการเงินของ Sure กลับผ่าน MCP ได้ แบบ None in app นำแชตในแอปออกและคง MCP ไว้ให้เอเจนต์ของคุณเอง
+        type_label: ประเภทผู้ช่วย
+        type_builtin: Builtin (LLM โดยตรง)
+        type_external: External (เอเจนต์ระยะไกล)
+        type_mcp_only: ไม่มีในแอป (เชื่อมต่อเอเจนต์ของคุณเองผ่าน MCP)
+        mcp_only_help: ผู้ช่วยในแอปปิดสำหรับทุกคนในครัวเรือนนี้ ทางลัด AI ของบิลและข้อความข้อมูลเชิงลึกที่ AI เขียนก็หยุดด้วย MCP และการจัดหมวดหมู่เบื้องหลังยังใช้ได้ เชื่อมต่อเอเจนต์ภายนอกที่ การตั้งค่า > MCP
+        external_status: Endpoint ของผู้ช่วยภายนอก
+        external_configured: ตั้งค่าแล้ว
+        external_not_configured: ยังไม่ได้ตั้งค่า กรอก URL และโทเคนด้านล่าง หรือตั้งตัวแปรสภาพแวดล้อม EXTERNAL_ASSISTANT_URL และ EXTERNAL_ASSISTANT_TOKEN
+        env_notice: "ประเภทผู้ช่วยถูกล็อกเป็น '%{type}' ผ่านตัวแปรสภาพแวดล้อม ASSISTANT_TYPE"
+        env_configured_external: ตั้งค่าผ่านตัวแปรสภาพแวดล้อมสำเร็จ
+        url_label: URL ของ Endpoint
+        url_placeholder: "https://your-agent-host/v1/chat"
+        url_help: URL เต็มของ API endpoint ของเอเจนต์ของคุณ ผู้ให้บริการเอเจนต์จะให้ค่านี้กับคุณ
+        token_label: โทเคน API
+        token_placeholder: กรอกโทเคนจากผู้ให้บริการเอเจนต์ของคุณ
+        token_help: โทเคนยืนยันตัวตนที่เอเจนต์ภายนอกของคุณให้มา ส่งเป็น Bearer token กับทุกคำขอ
+        agent_id_label: เอเจนต์ (จำเป็น)
+        agent_id_placeholder: "main (ค่าเริ่มต้น)"
+        agent_id_help: Sure โหลดรายการนี้จากการตอบกลับ /v1/models ของ endpoint เอเจนต์ที่เลือกควบคุมการกำหนดเส้นทาง โมเดลเบื้องหลังจัดการโดยบริการภายนอก
+        agent_discovery_configure_first: บันทึก URL endpoint และโทเคน API ที่ถูกต้องเพื่อโหลดเอเจนต์ที่ใช้ได้
+        external_agent_required: เลือกเอเจนต์ภายนอกก่อนบันทึก
+        external_agent_invalid: เลือกเอเจนต์ที่ endpoint ที่ตั้งค่าไว้ส่งกลับมา
+        external_agent_reselect: endpoint เปลี่ยนไปและเอเจนต์ที่เลือกไว้ก่อนหน้าไม่มีอยู่ที่นั่น เลือกเอเจนต์จาก endpoint ใหม่
+        agent_discovery_error: "โหลดเอเจนต์ไม่สำเร็จ: %{error}"
+        external_info:
+          title: การตั้งค่า AI ภายนอก
+          items:
+            - กรอก URL endpoint แบบเข้ากันได้กับ OpenAI เต็มรูปแบบที่ลงท้ายด้วย /v1/chat/completions
+            - Sure ค้นหาเอเจนต์ที่ใช้ได้จาก /v1/models หลังบันทึก endpoint และโทเคน
+            - บริการภายนอกเลือกโมเดลเบื้องหลังแต่ละเอเจนต์ Sure เลือกเฉพาะเส้นทางเอเจนต์
+            - ข้อผิดพลาดด้านการยืนยันตัวตน endpoint หรือเอเจนต์ส่งกลับมาจากบริการภายนอก ตรวจสอบบันทึกของมันเมื่อคำขอล้มเหลว
+        disconnect_title: การเชื่อมต่อภายนอก
+        disconnect_description: นำการเชื่อมต่อผู้ช่วยภายนอกออกและสลับกลับไปใช้ผู้ช่วยในตัว
+        disconnect_button: ยกเลิกการเชื่อมต่อ
+        confirm_disconnect:
+          title: ยกเลิกการเชื่อมต่อผู้ช่วยภายนอก?
+          body: การดำเนินการนี้จะลบ URL โทเคน และ ID เอเจนต์ที่บันทึกไว้ และสลับไปใช้ผู้ช่วยในตัว คุณเชื่อมต่อใหม่ภายหลังได้โดยกรอกข้อมูลรับรองใหม่
+      brand_fetch_settings:
+        description: กรอก Client ID ที่ Brandfetch ให้มา
+        env_configured_message: คุณตั้งค่า Brandfetch Client ID ผ่านตัวแปรสภาพแวดล้อม BRAND_FETCH_CLIENT_ID สำเร็จแล้ว
+        show_details: "(แสดงรายละเอียด)"
+        setup_step_1_html: 'ไปที่ <a href="https://brandfetch.com/developers" target="_blank" rel="noopener noreferrer" class="underline">brandfetch.com</a> และสร้างบัญชีนักพัฒนา Brandfetch ฟรี'
+        setup_step_2_html: 'ไปที่หน้า <a href="https://developers.brandfetch.com/dashboard/logo-api" target="_blank" rel="noopener noreferrer" class="underline">Logo API</a>'
+        setup_step_3: 'แตะไอคอนรูปตาใต้ส่วน "Your Client ID" เพื่อแสดง Client ID ของคุณ แล้ววางด้านล่าง'
+        label: Client ID
+        placeholder: กรอก Client ID ของคุณที่นี่
+        title: การตั้งค่า Brandfetch
+        high_res_label: เปิดใช้โลโก้ความละเอียดสูง
+        high_res_description: เมื่อเปิดใช้ โลโก้จะถูกดึงที่ความละเอียด 120x120 แทน 40x40 ให้ภาพคมชัดขึ้นบนจอ DPI สูง
+      llm_provider_selector:
+        title: ผู้ให้บริการ AI
+        description: เลือก LLM ที่ขับเคลื่อนแชต AI การตรวจจับร้านค้า และการประมวลผล PDF การจัดหมวดหมู่รายการธุรกรรมตั้งค่าแยกด้านล่าง
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม LLM_PROVIDER สำเร็จ
+        provider_label: ผู้ให้บริการ LLM ที่ใช้งาน
+        provider_openai: OpenAI
+        provider_anthropic: Anthropic (Claude)
+        provider_help: การสลับผู้ให้บริการมีผลกับแชตครั้งถัดไป กำหนดข้อมูลรับรองของผู้ให้บริการที่ใช้งานอยู่ด้านล่าง
+        not_configured_hint: "เพิ่มคีย์ API ของ %{provider} ด้านล่างเพื่อเปิดใช้"
+        data_retention_heading: การจัดการข้อมูล
+        data_retention: ข้อมูลที่ส่งผ่าน API จะไม่ถูกใช้ฝึกโมเดลโดยค่าเริ่มต้น API ที่โฮสต์ของผู้ให้บริการเก็บข้อมูลประมาณ 30 วันเพื่อความน่าเชื่อถือและความปลอดภัย endpoint ที่กำหนดเองหรือโฮสต์เองเป็นไปตามนโยบายของคุณ
+        max_items_per_call_label: จำนวนรายการสูงสุดต่อชุด (ไม่บังคับ)
+        max_items_per_call_help: "ขีดจำกัดบนของชุดการจัดหมวดหมู่อัตโนมัติ/ตรวจจับร้านค้า ค่าเริ่มต้น: 25 กับผู้ให้บริการที่เข้ากันได้กับ OpenAI ชุดที่ใหญ่กว่าจะถูกแบ่งอัตโนมัติให้พอดีกับหน้าต่างบริบท"
+      anthropic_settings:
+        title: Anthropic (Claude)
+        description: กรอกคีย์ API ของ Anthropic คุณชี้ Base URL ไปที่ AWS Bedrock หรือ GCP Vertex ได้ (ไม่บังคับ)
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อมสำเร็จ
+        access_token_label: คีย์ API
+        access_token_placeholder: กรอกคีย์ API ของ Anthropic
+        base_url_label: Base URL (ไม่บังคับ)
+        base_url_placeholder: "https://api.anthropic.com (ค่าเริ่มต้น)"
+        model_label: โมเดลเริ่มต้น (ไม่บังคับ)
+        model_placeholder: "claude-sonnet-4-6 (ค่าเริ่มต้น)"
+        model_help: ใช้สำหรับแชตและการประมวลผล PDF การทำงานเป็นชุด (จัดหมวดหมู่ ตรวจจับร้านค้า) ใช้ Haiku เป็นค่าเริ่มต้นเพื่อประหยัดค่าใช้จ่าย
+      categorization_provider_selector:
+        title: การจัดหมวดหมู่รายการธุรกรรม
+        preview_pill: ตัวอย่าง
+        description: เลือกผู้ให้บริการที่จัดหมวดหมู่รายการธุรกรรม แยกจากผู้ให้บริการ AI ด้านบนซึ่งจัดการแชตและการประมวลผล PDF
+        env_notice: "ตั้งเป็น %{type} ผ่านตัวแปรสภาพแวดล้อม"
+        provider_label: ผู้ให้บริการจัดหมวดหมู่
+        provider_llm: ผู้ให้บริการ AI (OpenAI หรือ Anthropic)
+        provider_jev: Jev (TypeSafe)
+        provider_help: ผู้ให้บริการ AI อ่านรายการธุรกรรมเป็นชุดและเขียนชื่อหมวดหมู่กลับมา Jev เลือกจากรายการหมวดหมู่ของคุณและส่งค่าความเชื่อมั่นที่ปรับเทียบแล้วสำหรับแต่ละรายการธุรกรรม
+        jev_configured: ตั้งค่าคีย์ API ของ Jev แล้ว
+        jev_not_configured: เลือก Jev แล้วแต่ยังไม่ได้ตั้งค่าคีย์ API การจัดหมวดหมู่จะใช้ผู้ให้บริการ AI ต่อไปจนกว่าคุณจะเพิ่มด้านล่าง
+        data_retention_heading: การแชร์ข้อมูล
+        data_retention_direct: คำอธิบายรายการธุรกรรม จำนวนเงิน และชื่อหมวดหมู่ของคุณถูกส่งไปยัง TypeSafe เพื่อจัดหมวดหมู่ ตรวจสอบนโยบายการเก็บข้อมูลก่อนเปิดใช้กับข้อมูลจริง
+        data_retention_proxied: คำอธิบายรายการธุรกรรม จำนวนเงิน และชื่อหมวดหมู่ของคุณถูกส่งไปยัง %{host} ซึ่งส่งต่อไปยัง TypeSafe ตรวจสอบนโยบายการเก็บข้อมูลของทั้งสองผู้ให้บริการก่อนเปิดใช้กับข้อมูลจริง
+        confidence_threshold_label: ความเชื่อมั่นขั้นต่ำ (0–1)
+        confidence_threshold_help: ต่ำกว่าความเชื่อมั่นนี้ หมวดหมู่จะไม่ถูกใช้และรายการธุรกรรมจะไม่ถูกจัดหมวดหมู่ เพื่อให้การรันครั้งถัดไปลองอีกครั้ง ไม่มีอะไรถูกทิ้ง ตั้งเป็น 0 เพื่อใช้ทุกคำตอบ
+        confidence_threshold_env_notice: ถูกล็อกโดยตัวแปรสภาพแวดล้อม CATEGORIZATION_CONFIDENCE_THRESHOLD
+        shadow_rate_label: อัตราการเปรียบเทียบเงา (0–1)
+        shadow_rate_help: รันผู้ให้บริการที่คุณไม่ได้เลือกควบคู่กับที่เลือก บันทึกว่าไม่ตรงกันที่ไหนโดยไม่เปลี่ยนหมวดหมู่ใด ค่าใช้จ่าย API จะเพิ่มเป็นสองเท่าในทุกการจัดหมวดหมู่ที่ถูกสุ่ม ตั้งเป็น 0 เพื่อปิด
+        shadow_rate_env_notice: ถูกล็อกโดยตัวแปรสภาพแวดล้อม CATEGORIZATION_SHADOW_RATE
+      categorization_shadow_results:
+        shadow_results_heading: การเปรียบเทียบเงา
+        shadow_results_empty: ยังไม่มีการเปรียบเทียบที่บันทึก ตั้งอัตราการเปรียบเทียบเงามากกว่า 0 แล้วรันการจัดหมวดหมู่เพื่อเก็บข้อมูล
+        shadow_results_summary: "ตรงกัน %{agreement}%% จาก %{count} รายการธุรกรรมที่สุ่ม"
+        shadow_disagreements_heading: ความไม่ตรงกันล่าสุด
+        shadow_disagreement_row: "%{applied_provider} เลือก %{applied_category}; %{shadow_provider} เลือก %{shadow_category}"
+        shadow_disagreement_confidence: "(ความเชื่อมั่น %{confidence})"
+        shadow_no_disagreements: ผู้ให้บริการทั้งสองตรงกันในทุกรายการธุรกรรมที่สุ่ม
+        shadow_no_category: ไม่มีหมวดหมู่
+      jev_settings:
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อมสำเร็จ
+        api_key_label: คีย์ API
+        api_key_placeholder: กรอกคีย์ API ของ TypeSafe
+        endpoint_label: Endpoint (ไม่บังคับ)
+        endpoint_placeholder: "https://api.typesafe.ai/v1/systemone (ค่าเริ่มต้น)"
+        model_label: โมเดล (ไม่บังคับ)
+        model_placeholder: "jev-latest (ค่าเริ่มต้น)"
+        model_help: ค่าเริ่มต้นคือ TypeSafe โดยตรง หากต้องการใช้ Jev ผ่าน OpenRouter ให้ตั้ง endpoint เป็น https://openrouter.ai/api/alpha/decisions และโมเดลเป็น ~typesafe/jev-latest
+      openai_settings:
+        description: กรอกโทเคนการเข้าถึง และกำหนดผู้ให้บริการที่เข้ากันได้กับ OpenAI เองได้ (ไม่บังคับ)
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อมสำเร็จ
+        access_token_label: โทเคนการเข้าถึง
+        access_token_placeholder: กรอกโทเคนการเข้าถึงของคุณที่นี่
+        uri_base_label: API Base URL (ไม่บังคับ)
+        uri_base_placeholder: "https://api.openai.com/v1 (ค่าเริ่มต้น)"
+        uri_base_local_help: "สำหรับโมเดลบนเครื่องของคุณเอง ให้กรอก endpoint ที่เข้ากันได้กับ OpenAI เช่น Ollama ที่ http://localhost:11434/v1 หรือ http://ollama:11434/v1 เมื่อ Sure และ Ollama ทำงานเป็นบริการ Docker Compose"
+        model_label: โมเดล (ไม่บังคับ)
+        model_placeholder: "gpt-4.1 (ค่าเริ่มต้น)"
+        model_function_calling_help: "ผู้ช่วย AI อ่านข้อมูลของคุณผ่านการเรียกฟังก์ชัน โปรดเลือกโมเดลที่ผู้ให้บริการระบุว่ารองรับ tools/function calling โมเดลที่ไม่รองรับจะทำให้แชตล้มเหลวพร้อมข้อผิดพลาดที่ไม่ชัดเจนจากผู้ให้บริการ"
+        model_function_calling_link: ตรวจสอบโมเดลที่ตั้งค่าไว้
+        model_required_help: "จำเป็นเมื่อคุณตั้ง API base URL: กรอกชื่อโมเดลที่เซิร์ฟเวอร์ของคุณใช้ เช่น llama3.1 สำหรับ Ollama"
+        json_mode_label: โหมด JSON
+        json_mode_auto: อัตโนมัติ (แนะนำ)
+        json_mode_strict: เข้มงวด (ดีที่สุดสำหรับโมเดลที่คิด)
+        json_mode_none: ไม่มี (ดีที่สุดสำหรับโมเดลมาตรฐาน)
+        json_mode_json_object: JSON Object
+        json_mode_help: "โหมดเข้มงวดเหมาะกับโมเดลที่คิด (qwen-thinking, deepseek-reasoner) โหมดไม่มีเหมาะกับโมเดลมาตรฐาน (llama, mistral, gpt-oss)"
+        budget_heading: งบโทเคน
+        budget_description: ใช้กับการเรียกที่เข้ากันได้กับ OpenAI (แชต การจัดหมวดหมู่อัตโนมัติ การตรวจจับร้านค้า และการประมวลผล PDF) ค่าเริ่มต้นเป็นแบบระมัดระวังสำหรับโมเดลในเครื่องที่บริบทเล็ก เพิ่มสำหรับโมเดลคลาวด์ที่มีหน้าต่างบริบทใหญ่กว่า
+        context_window_label: หน้าต่างบริบท (ไม่บังคับ)
+        context_window_help: "จำนวนโทเคนรวมที่โมเดลรับได้ ค่าเริ่มต้น: 2048 — เพิ่มเป็น 8192+ สำหรับ OpenAI บนคลาวด์หรือโมเดลในเครื่องที่บริบทใหญ่"
+        max_response_tokens_label: โทเคนตอบกลับสูงสุด (ไม่บังคับ)
+        max_response_tokens_help: "โทเคนที่สำรองไว้สำหรับคำตอบของโมเดล ค่าเริ่มต้น: 512 ลดเพื่อเหลือที่ให้ประวัติที่ยาวขึ้น"
+        timeout_heading: การหมดเวลา
+        timeout_description: ควบคุมระยะเวลาที่การเรียกโมเดลที่เข้ากันได้กับ OpenAI ทำงานได้ก่อนที่ Sure จะยอมแพ้ เพิ่มค่าเหล่านี้หากคุณรันโมเดลในเครื่องบนฮาร์ดแวร์ช้า
+        openai_request_timeout_label: เวลาหมดอายุคำขอเป็นวินาที (ไม่บังคับ)
+        openai_request_timeout_help: "ค่าเริ่มต้น: 60 ใช้กับทุกคำขอ HTTP ที่เข้ากันได้กับ OpenAI รวมการจัดหมวดหมู่อัตโนมัติ การตรวจจับร้านค้า แชต การประมวลผล PDF และการเรียก vector store OPENAI_REQUEST_TIMEOUT แทนที่ช่องนี้"
+        ai_response_timeout_label: เวลาหมดอายุการตอบกลับเป็นวินาที (ไม่บังคับ)
+        ai_response_timeout_help: "ค่าเริ่มต้น: 90 ใช้เฉพาะตัวเฝ้าดูทั้งรอบของแชต จึงควรกำหนดเป็นผลรวม: (1 + ASSISTANT_MAX_TOOL_CALL_ITERATIONS) × เวลาหมดอายุคำขอ บวกเวลาประมวลผลเครื่องมือและเวลาในคิว AI_RESPONSE_TIMEOUT แทนที่ช่องนี้"
+        ai_health_probe_timeout_label: เวลาหมดอายุการตรวจสุขภาพเป็นวินาที (ไม่บังคับ)
+        ai_health_probe_timeout_help: "ค่าเริ่มต้น: 5 ใช้เฉพาะการตรวจ AI สดภายใต้ การตั้งค่า → สถานะระบบ ไม่ใช่การเรียก AI จริง เพิ่มหากการตรวจ PDF รายงานหมดเวลากับโมเดลบนคลาวด์ AI_HEALTH_PROBE_TIMEOUT แทนที่ช่องนี้"
+        title: OpenAI
+      yahoo_finance_settings:
+        title: Yahoo Finance
+        description: Yahoo Finance ให้เข้าถึงราคาหุ้น อัตราแลกเปลี่ยน และข้อมูลการเงินได้ฟรีโดยไม่ต้องมีคีย์ API
+        status_healthy: Yahoo Finance ใช้งานอยู่และทำงานปกติ
+        status_rate_limited: Yahoo Finance จำกัดอัตราคำขอชั่วคราว
+        rate_limited_title: ถึงขีดจำกัดอัตราของ Yahoo Finance
+        rate_limited_message: ไม่ต้องดำเนินการใด Sure จะหลีกเลี่ยงการตรวจสุขภาพเพิ่มเติมเป็นเวลา 30 นาที การดำเนินการราคาและอัตราแลกเปลี่ยนยังทำงานต่อโดยอิสระ
+        status_unavailable: ขณะนี้ Yahoo Finance ไม่พร้อมใช้งาน
+        unavailable_title: ตรวจสอบ Yahoo Finance ไม่ได้
+        unavailable_message: เชื่อมต่อ Yahoo Finance ไม่ได้หรือได้รับการตอบกลับที่ไม่คาดคิด ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้งภายหลัง
+        status_unknown: กำลังตรวจสอบสถานะ Yahoo Finance
+      rentcast_settings:
+        title: RentCast
+        description: กรอกคีย์ API ของ RentCast เพื่อค้นหารายละเอียดอสังหาริมทรัพย์และค่าประเมินมูลค่าในสหรัฐอเมริกาเมื่อเพิ่มอสังหาริมทรัพย์ แพ็กเกจฟรีจำกัด 50 คำขอ API ต่อเดือน ใช้ร่วมกันระหว่างการค้นหาอสังหาริมทรัพย์และการรีเฟรชการประเมินมูลค่ารายวัน หากใช้แพ็กเกจแบบชำระเงิน เพิ่มเพดานด้วยตัวแปรสภาพแวดล้อม RENTCAST_MAX_REQUESTS_PER_MONTH
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม RENTCAST_API_KEY สำเร็จ
+        label: คีย์ API
+        placeholder: กรอกคีย์ API ของ RentCast ของคุณที่นี่
+        usage: "ใช้คำขอรายเดือน %{used} จาก %{limit}"
+      realie_settings:
+        title: Realie
+        description: กรอกคีย์ API ของ Realie เพื่อค้นหารายละเอียดอสังหาริมทรัพย์และค่าประเมินมูลค่าในสหรัฐอเมริกาเมื่อเพิ่มอสังหาริมทรัพย์ แพ็กเกจฟรีจำกัด 25 คำขอ API ต่อเดือน ใช้ร่วมกันระหว่างการค้นหาอสังหาริมทรัพย์และการรีเฟรชการประเมินมูลค่ารายวัน หากใช้แพ็กเกจแบบชำระเงิน เพิ่มเพดานด้วยตัวแปรสภาพแวดล้อม REALIE_MAX_REQUESTS_PER_MONTH
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม REALIE_API_KEY สำเร็จ
+        label: คีย์ API
+        placeholder: กรอกคีย์ API ของ Realie ของคุณที่นี่
+        usage: "ใช้คำขอรายเดือน %{used} จาก %{limit}"
+      chimnie_settings:
+        title: Chimnie
+        description: กรอกคีย์ API ของ Chimnie เพื่อประเมินมูลค่าอสังหาริมทรัพย์เพื่อที่อยู่อาศัยในสหราชอาณาจักรด้วย UPRN สร้างคีย์ฟรีที่ dashboard.chimnie.com (การสมัครต้องใช้อีเมลธุรกิจหรือโดเมนของตัวเอง ไม่รับ Gmail, Outlook และที่คล้ายกัน) การประเมินมูลค่าด้วย UPRN ฟรีและรีเฟรชรายเดือน Sure จำกัดไว้ที่ 1,000 คำขอต่อเดือน ซึ่งเปลี่ยนได้ด้วยตัวแปรสภาพแวดล้อม CHIMNIE_MAX_REQUESTS_PER_MONTH
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม CHIMNIE_API_KEY สำเร็จ
+        label: คีย์ API
+        placeholder: กรอกคีย์ API ของ Chimnie ของคุณที่นี่
+        usage: "ใช้คำขอรายเดือน %{used} จาก %{limit}"
+      tiingo_settings:
+        title: Tiingo
+        description: กรอกโทเคน API ที่ Tiingo ให้มา แพ็กเกจฟรีรองรับ 50 สัญลักษณ์ที่ไม่ซ้ำต่อชั่วโมงพร้อมข้อมูลย้อนหลังกว่า 30 ปี
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม TIINGO_API_KEY สำเร็จ
+        label: โทเคน API
+        placeholder: กรอกโทเคน API ของ Tiingo ของคุณที่นี่
+        show_details: "(แสดงรายละเอียด)"
+        step_1_html: 'ไปที่ <a href="https://www.tiingo.com" target="_blank" rel="noopener noreferrer" class="underline">tiingo.com</a> และสร้างบัญชีฟรี'
+        step_2_html: 'ไปที่หน้า <a href="https://www.tiingo.com/account/api/token" target="_blank" rel="noopener noreferrer" class="underline">API Token</a>'
+        step_3: คัดลอกโทเคน API ของคุณและวางด้านล่าง
+      tinkoff_invest_settings:
+        title: T-Invest (T-Bank)
+        description: กรอกโทเคน API ของ T-Invest แบบอ่านอย่างเดียว ใช้ดึงโลโก้แบรนด์ของหลักทรัพย์ (รวมกองทุนและพันธบัตร แม้ MOEX จะเป็นผู้กำหนดราคา) และเมื่อเปิดใช้ด้านบน ใช้ดึงราคาตราสารรัสเซีย
+        moex_only_notice: ไม่ได้เปิดสำหรับราคาด้านบน — ใช้ T-Invest ดึงโลโก้แบรนด์ของหลักทรัพย์ทั้งหมดของคุณเมื่อมีการตั้งค่าโทเคน โดยไม่ขึ้นกับช่องทำเครื่องหมายด้านบน
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม TINKOFF_INVEST_API_KEY สำเร็จ
+        label: โทเคน API
+        placeholder: กรอกโทเคน API ของ T-Invest ของคุณที่นี่
+        show_details: "(แสดงรายละเอียด)"
+        step_1: เปิดการลงทุน T-Bank จากนั้นการตั้งค่า แล้ว API tokens (ต้องมีบัญชีนายหน้า T-Bank ที่เปิดอยู่)
+        step_2: สร้างโทเคนที่มีสิทธิ์อ่านอย่างเดียว
+        step_3: คัดลอกโทเคนและวางด้านล่าง
+      eodhd_settings:
+        title: EODHD
+        description: กรอกโทเคน API ที่ EODHD ให้มา รองรับ ETF ยุโรปบน LSE, XETRA และตลาดต่างประเทศอื่น ๆ
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม EODHD_API_KEY สำเร็จ
+        label: โทเคน API
+        placeholder: กรอกโทเคน API ของ EODHD ของคุณที่นี่
+        show_details: "(แสดงรายละเอียด)"
+        step_1_html: 'ไปที่ <a href="https://eodhd.com/register" target="_blank" rel="noopener noreferrer" class="underline">eodhd.com</a> และสร้างบัญชีฟรี'
+        step_2_html: 'ไปที่ <a href="https://eodhd.com/cp/dashboard" target="_blank" rel="noopener noreferrer" class="underline">Dashboard</a> ของคุณเพื่อหาโทเคน API'
+        step_3: คัดลอกโทเคน API ของคุณและวางด้านล่าง
+        rate_limit_warning: "แพ็กเกจฟรีของ EODHD จำกัด 20 การเรียก API ต่อวัน เหมาะเป็นผู้ให้บริการเสริมสำหรับ ETF ยุโรปที่ผู้ให้บริการอื่นไม่มี"
+      mansa_settings:
+        title: Mansa
+        description: กรอกคีย์ API จาก Mansa API รองรับ NGX (ตลาดหลักทรัพย์ไนจีเรีย) ซึ่งไม่มีผู้ให้บริการอื่นที่นี่ครอบคลุม Mansa ครอบคลุมตลาดแอฟริกาอื่นด้วย แต่ตรวจสอบกับการเชื่อมต่อนี้เฉพาะ NGX เท่านั้น
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม MANSA_API_KEY สำเร็จ
+        label: คีย์ API
+        placeholder: กรอกคีย์ API ของ Mansa ของคุณที่นี่
+        show_details: "(แสดงรายละเอียด)"
+        step_1_html: 'ไปที่ <a href="https://mansaapi.com" target="_blank" rel="noopener noreferrer" class="underline">mansaapi.com</a> และรับคีย์ API ฟรี -- ไม่ต้องใช้บัตร'
+        step_2: คัดลอกคีย์ API ของคุณและวางด้านล่าง
+        rate_limit_warning: "แพ็กเกจฟรีของ Mansa จำกัด 100 การเรียก API ต่อวันและแสดงเฉพาะราคาปัจจุบัน -- ราคาย้อนหลังต้องใช้แพ็กเกจแบบชำระเงิน ตรวจสอบกับการเชื่อมต่อนี้เฉพาะ NGX (ตลาดหลักทรัพย์ไนจีเรีย) ตลาดแอฟริกาอื่นที่ Mansa ครอบคลุมยังไม่รองรับที่นี่"
+      alpha_vantage_settings:
+        title: Alpha Vantage
+        description: กรอกคีย์ API จาก Alpha Vantage รองรับ ETF ยุโรปบนตลาดหลักทรัพย์ลอนดอน XETRA และตลาดอื่น ๆ
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม ALPHA_VANTAGE_API_KEY สำเร็จ
+        label: คีย์ API
+        placeholder: กรอกคีย์ API ของ Alpha Vantage ของคุณที่นี่
+        show_details: "(แสดงรายละเอียด)"
+        step_1_html: 'ไปที่ <a href="https://www.alphavantage.co/support/#api-key" target="_blank" rel="noopener noreferrer" class="underline">alphavantage.co</a> และรับคีย์ API ฟรี'
+        step_2: คัดลอกคีย์ API และวางด้านล่าง
+        rate_limit_warning: "แพ็กเกจฟรีของ Alpha Vantage จำกัด 25 การเรียก API ต่อวัน เหมาะเป็นผู้ให้บริการเสริมสำหรับ ETF ยุโรปที่ผู้ให้บริการอื่นไม่มี"
+        no_health_check_note: "ไม่มีการตรวจสุขภาพการเชื่อมต่อสำหรับผู้ให้บริการนี้เนื่องจากขีดจำกัดอัตราที่เข้มงวด"
+      twelve_data_settings:
+        api_calls_used: "ใช้การเรียก API รายวัน %{used} / %{limit} (%{percentage})"
+        description: กรอกคีย์ API ที่ Twelve Data ให้มา
+        env_configured_message: ตั้งค่าผ่านตัวแปรสภาพแวดล้อม TWELVE_DATA_API_KEY สำเร็จ
+        label: คีย์ API
+        placeholder: กรอกคีย์ API ของคุณที่นี่
+        show_details: "(แสดงรายละเอียด)"
+        step_1_html: 'ไปที่ <a href="https://twelvedata.com/register" target="_blank" rel="noopener noreferrer" class="underline">twelvedata.com</a> และสร้างบัญชีนักพัฒนา Twelve Data ฟรี'
+        step_2_html: 'ไปที่หน้า <a href="https://twelvedata.com/account/api-keys" target="_blank" rel="noopener noreferrer" class="underline">API Keys</a>'
+        step_3: แสดง Secret Key ของคุณและวางด้านล่าง
+        plan: "แพ็กเกจ %{plan}"
+        plan_upgrade_warning_title: สัญลักษณ์บางส่วนต้องใช้แพ็กเกจแบบชำระเงิน
+        plan_upgrade_warning_description: สัญลักษณ์ต่อไปนี้ในพอร์ตของคุณซิงค์ราคาไม่ได้กับแพ็กเกจ Twelve Data ปัจจุบันของคุณ
+        requires_plan: ต้องใช้แพ็กเกจ %{plan}
+        view_pricing: ดูราคาของ Twelve Data
+        title: Twelve Data
+      update:
+        invalid_demo_family: ครอบครัวที่เลือกต้องเป็นเจ้าของอีเมลเดโมที่ตั้งค่าไว้
+        select_demo_family: เลือกครอบครัวเดโมแบบใช้แล้วทิ้งก่อน
+        failure: ค่าการตั้งค่าไม่ถูกต้อง
+        success: อัปเดตการตั้งค่าแล้ว
+        invalid_onboarding_state: สถานะการเริ่มต้นใช้งานไม่ถูกต้อง
+        invalid_sync_time: รูปแบบเวลาซิงค์ไม่ถูกต้อง โปรดใช้รูปแบบ HH:MM (เช่น 02:30)
+        invalid_llm_budget: "%{field} ต้องเป็นจำนวนเต็ม ≥ %{minimum}"
+        invalid_anthropic_base_url: Anthropic Base URL ต้องเป็น URL แบบ http(s)
+        anthropic_model_required_for_base_url: ต้องระบุโมเดล Anthropic เมื่อกำหนด Base URL เอง
+        invalid_jev_endpoint: Jev Endpoint ต้องเป็น URL แบบ https รองรับ http ธรรมดาเฉพาะ localhost
+        invalid_categorization_rate: "%{field} ต้องเป็นตัวเลขระหว่าง 0 ถึง 1"
+        scheduler_sync_failed: บันทึกการตั้งค่าแล้ว แต่อัปเดตกำหนดการซิงค์ไม่สำเร็จ โปรดลองอีกครั้งหรือตรวจสอบบันทึกเซิร์ฟเวอร์
+      disconnect_external_assistant:
+        external_assistant_disconnected: ยกเลิกการเชื่อมต่อผู้ช่วยภายนอกแล้ว
+      clear_cache:
+        cache_cleared: ล้างแคชข้อมูลแล้ว อาจใช้เวลาสักครู่จึงเสร็จสมบูรณ์
+      not_authorized: คุณไม่ได้รับอนุญาตให้ทำสิ่งนี้
+      ensure_admin:
+        not_authorized: คุณไม่ได้รับอนุญาตให้ทำสิ่งนี้
+      ensure_super_admin_for_onboarding:
+        not_authorized: คุณไม่ได้รับอนุญาตให้ทำสิ่งนี้
+      sync_auto_sync_scheduler!:
+        scheduler_sync_failed: บันทึกการตั้งค่าแล้ว แต่อัปเดตกำหนดการซิงค์ไม่สำเร็จ โปรดลองอีกครั้งหรือตรวจสอบบันทึกเซิร์ฟเวอร์
+      sync_settings:
+        auto_sync_label: เปิดใช้การซิงค์อัตโนมัติ
+        auto_sync_description: เมื่อเปิดใช้ บัญชีทั้งหมดจะถูกซิงค์โดยอัตโนมัติทุกวันตามเวลาที่ระบุ
+        auto_sync_time_label: เวลาซิงค์ (HH:MM)
+        auto_sync_time_description: ระบุเวลาของวันที่ควรซิงค์อัตโนมัติ
+        market_data_sync_label: เปิดใช้การนำเข้าข้อมูลตลาดรายวัน
+        market_data_sync_description: เมื่อเปิดใช้ ราคาหลักทรัพย์จะถูกนำเข้าอัตโนมัติวันละครั้ง (จันทร์-ศุกร์) ตามเวลาที่ระบุ
+        market_data_sync_time_label: เวลานำเข้าข้อมูลตลาด (HH:MM)
+        market_data_sync_time_description: ระบุเวลาของวันที่ควรรันการนำเข้าราคาหลักทรัพย์รายวัน — เช่น หลังตลาดหลักของคุณปิดไม่นาน
+        include_pending_label: รวมรายการธุรกรรมที่รอดำเนินการ
+        include_pending_description: เมื่อเปิดใช้ รายการธุรกรรมที่รอดำเนินการ (ยังไม่เคลียร์) จะถูกนำเข้าและกระทบยอดอัตโนมัติเมื่อบันทึกจริง ปิดหากธนาคารของคุณให้ข้อมูลรายการรอดำเนินการที่ไม่น่าเชื่อถือ
+        env_configured_message: การตั้งค่านี้ถูกปิดเพราะมีการตั้งตัวแปรสภาพแวดล้อมของผู้ให้บริการ (SIMPLEFIN_INCLUDE_PENDING หรือ PLAID_INCLUDE_PENDING) ลบออกเพื่อเปิดใช้การตั้งค่านี้

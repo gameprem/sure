@@ -1,0 +1,5 @@
+---
+th:
+  invitation_mailer:
+    invite_email:
+      subject: "%{inviter} เชิญคุณเข้าร่วมครัวเรือนของเขาบน %{product_name}!"

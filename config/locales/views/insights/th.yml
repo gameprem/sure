@@ -1,0 +1,114 @@
+---
+th:
+  insights:
+    notification:
+      title: ข้อมูลเชิงลึกทางการเงินใหม่
+      body: เปิด Sure เพื่อดูข้อมูลเชิงลึกจาก AI ล่าสุดของคุณ
+    index:
+      title: ข้อมูลเชิงลึก
+      subtitle: สิ่งที่เกิดขึ้นกับการเงินของคุณ รีเฟรชทุกคืน
+      refresh: ตรวจสอบข้อมูลเชิงลึกใหม่
+      empty:
+        title: ยังไม่มีข้อมูลเชิงลึก
+        description: ข้อมูลเชิงลึกจะปรากฏที่นี่เมื่อมีกิจกรรมในบัญชีของคุณมากพอ รีเฟรชอัตโนมัติทุกคืน
+    refresh:
+      queued: เรากำลังสร้างข้อมูลเชิงลึกใหม่ กลับมาดูในอีกหนึ่งนาที
+      checking: กำลังตรวจสอบ…
+    card:
+      acknowledged: "ปิดข้อมูลเชิงลึกแล้ว"
+      acknowledge: เข้าใจแล้ว
+      acknowledge_title: ซ่อนไว้จนกว่าตัวเลขจะเปลี่ยน
+      new: ใหม่
+      dig_in: เจาะลึกด้วย AI
+    dig_in:
+      prompt: |-
+        ช่วยฉันเจาะลึกข้อมูลเชิงลึกนี้
+
+        ข้อมูลเชิงลึก: %{title}
+        สิ่งที่ Sure พบ: %{body}
+        ช่วงเวลา: %{period}
+        ตัวเลข:
+        %{facts}
+
+        อะไรอยู่เบื้องหลังเรื่องนี้ และมีอะไรที่ฉันควรทำหรือไม่?
+    feed:
+      view_all: ดูข้อมูลเชิงลึกทั้งหมด
+      header: ล่าสุด
+      header_new: ใหม่
+      acknowledge_aria: "เข้าใจแล้ว: %{title}"
+    types:
+      spending_anomaly: การใช้จ่าย
+      cash_flow_warning: กระแสเงินสด
+      net_worth_milestone: มูลค่าสุทธิ
+      subscription_audit: ค่าสมาชิก
+      savings_rate_change: อัตราการออม
+      idle_cash: เงินสดที่ไม่ได้ใช้
+      budget_at_risk: งบประมาณ
+      budget_on_track: งบประมาณ
+      maintained_goal_depleted: เงินสำรอง
+    meta:
+      next_n_days:
+        one: วันถัดไป
+        other: "%{count} วันข้างหน้า"
+      last_n_days:
+        one: วันที่ผ่านมา
+        other: "%{count} วันที่ผ่านมา"
+      date_range: "%{from} ถึง %{to}"
+    figures:
+      vs_previous: เทียบกับเดือนก่อน
+      today: วันนี้
+      on_pace: เป็นไปตามแผน
+      of_budget: ของงบประมาณ
+      need_attention: ต้องตรวจสอบ
+      days_overdue:
+        one: "เลยกำหนด %{count} วัน"
+        other: "เลยกำหนด %{count} วัน"
+      idle_days:
+        one: ไม่ได้ใช้ %{count} วัน
+        other: "ไม่ได้ใช้ %{count} วัน"
+    actions:
+      spending_anomaly: ดูรายการธุรกรรม%{category}
+      cash_flow_warning: ตรวจสอบรายการธุรกรรมประจำ
+      net_worth_milestone: ดูรายงานมูลค่าสุทธิ
+      subscription_audit: ตรวจสอบรายการธุรกรรมประจำ
+      savings_rate_change: ดูรายการธุรกรรมของเดือนนั้น
+      idle_cash: ไปที่บัญชี
+      budget: ดูงบประมาณ
+      maintained_goal_depleted: ดูเงินสำรอง
+    titles:
+      spending_anomaly:
+        above: "การใช้จ่าย%{category}มีแนวโน้มเพิ่มขึ้น"
+        below: "การใช้จ่าย%{category}มีแนวโน้มลดลง"
+      cash_flow_warning:
+        low: ยอดเงินสดของคุณอาจเหลือน้อย
+        negative: ยอดเงินสดของคุณอาจติดลบ
+      net_worth_milestone: "หลักไมล์มูลค่าสุทธิ: %{milestone}"
+      maintained_goal_depleted: "%{goal} ลดลงต่ำกว่าระดับที่ตั้งไว้"
+      subscription_audit: "%{name} ยังใช้งานอยู่หรือไม่?"
+      savings_rate_change:
+        up: อัตราการออมของคุณดีขึ้นใน%{month}
+        down: อัตราการออมของคุณลดลงใน%{month}
+      idle_cash: เงินสดที่ไม่ได้ใช้ใน %{account}
+      budget_at_risk:
+        one: มีหนึ่งหมวดหมู่ในงบประมาณของคุณที่ต้องตรวจสอบ
+        other: "มี %{count} หมวดหมู่ในงบประมาณของคุณที่ต้องตรวจสอบ"
+      budget_on_track: งบประมาณของคุณเป็นไปตามแผน
+    templates:
+      spending_anomaly:
+        above: คุณกำลังจะใช้จ่าย%{category} %{projected_spend} ในเดือนนี้ มากกว่าค่าเฉลี่ยรายเดือนล่าสุด %{baseline_spend} ประมาณ %{deviation_pct}%
+        below: คุณกำลังจะใช้จ่าย%{category} %{projected_spend} ในเดือนนี้ น้อยกว่าค่าเฉลี่ยรายเดือนล่าสุด %{baseline_spend} ประมาณ %{deviation_pct}%
+      cash_flow_warning:
+        low: จากรายการธุรกรรมประจำที่กำลังจะมาถึงและการใช้จ่ายตามปกติ ยอดเงินสดของคุณอาจลดเหลือ %{projected_low} ราว %{projected_low_date}
+        negative: จากรายการธุรกรรมประจำที่กำลังจะมาถึงและการใช้จ่ายตามปกติ ยอดเงินสดของคุณอาจลดลงเป็น %{projected_low} ราว %{projected_low_date}
+      net_worth_milestone: มูลค่าสุทธิของคุณข้าม %{milestone} และตอนนี้อยู่ที่ %{net_worth}
+      maintained_goal_depleted: "%{goal} มี %{saved} จาก %{target} ที่ควรรักษาไว้ ขาดอยู่ %{missing}"
+      subscription_audit: "%{name} (%{amount}) ไม่ปรากฏตั้งแต่ที่คาดไว้เมื่อ %{expected_on} อาจถูกยกเลิก หรือรายการเรียกเก็บอาจย้ายไป"
+      savings_rate_change:
+        up: คุณออมได้ %{current_rate}% ของรายได้ใน%{month} เพิ่มขึ้น %{change_pp} จุดเปอร์เซ็นต์จาก %{previous_rate}% ในเดือนก่อน
+        down: คุณออมได้ %{current_rate}% ของรายได้ใน%{month} ลดลง %{change_pp} จุดเปอร์เซ็นต์จาก %{previous_rate}% ในเดือนก่อน
+        down_negative: "คุณใช้จ่ายมากกว่ารายได้ใน%{month}: อัตราการออมของคุณลดลงเหลือ %{current_rate}% จาก %{previous_rate}% ในเดือนก่อน"
+      idle_cash: "%{account} มี %{balance} โดยไม่มีกิจกรรมใน %{idle_days} วันที่ผ่านมา"
+      budget_at_risk:
+        over: "%{categories} เกินงบประมาณในเดือนนี้ คุณใช้ไป %{budget_spent_pct}% ของงบประมาณรวมแล้ว"
+        near: "%{categories} ใกล้ถึงขีดจำกัดในเดือนนี้ คุณใช้ไป %{budget_spent_pct}% ของงบประมาณรวมแล้ว"
+      budget_on_track: คุณใช้จ่ายไป %{spent} จากงบประมาณ %{budgeted} (%{budget_spent_pct}%) และทุกอย่างอยู่ภายในขีดจำกัด

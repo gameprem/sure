@@ -1,0 +1,29 @@
+---
+th:
+  account_sharings:
+    show:
+      title: การแชร์บัญชี
+      subtitle: ควบคุมว่าใครเห็นและใช้งานบัญชีนี้ได้
+      member: สมาชิก
+      permission: สิทธิ์
+      shared: แชร์แล้ว
+      no_members: ไม่มีสมาชิกอื่นใน%{moniker}ของคุณให้แชร์
+      permissions:
+        full_control: ควบคุมได้เต็มที่
+        full_control_description: ดู แก้ไข และจัดการรายการธุรกรรมได้
+        read_write: ใส่คำอธิบายได้
+        read_write_description: จัดหมวดหมู่ ติดแท็ก และเพิ่มบันทึกได้
+        read_only: ดูได้อย่างเดียว
+        read_only_description: ดูข้อมูลบัญชีได้เท่านั้น
+      save: บันทึกการตั้งค่าการแชร์
+      owner_label: "เจ้าของ: %{name}"
+      shared_with_count:
+        one: แชร์กับสมาชิก 1 คน
+        other: "แชร์กับสมาชิก %{count} คน"
+      include_in_finances: รวมในงบประมาณและรายงานของฉัน
+      exclude_from_finances: ไม่รวมในงบประมาณและรายงานของฉัน
+      finance_toggle_description: นับบัญชีนี้ในมูลค่าสุทธิ งบประมาณ และรายงานของคุณ
+    update:
+      success: อัปเดตการตั้งค่าการแชร์แล้ว
+      not_owner: เฉพาะเจ้าของบัญชีเท่านั้นที่จัดการการแชร์ได้
+      finance_toggle_success: อัปเดตการตั้งค่าการรวมในการเงินแล้ว

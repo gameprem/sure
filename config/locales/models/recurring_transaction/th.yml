@@ -1,0 +1,35 @@
+---
+th:
+  recurring_transactions:
+    allocator:
+      missing_rate: "ไม่มีอัตราแลกเปลี่ยนจาก %{from} เป็น %{to} โปรดระบุจำนวนเงินโดยตรง"
+      unmeasurable: "รายการธุรกรรมนี้มีการจัดสรรที่แปลงเป็น %{currency} ไม่ได้ จึงวัดยอดที่เหลือไม่ได้ เพิ่มอัตราแลกเปลี่ยนสำหรับวันที่ %{date} หรือลบการชำระเงินที่มีอยู่ก่อน"
+      over_allocated: "การจัดสรร %{amount} เกินยอดคงเหลือของรายการธุรกรรมที่ %{capacity} %{currency}"
+      entry_exhausted: "ยอดเต็มของรายการธุรกรรมนี้ถูกนำไปใช้กับการชำระเงินที่ครบกำหนดอื่นแล้ว"
+      already_allocated: "รายการธุรกรรมนี้ถูกนำไปใช้กับบิลนี้แล้ว"
+      exceeds_remaining: "%{amount} เกินยอดคงเหลือ %{remaining} ของรอบนี้"
+  activerecord:
+    attributes:
+      recurring_transaction:
+        payment_url: "ลิงก์ชำระเงิน"
+        frequency_interval: "ช่วงห่างการทำซ้ำ"
+    errors:
+      models:
+        recurring_transaction:
+          merchant_or_name_required: "ต้องระบุร้านค้าหรือชื่ออย่างใดอย่างหนึ่ง"
+          attributes:
+            payment_url:
+              invalid_scheme: "ต้องเป็นที่อยู่ http:// หรือ https:// ที่ถูกต้อง"
+            anchor_date:
+              required_for_intervals: "จำเป็นเมื่อกฎทำซ้ำทุก 2 รอบขึ้นไป"
+            bill_type:
+              transfer_shape_mismatch: "เป็นการโอนได้เฉพาะเมื่อกำหนดบัญชีปลายทาง"
+            expected_amount_min:
+              greater_than_max: "ต้องไม่มากกว่าจำนวนเงินสูงสุดที่คาดไว้"
+            account:
+              required_for_transfer: "ต้องมีในการโอนประจำ"
+              wrong_family: "ต้องเป็นของครอบครัวนี้"
+            destination_account:
+              same_as_source: "ต้องไม่ใช่บัญชีเดียวกับบัญชีต้นทาง"
+              family_mismatch: "ต้องเป็นของครอบครัวเดียวกับบัญชีต้นทาง"
+              wrong_family: "ต้องเป็นของครอบครัวนี้"

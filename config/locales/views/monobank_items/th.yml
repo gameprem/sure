@@ -1,0 +1,134 @@
+---
+th:
+  providers:
+    monobank:
+      name: Monobank
+      description: เชื่อมต่อบัตรและ jar ของ Monobank ยูเครนด้วยโทเคน API ส่วนบุคคล
+  family:
+    monobank:
+      create_monobank_item:
+        default_name: การเชื่อมต่อ Monobank
+  monobank_account:
+    jar_fallback: jar ของ Monobank
+    card_types:
+      black: บัตร Black
+      white: บัตร White
+      platinum: บัตร Platinum
+      iron: บัตร Iron
+      yellow: บัตร Yellow
+      eaid: บัตร eAid
+      fop: บัญชีธุรกิจ
+      jar: Jar
+      unknown: บัตร Monobank
+  monobank_item:
+    errors:
+      account_processing_failed: ซิงค์บัญชี Monobank ไม่ได้
+      account_sync_schedule_failed: ตั้งเวลาซิงค์บัญชี Monobank ไม่ได้
+      transactions_failed: ดึงใบแจ้งยอด Monobank ไม่ได้
+      sync_failed: ซิงค์การเชื่อมต่อ Monobank ไม่ได้
+    sync:
+      status:
+        importing: กำลังนำเข้าบัญชีจาก Monobank...
+        checking_setup: กำลังตรวจสอบการตั้งค่าบัญชี...
+        needs_setup:
+          one: 1 บัญชีต้องตั้งค่า...
+          other: "%{count} บัญชีต้องตั้งค่า..."
+        processing: กำลังประมวลผลรายการธุรกรรม...
+        calculating: กำลังคำนวณยอดคงเหลือ...
+    sync_status:
+      no_accounts: ไม่พบบัญชี
+      all_synced:
+        one: ซิงค์ 1 บัญชีแล้ว
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      partial: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    institution_summary:
+      none: ไม่มีสถาบันที่เชื่อมต่อ
+      one: 1 สถาบัน
+      count:
+        one: 1 สถาบัน
+        other: "%{count} สถาบัน"
+  monobank_items:
+    provider_panel:
+      default_connection_name: การเชื่อมต่อ Monobank
+      add_connection: เพิ่มการเชื่อมต่อ Monobank
+      update_connection: อัปเดตการเชื่อมต่อ
+      connection_name_label: ชื่อการเชื่อมต่อ
+      connection_name_placeholder: Monobank ของฉัน
+      access_token_label: โทเคน API ส่วนบุคคล
+      access_token_placeholder: วางโทเคนส่วนบุคคลของ Monobank
+      keep_access_token_placeholder: เว้นว่างไว้เพื่อใช้โทเคนเดิม
+      setup_accounts: ตั้งค่าบัญชี
+      syncing: กำลังซิงค์...
+      sync: ซิงค์
+      disconnect: ยกเลิกการเชื่อมต่อ
+      disconnect_confirm: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ %{name}?"
+      rate_limit_notice: Monobank อนุญาตหนึ่งคำขอต่อนาที การซิงค์จึงดึงทีละไม่กี่บัญชี และประวัติเก่าจะมาในหลายการซิงค์
+    create:
+      success: บันทึกการเชื่อมต่อ Monobank แล้ว
+    update:
+      success: อัปเดตการเชื่อมต่อ Monobank แล้ว
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Monobank แล้ว
+      unlink_failed: ยกเลิกการเชื่อมต่อ Monobank ไม่ได้
+    select_accounts:
+      title: เชื่อมโยงบัญชี Monobank
+      description: เลือกบัตรหรือ jar ของ Monobank ที่จะเพิ่ม
+      no_accounts_found: ไม่พบบัญชี Monobank ที่ยังไม่เชื่อมโยง
+      no_credentials_configured: ตั้งค่า Monobank ในการตั้งค่าผู้ให้บริการก่อน
+      cancel: ยกเลิก
+      link_accounts: เชื่อมโยงบัญชี
+    link_accounts:
+      success:
+        one: เชื่อมโยงบัญชี Monobank 1 บัญชีแล้ว
+        other: "เชื่อมโยงบัญชี Monobank %{count} บัญชีแล้ว"
+      no_accounts_selected: เลือกอย่างน้อยหนึ่งบัญชี
+      no_credentials_configured: ตั้งค่า Monobank ในการตั้งค่าผู้ให้บริการก่อน
+      unsupported_account_type: Monobank ไม่รองรับบัญชีประเภทนั้น
+      link_failed: ไม่มีบัญชีที่ถูกเชื่อมโยง
+    select_existing_account:
+      title: "เชื่อมโยงบัญชี Monobank กับ %{account_name}"
+      description: เลือกบัญชี Monobank ที่ยังไม่เชื่อมโยงเพื่อเชื่อมต่อกับบัญชีนี้
+      no_accounts_found: ไม่พบบัญชี Monobank ที่ยังไม่เชื่อมโยง
+      no_credentials_configured: ตั้งค่า Monobank ในการตั้งค่าผู้ให้บริการก่อน
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      cancel: ยกเลิก
+      link_account: เชื่อมโยงบัญชี
+    link_existing_account:
+      success: "เชื่อมโยงบัญชี Monobank กับ %{account_name} แล้ว"
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      monobank_account_already_linked: บัญชี Monobank นี้เชื่อมโยงแล้ว
+      no_account_selected: เลือกบัญชี Monobank ที่จะเชื่อมโยง
+    setup_accounts:
+      title: เชื่อมโยงบัญชี Monobank
+      subtitle: เลือกว่าแต่ละบัตรหรือ jar ของ Monobank ควรแสดงใน Sure อย่างไร
+      no_credentials: ตั้งค่าข้อมูลรับรอง Monobank ก่อน
+      api_error: รีเฟรชบัญชีจาก Monobank ไม่ได้ จึงแสดงบัญชีที่บันทึกจากการซิงค์ครั้งล่าสุดแทน
+      no_accounts_to_setup: ไม่มีบัญชีที่ต้องตั้งค่า
+      all_accounts_linked: บัญชี Monobank ทั้งหมดเชื่อมโยงแล้ว
+      choose_account_type: เลือกประเภทบัญชี
+      choose_account_type_description: ข้ามบัญชีที่คุณไม่ต้องการติดตาม
+      account_type_label: ประเภทบัญชี
+      account_types:
+        skip: ข้าม
+        depository: เงินสด
+      create_accounts: สร้างบัญชี
+      cancel: ยกเลิก
+    complete_account_setup:
+      success:
+        one: สร้างบัญชี Monobank 1 บัญชีแล้ว
+        other: "สร้างบัญชี Monobank %{count} บัญชีแล้ว"
+      all_skipped: ไม่ได้สร้างบัญชี Monobank
+      no_accounts: ไม่ได้เลือกบัญชี Monobank
+      creation_failed: สร้างบัญชี Monobank ไม่ได้
+    monobank_item:
+      deletion_in_progress: กำลังลบ
+      syncing: กำลังซิงค์
+      error: ข้อผิดพลาด
+      status_with_summary: "ซิงค์เมื่อ %{timestamp} ที่แล้ว · %{summary}"
+      status_never: ไม่เคยซิงค์
+      delete: ลบ
+      setup_needed: ต้องตั้งค่าบัญชี
+      setup_description: "เชื่อมโยงแล้ว %{linked} จาก %{total} บัญชี"
+      setup_action: ตั้งค่าบัญชี
+      no_accounts_title: ยังไม่ได้นำเข้าบัญชี
+      no_accounts_description: ดึงบัญชี Monobank แล้วเลือกว่าจะเชื่อมโยงบัญชีใด

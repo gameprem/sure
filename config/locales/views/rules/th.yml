@@ -1,0 +1,166 @@
+---
+th:
+  rules:
+    no_action: ไม่มีการดำเนินการ
+    no_condition: ไม่มีเงื่อนไข
+    notification_baseline_timed_out: กฎนี้ยังปิดอยู่ การตรวจสอบว่ากฎนี้ตรงกับรายการธุรกรรมใดอยู่แล้วใช้เวลานานเกินไป และหากไม่ตรวจสอบ จะส่งอีเมลหาทุกรายการ ทำเงื่อนไขให้ง่ายขึ้นแล้วเปิดใหม่อีกครั้ง
+    category_rule_cta:
+      close: ปิด
+      create_rule: สร้างกฎ
+      description: คุณสร้างกฎเพื่อจัดหมวดหมู่รายการธุรกรรมแบบนี้โดยอัตโนมัติได้
+      dont_show_again: ไม่ต้องแสดงอีก
+      hide_for_today: ซ่อนวันนี้
+      hide_for_today_hint: "ซ่อนวันนี้จะหยุดข้อเสนอแนะเหล่านี้ 24 ชั่วโมง"
+      message: อัปเดตเป็น %{category_name} แล้ว
+    classifier_rules:
+      category_classifier: ตัวจัดประเภทหมวดหมู่
+      merchant_matcher: ตัวจับคู่ร้านค้า
+    rule:
+      edit: แก้ไข
+      re_apply_rule: ใช้กฎอีกครั้ง
+      delete: ลบ
+      then: แล้ว
+      and_more_conditions:
+        one: และอีก 1 เงื่อนไข
+        other: และอีก %{count} เงื่อนไข
+      and_more_actions:
+        one: และอีก 1 การดำเนินการ
+        other: และอีก %{count} การดำเนินการ
+      action_label_to: "%{label} เป็น %{value}"
+      all_past_and_future: "%{resource}ทั้งหมดในอดีตและอนาคต"
+      on_or_after: "%{resource}ตั้งแต่ %{date} เป็นต้นไป"
+      stop_processing: หยุด
+      stop_processing_hint: กฎที่อยู่ถัดลงไปจะไม่เปลี่ยนรายการธุรกรรมที่กฎนี้ตรงกัน
+    form:
+      rule_name_label: ชื่อกฎ (ไม่บังคับ)
+      rule_name_placeholder: กรอกชื่อสำหรับกฎนี้
+      add_condition: เพิ่มเงื่อนไข
+      add_condition_group: เพิ่มกลุ่มเงื่อนไข
+      add_action: เพิ่มการดำเนินการ
+      all_past_and_future: "%{resource}ทั้งหมดในอดีตและอนาคต"
+      starting_from: เริ่มตั้งแต่
+      then: แล้ว
+      stop_processing_label: หยุดประมวลผลกฎถัดไป
+      stop_processing_description: กฎที่อยู่ถัดลงไปในรายการจะไม่เปลี่ยนรายการธุรกรรมที่กฎนี้ตรงกัน
+    index:
+      page_title: กฎ
+      delete_all_rules: ลบกฎทั้งหมด
+      new_rule: กฎใหม่
+      ai_cost_warning: การดำเนินการของกฎที่ใช้ AI มีค่าใช้จ่าย โปรดกรองให้แคบที่สุดเท่าที่ทำได้เพื่อหลีกเลี่ยงค่าใช้จ่ายที่ไม่จำเป็น
+      rules_heading: กฎ
+      order_hint: กฎทำงานจากบนลงล่าง เมื่อกฎตั้งค่าช่องหนึ่งของรายการธุรกรรมแล้ว กฎที่อยู่ถัดลงไปจะไม่เปลี่ยนช่องนั้น แท็กจะถูกเพิ่มโดยทุกกฎที่ตรงกัน ลากกฎเพื่อเปลี่ยนลำดับ
+      reorder_rule: "ย้ายกฎ %{name} กด Enter หรือ Space เพื่อจับ แล้วใช้ปุ่มลูกศรเพื่อย้าย"
+      no_rules_title: ยังไม่มีกฎ
+      no_rules_description: ตั้งกฎเพื่อดำเนินการกับรายการธุรกรรมและข้อมูลอื่นของคุณทุกครั้งที่ซิงค์บัญชี
+    confirm:
+      title: ยืนยันการเปลี่ยนแปลง
+      title_with_name: "ยืนยันการเปลี่ยนแปลงของ \"%{name}\""
+      apply_notice_html: "คุณกำลังจะใช้กฎนี้กับ<span class=\"text-primary font-medium\">%{resource} %{count} รายการ</span>ที่ตรงตามเกณฑ์ของกฎ โปรดยืนยันหากต้องการดำเนินการเปลี่ยนแปลงนี้"
+      rules_above_notice:
+        one: กฎที่ใช้งานอยู่ด้านบนมันทำงานก่อน ผลลัพธ์จึงเหมือนการรันทั้งหมด
+        other: กฎที่ใช้งานอยู่ %{count} ข้อด้านบนมันทำงานก่อน ผลลัพธ์จึงเหมือนการรันทั้งหมด
+      ai_cost_title: ประมาณค่าใช้จ่าย AI
+      ai_cost_with_estimate_html: "การดำเนินการนี้จะใช้ AI จัดหมวดหมู่ %{count} รายการธุรกรรม ค่าใช้จ่ายโดยประมาณ: <span class=\"font-semibold\">~$%{cost}</span>"
+      ai_cost_no_estimate_html: "การดำเนินการนี้จะใช้ AI จัดหมวดหมู่ %{count} รายการธุรกรรม"
+      cost_unavailable_model: "ไม่มีการประมาณค่าใช้จ่ายสำหรับโมเดล \"%{model}\""
+      cost_unavailable_no_provider: ไม่มีการประมาณค่าใช้จ่าย (ยังไม่ได้ตั้งค่าผู้ให้บริการ LLM)
+      cost_warning: คุณอาจมีค่าใช้จ่าย โปรดตรวจสอบราคาล่าสุดกับผู้ให้บริการโมเดล
+      view_usage_history: ดูประวัติการใช้งาน
+      confirm_changes: ยืนยันการเปลี่ยนแปลง
+    actions:
+      to_label: เป็น
+      value_placeholder: กรอกค่า
+      split:
+        type_fixed: จำนวนเงินคงที่
+        type_percentage: เปอร์เซ็นต์
+        type_label: ประเภทการแบ่ง
+        add_split: เพิ่มส่วนแบ่ง
+        name_placeholder: ชื่อส่วนแบ่ง
+        share_label: จำนวนเงินหรือเปอร์เซ็นต์ของส่วนแบ่ง
+        category_label: หมวดหมู่ของส่วนแบ่ง
+        merchant_label: ร้านค้าของส่วนแบ่ง
+        tags_label: "แท็กของส่วนแบ่ง"
+        remove_split: "ลบส่วนแบ่ง"
+        hint: "การแบ่งแบบจำนวนคงที่ถูกหักก่อนเป็นจำนวนเงินที่แน่นอน จากนั้นการแบ่งแบบเปอร์เซ็นต์แบ่งส่วนที่เหลือ หากทุกส่วนแบ่งที่นี่ใช้จำนวนคงที่ ให้เพิ่มเงื่อนไขที่ตรงกับจำนวนเงินของรายการธุรกรรมแบบตรงตัวด้วย (เช่น จำนวนเงิน = 42.00) เพราะทุกรายการธุรกรรมที่ตรงกันต้องมียอดรวมเท่ากันเพื่อให้จำนวนคงที่รวมกันได้ กฎการแบ่งมีการดำเนินการอื่นไม่ได้"
+        fixed_summary_label: คงที่
+        summary:
+          one: "%{count} ส่วนแบ่ง"
+          other: "%{count} ส่วนแบ่ง"
+    update:
+      success: อัปเดตกฎแล้ว
+    destroy:
+      success: ลบกฎแล้ว
+    destroy_all:
+      success: ลบกฎทั้งหมดแล้ว
+    apply_all:
+      button: ใช้ทั้งหมด
+      confirm_title: ใช้กฎทั้งหมด
+      confirm_message: คุณกำลังจะใช้ %{count} กฎซึ่งส่งผลต่อรายการธุรกรรมที่ไม่ซ้ำกัน %{transactions} รายการ โปรดยืนยันหากต้องการดำเนินการ
+      confirm_button: ยืนยันและใช้ทั้งหมด
+      success: จัดคิวกฎทั้งหมดเพื่อดำเนินการแล้ว
+      ai_cost_title: ประมาณค่าใช้จ่าย AI
+      ai_cost_message: การดำเนินการนี้จะใช้ AI จัดหมวดหมู่รายการธุรกรรมสูงสุด %{transactions} รายการ
+      estimated_cost: "ค่าใช้จ่ายโดยประมาณ: ~$%{cost}"
+      cost_unavailable_model: ไม่มีการประมาณค่าใช้จ่ายสำหรับโมเดล "%{model}"
+      cost_unavailable_no_provider: ไม่มีการประมาณค่าใช้จ่าย (ยังไม่ได้ตั้งค่าผู้ให้บริการ LLM)
+      cost_warning: คุณอาจมีค่าใช้จ่าย โปรดตรวจสอบราคาล่าสุดกับผู้ให้บริการโมเดล
+      view_usage: ดูประวัติการใช้งาน
+    recent_runs:
+      title: การรันล่าสุด
+      description: ดูประวัติการทำงานของกฎของคุณ รวมสถานะสำเร็จ/ล้มเหลวและจำนวนรายการธุรกรรม
+      unnamed_rule: กฎที่ไม่มีชื่อ
+      columns:
+        date_time: วันที่/เวลา
+        execution_type: ประเภท
+        status: สถานะ
+        rule_name: ชื่อกฎ
+        transactions_counts:
+          queued: อยู่ในคิว
+          processed: ประมวลผลแล้ว
+          modified: แก้ไขแล้ว
+          blocked: ถูกบล็อก
+      execution_types:
+        manual: ด้วยตนเอง
+        scheduled: ตามกำหนดเวลา
+      statuses:
+        pending: รอดำเนินการ
+        success: สำเร็จ
+        failed: ล้มเหลว
+    clear_ai_cache:
+      button: รีเซ็ตแคช AI
+      confirm_title: รีเซ็ตแคช AI?
+      confirm_body: คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตแคช AI การทำเช่นนี้จะให้กฎ AI ประมวลผลรายการธุรกรรมทั้งหมดอีกครั้ง ซึ่งอาจมีค่าใช้จ่าย API เพิ่ม
+      confirm_button: รีเซ็ตแคช
+      success: กำลังล้างแคช AI อาจใช้เวลาสักครู่
+    condition_filters:
+      transaction_type:
+        income: รายรับ
+        expense: รายจ่าย
+        transfer: โอน
+        equal_to: เท่ากับ
+      operators:
+        contains: มีคำว่า
+        does_not_contain: ไม่มีคำว่า
+        starts_with: ขึ้นต้นด้วย
+        ends_with: ลงท้ายด้วย
+        matches_regex: ตรงกับ regex
+        equal_to: เท่ากับ
+        is_equal_to: เท่ากับ
+        not_equal_to: ไม่เท่ากับ
+        is_empty: ว่างเปล่า
+        is_not_empty: ไม่ว่างเปล่า
+        greater_than: มากกว่า
+        greater_or_equal_to: มากกว่าหรือเท่ากับ
+        less_than: น้อยกว่า
+        less_than_or_equal_to: น้อยกว่าหรือเท่ากับ
+  rule:
+    conditions:
+      condition_group:
+        and_prefix: และ
+        match: ตรงกับ
+        all: ทั้งหมด
+        any: ข้อใดข้อหนึ่ง
+        of_the_following_conditions: ของเงื่อนไขต่อไปนี้
+        add_condition: เพิ่มเงื่อนไข
+      condition:
+        value_placeholder: กรอกค่า

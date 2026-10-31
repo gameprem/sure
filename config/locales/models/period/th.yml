@@ -1,0 +1,56 @@
+---
+th:
+  period:
+    last_day:
+      label_short: "1 วัน"
+      label: "1 วันที่ผ่านมา"
+      comparison_label: "เทียบกับเมื่อวาน"
+    current_week:
+      label_short: "สัปดาห์นี้"
+      label: "สัปดาห์นี้"
+      comparison_label: "เทียบกับต้นสัปดาห์"
+    last_7_days:
+      label_short: "7 วัน"
+      label: "7 วันที่ผ่านมา"
+      comparison_label: "เทียบกับสัปดาห์ที่แล้ว"
+    current_month:
+      label_short: "เดือนนี้"
+      label: "เดือนนี้"
+      comparison_label: "เทียบกับต้นเดือน"
+    last_month:
+      label_short: "เดือนก่อน"
+      label: "เดือนที่แล้ว"
+      comparison_label: "เทียบกับเดือนที่แล้ว"
+    last_30_days:
+      label_short: "30 วัน"
+      label: "30 วันที่ผ่านมา"
+      comparison_label: "เทียบกับ 30 วันก่อนหน้า"
+    last_90_days:
+      label_short: "90 วัน"
+      label: "90 วันที่ผ่านมา"
+      comparison_label: "เทียบกับไตรมาสที่แล้ว"
+    current_year:
+      label_short: "ปีนี้"
+      label: "ปีนี้"
+      comparison_label: "เทียบกับต้นปี"
+    last_365_days:
+      label_short: "365 วัน"
+      label: "365 วันที่ผ่านมา"
+      comparison_label: "เทียบกับ 1 ปีก่อน"
+    last_5_years:
+      label_short: "5 ปี"
+      label: "5 ปีที่ผ่านมา"
+      comparison_label: "เทียบกับ 5 ปีก่อน"
+    last_10_years:
+      label_short: "10 ปี"
+      label: "10 ปีที่ผ่านมา"
+      comparison_label: "เทียบกับ 10 ปีก่อน"
+    all_time:
+      label_short: "ทั้งหมด"
+      label: "ตลอดเวลา"
+      comparison_label: "เทียบกับจุดเริ่มต้น"
+    custom:
+      label_short: "กำหนดเอง"
+      label: "ช่วงเวลาที่กำหนดเอง"
+      comparison_label: "%{start_date} ถึง %{end_date}"
+    range: "%{start_date} – %{end_date}"

@@ -1,0 +1,11 @@
+---
+th:
+  provider_warnings:
+    limited_investment_data: "ข้อมูลการลงทุนจากผู้ให้บริการนี้มีจำกัด ไม่มีป้ายกำกับกิจกรรม (ซื้อ ขาย เงินปันผล) ซึ่งอาจส่งผลต่อความแม่นยำของงบประมาณ ลองสร้างกฎเพื่อยกเว้นหรือจัดหมวดหมู่รายการธุรกรรมการลงทุน"
+    lunchflow_accounts_failed:
+      one: "นำเข้า Lunchflow: อัปเดตบัญชีไม่สำเร็จ %{count} บัญชี"
+      other: "นำเข้า Lunchflow: อัปเดตบัญชีไม่สำเร็จ %{count} บัญชี"
+    lunchflow_transactions_failed:
+      one: "นำเข้า Lunchflow: ดึงรายการธุรกรรมไม่สำเร็จสำหรับ %{count} บัญชี"
+      other: "นำเข้า Lunchflow: ดึงรายการธุรกรรมไม่สำเร็จสำหรับ %{count} บัญชี"
+    lunchflow_import_error: "นำเข้า Lunchflow: %{error}"

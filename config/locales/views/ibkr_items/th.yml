@@ -1,0 +1,92 @@
+---
+th:
+  providers:
+    ibkr:
+      name: Interactive Brokers
+      connection_description: เชื่อมต่อรายงาน Flex Web Service ของ Interactive Brokers
+      institution_name: Interactive Brokers
+  ibkr_items:
+    defaults:
+      name: Interactive Brokers
+    ibkr_item:
+      deletion_in_progress: กำลังลบ
+      flex_web_service: Flex Web Service
+      syncing: กำลังซิงค์
+      requires_update: ข้อมูลรับรองต้องตรวจสอบ
+      error: ข้อผิดพลาด
+      synced: ซิงค์เมื่อ %{time} ที่แล้ว %{summary}
+      never_synced: ไม่เคยซิงค์
+      setup_accounts: ตั้งค่าบัญชี
+      delete: ลบ
+      accounts_need_setup: บัญชีต้องตั้งค่า
+      accounts_need_setup_description: บัญชีบางส่วนจาก IBKR ต้องเชื่อมโยงกับบัญชี Sure
+      no_accounts_discovered: ยังไม่พบบัญชี IBKR
+      no_accounts_discovered_description: รันการซิงค์หลังตั้งค่า Flex query เพื่อค้นหาบัญชี
+    setup_accounts:
+      page_title: ตั้งค่าบัญชี Interactive Brokers
+      dialog_title: ตั้งค่าบัญชี Interactive Brokers ของคุณ
+      subtitle: เลือกบัญชีนายหน้า IBKR ที่จะเชื่อมโยง
+      info_box:
+        title: การนำเข้า IBKR Flex Query
+        items:
+          item_1: สินทรัพย์ที่ถือครองพร้อมราคาและจำนวนปัจจุบัน
+          item_2: ต้นทุนต่อสถานะ
+          item_3: การซื้อขาย เงินปันผล ค่าคอมมิชชัน และการฝากหรือถอนเงินสด
+        warning: กิจกรรมย้อนหลังจำกัดอยู่ในช่วงรายงานของ Flex Query
+      status:
+        fetching_accounts: กำลังดึงบัญชีจาก Interactive Brokers...
+        no_accounts_found_title: ไม่พบบัญชี
+        no_accounts_found_description: Sure ไม่พบบัญชี IBKR ในรายงาน Flex ล่าสุด
+      available_accounts:
+        title: บัญชีที่ใช้ได้
+        account_type_investment: การลงทุน
+        account_summary: "%{account_type} • ยอดคงเหลือ: %{balance}"
+        account_id: "Account ID: %{account_id}"
+      link_existing:
+        description: หรือเชื่อมโยงบัญชี IBKR ที่พบกับบัญชีลงทุนแบบกรอกเองที่มีอยู่
+        manual_account_option: "%{name} (%{balance})"
+        select_prompt: เลือกบัญชี...
+      linked_accounts:
+        title: เชื่อมโยงแล้ว
+        linked_to_html: "เชื่อมโยงกับ: %{account}"
+      buttons:
+        refresh: รีเฟรช
+        cancel: ยกเลิก
+        back_to_settings: กลับไปที่การตั้งค่า
+        create_selected_accounts: สร้างบัญชีที่เลือก
+        link: เชื่อมโยง
+        done: เสร็จสิ้น
+    sync_status:
+      no_accounts: ยังไม่พบบัญชี IBKR
+      all_linked:
+        one: เชื่อมโยง 1 บัญชีแล้ว
+        other: "เชื่อมโยง %{count} บัญชีแล้ว"
+      partial: "เชื่อมโยงแล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    select_existing_account:
+      title: เชื่อมโยงบัญชี Interactive Brokers
+      no_accounts_available: ยังไม่มีบัญชี Interactive Brokers ที่ยังไม่เชื่อมโยง
+      run_sync_hint: "รันการซิงค์จาก การตั้งค่า > ผู้ให้บริการ หลังอัปเดต Flex query ของคุณ"
+      wait_for_sync: รอให้การซิงค์ค้นหาบัญชีเสร็จ
+      balance: ยอดคงเหลือ
+      link: เชื่อมโยง
+      cancel: ยกเลิก
+    create:
+      success: ตั้งค่า Interactive Brokers สำเร็จ
+    update:
+      success: อัปเดตการตั้งค่า Interactive Brokers สำเร็จ
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Interactive Brokers แล้ว
+    select_accounts:
+      not_configured: ยังไม่ได้ตั้งค่า Interactive Brokers
+    link_existing_account:
+      not_found: ไม่พบบัญชีหรือการตั้งค่า Interactive Brokers
+      only_manual_investment: เชื่อมโยงกับ Interactive Brokers ได้เฉพาะบัญชีลงทุนแบบกรอกเอง
+      already_linked: บัญชี Interactive Brokers นี้เชื่อมโยงแล้ว
+      success: เชื่อมโยงกับบัญชี Interactive Brokers สำเร็จ
+      failed: เชื่อมโยงบัญชี Interactive Brokers ไม่สำเร็จ
+    complete_account_setup:
+      success:
+        one: สร้างบัญชี Interactive Brokers %{count} บัญชีสำเร็จ
+        other: สร้างบัญชี Interactive Brokers %{count} บัญชีสำเร็จ
+      none_selected: ไม่ได้เลือกบัญชี
+      none_created: ไม่ได้สร้างบัญชี

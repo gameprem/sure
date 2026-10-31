@@ -1,0 +1,127 @@
+---
+th:
+  providers:
+    akahu:
+      name: Akahu
+      description: เชื่อมต่อบัญชีธนาคารในนิวซีแลนด์ผ่าน Akahu
+  family:
+    akahu:
+      create_akahu_item:
+        default_name: การเชื่อมต่อ Akahu
+  akahu_account:
+    fallback: บัญชี Akahu
+  akahu_entry:
+    notes:
+      reference: อ้างอิง
+      particulars: รายละเอียด
+      code: รหัส
+      other_account: บัญชีอื่น
+  akahu_item:
+    errors:
+      account_processing_failed: ซิงค์บัญชี Akahu ไม่ได้
+      account_sync_schedule_failed: ตั้งเวลาซิงค์บัญชี Akahu ไม่ได้
+      pending_transactions_failed: ดึงรายการธุรกรรมที่รอดำเนินการของ Akahu ไม่ได้
+      transactions_failed: ดึงรายการธุรกรรมของ Akahu ไม่ได้
+      sync_failed: ซิงค์การเชื่อมต่อ Akahu ไม่ได้
+    sync_status:
+      no_accounts: ไม่พบบัญชี
+      all_synced:
+        one: ซิงค์ 1 บัญชีแล้ว
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      partial: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+    institution_summary:
+      none: ไม่มีสถาบันที่เชื่อมต่อ
+      one: 1 สถาบัน
+      count:
+        one: 1 สถาบัน
+        other: "%{count} สถาบัน"
+  akahu_items:
+    provider_panel:
+      default_connection_name: การเชื่อมต่อ Akahu
+      add_connection: เพิ่มการเชื่อมต่อ Akahu
+      update_connection: อัปเดตการเชื่อมต่อ
+      connection_name_label: ชื่อการเชื่อมต่อ
+      connection_name_placeholder: Akahu หลัก
+      app_token_label: App Token
+      app_token_placeholder: วาง app token ของ Akahu
+      keep_app_token_placeholder: เว้นว่างไว้เพื่อใช้ app token เดิม
+      user_token_label: User Token
+      user_token_placeholder: วาง user token ของ Akahu
+      keep_user_token_placeholder: เว้นว่างไว้เพื่อใช้ user token เดิม
+      setup_accounts: ตั้งค่าบัญชี
+      syncing: กำลังซิงค์...
+      sync: ซิงค์
+      disconnect: ยกเลิกการเชื่อมต่อ
+      disconnect_confirm: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ %{name}?"
+    create:
+      success: บันทึกการเชื่อมต่อ Akahu แล้ว
+    update:
+      success: อัปเดตการเชื่อมต่อ Akahu แล้ว
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Akahu แล้ว
+      unlink_failed: ยกเลิกการเชื่อมต่อ Akahu ไม่ได้
+    select_accounts:
+      title: เชื่อมโยงบัญชี Akahu
+      description: เลือกบัญชี Akahu ที่จะเพิ่ม
+      no_accounts_found: ไม่พบบัญชี Akahu ที่ยังไม่เชื่อมโยง
+      no_credentials_configured: ตั้งค่า Akahu ในการตั้งค่าผู้ให้บริการก่อน
+      cancel: ยกเลิก
+      link_accounts: เชื่อมโยงบัญชี
+    link_accounts:
+      success:
+        one: เชื่อมโยงบัญชี Akahu 1 บัญชีแล้ว
+        other: "เชื่อมโยงบัญชี Akahu %{count} บัญชีแล้ว"
+      no_accounts_selected: เลือกอย่างน้อยหนึ่งบัญชี
+      no_credentials_configured: ตั้งค่า Akahu ในการตั้งค่าผู้ให้บริการก่อน
+      unsupported_account_type: Akahu ไม่รองรับบัญชีประเภทนั้น
+      link_failed: ไม่มีบัญชีที่ถูกเชื่อมโยง
+    select_existing_account:
+      title: "เชื่อมโยงบัญชี Akahu กับ %{account_name}"
+      description: เลือกบัญชี Akahu ที่ยังไม่เชื่อมโยงเพื่อเชื่อมต่อกับบัญชีนี้
+      no_accounts_found: ไม่พบบัญชี Akahu ที่ยังไม่เชื่อมโยง
+      no_credentials_configured: ตั้งค่า Akahu ในการตั้งค่าผู้ให้บริการก่อน
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      cancel: ยกเลิก
+      link_account: เชื่อมโยงบัญชี
+    link_existing_account:
+      success: "เชื่อมโยงบัญชี Akahu กับ %{account_name} แล้ว"
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      akahu_account_already_linked: บัญชี Akahu นี้เชื่อมโยงแล้ว
+    setup_accounts:
+      title: ตั้งค่าบัญชี Akahu
+      subtitle: เลือกว่าแต่ละบัญชี Akahu ควรแสดงใน Sure อย่างไร
+      no_credentials: ตั้งค่าข้อมูลรับรอง Akahu ก่อน
+      api_error: ดึงบัญชี Akahu ไม่ได้
+      fetch_failed: ดึงบัญชีไม่ได้
+      no_accounts_to_setup: ไม่มีบัญชีที่ต้องตั้งค่า
+      all_accounts_linked: บัญชี Akahu ทั้งหมดเชื่อมโยงแล้ว
+      choose_account_type: เลือกประเภทบัญชี
+      choose_account_type_description: ข้ามบัญชีที่คุณไม่ต้องการติดตาม
+      account_type_label: ประเภทบัญชี
+      account_types:
+        skip: ข้าม
+        depository: เงินสด
+        credit_card: บัตรเครดิต
+        investment: การลงทุน
+        loan: สินเชื่อ
+      create_accounts: สร้างบัญชี
+      cancel: ยกเลิก
+    complete_account_setup:
+      success:
+        one: สร้างบัญชี Akahu 1 บัญชีแล้ว
+        other: "สร้างบัญชี Akahu %{count} บัญชีแล้ว"
+      all_skipped: ไม่ได้สร้างบัญชี Akahu
+      no_accounts: ไม่ได้เลือกบัญชี Akahu
+      creation_failed: สร้างบัญชี Akahu ไม่ได้
+    akahu_item:
+      deletion_in_progress: กำลังลบ
+      syncing: กำลังซิงค์
+      error: ข้อผิดพลาด
+      status_with_summary: "ซิงค์เมื่อ %{timestamp} ที่แล้ว · %{summary}"
+      status_never: ไม่เคยซิงค์
+      delete: ลบ
+      setup_needed: ต้องตั้งค่าบัญชี
+      setup_description: "เชื่อมโยงแล้ว %{linked} จาก %{total} บัญชี"
+      setup_action: ตั้งค่าบัญชี
+      no_accounts_title: ยังไม่ได้นำเข้าบัญชี
+      no_accounts_description: ดึงบัญชี Akahu แล้วเลือกว่าจะเชื่อมโยงบัญชีใด

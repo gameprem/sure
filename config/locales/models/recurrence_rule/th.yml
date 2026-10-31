@@ -1,0 +1,35 @@
+---
+th:
+  activerecord:
+    attributes:
+      recurrence_rule:
+        frequency: "ความถี่"
+        interval: "ช่วงห่าง"
+        day_of_month: "วันที่ของเดือน"
+        weekday: "วันในสัปดาห์"
+        weekday_ordinal: "สัปดาห์ของเดือน"
+        month_of_year: "เดือน"
+      recurring_transaction/recurrence_rules:
+        base: "กฎการทำซ้ำ:"
+        frequency: "ความถี่"
+        interval: "ช่วงห่าง"
+        day_of_month: "วันที่ของเดือน"
+        weekday: "วันในสัปดาห์"
+        weekday_ordinal: "สัปดาห์ของเดือน"
+        month_of_year: "เดือน"
+    errors:
+      models:
+        recurrence_rule:
+          day_spec_required: "เลือกวันที่ของเดือนหรือวันในสัปดาห์อย่างใดอย่างหนึ่งเท่านั้น"
+          attributes:
+            weekday:
+              required_for_weekly: "จำเป็นสำหรับกฎรายสัปดาห์"
+            weekday_ordinal:
+              not_allowed_for_weekly: "ไม่ใช้กับกฎรายสัปดาห์"
+              required_with_weekday: "จำเป็นเมื่อกำหนดวันในสัปดาห์"
+              not_allowed_without_weekday: "ใช้ได้เฉพาะเมื่อกำหนดวันในสัปดาห์"
+            day_of_month:
+              not_allowed_for_weekly: "ไม่ใช้กับกฎรายสัปดาห์"
+            month_of_year:
+              required_for_yearly: "จำเป็นสำหรับกฎรายปี"
+              not_allowed: "ใช้ได้เฉพาะกฎรายปี"

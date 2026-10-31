@@ -1,0 +1,5 @@
+---
+th:
+  models:
+    tag:
+      untagged: ไม่มีแท็ก

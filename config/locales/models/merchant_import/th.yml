@@ -1,0 +1,8 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        merchant_import:
+          missing_columns: "ขาดคอลัมน์ที่จำเป็น: %{columns}"
+          duplicate_columns: "ชื่อคอลัมน์ซ้ำกันหลังปรับรูปแบบ: %{columns}"

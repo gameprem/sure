@@ -1,0 +1,9 @@
+---
+th:
+  email_confirmation_mailer:
+    confirmation_email:
+      body: คุณเพิ่งขอเปลี่ยนที่อยู่อีเมล คลิกปุ่มด้านล่างเพื่อยืนยันการเปลี่ยนแปลงนี้
+      cta: ยืนยันการเปลี่ยนอีเมล
+      expiry_notice: ลิงก์นี้จะหมดอายุใน %{hours} ชั่วโมง
+      greeting: สวัสดี!
+      subject: '%{product_name}: ยืนยันการเปลี่ยนอีเมลของคุณ'

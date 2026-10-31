@@ -1,0 +1,7 @@
+---
+th:
+  other_liabilities:
+    edit:
+      edit: แก้ไข %{account}
+    new:
+      title: กรอกรายละเอียดหนี้สิน

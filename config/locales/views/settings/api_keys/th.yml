@@ -1,0 +1,77 @@
+---
+th:
+  settings:
+    api_keys_controller:
+      success: "สร้างคีย์ API ของคุณเรียบร้อยแล้ว"
+      revoked_successfully: "เพิกถอนคีย์ API เรียบร้อยแล้ว"
+      revoke_failed: "เพิกถอนคีย์ API ไม่สำเร็จ"
+    api_keys:
+      create:
+        success: "สร้างคีย์ API ของคุณเรียบร้อยแล้ว"
+      destroy:
+        revoked_successfully: "เพิกถอนคีย์ API เรียบร้อยแล้ว"
+        revoke_failed: "เพิกถอนคีย์ API ไม่สำเร็จ"
+      shared:
+        active: "ใช้งานอยู่"
+        created_ago: "สร้างเมื่อ %{time} ที่แล้ว"
+        last_used_ago: "ใช้ล่าสุด %{time} ที่แล้ว"
+        never_used: "ไม่เคยใช้"
+        scope_read_only: "อ่านอย่างเดียว"
+        scope_read_write: "อ่าน/เขียน"
+      index:
+        title: "คีย์ API"
+        subtitle: "จัดการคีย์ API เพื่อเข้าถึงข้อมูลของคุณด้วยโปรแกรม"
+        new_key: "คีย์ API ใหม่"
+        empty_heading: "ยังไม่มีคีย์ API"
+        empty_description: "สร้างคีย์ API เพื่อเข้าถึงข้อมูลของคุณด้วยโปรแกรม"
+        revoke_key: "เพิกถอน"
+        revoke_confirmation: "คุณแน่ใจหรือไม่ว่าต้องการเพิกถอน \"%{name}\" แอปพลิเคชันที่ใช้คีย์นี้จะถูกปิดใช้งานทันที"
+      key_reveal:
+        copied: "คัดลอกแล้ว!"
+      show:
+        title: "การจัดการคีย์ API"
+        newly_created:
+          page_title: "สร้างคีย์ API สำเร็จ"
+          heading: "สร้างคีย์ API สำเร็จ!"
+          key_ready: "คีย์ API ใหม่ \"%{name}\" ของคุณถูกสร้างและพร้อมใช้งานแล้ว"
+          your_api_key: "คีย์ API ของคุณ"
+          copy_store_securely: "คัดลอกและเก็บคีย์นี้ไว้อย่างปลอดภัย คุณต้องใช้เพื่อยืนยันตัวตนในคำขอ API"
+          copy_api_key: "คัดลอกคีย์ API"
+          how_to_use: "วิธีใช้คีย์ API ของคุณ"
+          continue: "ไปที่การตั้งค่าคีย์ API"
+        current_api_key:
+          title: "คีย์ API ของคุณ"
+          permissions: "สิทธิ์"
+          copy_api_key: "คัดลอกคีย์ API"
+          copy_store_securely: "คัดลอกและเก็บคีย์นี้ไว้อย่างปลอดภัย คุณต้องใช้เพื่อยืนยันตัวตนในคำขอ API"
+          usage_instructions_title: "วิธีใช้คีย์ API ของคุณ"
+          usage_instructions: "ใส่คีย์ API ของคุณในเฮดเดอร์ X-Api-Key เมื่อส่งคำขอไปยัง API ของ %{product_name}:"
+          back_to_keys: "กลับไปที่คีย์ API"
+          revoke_key: "เพิกถอนคีย์"
+          revoke_confirmation: "คุณแน่ใจหรือไม่ว่าต้องการเพิกถอนคีย์ API นี้ การดำเนินการนี้ย้อนกลับไม่ได้ และจะปิดการใช้งานแอปพลิเคชันทั้งหมดที่ใช้คีย์นี้ทันที"
+      new:
+        title: "สร้างคีย์ API"
+        create_new_api_key: "สร้างคีย์ API ใหม่"
+        subtitle: "สร้างคีย์ API ใหม่เพื่อเข้าถึงข้อมูล Sure ของคุณด้วยโปรแกรม"
+        description: "กำหนดคีย์ API ใหม่ของคุณด้วยชื่อที่สื่อความหมายและสิทธิ์ที่เหมาะสม"
+        name_label: "ชื่อคีย์ API"
+        name_placeholder: "เช่น แอปงบประมาณของฉัน, ตัวติดตามพอร์ต"
+        name_help_text: "เลือกชื่อที่สื่อความหมายเพื่อให้ระบุคีย์นี้ได้ภายหลัง"
+        name_help: "เลือกชื่อที่สื่อความหมายเพื่อให้ระบุวัตถุประสงค์ของคีย์นี้"
+        permissions_label: "สิทธิ์"
+        permissions_help: "เลือกสิทธิ์ที่คีย์ API นี้ควรมี:"
+        scope_read_only: "อ่านอย่างเดียว"
+        scope_read_only_description: "ดูบัญชี รายการธุรกรรม และยอดคงเหลือของคุณ"
+        scope_read_write: "อ่าน/เขียน"
+        scope_read_write_description: "ดูข้อมูลของคุณและสร้างรายการธุรกรรมใหม่"
+        scope_details:
+          read_accounts: "ดูข้อมูลบัญชี ยอดคงเหลือ และข้อมูลระดับบัญชี"
+          read_transactions: "ดูข้อมูลรายการธุรกรรม หมวดหมู่ และรายละเอียดรายการธุรกรรม"
+          read_balances: "ดูข้อมูลยอดคงเหลือย้อนหลังและแนวโน้มมูลค่าบัญชี"
+          write_transactions: "สร้างและอัปเดตระเบียนรายการธุรกรรม (เร็ว ๆ นี้)"
+        security_warning_title: "คำเตือนด้านความปลอดภัย"
+        security_warning_body: "คีย์ API ของคุณจะแสดงเพียงครั้งเดียวหลังสร้าง โปรดคัดลอกและเก็บไว้อย่างปลอดภัย ใครก็ตามที่มีคีย์นี้จะเข้าถึงข้อมูลของคุณได้ตามสิทธิ์ที่คุณเลือก"
+        security_warning: "คีย์ API ของคุณจะแสดงเพียงครั้งเดียวหลังสร้าง เก็บไว้อย่างปลอดภัยและอย่าเผยแพร่ต่อสาธารณะ หากทำหาย คุณต้องสร้างคีย์ใหม่"
+        create_key: "สร้างคีย์ API"
+        cancel: "ยกเลิก"
+        save_api_key: "บันทึกคีย์ API"

@@ -1,0 +1,20 @@
+---
+th:
+  activerecord:
+    attributes:
+      goal_pledge:
+        amount: จำนวนเงิน
+        currency: สกุลเงิน
+        account: บัญชี
+        kind: ประเภท
+        status: สถานะ
+        expires_at: หมดอายุเมื่อ
+    errors:
+      models:
+        goal_pledge:
+          attributes:
+            account:
+              must_be_linked_to_goal: เลือกหนึ่งในบัญชีที่เชื่อมโยงกับเป้าหมาย
+            currency:
+              must_match_goal: สกุลเงินของคำมั่นต้องตรงกับสกุลเงินของเป้าหมาย
+          duplicate_open_pledge: คุณมีคำมั่นที่ยังเปิดอยู่สำหรับจำนวนเงินนี้ในบัญชีนี้แล้ว โปรดยกเลิกหรือขยายเวลาของรายการเดิมก่อนบันทึกรายการใหม่

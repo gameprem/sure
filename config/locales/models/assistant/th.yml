@@ -1,0 +1,7 @@
+---
+th:
+  assistant:
+    external:
+      model_catalog:
+        default_agent_label: "เอเจนต์เริ่มต้น (%{id})"
+        named_agent_label: "%{name} (%{id})"

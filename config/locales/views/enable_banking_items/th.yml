@@ -1,0 +1,115 @@
+---
+th:
+  enable_banking_items:
+    errors:
+      api_error: "เกิดข้อผิดพลาดในการสื่อสารกับธนาคาร"
+      network_unreachable: "บริการธนาคารเข้าถึงไม่ได้ชั่วคราว โปรดลองอีกครั้งภายหลัง"
+      session_invalid: "เซสชันหมดอายุ โปรดเชื่อมต่อธนาคารของคุณใหม่"
+      unexpected: "เกิดข้อผิดพลาดที่ไม่คาดคิดระหว่างการซิงค์"
+    authorize:
+      authorization_failed: "เริ่มการอนุญาตไม่สำเร็จ: %{message}"
+      bank_required: โปรดเลือกธนาคาร
+      invalid_redirect: URL การอนุญาตที่ได้รับไม่ถูกต้อง โปรดลองอีกครั้ง
+      redirect_uri_not_allowed: ไม่อนุญาตการเปลี่ยนเส้นทาง โปรดตั้งค่า `%{callback_url}` ในการตั้งค่าแอป Enable Banking ของคุณ
+      unexpected_error: เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดลองอีกครั้ง
+    callback:
+      authorization_error: การอนุญาตล้มเหลว
+      invalid_callback: พารามิเตอร์ callback ไม่ถูกต้อง
+      item_not_found: ไม่พบการเชื่อมต่อ
+      session_failed: ทำการอนุญาตให้เสร็จสมบูรณ์ไม่ได้
+      success: เชื่อมต่อธนาคารของคุณสำเร็จ กำลังซิงค์บัญชีของคุณ
+      unexpected_error: เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดลองอีกครั้ง
+    complete_account_setup:
+      all_skipped: ข้ามบัญชีทั้งหมด คุณตั้งค่าได้ภายหลังที่หน้าบัญชี
+      no_accounts: ไม่มีบัญชีที่ตั้งค่าได้
+      success: สร้าง %{count} บัญชีสำเร็จ!
+    create:
+      success: ตั้งค่า Enable Banking สำเร็จ
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Enable Banking แล้ว
+    link_accounts:
+      already_linked: บัญชีที่เลือกเชื่อมโยงแล้ว
+      link_failed: เชื่อมโยงบัญชีไม่สำเร็จ
+      no_accounts_selected: ไม่ได้เลือกบัญชี
+      no_session: ไม่มีการเชื่อมต่อ Enable Banking ที่ใช้งานอยู่ โปรดเชื่อมต่อธนาคารก่อน
+      success: เชื่อมโยง %{count} บัญชีสำเร็จ
+    link_existing_account:
+      success: เชื่อมโยงบัญชีกับ Enable Banking สำเร็จ
+      errors:
+        only_manual: เชื่อมโยงได้เฉพาะบัญชีแบบกรอกเอง
+        invalid_enable_banking_account: เลือกบัญชี Enable Banking ไม่ถูกต้อง
+    enable_banking_item:
+      deletion_in_progress: กำลังลบ
+      provider_name: Enable Banking
+      syncing: กำลังซิงค์...
+      reconnect: เชื่อมต่อใหม่
+      last_synced: ซิงค์ล่าสุด %{time} ที่แล้ว
+      never_synced: ไม่เคยซิงค์
+      update: อัปเดต
+      delete: ลบ
+      setup_needed: ต้องตั้งค่า
+      setup_needed_description:
+        one: บัญชีที่นำเข้าจาก Enable Banking 1 บัญชีต้องตั้งค่า
+        other: "บัญชีที่นำเข้าจาก Enable Banking %{count} บัญชีต้องตั้งค่า"
+      set_up_accounts: ตั้งค่าบัญชี
+      no_accounts_found: ไม่พบบัญชี
+      no_accounts_found_description: ไม่พบบัญชีจาก Enable Banking ลองซิงค์อีกครั้ง
+    select_existing_account:
+      title: เชื่อมโยงบัญชี Enable Banking
+      all_linked: บัญชี Enable Banking ทั้งหมดดูเหมือนจะเชื่อมโยงแล้ว
+      try_after_sync: หากเพิ่งเชื่อมต่อหรือซิงค์ ให้ลองอีกครั้งหลังซิงค์เสร็จ
+      unlink_to_move: หากต้องการเชื่อมโยงบัญชีอื่น ให้ยกเลิกการเชื่อมโยงจากเมนูการดำเนินการของบัญชีก่อน
+      balance: ยอดคงเหลือ
+      link: เชื่อมโยง
+      cancel: ยกเลิก
+    setup_accounts:
+      title: ตั้งค่าบัญชี Enable Banking ของคุณ
+      header_subtitle: เลือกประเภทบัญชีที่ถูกต้องสำหรับบัญชีที่นำเข้า
+      choose_account_type: "เลือกประเภทบัญชีที่ถูกต้องสำหรับแต่ละบัญชี Enable Banking:"
+      historical_data_range: "ช่วงข้อมูลย้อนหลัง:"
+      sync_start_date_label: "เริ่มซิงค์รายการธุรกรรมตั้งแต่:"
+      sync_start_date_help: เลือกว่าจะซิงค์ประวัติรายการธุรกรรมย้อนหลังไปไกลแค่ไหน ย้อนหลังได้สูงสุด 2 ปี
+      account_type_label: "ประเภทบัญชี:"
+      balance: ยอดคงเหลือ
+      create_accounts: สร้างบัญชี
+      creating_accounts: กำลังสร้างบัญชี...
+      cancel: ยกเลิก
+    new:
+      link_enable_banking_title: เชื่อมโยง Enable Banking
+      session_expired: เซสชันหมดอายุ - ต้องอนุญาตใหม่
+      connected_bank: ธนาคารที่เชื่อมต่อ
+      session_expires: "เซสชันหมดอายุ"
+      unknown: ไม่ทราบ
+      connection: การเชื่อมต่อ
+      configured: ตั้งค่าแล้ว
+      ready_to_connect: พร้อมเชื่อมต่อธนาคาร
+      sync: ซิงค์
+      reconnect: เชื่อมต่อใหม่
+      connect_bank: เชื่อมต่อธนาคาร
+      remove_confirm: คุณแน่ใจหรือไม่ว่าต้องการนำการเชื่อมต่อนี้ออก?
+      remove: นำออก
+      add_connection: เพิ่มการเชื่อมต่อ
+      not_configured: ยังไม่ได้ตั้งค่าการเชื่อมต่อ Enable Banking
+      not_configured_description: ก่อนเชื่อมโยงบัญชี Enable Banking คุณต้องตั้งค่าการเชื่อมต่อ Enable Banking
+      setup_steps_title: "ขั้นตอนการตั้งค่า:"
+      setup_step_1_html: "ไปที่ <strong>การตั้งค่า → ผู้ให้บริการ</strong>"
+      setup_step_2_html: "ค้นหาส่วน <strong>Enable Banking</strong>"
+      setup_step_3: กรอกข้อมูลรับรอง Enable Banking ของคุณ
+      setup_step_4: กลับมาที่นี่เพื่อเชื่อมโยงบัญชีของคุณ
+      go_to_provider_settings: ไปที่การตั้งค่าผู้ให้บริการ
+    reauthorize:
+      invalid_redirect: URL การอนุญาตที่ได้รับไม่ถูกต้อง โปรดลองอีกครั้ง
+      reauthorization_failed: การอนุญาตใหม่ล้มเหลว
+    select_bank:
+      beta_label: เบตา
+      cancel: ยกเลิก
+      check_country: โปรดตรวจสอบการตั้งค่ารหัสประเทศของคุณ
+      credentials_required: โปรดตั้งค่าข้อมูลรับรอง Enable Banking ของคุณก่อน
+      description: เลือกธนาคารที่คุณต้องการเชื่อมต่อกับบัญชีของคุณ
+      no_banks: ไม่มีธนาคารสำหรับประเทศ/ภูมิภาคนี้
+      no_search_results: ไม่มีธนาคารที่ตรงกับการค้นหาของคุณ
+      search_label: ค้นหาธนาคารของคุณ
+      search_placeholder: ค้นหาธนาคารของคุณ...
+      title: เลือกธนาคารของคุณ
+    update:
+      success: อัปเดตการตั้งค่า Enable Banking แล้ว

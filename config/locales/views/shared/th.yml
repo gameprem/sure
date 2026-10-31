@@ -1,0 +1,65 @@
+---
+th:
+  concerns:
+    self_hostable:
+      redis_configured: "ตั้งค่า Redis ถูกต้องแล้ว! ตอนนี้คุณตั้งค่าแอปพลิเคชัน Sure ได้เลย"
+  shared:
+    preview: ตัวอย่าง
+    dot_separator: "·"
+    sync_toast:
+      message: "มีข้อมูลใหม่"
+      refresh: "รีเฟรช"
+    confirm_modal:
+      accept: ยืนยัน
+      body_html: "<p>คุณจะไม่สามารถย้อนกลับการตัดสินใจนี้ได้</p>"
+      cancel: ยกเลิก
+      title: คุณแน่ใจหรือไม่?
+    money_field:
+      above_max: กรอกจำนวนเงินไม่เกิน %{max}
+      below_min: กรอกจำนวนเงินอย่างน้อย %{min}
+      invalid_amount: กรอกจำนวนเงินหรือนิพจน์ที่ถูกต้อง
+      label: จำนวนเงิน
+      operator_add: บวก
+      operator_subtract: ลบ
+      operator_multiply: คูณ
+      operator_divide: หาร
+    exchange_rate_tabs:
+      calculate_rate_tab: คำนวณอัตราแลกเปลี่ยน
+      convert_tab: แปลงด้วยอัตราแลกเปลี่ยน
+      destination_amount: จำนวนเงินปลายทาง
+      exchange_rate: อัตราแลกเปลี่ยน
+      exchange_rate_help: เลือกวิธีกรอกจำนวนเงิน
+    syncing_notice:
+      syncing: กำลังซิงค์ข้อมูลบัญชี...
+    require_admin: "เฉพาะผู้ดูแลระบบเท่านั้นที่ทำสิ่งนี้ได้"
+    require_non_guest: "ผู้เยี่ยมชมไม่สามารถทำสิ่งนี้ได้"
+    require_connector_owner: "คุณจัดการได้เฉพาะการเชื่อมต่อที่คุณเพิ่มเอง"
+    custom_confirm:
+      default_title: "คุณแน่ใจหรือไม่?"
+      default_body: "การดำเนินการนี้ไม่สามารถย้อนกลับได้"
+      default_btn_text: "ยืนยัน"
+      resource_deletion_title: "ลบ%{resource}?"
+      resource_deletion_body: "คุณแน่ใจหรือไม่ว่าต้องการลบ%{resource}? การดำเนินการนี้ไม่สามารถย้อนกลับได้"
+      resource_deletion_btn_text: "ลบ%{resource}"
+    family_moniker:
+      group_plural: กลุ่ม
+      group_singular: กลุ่ม
+      plural: ครอบครัว
+      singular: ครอบครัว
+    trend_change:
+      no_change: "ไม่มีการเปลี่ยนแปลง"
+    cancel: ยกเลิก
+    transaction_tabs:
+      expense: รายจ่าย
+      income: รายรับ
+      transfer: โอน
+    sidekiq_health_banner:
+      title: ข้อมูลบางส่วนอาจไม่เป็นปัจจุบัน
+      body: "งานเบื้องหลังไม่ได้รับการประมวลผล ยอดคงเหลือ มูลค่าสุทธิ และการซิงค์บัญชีอาจล้าสมัยหรือขาดหาย"
+      cta: ดูสถานะระบบ
+      reasons:
+        redis_unreachable: "แอปเชื่อมต่อ Redis ไม่ได้ ตรวจสอบ REDIS_URL และว่า Redis ทำงานอยู่"
+        no_worker_processes: "ไม่มีโพรเซส worker ของ Sidekiq เชื่อมต่ออยู่ โปรดเริ่ม worker container หรือ systemd unit"
+        stale_heartbeat: "worker ของ Sidekiq ไม่ได้ส่งสัญญาณชีพมาระยะหนึ่งแล้ว อาจค้างหรือหยุดทำงาน"
+        ai_queues_not_polled: "ไม่มี worker ประมวลผลคิว AI (แชต การตรวจจับร้านค้า การจัดหมวดหมู่) ตรวจสอบว่า worker โหลด config/sidekiq.yml"
+        queue_backed_up: "งานที่เข้าคิวเก่าที่สุดรอเกินเวลาที่กำหนด worker ยังทำงานอยู่แต่ตามไม่ทัน"

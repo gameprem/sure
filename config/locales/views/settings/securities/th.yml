@@ -1,0 +1,36 @@
+---
+th:
+  settings:
+    securities:
+      show:
+        disable_mfa: ปิดใช้ 2FA
+        disable_mfa_confirm: คุณแน่ใจหรือไม่ว่าต้องการปิดการยืนยันตัวตนสองขั้นตอน การทำเช่นนี้จะทำให้บัญชีของคุณปลอดภัยน้อยลง
+        enable_mfa: เปิดใช้ 2FA
+        mfa_enabled_status_html: "การยืนยันตัวตนสองขั้นตอน<span class=\"font-medium text-green-600\">เปิดใช้งานอยู่</span>"
+        mfa_enabled_description: บัญชีของคุณได้รับการปกป้องด้วยความปลอดภัยอีกชั้น
+        mfa_disabled_status_html: "การยืนยันตัวตนสองขั้นตอน<span class=\"font-medium text-red-600\">ปิดอยู่</span>"
+        mfa_disabled_description: เปิดใช้ 2FA เพื่อเพิ่มความปลอดภัยอีกชั้นให้บัญชีของคุณ
+        mfa_description: เพิ่มความปลอดภัยอีกชั้นให้บัญชีของคุณด้วยการกำหนดให้ใช้รหัสจากแอปยืนยันตัวตนเมื่อเข้าสู่ระบบ
+        mfa_title: การยืนยันตัวตนสองขั้นตอน
+        webauthn_add: เพิ่มพาสคีย์หรือคีย์ความปลอดภัย
+        webauthn_added: เพิ่มเมื่อ %{date}
+        webauthn_code_label: รหัสจากแอปยืนยันตัวตนหรือรหัสสำรอง
+        webauthn_code_placeholder: รหัสปัจจุบันจากแอปยืนยันตัวตนหรือรหัสสำรองที่ยังไม่ได้ใช้
+        webauthn_description: ใช้พาสคีย์ Touch ID, Windows Hello หรือคีย์ความปลอดภัยแบบฮาร์ดแวร์เป็นปัจจัยที่สองเมื่อเข้าสู่ระบบ
+        webauthn_empty: ยังไม่ได้ลงทะเบียนพาสคีย์หรือคีย์ความปลอดภัย
+        webauthn_last_used: ใช้ล่าสุด %{time_ago} ที่แล้ว
+        webauthn_name_label: ชื่อคีย์
+        webauthn_name_placeholder: MacBook Touch ID, YubiKey ฯลฯ
+        webauthn_remove: ลบ
+        webauthn_remove_confirm: คุณแน่ใจหรือไม่ว่าต้องการลบพาสคีย์หรือคีย์ความปลอดภัยนี้
+        webauthn_remove_confirm_body: คุณต้องลงทะเบียนพาสคีย์หรือคีย์ความปลอดภัยนี้อีกครั้งก่อนจึงจะใช้ยืนยันการเข้าสู่ระบบได้
+        webauthn_title: พาสคีย์และคีย์ความปลอดภัย
+        webauthn_unsupported: เบราว์เซอร์นี้ไม่รองรับพาสคีย์หรือคีย์ความปลอดภัย
+  webauthn_credentials:
+    code_already_used: รหัสนั้นถูกใช้ไปแล้ว รอรหัสถัดไปจากแอปยืนยันตัวตนของคุณ
+    default_name: คีย์ความปลอดภัย
+    failure: บันทึกพาสคีย์หรือคีย์ความปลอดภัยนั้นไม่สำเร็จ โปรดลองอีกครั้ง
+    invalid_code: รหัสนั้นไม่ถูกต้อง กรอกรหัสปัจจุบันจากแอปยืนยันตัวตนหรือรหัสสำรองที่ยังไม่ได้ใช้
+    mfa_required: เปิดการยืนยันตัวตนสองขั้นตอนก่อนเพิ่มพาสคีย์หรือคีย์ความปลอดภัย
+    rate_limited: ลองหลายครั้งเกินไป โปรดรอสักครู่แล้วลองอีกครั้ง
+    success: ลบพาสคีย์หรือคีย์ความปลอดภัยแล้ว

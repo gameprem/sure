@@ -1,0 +1,312 @@
+---
+th:
+  sophtron_items:
+    defaults:
+      name: การเชื่อมต่อ Sophtron
+    new:
+      title: เชื่อมต่อ Sophtron
+      user_id: User ID
+      user_id_placeholder: วาง User ID ของ Sophtron ของคุณ
+      access_key: Access Key
+      access_key_placeholder: วาง Access Key ของ Sophtron ของคุณ
+      connect: เชื่อมต่อ
+      cancel: ยกเลิก
+    create:
+      success: สร้างการเชื่อมต่อ Sophtron เรียบร้อยแล้ว
+    destroy:
+      success: นำการเชื่อมต่อ Sophtron ออกแล้ว
+    update:
+      success: อัปเดตการเชื่อมต่อ Sophtron เรียบร้อยแล้ว! กำลังเชื่อมต่อบัญชีของคุณใหม่
+      errors:
+        blank_user_id: โปรดกรอก User ID ของ Sophtron
+        invalid_user_id: User ID ไม่ถูกต้อง โปรดตรวจสอบว่าคุณคัดลอก User ID ครบถ้วนจาก Sophtron
+        user_id_compromised: User ID อาจถูกเปิดเผย หมดอายุ หรือถูกใช้ไปแล้ว โปรดสร้างใหม่
+        blank_access_key: โปรดกรอก Access Key ของ Sophtron
+        invalid_access_key: Access Key ไม่ถูกต้อง โปรดตรวจสอบว่าคุณคัดลอก Access Key ครบถ้วนจาก Sophtron
+        access_key_compromised: Access Key อาจถูกเปิดเผย หมดอายุ หรือถูกใช้ไปแล้ว โปรดสร้างใหม่
+        update_failed: "อัปเดตการเชื่อมต่อไม่สำเร็จ: %{message}"
+        unexpected: เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดลองอีกครั้งหรือติดต่อฝ่ายสนับสนุน
+    edit:
+      user_id:
+        label: "Sophtron User ID:"
+        placeholder: "วาง Sophtron User ID ของคุณที่นี่..."
+        help_text: "User ID ควรเป็นสตริงยาวที่ขึ้นต้นด้วยตัวอักษรและตัวเลข"
+      access_key:
+        label: "Sophtron Access Key:"
+        placeholder: "วาง Sophtron Access Key ของคุณที่นี่..."
+        help_text: "Access Key ควรเป็นสตริงยาวที่ขึ้นต้นด้วยตัวอักษรและตัวเลข"
+    index:
+      title: การเชื่อมต่อ Sophtron
+    loading:
+      loading_message: กำลังโหลดบัญชี Sophtron...
+      loading_title: กำลังโหลด
+    link_accounts:
+      all_already_linked:
+        one: "บัญชีที่เลือก (%{names}) เชื่อมโยงแล้ว"
+        other: "บัญชีที่เลือกทั้ง %{count} บัญชีเชื่อมโยงแล้ว: %{names}"
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API"
+      invalid_account_names:
+        one: "เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้"
+        other: "เชื่อมโยง %{count} บัญชีที่ไม่มีชื่อไม่ได้"
+      link_failed: เชื่อมโยงบัญชีไม่สำเร็จ
+      no_accounts_selected: โปรดเลือกอย่างน้อยหนึ่งบัญชี
+      partial_invalid: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว %{invalid_count} บัญชีมีชื่อไม่ถูกต้อง"
+      partial_success: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว: %{already_linked_names}"
+      success:
+        one: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+        other: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+      no_credentials_configured: "โปรดตั้งค่า User ID และ Access Key ของ Sophtron API ในการตั้งค่าผู้ให้บริการก่อน"
+      no_accounts_found: ไม่พบบัญชี โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ
+      no_access_key: ยังไม่ได้ตั้งค่า Access Key ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+      no_user_id: ยังไม่ได้ตั้งค่า User ID ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+      no_institution_connected: โปรดเชื่อมต่อสถาบันธนาคารกับ Sophtron ก่อน
+    connect:
+      cancel: ยกเลิก
+      captcha: Captcha
+      connect: เชื่อมต่อ
+      institution_search_label: สถาบัน
+      institution_search_placeholder: ค้นหาตามชื่อธนาคาร
+      no_institutions: ไม่พบสถาบันที่ตรงกัน
+      password: รหัสผ่าน
+      search: ค้นหา
+      search_too_short: กรอกอย่างน้อยสองตัวอักษรเพื่อค้นหา
+      title: เชื่อมต่อสถาบัน Sophtron
+      username: ชื่อผู้ใช้
+    connect_institution:
+      api_error: "การเชื่อมต่อ Sophtron ล้มเหลว: %{message}"
+      missing_parameters: เลือกสถาบันและกรอกข้อมูลเข้าสู่ระบบธนาคารของคุณ
+    connection_status:
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API: %{message}"
+      attempt: "ครั้งที่ %{attempt} จาก %{max}"
+      check_again: ตรวจสอบอีกครั้ง
+      failed: Sophtron เชื่อมต่อสถาบันนี้ไม่สำเร็จ
+      failed_timeout: Sophtron หมดเวลาขณะที่สถาบันกำลังทำการเข้าสู่ระบบ
+      timeout: Sophtron เชื่อมต่อไม่เสร็จภายในเวลาที่คาดไว้ คุณตรวจสอบอีกครั้ง หรือลองเชื่อมต่อใหม่ภายหลังได้
+      title: กำลังเชื่อมต่อ Sophtron
+      waiting: Sophtron ยังเชื่อมต่อกับสถาบันของคุณอยู่
+    mfa:
+      captcha: ข้อความ captcha
+      captcha_alt: captcha ของ Sophtron
+      phone_confirmed: ฉันยืนยันทางโทรศัพท์แล้ว
+      submit: ส่ง
+      title: การยืนยัน Sophtron
+      token: รหัสยืนยัน
+    submit_mfa:
+      api_error: "การยืนยันล้มเหลว: %{message}"
+      invalid_security_answers: คำตอบด้านความปลอดภัยหายไปหรือยาวเกินไป
+      unknown_challenge: ขั้นตอนการยืนยัน Sophtron ที่ไม่รู้จัก
+    sophtron_item:
+      accounts_need_setup: บัญชีต้องตั้งค่า
+      automatic_sync: ใช้การซิงค์อัตโนมัติ
+      delete: ลบการเชื่อมต่อ
+      deletion_in_progress: กำลังลบ...
+      error: ข้อผิดพลาด
+      no_accounts_description: การเชื่อมต่อนี้ยังไม่มีบัญชีที่เชื่อมโยง
+      no_accounts_title: ไม่มีบัญชี
+      manual_sync: ซิงค์ด้วยตนเอง
+      manual_sync_action: ต้องซิงค์ด้วยตนเอง
+      manual_sync_action_for: "ต้องซิงค์ด้วยตนเองสำหรับ %{institution}"
+      automatic_sync_for: "ใช้การซิงค์อัตโนมัติสำหรับ %{institution}"
+      setup_action: ตั้งค่าบัญชีใหม่
+      setup_description: "เชื่อมโยง %{linked} จาก %{total} บัญชี เลือกประเภทบัญชีสำหรับบัญชี Sophtron ที่เพิ่งนำเข้า"
+      setup_needed: บัญชีใหม่พร้อมตั้งค่า
+      status: "ซิงค์เมื่อ %{timestamp} ที่แล้ว"
+      status_never: ไม่เคยซิงค์
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว • %{summary}"
+      sync_now: ซิงค์ตอนนี้
+      syncing: กำลังซิงค์...
+      total: ทั้งหมด
+      unlinked: ยังไม่เชื่อมโยง
+    preload_accounts:
+      preload_accounts: โหลดบัญชีล่วงหน้า
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API"
+      unexpected_error: "เกิดข้อผิดพลาดที่ไม่คาดคิด"
+      no_credentials_configured: "โปรดตั้งค่า User ID และ Access Key ของ Sophtron API ในการตั้งค่าผู้ให้บริการก่อน"
+      no_accounts_found: ไม่พบบัญชี โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ
+      no_access_key: ยังไม่ได้ตั้งค่า Access Key ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+      no_user_id: ยังไม่ได้ตั้งค่า User ID ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+    select_accounts:
+      accounts_selected: บัญชีที่เลือก
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API"
+      unexpected_error: "เกิดข้อผิดพลาดที่ไม่คาดคิด"
+      cancel: ยกเลิก
+      configure_name_in_sophtron: นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Sophtron
+      description: เลือกบัญชีที่คุณต้องการเชื่อมโยงกับบัญชี %{product_name} ของคุณ
+      link_accounts: เชื่อมโยงบัญชีที่เลือก
+      no_accounts_found: ไม่พบบัญชี โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ
+      no_access_key: ยังไม่ได้ตั้งค่า Access Key ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+      no_user_id: ยังไม่ได้ตั้งค่า User ID ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+      no_credentials_configured: "โปรดตั้งค่า User ID และ Access Key ของ Sophtron API ในการตั้งค่าผู้ให้บริการก่อน"
+      no_institution_connected: โปรดเชื่อมต่อสถาบันธนาคารกับ Sophtron ก่อน
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      title: เลือกบัญชี Sophtron
+    select_existing_account:
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      all_accounts_already_linked: บัญชี Sophtron ทั้งหมดเชื่อมโยงแล้ว
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API"
+      cancel: ยกเลิก
+      configure_name_in_sophtron: นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Sophtron
+      description: เลือกบัญชี Sophtron เพื่อเชื่อมโยงกับบัญชีนี้ รายการธุรกรรมจะถูกซิงค์และกำจัดรายการซ้ำโดยอัตโนมัติ
+      link_account: เชื่อมโยงบัญชี
+      no_account_specified: ไม่ได้ระบุบัญชี
+      no_accounts_found: ไม่พบบัญชี Sophtron โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ
+      no_access_key: ยังไม่ได้ตั้งค่า Access Key ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+      no_user_id: ยังไม่ได้ตั้งค่า User ID ของ Sophtron โปรดตั้งค่าในการตั้งค่า
+      no_institution_connected: โปรดเชื่อมต่อสถาบันธนาคารกับ Sophtron ก่อน
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      title: "เชื่อมโยง %{account_name} กับ Sophtron"
+      unexpected_error: "เกิดข้อผิดพลาดที่ไม่คาดคิด"
+    link_existing_account:
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API"
+      unexpected_error: "เกิดข้อผิดพลาดที่ไม่คาดคิด"
+      invalid_account_name: เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้
+      sophtron_account_already_linked: บัญชี Sophtron นี้เชื่อมโยงกับบัญชีอื่นแล้ว
+      sophtron_account_not_found: ไม่พบบัญชี Sophtron
+      missing_parameters: ขาดพารามิเตอร์ที่จำเป็น
+      no_institution_connected: โปรดเชื่อมต่อสถาบันธนาคารกับ Sophtron ก่อน
+      success: "เชื่อมโยง %{account_name} กับ Sophtron สำเร็จ"
+    setup_accounts:
+      account_type_label: "ประเภทบัญชี:"
+      all_accounts_linked: "บัญชี Sophtron ทั้งหมดของคุณถูกตั้งค่าแล้ว"
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API"
+      unexpected_error: "เกิดข้อผิดพลาดที่ไม่คาดคิด"
+      fetch_failed: "ดึงบัญชีไม่สำเร็จ"
+      no_accounts_to_setup: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      no_access_key: "ยังไม่ได้ตั้งค่า Access Key ของ Sophtron โปรดตรวจสอบการตั้งค่าการเชื่อมต่อของคุณ"
+      no_user_id: "ยังไม่ได้ตั้งค่า User ID ของ Sophtron โปรดตรวจสอบการตั้งค่าการเชื่อมต่อของคุณ"
+      no_institution_connected: "ยังไม่ได้เชื่อมต่อสถาบัน Sophtron"
+      account_types:
+        skip: ข้ามบัญชีนี้
+        depository: บัญชีกระแสรายวันหรือออมทรัพย์
+        credit_card: บัตรเครดิต
+        investment: บัญชีลงทุน
+        loan: สินเชื่อหรือสินเชื่อบ้าน
+        other_asset: สินทรัพย์อื่น ๆ
+      subtype_labels:
+        depository: "ประเภทย่อยของบัญชี:"
+        credit_card: ""
+        investment: "ประเภทการลงทุน:"
+        loan: "ประเภทสินเชื่อ:"
+        other_asset: ""
+      subtype_messages:
+        credit_card: "บัตรเครดิตจะถูกตั้งค่าเป็นบัญชีบัตรเครดิตโดยอัตโนมัติ"
+        other_asset: "สินทรัพย์อื่น ๆ ไม่ต้องมีตัวเลือกเพิ่มเติม"
+      balance: ยอดคงเหลือ
+      cancel: ยกเลิก
+      choose_account_type: "เลือกประเภทบัญชีที่ถูกต้องสำหรับแต่ละบัญชี Sophtron:"
+      create_accounts: สร้างบัญชี
+      creating_accounts: กำลังสร้างบัญชี...
+      historical_data_range: "ช่วงข้อมูลย้อนหลัง:"
+      subtitle: เลือกประเภทบัญชีที่ถูกต้องสำหรับบัญชีที่นำเข้า
+      sync_start_date_help: เลือกว่าจะซิงค์ประวัติรายการธุรกรรมย้อนหลังไปไกลแค่ไหน ย้อนหลังได้สูงสุด 3 ปี
+      sync_start_date_label: "เริ่มซิงค์รายการธุรกรรมตั้งแต่:"
+      title: ตั้งค่าบัญชี Sophtron ของคุณ
+    complete_account_setup:
+      all_skipped: "ข้ามบัญชีทั้งหมด ไม่ได้สร้างบัญชี"
+      creation_failed: "สร้างบัญชีไม่สำเร็จ"
+      api_error: "ข้อผิดพลาดการเชื่อมต่อ API"
+      unexpected_error: "เกิดข้อผิดพลาดที่ไม่คาดคิด"
+      no_accounts: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      success: "สร้าง %{count} บัญชีสำเร็จ"
+    sync:
+      already_running: การซิงค์ด้วยตนเองของ Sophtron กำลังดำเนินอยู่แล้ว
+      api_error: "การซิงค์ด้วยตนเองของ Sophtron ล้มเหลว: %{message}"
+      failed: การซิงค์ด้วยตนเองของ Sophtron ล้มเหลว
+      no_linked_accounts: สถาบัน Sophtron นี้ไม่มีบัญชีที่เชื่อมโยงให้ซิงค์
+      processing_failed: การซิงค์ด้วยตนเองของ Sophtron ประมวลผลรายการธุรกรรมที่รีเฟรชไม่ได้
+      success: เริ่มซิงค์แล้ว
+    toggle_manual_sync:
+      success_disabled: สถาบัน Sophtron จะซิงค์โดยอัตโนมัติ
+      success_enabled: สถาบัน Sophtron ต้องซิงค์ด้วยตนเองแล้ว
+    manual_sync_complete:
+      close: ปิด
+      description: ยอดคงเหลือของบัญชีจะอัปเดตเสร็จเบื้องหลัง
+      message: ดาวน์โหลดรายการธุรกรรมแล้วหลังการยืนยันของ Sophtron
+      title: เริ่มซิงค์ Sophtron แล้ว
+    sophtron_setup_required:
+      title: ต้องตั้งค่า Sophtron
+      message: "หากต้องการตั้งค่าการเชื่อมต่อ Sophtron ของคุณให้เสร็จ โปรดไปที่หน้าการตั้งค่าผู้ให้บริการและทำตามคำแนะนำเพื่ออนุญาตและกำหนดค่าการเชื่อมต่อ Sophtron ของคุณ"
+      go_to_provider_settings: ไปที่การตั้งค่าผู้ให้บริการ
+      heading: "ยังไม่ได้ตั้งค่า User ID และ Access Key"
+      description: "ก่อนเชื่อมโยงบัญชี Sophtron คุณต้องตั้งค่า User ID และ Access key ของ Sophtron"
+      setup_steps_title: "ขั้นตอนการตั้งค่า:"
+      step_1_html: "ไปที่ <strong>การตั้งค่า → ผู้ให้บริการซิงค์ธนาคาร</strong>"
+      step_2_html: "ค้นหาส่วน <strong>Sophtron</strong>"
+      step_3_html: "กรอก User ID และ Access key ของ Sophtron ของคุณ"
+      step_4: "กลับมาที่นี่เพื่อเชื่อมโยงบัญชีของคุณ"
+    api_error:
+      title: "ข้อผิดพลาดการเชื่อมต่อ Sophtron"
+      unable_to_connect: "เชื่อมต่อ Sophtron ไม่ได้"
+      institution_unable_to_connect: "เชื่อมต่อสถาบันไม่ได้"
+      common_issues_title: "ปัญหาที่พบบ่อย:"
+      incorrect_user_id: "User ID ไม่ถูกต้อง: ตรวจสอบ User ID ของคุณในการตั้งค่าผู้ให้บริการ"
+      invalid_access_key: "Access Key ไม่ถูกต้อง: ตรวจสอบ Access Key ของคุณในการตั้งค่าผู้ให้บริการ"
+      expired_credentials: "ข้อมูลรับรองหมดอายุ: สร้าง User ID และ Access Key ใหม่จาก Sophtron"
+      network_issue: "ปัญหาเครือข่าย: ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ"
+      service_down: "บริการล่ม: Sophtron API อาจไม่พร้อมใช้งานชั่วคราว"
+      bad_credentials: "ข้อมูลรับรองธนาคาร: ตรวจสอบว่าชื่อผู้ใช้และรหัสผ่านถูกต้อง"
+      verification_code: "รหัสยืนยัน: ตรวจสอบว่ากรอกรหัสล่าสุดก่อนหมดอายุ"
+      institution_timeout: "สถาบันหมดเวลา: หน้าเข้าสู่ระบบธนาคารทำงานไม่เสร็จทันเวลา"
+      unsupported_mfa: "การรองรับ MFA: Sophtron อาจไม่รองรับขั้นตอนการยืนยันปัจจุบันของสถาบันนี้"
+      check_provider_settings: "ตรวจสอบการตั้งค่าผู้ให้บริการ"
+      try_again: "ลองเชื่อมต่ออีกครั้ง"
+    select_option: "เลือก%{type}"
+    subtype: "ประเภทย่อย"
+    type: "ประเภท"
+    sophtron_panel:
+      setup_instructions_title: "วิธีการตั้งค่า:"
+      setup_instructions:
+        step_1_html: 'ไปที่ <a href="%{url}" target="_blank" rel="noopener noreferrer" class="link">Sophtron</a> เพื่อรับข้อมูลรับรอง API ของคุณ'
+        step_2: "คัดลอก User ID และ Access Key ของคุณจากการตั้งค่าบัญชี Sophtron"
+        step_3: "วางข้อมูลรับรองด้านล่างแล้วคลิกบันทึก Sure จะสร้างหรือใช้ Customer ID ของ Sophtron ของคุณซ้ำโดยอัตโนมัติ"
+      field_descriptions_title: "คำอธิบายช่อง:"
+      field_descriptions:
+        user_id_html: "<strong>User ID:</strong> ข้อมูลรับรอง User ID ของ Sophtron ของคุณ"
+        access_key_html: "<strong>Access Key:</strong> ข้อมูลรับรอง Access Key ของ Sophtron ของคุณ"
+        base_url_html: "<strong>Base URL:</strong> URL endpoint ของ Sophtron API โดยปกติคือ https://api.sophtron.com/api"
+      fields:
+        user_id:
+          label: "User ID"
+          placeholder_new: "วาง Sophtron User ID ของคุณ"
+          placeholder_edit: "••••••••"
+        access_key:
+          label: "Access Key"
+          placeholder_new: "วาง Sophtron Access Key ของคุณ"
+          placeholder_edit: "••••••••"
+        base_url:
+          label: "Base URL"
+          placeholder: "https://api.sophtron.com/api"
+      save: "บันทึกการตั้งค่า"
+      update: "อัปเดตการตั้งค่า"
+    syncer:
+      manual_sync_required: "สถาบันนี้ต้องซิงค์ Sophtron ด้วยตนเอง ข้ามบัญชีเหล่านั้นระหว่างการซิงค์อัตโนมัติ"
+      importing_accounts: "กำลังนำเข้าบัญชีจาก Sophtron..."
+      checking_account_configuration: "กำลังตรวจสอบการตั้งค่าบัญชี..."
+      accounts_need_setup: "%{count} บัญชีต้องตั้งค่า"
+      processing_transactions: "กำลังประมวลผลรายการธุรกรรมของบัญชีที่เชื่อมโยง..."
+      calculating_balances: "กำลังคำนวณยอดคงเหลือของบัญชีที่เชื่อมโยง..."
+    sophtron_entry:
+      processor:
+        unknown_transaction: "รายการธุรกรรมไม่ทราบชื่อ"
+    render_connection_timeout:
+      timeout: "การเชื่อมต่อหมดเวลา โปรดลองอีกครั้ง"
+    redirect_after_account_link:
+      invalid_account_names:
+        one: "เชื่อมโยง %{count} บัญชีที่ไม่มีชื่อไม่ได้"
+        other: "เชื่อมโยง %{count} บัญชีที่ไม่มีชื่อไม่ได้"
+      partial_invalid: "เชื่อมโยง %{created_count} บัญชี %{already_linked_count} เชื่อมโยงอยู่แล้ว %{invalid_count} มีชื่อไม่ถูกต้อง"
+      partial_success: "เชื่อมโยง %{created_count} บัญชี %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว"
+      success:
+        one: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+        other: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+      all_already_linked:
+        one: "บัญชีที่เลือกเชื่อมโยงแล้ว"
+        other: "บัญชีที่เลือกทั้ง %{count} บัญชีเชื่อมโยงแล้ว"
+      link_failed: "เชื่อมโยงบัญชีไม่สำเร็จ"
+    start_manual_sync:
+      already_running: "กำลังซิงค์อยู่แล้ว"
+      no_linked_accounts: "ไม่มีบัญชีที่เชื่อมโยงให้ซิงค์"
+      api_error: "ข้อผิดพลาด API: %{message}"
+    start_manual_sync_for_account:
+      failed: "ซิงค์บัญชีไม่สำเร็จ"

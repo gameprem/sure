@@ -1,0 +1,141 @@
+---
+th:
+  providers:
+    fio:
+      name: Fio banka
+      description: ซิงค์บัญชี Fio banka ด้วยโทเคน API แบบอ่านอย่างเดียว
+  family:
+    fio:
+      create_fio_item:
+        default_name: การเชื่อมต่อ Fio banka
+  fio_item:
+    errors:
+      account_processing_failed: ซิงค์บัญชี Fio ไม่ได้
+      account_mismatch: โทเคนนี้เป็นของบัญชี Fio คนละบัญชีกับที่การเชื่อมต่อนี้ซิงค์อยู่แล้ว เพิ่มเป็นการเชื่อมต่อแยกแทน
+      account_sync_schedule_failed: ตั้งเวลาซิงค์บัญชี Fio ไม่ได้
+      statement_too_large: ใบแจ้งยอดมีรายการธุรกรรมมากกว่าที่ Fio ให้ในหนึ่งคำขอ เลื่อนวันเริ่มซิงค์ไปข้างหน้าแล้วซิงค์อีกครั้ง
+      statement_fetch_failed: ดึงใบแจ้งยอดจาก Fio ไม่ได้
+      history_locked: Fio ปฏิเสธช่วงเวลาของใบแจ้งยอดนี้ ปลดล็อกประวัติทั้งหมดของบัญชีในอินเทอร์เน็ตแบงกิ้งที่ Settings → API แล้วซิงค์อีกครั้งภายใน 10 นาที
+      sync_failed: ซิงค์การเชื่อมต่อ Fio ไม่ได้
+    sync:
+      status:
+        importing: กำลังนำเข้าใบแจ้งยอดจาก Fio...
+        checking_setup: กำลังตรวจสอบการตั้งค่าบัญชี...
+        needs_setup:
+          one: 1 บัญชีต้องตั้งค่า...
+          other: "%{count} บัญชีต้องตั้งค่า..."
+        processing: กำลังประมวลผลรายการธุรกรรม...
+        calculating: กำลังคำนวณยอดคงเหลือ...
+    sync_status:
+      no_accounts: ยังไม่พบบัญชี
+      all_synced:
+        one: ซิงค์ 1 บัญชีแล้ว
+        other: "ซิงค์ %{count} บัญชีแล้ว"
+      partial: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+  fio_items:
+    account_types:
+      depository: บัญชีกระแสรายวันหรือออมทรัพย์
+      loan: สินเชื่อ สินเชื่อบ้าน หรือเงินเบิกเกินบัญชี
+    provider_panel:
+      default_connection_name: การเชื่อมต่อ Fio banka
+      add_connection: เพิ่มการเชื่อมต่อ Fio banka
+      update_connection: อัปเดตการเชื่อมต่อ
+      connection_name_label: ชื่อการเชื่อมต่อ
+      connection_name_placeholder: บัญชี Fio ของฉัน
+      token_label: โทเคน API (อ่านอย่างเดียว)
+      token_placeholder: วางโทเคน 64 ตัวอักษร
+      keep_token_placeholder: เว้นว่างไว้เพื่อใช้โทเคนเดิม
+      sync_start_date_label: นำเข้ารายการธุรกรรมตั้งแต่
+      sync_start_date_hint: Fio ให้ข้อมูล 90 วันล่าสุดโดยไม่ต้องอนุญาตเพิ่ม สำหรับข้อมูลที่เก่ากว่านั้น ให้ปลดล็อกประวัติทั้งหมดของบัญชีในอินเทอร์เน็ตแบงกิ้งที่ Settings → API (ไอคอนแม่กุญแจ) ซึ่งเปิดช่วงเวลา 10 นาที แล้วซิงค์ในช่วงนั้น
+      one_account_notice: หนึ่งโทเคนเข้าถึงได้หนึ่งบัญชี Fio จึงต้องเพิ่มการเชื่อมต่อสำหรับแต่ละบัญชีที่ต้องการติดตาม โทเคนใช้ได้ทุก 30 วินาทีหนึ่งครั้ง การซิงค์ที่มาเร็วกว่านั้นจะถูกรับไปในครั้งถัดไป
+      connected_account: บัญชีที่เชื่อมต่อ
+      no_account_yet: ยังไม่มีบัญชี — การซิงค์ครั้งแรกจะค้นหาบัญชีที่โทเคนนี้เข้าถึง
+      account_needs_setup: ยังไม่ได้เชื่อมโยงกับบัญชี Sure
+      requires_update: ต้องใช้โทเคนใหม่
+      requires_update_notice: Fio ปฏิเสธโทเคนนี้ โทเคนใช้ได้นานสูงสุด 180 วัน เว้นแต่จะต่ออายุอัตโนมัติทุกครั้งที่เข้าสู่ระบบธนาคาร จึงให้สร้างโทเคนแบบอ่านอย่างเดียวใหม่ที่ Settings → API แล้ววางด้านล่าง
+      last_synced: ซิงค์เมื่อ %{timestamp} ที่แล้ว
+      never_synced: ไม่เคยซิงค์
+      syncing: กำลังซิงค์...
+      sync: ซิงค์
+      setup_accounts: ตั้งค่าบัญชี
+      disconnect: ยกเลิกการเชื่อมต่อ
+      disconnect_confirm: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ %{name}?"
+    create:
+      success: บันทึกการเชื่อมต่อ Fio banka แล้ว
+      token_required: วางโทเคน API จากอินเทอร์เน็ตแบงกิ้ง Fio
+    update:
+      success: อัปเดตการเชื่อมต่อ Fio banka แล้ว
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อ Fio banka แล้ว
+      unlink_failed: ยกเลิกการเชื่อมต่อ Fio banka ไม่ได้
+    select_accounts:
+      title: เชื่อมโยงบัญชี Fio ของคุณ
+      description: โทเคนนี้เข้าถึงหนึ่งบัญชี เลือกวิธีติดตามใน Sure
+      account_type_label: ประเภทบัญชี
+      awaiting_first_sync: Fio ยังไม่รายงานบัญชีของโทเคนนี้ รันการซิงค์แล้วกลับมาใหม่
+      already_linked: บัญชีของการเชื่อมต่อนี้เชื่อมโยงกับบัญชี Sure แล้ว
+      sync_now: ซิงค์ตอนนี้
+      no_credentials_configured: ตั้งค่า Fio banka ในการตั้งค่าผู้ให้บริการก่อน
+      cancel: ยกเลิก
+      link_account: เชื่อมโยงบัญชี
+    link_accounts:
+      success: "เชื่อมโยงบัญชี Fio ของคุณกับ %{account_name} แล้ว"
+      no_account_found: ไม่พบบัญชี Fio ที่ยังไม่เชื่อมโยงสำหรับการเชื่อมต่อนี้
+      no_credentials_configured: ตั้งค่า Fio banka ในการตั้งค่าผู้ให้บริการก่อน
+      unsupported_account_type: Fio ไม่รองรับบัญชีประเภทนั้น
+      link_failed: เชื่อมโยงบัญชีไม่ได้
+    select_existing_account:
+      title: "เชื่อมโยงบัญชี Fio กับ %{account_name}"
+      description: เชื่อมต่อบัญชีที่โทเคนนี้เข้าถึงกับบัญชีที่คุณเลือก
+      awaiting_first_sync: Fio ยังไม่รายงานบัญชีของโทเคนนี้ รันการซิงค์แล้วกลับมาใหม่
+      already_linked: บัญชีของการเชื่อมต่อนี้เชื่อมโยงกับบัญชี Sure แล้ว
+      sync_now: ซิงค์ตอนนี้
+      no_credentials_configured: ตั้งค่า Fio banka ในการตั้งค่าผู้ให้บริการก่อน
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      cancel: ยกเลิก
+      link_account: เชื่อมโยงบัญชี
+    link_existing_account:
+      success: "เชื่อมโยงบัญชี Fio ของคุณกับ %{account_name} แล้ว"
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      fio_account_already_linked: บัญชี Fio นี้เชื่อมโยงแล้ว
+      no_account_selected: ไม่มีบัญชี Fio ที่เชื่อมโยงได้
+      unsupported_account_type: Fio ซิงค์ได้เฉพาะบัญชีเงินสดและสินเชื่อ
+    setup_accounts:
+      title: เชื่อมโยงบัญชี Fio ของคุณ
+      subtitle: เลือกว่าบัญชีที่โทเคนนี้เข้าถึงควรแสดงใน Sure อย่างไร
+      choose_account_type: เลือกประเภทบัญชี
+      choose_account_type_description: ข้ามหากคุณไม่ต้องการติดตามบัญชีนี้
+      account_type_label: ประเภทบัญชี
+      account_types:
+        skip: ข้าม
+      create_account: สร้างบัญชี
+      awaiting_first_sync: ยังไม่พบบัญชี
+      awaiting_first_sync_description: Fio รายงานบัญชีเฉพาะในใบแจ้งยอด จึงปรากฏหลังซิงค์ครั้งแรกสำเร็จ
+      sync_now: ซิงค์ตอนนี้
+      nothing_to_setup: ไม่มีอะไรต้องตั้งค่า
+      account_already_handled: บัญชีของการเชื่อมต่อนี้เชื่อมโยงหรือข้ามไปแล้ว
+      close: ปิด
+      cancel: ยกเลิก
+    complete_account_setup:
+      success: "สร้าง %{account_name} แล้ว"
+      skipped: ข้ามบัญชี Fio แล้ว
+      no_account: ไม่มีบัญชี Fio ที่ต้องตั้งค่า
+      unsupported_account_type: Fio ไม่รองรับบัญชีประเภทนั้น
+      creation_failed: สร้างบัญชี Sure ไม่ได้
+    fio_item:
+      deletion_in_progress: กำลังลบ
+      syncing: กำลังซิงค์
+      requires_update: ต้องใช้โทเคนใหม่
+      error: ข้อผิดพลาด
+      status_with_summary: "ซิงค์เมื่อ %{timestamp} ที่แล้ว · %{summary}"
+      status_never: ไม่เคยซิงค์
+      delete: ลบ
+      requires_update_title: ต้องใช้โทเคนใหม่
+      requires_update_description: Fio ปฏิเสธโทเคนของการเชื่อมต่อนี้ สร้างโทเคนแบบอ่านอย่างเดียวใหม่ที่ Settings → API ในอินเทอร์เน็ตแบงกิ้ง
+      update_token: อัปเดตโทเคน
+      setup_needed: ต้องตั้งค่าบัญชี
+      setup_description: บัญชีที่โทเคนนี้เข้าถึงยังไม่ได้เชื่อมโยงกับบัญชี Sure
+      setup_action: ตั้งค่าบัญชี
+      no_accounts_title: ยังไม่ได้นำเข้าบัญชี
+      no_accounts_description: Fio รายงานบัญชีเฉพาะในใบแจ้งยอด จึงปรากฏหลังซิงค์ครั้งแรกสำเร็จ
+      sync_now: ซิงค์ตอนนี้

@@ -1,0 +1,103 @@
+---
+th:
+  holdings:
+    cash:
+      brokerage_cash: เงินสดในบัญชีนายหน้า
+    destroy:
+      success: ลบสินทรัพย์ที่ถือครองแล้ว
+      cannot_delete: คุณไม่สามารถลบสินทรัพย์ที่ถือครองนี้ได้
+    update:
+      success: บันทึกต้นทุนแล้ว
+      error: ค่าต้นทุนไม่ถูกต้อง
+    unlock_cost_basis:
+      success: ปลดล็อกต้นทุนแล้ว อาจถูกอัปเดตในการซิงค์ครั้งถัดไป
+    remap_security:
+      success: อัปเดตหลักทรัพย์เรียบร้อยแล้ว
+      security_not_found: ไม่พบหลักทรัพย์ที่เลือก
+    reset_security:
+      success: รีเซ็ตหลักทรัพย์เป็นค่าของผู้ให้บริการแล้ว
+    sync_prices:
+      success: ซิงค์ข้อมูลตลาดเรียบร้อยแล้ว
+      unavailable: ไม่รองรับการซิงค์ข้อมูลตลาดสำหรับหลักทรัพย์ออฟไลน์
+      provider_error: ดึงราคาล่าสุดไม่สำเร็จ โปรดลองอีกครั้งในอีกไม่กี่นาที
+    errors:
+      security_collision: "ย้ายไม่ได้: คุณมีสินทรัพย์ที่ถือครอง %{ticker} ของวันที่ %{date} อยู่แล้ว"
+    cost_basis_sources:
+      manual: ผู้ใช้กำหนด
+      calculated: จากการซื้อขาย
+      provider: จากผู้ให้บริการ
+    cost_basis_cell:
+      unknown: "--"
+      set: กำหนด
+      set_cost_basis_header: "กำหนดต้นทุนของ %{ticker}"
+      total_cost_basis_label: ต้นทุนรวม
+      per_share_label: "ต่อหุ้น"
+      cancel: ยกเลิก
+      save: บันทึก
+      overwrite_confirm_title: เขียนทับต้นทุน?
+      overwrite_confirm_body: "การดำเนินการนี้จะแทนที่ต้นทุนปัจจุบัน %{current}"
+    holding:
+      per_share: ต่อหุ้น
+      shares: "%{qty} หุ้น"
+      unknown: "--"
+      no_cost_basis: ไม่มีต้นทุน
+    index:
+      average_cost: ต้นทุนเฉลี่ย
+      holdings: สินทรัพย์ที่ถือครอง
+      name: ชื่อ
+      new_holding: กิจกรรมใหม่
+      no_holdings: ไม่มีสินทรัพย์ที่ถือครองให้แสดง
+      positions:
+        one: "%{count} สถานะ"
+        other: "%{count} สถานะ"
+      return: ผลตอบแทนรวม
+      weight: สัดส่วน
+    missing_price_tooltip:
+      description: การลงทุนนี้มีค่าที่ขาดหาย จึงคำนวณผลตอบแทนหรือมูลค่าไม่ได้
+      missing_data: ข้อมูลขาดหาย
+    show:
+      avg_cost_label: ต้นทุนเฉลี่ย
+      current_market_price_label: ราคาตลาดปัจจุบัน
+      delete: ลบ
+      delete_subtitle: การดำเนินการนี้จะลบสินทรัพย์ที่ถือครองและการซื้อขายที่เกี่ยวข้องทั้งหมดในบัญชีนี้ และไม่สามารถย้อนกลับได้
+      delete_title: ลบสินทรัพย์ที่ถือครอง
+      edit_security: แก้ไขหลักทรัพย์
+      history: ประวัติ
+      no_trade_history: ไม่มีประวัติการซื้อขายสำหรับสินทรัพย์ที่ถือครองนี้
+      overview: ภาพรวม
+      portfolio_weight_label: สัดส่วนในพอร์ต
+      settings: การตั้งค่า
+      security_label: หลักทรัพย์
+      originally: "เดิมคือ %{ticker}"
+      search_security: ค้นหาหลักทรัพย์
+      search_security_placeholder: ค้นหาตามสัญลักษณ์หรือชื่อ
+      cancel: ยกเลิก
+      remap_security: บันทึก
+      provider_disabled_warning: "หยุดอัปเดตราคา — ผู้ให้บริการ %{provider} ถูกปิดใช้งาน สลับไปผู้ให้บริการอื่นด้านล่างหรือเปิดใช้อีกครั้งในการตั้งค่า"
+      truncated_history_warning: "ประวัติราคามีตั้งแต่ %{date} เป็นต้นไปเท่านั้น วันที่ก่อนหน้าไม่มีข้อมูลจากผู้ให้บริการที่เลือก ซึ่งอาจเกิดขึ้นเมื่อสินทรัพย์ถูกจดทะเบียนหลังวันที่คุณซื้อขาย หรือเมื่อผู้ให้บริการมีข้อมูลย้อนหลังจำกัดในแพ็กเกจปัจจุบัน"
+      switch_provider_label: สลับผู้ให้บริการ
+      switch_provider_description: "%{provider} ถูกปิดใช้งาน ค้นหาหลักทรัพย์นี้จากผู้ให้บริการอื่นที่เปิดใช้งาน"
+      switch_provider_button: สลับ
+      no_security_provider: ยังไม่ได้ตั้งค่าผู้ให้บริการหลักทรัพย์ ค้นหาหลักทรัพย์ไม่ได้
+      security_remapped_label: ย้ายหลักทรัพย์แล้ว
+      provider_sent: "ผู้ให้บริการส่งมา: %{ticker}"
+      reset_to_provider: รีเซ็ตเป็นค่าของผู้ให้บริการ
+      reset_confirm_title: รีเซ็ตหลักทรัพย์เป็นค่าของผู้ให้บริการ?
+      reset_confirm_body: "การดำเนินการนี้จะเปลี่ยนหลักทรัพย์จาก %{current} กลับเป็น %{original} และย้ายการซื้อขายที่เกี่ยวข้องทั้งหมด"
+      ticker_label: สัญลักษณ์
+      trade_history_entry: "%{qty} หุ้นของ %{security} ที่ %{price}"
+      total_return_label: ผลตอบแทนรวม
+      unknown: ไม่ทราบ
+      cost_basis_locked_label: ต้นทุนถูกล็อก
+      cost_basis_locked_description: ต้นทุนที่คุณกำหนดเองจะไม่ถูกเปลี่ยนโดยการซิงค์
+      unlock_cost_basis: ปลดล็อก
+      unlock_confirm_title: ปลดล็อกต้นทุน?
+      unlock_confirm_body: การดำเนินการนี้จะอนุญาตให้การซิงค์ของผู้ให้บริการหรือการคำนวณการซื้อขายอัปเดตต้นทุนได้
+      shares_label: หุ้น
+      book_value_label: มูลค่าตามบัญชี
+      market_value_label: มูลค่าตลาด
+      market_data_label: ข้อมูลตลาด
+      market_data_sync_button: รีเฟรช
+      last_price_update: อัปเดตราคาล่าสุด
+      syncing: กำลังซิงค์...
+      never: ไม่เคย

@@ -1,0 +1,13 @@
+---
+th:
+  category:
+    deletions:
+      create:
+        success: ลบหมวดหมู่ของรายการธุรกรรมเรียบร้อยแล้ว
+      new:
+        category: หมวดหมู่
+        delete_and_leave_uncategorized: ลบ "%{category_name}" และปล่อยไม่ได้จัดหมวดหมู่
+        delete_and_recategorize: ลบ "%{category_name}" และกำหนดหมวดหมู่ใหม่
+        delete_category: ลบหมวดหมู่?
+        explanation: การลบหมวดหมู่นี้จะทำให้ทุกรายการธุรกรรมที่อยู่ในหมวดหมู่ "%{category_name}" ไม่ได้จัดหมวดหมู่ แทนที่จะปล่อยไว้ คุณกำหนดหมวดหมู่ใหม่ด้านล่างได้เช่นกัน
+        replacement_category_prompt: เลือกหมวดหมู่

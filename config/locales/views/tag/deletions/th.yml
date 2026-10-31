@@ -1,0 +1,14 @@
+---
+th:
+  tag:
+    deletions:
+      create:
+        deleted: ลบแท็กแล้ว
+      new:
+        delete_and_leave_uncategorized: ลบ "%{tag_name}"
+        delete_and_recategorize: ลบ "%{tag_name}" และกำหนดแท็กใหม่
+        delete_and_reassign: ลบและกำหนดใหม่
+        delete_tag: ลบแท็ก?
+        explanation: "%{tag_name} จะถูกนำออกจากรายการธุรกรรมและรายการอื่นที่ติดแท็กได้ แทนที่จะปล่อยไว้ไม่มีแท็ก คุณกำหนดแท็กใหม่ด้านล่างได้เช่นกัน"
+        replacement_tag_prompt: เลือกแท็ก
+        tag: แท็ก

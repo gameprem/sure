@@ -1,0 +1,72 @@
+---
+th:
+  trades:
+    api_errors:
+      activity_label_must_match_type: "investment_activity_label ต้องเป็น %{label} เมื่อ type เป็น %{type}"
+      invalid_activity_label: ป้ายกำกับกิจกรรมการลงทุนไม่ถูกต้อง
+      invalid_type: ประเภทไม่ถูกต้อง
+      supported_types: "type ต้องเป็นหนึ่งใน: %{types}"
+    form:
+      account: บัญชีที่โอน (ไม่บังคับ)
+      account_prompt: ค้นหาบัญชี
+      amount: จำนวนเงิน
+      fee: ค่าธรรมเนียมรายการธุรกรรม
+      holding: สัญลักษณ์หลักทรัพย์
+      holding_optional: สัญลักษณ์หลักทรัพย์ (ไม่บังคับ)
+      price: ราคาต่อหุ้น
+      qty: จำนวน
+      submit: เพิ่มรายการธุรกรรม
+      ticker_placeholder: AAPL
+      type: ประเภท
+      type_buy: ซื้อ
+      type_sell: ขาย
+      type_deposit: ฝาก
+      type_withdrawal: ถอน
+      type_dividend: เงินปันผล
+      type_interest: ดอกเบี้ย
+      dividend_requires_security: ต้องระบุหลักทรัพย์สำหรับเงินปันผล
+      trade_requires_security: ต้องระบุหลักทรัพย์ (สัญลักษณ์) สำหรับการซื้อและขาย
+    header:
+      buy: ซื้อ
+      sell: ขาย
+      dividend: เงินปันผล
+      interest: ดอกเบี้ย
+      contribution: เงินสมทบ
+      exchange: แลกเปลี่ยน
+      fee: ค่าธรรมเนียม
+      other: อื่น ๆ
+      reinvestment: ลงทุนซ้ำ
+      sweep_in: โอนเข้าอัตโนมัติ
+      sweep_out: โอนออกอัตโนมัติ
+      transfer: โอน
+      withdrawal: ถอน
+      current_market_price_label: ราคาตลาดปัจจุบัน
+      overview: ภาพรวม
+      purchase_price_label: ราคาซื้อ
+      purchase_qty_label: จำนวนที่ซื้อ
+      symbol_label: สัญลักษณ์
+      total_return_label: กำไร/ขาดทุนที่ยังไม่รับรู้
+    new:
+      title: รายการธุรกรรมใหม่
+    show:
+      additional: เพิ่มเติม
+      amount_label: จำนวนเงิน
+      buy: ซื้อ
+      category_label: หมวดหมู่
+      cost_per_share_label: ต้นทุนต่อหุ้น
+      date_label: วันที่
+      delete: ลบ
+      fee_label: ค่าธรรมเนียมรายการธุรกรรม
+      delete_subtitle: การดำเนินการนี้ไม่สามารถย้อนกลับได้
+      delete_title: ลบการซื้อขาย
+      details: รายละเอียด
+      provider_disabled_warning: "หยุดอัปเดตราคา — ผู้ให้บริการ %{provider} ถูกปิดใช้งาน เปิดใช้อีกครั้งในการตั้งค่า หรือย้ายสินทรัพย์ที่ถือครองไปผู้ให้บริการอื่น"
+      exclude_subtitle: การซื้อขายนี้จะไม่ถูกรวมในรายงานและการคำนวณ
+      exclude_title: ไม่รวมในการวิเคราะห์
+      no_category: ไม่มีหมวดหมู่
+      note_label: บันทึก
+      note_placeholder: เพิ่มบันทึกเพิ่มเติมที่นี่...
+      quantity_label: จำนวน
+      sell: ขาย
+      settings: การตั้งค่า
+      type_label: ประเภท

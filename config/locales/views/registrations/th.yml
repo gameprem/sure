@@ -1,0 +1,31 @@
+---
+th:
+  helpers:
+    label:
+      user:
+        invite_code: รหัสเชิญ
+    submit:
+      user:
+        create: ดำเนินการต่อ
+  registrations:
+    closed: ขณะนี้ปิดรับสมัครสมาชิก
+    create:
+      failure: เกิดปัญหาในการสมัครสมาชิก
+      invalid_invite_code: รหัสเชิญไม่ถูกต้อง โปรดลองอีกครั้ง
+      success: สมัครสมาชิกเรียบร้อยแล้ว
+    new:
+      invitation_message: "%{inviter} เชิญคุณเข้าร่วมในฐานะ%{role}"
+      join_family_title: เข้าร่วม%{moniker} %{family}
+      role_admin: ผู้ดูแลระบบ
+      role_guest: ผู้เยี่ยมชม
+      role_member: สมาชิก
+      submit: สร้างบัญชี
+      title: สร้างบัญชีของคุณ
+      welcome_body: เริ่มต้นด้วยการสมัครบัญชีใหม่ จากนั้นคุณจะตั้งค่าอื่น ๆ เพิ่มเติมภายในแอปได้
+      welcome_title: ยินดีต้อนรับสู่ %{product_name} แบบโฮสต์เอง!
+      password_placeholder: กรอกรหัสผ่านของคุณ
+      password_requirements:
+        length: อย่างน้อย 8 ตัวอักษร
+        case: ตัวอักษรพิมพ์ใหญ่และพิมพ์เล็ก
+        number: ตัวเลข (0-9)
+        special: "อักขระพิเศษ (!, @, #, $, % ฯลฯ)"

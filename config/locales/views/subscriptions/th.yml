@@ -1,0 +1,24 @@
+---
+th:
+  subscriptions:
+    self_hosted_alert: "%{product_name} ไม่พร้อมใช้งานในโหมดโฮสต์เอง"
+    upgrade:
+      already_contributing: คุณสมทบอยู่แล้ว ขอบคุณ!
+      page_title: "อัปเกรด"
+      account_settings: "การตั้งค่าบัญชี"
+      sign_out: "ออกจากระบบ"
+      contribute_and_support_sure: "สมทบและสนับสนุน Sure"
+      cta: "สนับสนุนการพัฒนาโค้ดนี้ต่อไป!"
+      header:
+        support: "สนับสนุน"
+        sure: "Sure"
+        today: "วันนี้"
+      redirect_to_stripe: "ในขั้นตอนถัดไป คุณจะถูกเปลี่ยนเส้นทางไปยัง Stripe ซึ่งจัดการบัตรเครดิตแทนเรา"
+      trialing: "ข้อมูลของคุณจะถูกลบใน %{days} วัน"
+      trial_over: "การทดลองใช้ของคุณสิ้นสุดแล้ว"
+    create:
+      welcome: "ยินดีต้อนรับสู่ Sure!"
+      trial_already_used: "คุณเริ่มหรือทดลองใช้เสร็จสิ้นไปแล้ว โปรดอัปเกรดเพื่อดำเนินการต่อ"
+    success:
+      welcome_with_contribution: "ยินดีต้อนรับสู่ Sure! ขอบคุณสำหรับการสมทบของคุณ"
+      contribution_failed: "เกิดข้อผิดพลาดในการประมวลผลการสมทบของคุณ โปรดลองอีกครั้ง"

@@ -1,0 +1,75 @@
+---
+th:
+  coinstats_items:
+    create:
+      success: ตั้งค่าการเชื่อมต่อผู้ให้บริการ CoinStats เรียบร้อยแล้ว
+      default_name: การเชื่อมต่อ CoinStats
+      errors:
+        validation_failed: "ไม่ผ่านการตรวจสอบ: %{message}"
+    update:
+      success: อัปเดตการเชื่อมต่อผู้ให้บริการ CoinStats เรียบร้อยแล้ว
+      errors:
+        validation_failed: "ไม่ผ่านการตรวจสอบ: %{message}"
+    destroy:
+      success: จัดคิวลบการเชื่อมต่อผู้ให้บริการ CoinStats แล้ว
+    link_wallet:
+      success: "เชื่อมโยงกระเป๋าคริปโต %{count} ใบเรียบร้อยแล้ว"
+      missing_params: "ขาดพารามิเตอร์ที่จำเป็น: ที่อยู่และบล็อกเชน"
+      failed: เชื่อมโยงกระเป๋าคริปโตไม่สำเร็จ
+      error: "เชื่อมโยงกระเป๋าคริปโตไม่สำเร็จ: %{message}"
+    link_exchange:
+      success: "เชื่อมโยงแพลตฟอร์มแลกเปลี่ยน %{name} แล้ว"
+      missing_params: ต้องมีแพลตฟอร์มแลกเปลี่ยนและข้อมูลรับรอง
+      invalid_exchange: แพลตฟอร์มแลกเปลี่ยนที่เลือกไม่ได้รับการรองรับอีกต่อไป
+      failed: เชื่อมโยงแพลตฟอร์มแลกเปลี่ยนไม่สำเร็จ
+      error: "เชื่อมโยงแพลตฟอร์มแลกเปลี่ยนไม่สำเร็จ: %{message}"
+    new:
+      title: เชื่อมโยงคริปโตกับ CoinStats
+      blockchain_fetch_error: โหลดบล็อกเชนไม่สำเร็จ โปรดลองอีกครั้งภายหลัง
+      link_wallet_title: เชื่อมโยงที่อยู่กระเป๋า
+      link_wallet_description: ติดตามกระเป๋าที่ดูแลเองหรือที่อยู่บนเชนเดียวผ่าน CoinStats
+      address_label: ที่อยู่
+      address_placeholder: จำเป็น
+      blockchain_label: บล็อกเชน
+      blockchain_placeholder: จำเป็น
+      blockchain_select_blank: เลือกบล็อกเชน
+      link_wallet_submit: เชื่อมโยงกระเป๋าคริปโต
+      link_exchange_title: เชื่อมโยง API ของแพลตฟอร์มแลกเปลี่ยน
+      link_exchange_description: ใช้คีย์ API ของแพลตฟอร์มแลกเปลี่ยนแบบอ่านอย่างเดียวเพื่อให้ CoinStats ซิงค์ยอดคงเหลือและรายการธุรกรรมจาก Bitvavo, Binance และแพลตฟอร์มอื่นที่รองรับ
+      link_exchange_note: หากแพลตฟอร์มแลกเปลี่ยนของคุณต้องเปิดใช้คีย์ API หรือยืนยันทางอีเมล โปรดทำขั้นตอนนั้นให้เสร็จก่อนเชื่อมโยงที่นี่
+      exchange_select_blank: เลือกแพลตฟอร์มแลกเปลี่ยน
+      exchange_label: แพลตฟอร์มแลกเปลี่ยน
+      link_exchange_submit: เชื่อมโยงแพลตฟอร์มแลกเปลี่ยน
+      not_configured_title: ยังไม่ได้ตั้งค่าการเชื่อมต่อผู้ให้บริการ CoinStats
+      not_configured_message: หากต้องการเชื่อมโยงกระเป๋าคริปโตหรือแพลตฟอร์มแลกเปลี่ยน คุณต้องตั้งค่าการเชื่อมต่อผู้ให้บริการ CoinStats ก่อน
+      not_configured_step1_html: ไปที่ <strong>การตั้งค่า → ผู้ให้บริการ</strong>
+      not_configured_step2_html: ค้นหาผู้ให้บริการ <strong>CoinStats</strong>
+      not_configured_step3_html: ทำตาม<strong>วิธีการตั้งค่า</strong>ที่ให้ไว้เพื่อตั้งค่าผู้ให้บริการให้เสร็จ
+      go_to_settings: ไปที่การตั้งค่าผู้ให้บริการ
+      setup_instructions: "วิธีการตั้งค่า:"
+      step1_html: ไปที่ <a href="https://openapi.coinstats.app/" class="link" target="_blank" rel="noopener noreferrer">CoinStats Public API Dashboard</a> เพื่อรับคีย์ API
+      step2: กรอกคีย์ API ของคุณด้านล่างแล้วคลิกตั้งค่า
+      step3_html: หลังเชื่อมต่อสำเร็จ ไปที่แท็บ<a href="%{accounts_url}" class="link" data-turbo-frame="_top">บัญชี</a>เพื่อตั้งค่าบัญชีคริปโตของคุณ
+      api_key_label: คีย์ API
+      api_key_placeholder: จำเป็น
+      configure: ตั้งค่า
+      update_configuration: ตั้งค่าใหม่
+      default_name: การเชื่อมต่อ CoinStats
+    coinstats_item:
+      deletion_in_progress: กำลังลบข้อมูลกระเป๋าคริปโต…
+      provider_name: CoinStats
+      syncing: กำลังซิงค์…
+      sync_status:
+        no_accounts: ไม่พบกระเป๋าคริปโต
+        all_synced:
+          one: "ซิงค์กระเป๋าคริปโต %{count} ใบแล้ว"
+          other: "ซิงค์กระเป๋าคริปโต %{count} ใบแล้ว"
+        partial_sync: "ซิงค์กระเป๋าคริปโตแล้ว %{linked_count} ใบ ต้องตั้งค่า %{unlinked_count} ใบ"
+      reconnect: เชื่อมต่อใหม่
+      status: ซิงค์ล่าสุด %{timestamp} ที่แล้ว
+      status_never: ไม่เคยซิงค์
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว • %{summary}"
+      update_api_key: อัปเดตคีย์ API
+      delete: ลบ
+      no_wallets_title: ไม่มีกระเป๋าคริปโตที่เชื่อมต่อ
+      no_wallets_message: ขณะนี้ไม่มีกระเป๋าคริปโตที่เชื่อมต่อกับ CoinStats

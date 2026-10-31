@@ -1,0 +1,96 @@
+---
+th:
+  loans:
+    edit:
+      edit: แก้ไข %{account}
+    form:
+      interest_rate: อัตราดอกเบี้ย
+      interest_rate_placeholder: '5.25'
+      initial_balance: ยอดสินเชื่อเดิม
+      day_count_convention: ฐานการคิดดอกเบี้ย
+      day_count_convention_actual_365: Actual/365
+      day_count_convention_actual_actual: Actual/actual
+      day_count_convention_hint: วิธีที่ผู้ให้กู้วัดแต่ละงวดเทียบกับหนึ่งปี Actual/365 คิดตามจำนวนวันของเดือนและเป็นมาตรฐานของสินเชื่อบ้านในสหราชอาณาจักรและออสเตรเลีย 30/360 คิดเป็นหนึ่งในสิบสองคงที่ ซึ่งเป็นฐานที่ Sure ใช้มาตลอด
+      day_count_convention_thirty_360: 30/360 (หนึ่งในสิบสองคงที่)
+      rate_type: ประเภทอัตราดอกเบี้ย
+      term_months: ระยะเวลา (เดือน)
+      term_months_placeholder: '360'
+      none: ไม่มี
+      subtype_prompt: เลือกประเภทสินเชื่อ
+      subtype_none: ไม่มี
+      rate_type_adjustable: ปรับได้
+      rate_type_fixed: คงที่
+      rate_type_variable: ผันแปร
+      rate_changes: การเปลี่ยนอัตราดอกเบี้ย
+      rate_changes_hint: แต่ละแถวกำหนดอัตราที่ใช้ตั้งแต่วันที่มีผลจนถึงแถวถัดไป การกรอกวันที่ซ้ำจะแทนที่แถวนั้นแทนที่จะเพิ่มแถวที่สอง
+      rate_changes_empty: ไม่มีการเปลี่ยนอัตราดอกเบี้ยที่บันทึกไว้ สินเชื่อใช้อัตราดอกเบี้ยด้านบน
+      rate_change_effective_date: วันที่มีผล
+      rate_change_rate: อัตรา
+      rate_change_add: เพิ่มการเปลี่ยนอัตรา
+      rate_change_remove: ลบ
+      start_date: วันที่เริ่มสินเชื่อ
+      start_date_hint: วันที่ถอนสินเชื่อ ประวัติยอดคงเหลือของสินเชื่อใหม่เริ่มตั้งแต่วันนี้ ไม่ใช่วันที่ยอดคงเหลือเริ่มต้น เว้นว่างไว้เพื่อใช้วันที่ยอดคงเหลือเริ่มต้น
+      down_payment: เงินดาวน์
+      insurance_rate: อัตราเบี้ยประกัน
+      insurance_rate_placeholder: '0.36'
+      insurance_rate_hint: อัตราต่อปี เรียกเก็บรายเดือนควบคู่กับการผ่อนชำระ แบบคุ้มครองคงที่คิดจากยอดเดิม แบบลดลงคิดจากยอดที่ยังค้าง
+      insurance_rate_type: ประเภทประกัน
+      insurance_rate_type_decreasing_life: ลดลง
+      insurance_rate_type_level_term: คุ้มครองคงที่
+    new:
+      title: กรอกรายละเอียดสินเชื่อ
+    overview:
+      interest_rate: อัตราดอกเบี้ย
+      monthly_payment: ค่างวดรายเดือน
+      not_applicable: ไม่มี
+      original_payoff_date: วันปิดสินเชื่อเดิม
+      original_principal: ยอดสินเชื่อเดิม
+      remaining_principal: ยอดสินเชื่อคงเหลือ
+      term: ระยะเวลา
+      type: ประเภท
+      unknown: ไม่ทราบ
+    tabs:
+      repayment_progress:
+        instalment: งวดที่ %{number} · %{date}
+        insurance: ประกัน
+        interest: ดอกเบี้ย
+        of_original: จาก %{amount}
+        principal: เงินต้น
+        repaid: ชำระแล้ว
+        total: รวม
+      schedule:
+        date: วันที่
+        description: คาดการณ์จากยอดคงเหลือ อัตรา และระยะเวลาเดิม เริ่ม %{start_date} ไม่รวมการชำระเพิ่มเติม
+        variable_rate_notice: อัตราดอกเบี้ยของสินเชื่อนี้เปลี่ยนตามเวลา ตารางจะคำนวณการตัดเงินต้นใหม่ทุกครั้งที่มีการเปลี่ยนที่บันทึก โดยคงวันปิดสินเชื่อเดิมและปรับค่างวด การเปลี่ยนที่ยังไม่ได้บันทึกจะทำให้ตัวเลขเหล่านี้เปลี่ยน
+        opening_payment: งวดแรก
+        forecasted_payoff_date: วันปิดสินเชื่อที่คาดการณ์
+        forecasted_payoff_not_converged: ไม่ปิดสินเชื่อด้วยค่างวดปัจจุบัน
+        interest: ดอกเบี้ย
+        monthly_payment: ค่างวดรายเดือน
+        not_applicable: ไม่มี
+        number: "#"
+        payment: ค่างวด
+        principal: เงินต้น
+        remaining_balance: ยอดคงเหลือ
+        total_cost: ต้นทุนรวม
+        total_interest: ดอกเบี้ยรวม
+      overview:
+        insurance_rate_only: "%{rate} ต่อปี"
+        interest_rate: อัตราดอกเบี้ย
+        leverage: เลเวอเรจ
+        leverage_band_conservative: ระมัดระวัง
+        leverage_band_high: สูง
+        leverage_band_moderate: ปานกลาง
+        leverage_multiple: "%{ratio}x"
+        monthly_payment: ค่างวดรายเดือน
+        not_applicable: ไม่มี
+        original_payoff_date: วันปิดสินเชื่อเดิม
+        original_principal: ยอดสินเชื่อเดิม
+        remaining_principal: ยอดสินเชื่อคงเหลือ
+        total_cost: ต้นทุนรวม
+        total_cost_with_insurance: ต้นทุนรวมรวมประกัน
+        total_insurance: ประกัน
+        term: ระยะเวลา
+        type: ประเภท
+        unknown: ไม่ทราบ
+        edit_loan_details: "แก้ไขรายละเอียดสินเชื่อ"

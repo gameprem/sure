@@ -1,0 +1,8 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        loan:
+          invalid_rate_change: แถวการเปลี่ยนอัตราดอกเบี้ยต้องมีทั้งวันที่มีผลและอัตราดอกเบี้ย
+          rate_change_before_origination: การเปลี่ยนอัตราดอกเบี้ยไม่สามารถมีผลก่อนวันที่เริ่มสินเชื่อได้

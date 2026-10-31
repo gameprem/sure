@@ -1,0 +1,39 @@
+---
+th:
+  vehicles:
+    edit:
+      edit: แก้ไข %{account}
+    form:
+      make: ยี่ห้อ
+      make_placeholder: Toyota
+      mileage: เลขไมล์
+      mileage_placeholder: '15000'
+      mileage_unit: หน่วย
+      model: รุ่น
+      model_placeholder: Camry
+      purchase_date: วันที่ซื้อ
+      purchase_price: ราคาซื้อ
+      year: ปี
+      year_placeholder: '2023'
+      mileage_unit_kilometers: กิโลเมตร
+      mileage_unit_miles: ไมล์
+    new:
+      title: กรอกรายละเอียดยานพาหนะ
+    overview:
+      current_price: ราคาปัจจุบัน
+      make_model: ยี่ห้อและรุ่น
+      mileage: เลขไมล์
+      purchase_price: ราคาซื้อ
+      trend: แนวโน้ม
+      unknown: ไม่ทราบ
+      year: ปี
+    tabs:
+      overview:
+        current_price: ราคาปัจจุบัน
+        make_model: ยี่ห้อและรุ่น
+        mileage: เลขไมล์
+        purchase_price: ราคาซื้อ
+        trend: แนวโน้ม
+        unknown: ไม่ทราบ
+        year: ปี
+        edit_account_details: "แก้ไขรายละเอียดบัญชี"

@@ -1,0 +1,406 @@
+---
+th:
+  transactions:
+    bulk_updates:
+      new:
+        cancel: ยกเลิก
+        category_label: หมวดหมู่
+        category_prompt: เลือกหมวดหมู่
+        date_label: วันที่
+        header_title: แก้ไขรายการธุรกรรม
+        merchant_label: ร้านค้า
+        merchant_prompt: เลือกร้านค้า
+        name_label: ชื่อ
+        name_placeholder: กรอกชื่อที่จะใช้กับรายการธุรกรรมที่เลือก
+        none: "(ไม่มี)"
+        notes_label: บันทึก
+        notes_placeholder: กรอกบันทึกที่จะใช้กับรายการธุรกรรมที่เลือก
+        overview: ภาพรวม
+        save: บันทึก
+        tags_label: แท็ก
+        transactions_section: รายการธุรกรรม
+    unknown_name: รายการธุรกรรมไม่ทราบชื่อ
+    selection_bar:
+      duplicate: ทำซ้ำ
+      edit: แก้ไข
+      selected: ที่เลือก
+    form:
+      details: รายละเอียด
+      account: บัญชี
+      account_prompt: เลือกบัญชี
+      amount: จำนวนเงิน
+      category: หมวดหมู่
+      category_label: หมวดหมู่
+      category_prompt: เลือกหมวดหมู่
+      category_search_placeholder: ค้นหาหมวดหมู่
+      create_category: 'สร้าง "%{name}"'
+      create_category_error: สร้างหมวดหมู่ไม่สำเร็จ
+      create_as_subcategory: เพิ่มเป็นหมวดหมู่ย่อย…
+      choose_parent: 'สร้าง "%{name}" ภายใต้:'
+      back_to_categories: กลับ
+      date: วันที่
+      description: คำอธิบาย
+      description_placeholder: อธิบายรายการธุรกรรม
+      description_placeholder_optional: เว้นว่างไว้เพื่อใช้ชื่อหมวดหมู่/ร้านค้า หรือเลือกอย่างใดอย่างหนึ่งก่อน
+      expense: รายจ่าย
+      income: รายรับ
+      merchant_label: ร้านค้า
+      none: (ไม่มี)
+      note_label: บันทึก
+      note_placeholder: กรอกบันทึก
+      create_tag: สร้าง
+      create_merchant: สร้าง
+      create_merchant_error: สร้างร้านค้าไม่สำเร็จ
+      merchant_search_placeholder: ค้นหาหรือสร้างร้านค้า
+      no_matching_categories: ไม่พบหมวดหมู่ที่ตรงกัน
+      submit: เพิ่มรายการธุรกรรม
+      tag_search_placeholder: ค้นหาหรือสร้างแท็ก
+      tags_label: แท็ก
+      transfer: โอน
+    create:
+      created: สร้างรายการธุรกรรมแล้ว
+    update:
+      updated: อัปเดตรายการธุรกรรมแล้ว
+    new:
+      new_transaction: รายการธุรกรรมใหม่
+    transaction_category:
+      set_on_outflow: "หมวดหมู่เป็นของฝั่งเงินออกของการโอนนี้ และเปลี่ยนได้ที่ฝั่งนั้นเท่านั้น"
+    show:
+      category_set_on_hidden_outflow: "นี่คือฝั่งเงินเข้าของการโอน หมวดหมู่เป็นของฝั่งเงินออกซึ่งอยู่ในบัญชีที่คุณเข้าถึงไม่ได้ และเปลี่ยนได้ที่ฝั่งนั้นเท่านั้น"
+      category_set_on_outflow: "นี่คือฝั่งเงินเข้าของการโอน หมวดหมู่เป็นของฝั่งเงินออกและเปลี่ยนได้ที่ฝั่งนั้นเท่านั้น เพื่อให้งบประมาณนับเพียงครั้งเดียว"
+      keep_both: ไม่ เก็บไว้ทั้งสอง
+      loan_payment: ชำระสินเชื่อ
+      mark_recurring: ทำเครื่องหมายเป็นรายการประจำ
+      create_bill: สร้างบิล
+      mark_recurring_subtitle: ติดตามรายการนี้เป็นรายการธุรกรรมประจำ ความแปรปรวนของจำนวนเงินจะถูกคำนวณอัตโนมัติจากรายการธุรกรรมที่คล้ายกันในช่วง 6 เดือนที่ผ่านมา
+      mark_recurring_title: รายการธุรกรรมประจำ
+      applied_to_title: บิลที่รายการนี้ชำระ
+      applied_to_detail: "%{amount} สำหรับบิลที่ครบกำหนด %{date}"
+      applied_to_unreviewed: ต้องตรวจสอบ
+      merge_duplicate: ใช่ รวมเข้าด้วยกัน
+      potential_duplicate_description: รายการที่รอดำเนินการนี้อาจเป็นรายการเดียวกับรายการที่บันทึกแล้วด้านล่าง หากใช่ ให้รวมเข้าด้วยกันเพื่อไม่ให้นับซ้ำ
+      potential_duplicate_title: ตรวจพบรายการที่อาจซ้ำ
+      transfer: โอน
+      account_label: บัญชี
+      amount: จำนวนเงิน
+      category_label: หมวดหมู่
+      date_label: วันที่
+      delete: ลบ
+      delete_subtitle: การดำเนินการนี้จะลบรายการธุรกรรมอย่างถาวร ส่งผลต่อยอดคงเหลือย้อนหลังของคุณ และไม่สามารถย้อนกลับได้
+      delete_title: ลบรายการธุรกรรม
+      details: รายละเอียด
+      attachments: ไฟล์แนบ
+      exclude: ไม่รวม
+      exclude_description: รายการธุรกรรมที่ไม่รวมจะถูกนำออกจากการคำนวณงบประมาณและรายงาน
+      activity_type: ประเภทกิจกรรม
+      activity_type_description: ประเภทของกิจกรรมการลงทุน (ซื้อ ขาย เงินปันผล ฯลฯ) ตรวจพบอัตโนมัติหรือกำหนดเอง
+      one_time_title: "%{type}ครั้งเดียว"
+      one_time_description: รายการธุรกรรมครั้งเดียวจะถูกยกเว้นจากการคำนวณงบประมาณและรายงานบางส่วน เพื่อให้คุณเห็นสิ่งที่สำคัญจริง ๆ
+      convert_to_trade_title: แปลงเป็นการซื้อขายหลักทรัพย์
+      convert_to_trade_description: แปลงรายการธุรกรรมนี้เป็นการซื้อหรือขายพร้อมรายละเอียดหลักทรัพย์ เพื่อติดตามพอร์ตการลงทุน
+      convert_to_trade_button: แปลงเป็นการซื้อขาย
+      transfer_matcher_description: เชื่อมรายการธุรกรรมนี้กับรายการคู่ในบัญชีอื่น
+      pending_duplicate_merger_title: ซ้ำกับรายการที่บันทึกแล้วหรือไม่?
+      pending_duplicate_merger_description: รวมรายการที่รอดำเนินการนี้กับรายการที่บันทึกแล้วด้วยตนเอง
+      pending_duplicate_merger_button: เปิดตัวรวมรายการ
+      merchant_label: ร้านค้า
+      name_label: ชื่อ
+      nature: ประเภท
+      none: "(ไม่มี)"
+      note_label: บันทึก
+      note_placeholder: กรอกบันทึก
+      overview: ภาพรวม
+      settings: การตั้งค่า
+      tags_label: แท็ก
+      tab_transactions: รายการธุรกรรม
+      tab_upcoming: กำลังจะมาถึง
+      uncategorized: "(ไม่ได้จัดหมวดหมู่)"
+      additional_details: "รายละเอียดเพิ่มเติม"
+      payee: "ผู้รับเงิน"
+      description: "คำอธิบาย"
+      memo: "บันทึกช่วยจำ"
+      original_description: "คำอธิบายต้นฉบับ"
+      payment_channel: "ช่องทางการชำระเงิน"
+      transaction_code: "รหัสรายการธุรกรรม"
+      provider_extras: "ข้อมูลเพิ่มเติมจากผู้ให้บริการ"
+      plaid_payment_meta_label: "ข้อมูลการชำระเงิน · %{name}"
+      plaid_counterparty_label: "คู่สัญญา %{index}"
+      # Provider field names. The set is open-ended — anything not listed falls
+      # back to a humanized form of the provider's own identifier.
+      provider_extra_fields:
+        by_order_of: "ตามคำสั่งของ"
+        confidence_level: "ระดับความเชื่อมั่น"
+        entity_id: "Entity ID"
+        logo_url: "URL โลโก้"
+        name: "ชื่อ"
+        payee: "ผู้รับเงิน"
+        payer: "ผู้จ่ายเงิน"
+        phone_number: "หมายเลขโทรศัพท์"
+        ppd_id: "PPD ID"
+        reason: "เหตุผล"
+        reference_number: "เลขอ้างอิง"
+        type: "ประเภท"
+        website: "เว็บไซต์"
+      transfer_or_debt_payment: "โอนหรือชำระหนี้?"
+      open_matcher: "เปิดตัวจับคู่"
+      convert: "แปลง"
+    activity_labels:
+      buy: ซื้อ
+      sell: ขาย
+      sweep_in: โอนเข้าอัตโนมัติ
+      sweep_out: โอนออกอัตโนมัติ
+      dividend: เงินปันผล
+      reinvestment: ลงทุนซ้ำ
+      interest: ดอกเบี้ย
+      fee: ค่าธรรมเนียม
+      transfer: โอน
+      contribution: เงินสมทบ
+      withdrawal: ถอน
+      exchange: แลกเปลี่ยน
+      other: อื่น ๆ
+    mark_recurring: ทำเครื่องหมายเป็นรายการประจำ
+    mark_recurring_subtitle: ติดตามรายการนี้เป็นรายการธุรกรรมประจำ ความแปรปรวนของจำนวนเงินจะถูกคำนวณอัตโนมัติจากรายการธุรกรรมที่คล้ายกันในช่วง 6 เดือนที่ผ่านมา
+    mark_recurring_title: รายการธุรกรรมประจำ
+    potential_duplicate_title: ตรวจพบรายการที่อาจซ้ำ
+    potential_duplicate_description: รายการที่รอดำเนินการนี้อาจเป็นรายการเดียวกับรายการที่บันทึกแล้วด้านล่าง หากใช่ ให้รวมเข้าด้วยกันเพื่อไม่ให้นับซ้ำ
+    keep_both: ไม่ เก็บไว้ทั้งสอง
+    split_parent_row:
+      split_label: "แบ่งรายการ"
+    transfer_match:
+      auto_matched: จับคู่อัตโนมัติ
+      auto_matched_short: อัตโนมัติ
+      confirm_match: ยืนยันการจับคู่
+      payment_confirmed: ยืนยันการชำระเงินแล้ว
+      reject_match: ปฏิเสธการจับคู่
+      transfer_confirmed: ยืนยันการโอนแล้ว
+    transaction:
+      pending: รอดำเนินการ
+      pending_tooltip: รายการที่รอดำเนินการ — อาจเปลี่ยนแปลงเมื่อบันทึกแล้ว
+      linked_with_provider: เชื่อมโยงกับ %{provider}
+      activity_type_tooltip: ประเภทกิจกรรมการลงทุน
+      possible_duplicate: ซ้ำหรือไม่?
+      potential_duplicate_tooltip: อาจซ้ำกับรายการธุรกรรมอื่น
+      review_recommended: ตรวจสอบ
+      review_recommended_tooltip: จำนวนเงินต่างกันมาก — แนะนำให้ตรวจสอบว่าซ้ำหรือไม่
+      split: แบ่งรายการ
+      split_tooltip: รายการธุรกรรมนี้ถูกแบ่งเป็นหลายรายการ
+      split_child_tooltip: ส่วนหนึ่งของรายการธุรกรรมที่แบ่ง
+      transfer_hint: โอนหรือไม่?
+      transfer_hint_dismiss: ไม่ใช่การโอน
+      transfer_hint_tooltip: รายการธุรกรรมที่ตรงกันในบัญชีอื่นดูเหมือนอีกฝั่งของการโอน — คลิกเพื่อจับคู่
+    merge_duplicate:
+      success: รวมรายการธุรกรรมเรียบร้อยแล้ว
+      failure: รวมรายการธุรกรรมไม่สำเร็จ
+    dismiss_duplicate:
+      success: เก็บไว้เป็นรายการธุรกรรมแยกกัน
+      failure: ปิดข้อเสนอแนะรายการซ้ำไม่สำเร็จ
+    pending_duplicate_merge:
+      possible_duplicate: ซ้ำหรือไม่?
+      possible_duplicate_short: ซ้ำ?
+      review_recommended: ตรวจสอบ
+      review_recommended_short: ตรวจ
+      confirm_title: "รวมกับรายการที่บันทึกแล้ว (%{posted_amount})"
+      reject_title: เก็บไว้เป็นรายการธุรกรรมแยกกัน
+    summary:
+      total_transactions: รายการธุรกรรมทั้งหมด
+      income: รายรับ
+      expenses: รายจ่าย
+      inflow: เงินเข้า
+      outflow: เงินออก
+    header:
+      edit_categories: แก้ไขหมวดหมู่
+      edit_imports: แก้ไขการนำเข้า
+      edit_merchants: แก้ไขร้านค้า
+      edit_tags: แก้ไขแท็ก
+      import: นำเข้า
+    index:
+      title: "รายการธุรกรรม"
+      transaction: รายการธุรกรรม
+      transactions: รายการธุรกรรม
+      import: นำเข้า
+      new_rule: "กฎใหม่"
+      edit_rules: "แก้ไขกฎ"
+      edit_categories: "แก้ไขหมวดหมู่"
+      edit_tags: "แก้ไขแท็ก"
+      edit_merchants: "แก้ไขร้านค้า"
+      edit_imports: "แก้ไขการนำเข้า"
+      new_transaction: "รายการธุรกรรมใหม่"
+      categorize_button:
+        one: "จัดหมวดหมู่ (1)"
+        other: "จัดหมวดหมู่ (%{count})"
+    categorizes:
+      show:
+        exit: "ออก"
+        skip: "ข้าม"
+        remaining:
+          one: "เหลือ 1 รายการธุรกรรมที่ยังไม่ได้จัดหมวดหมู่"
+          other: "เหลือ %{count} รายการธุรกรรมที่ยังไม่ได้จัดหมวดหมู่"
+        transaction_count:
+          one: "1 รายการธุรกรรม"
+          other: "%{count} รายการธุรกรรม"
+        transactions_hint: "เอาเครื่องหมายถูกออกเพื่อไม่รวมรายการธุรกรรม หรือกำหนดหมวดหมู่อื่นได้โดยตรงในแถวของรายการนั้น"
+        assign_category: "กำหนดหมวดหมู่"
+        assign_category_prompt: "→ กำหนด"
+        filter_placeholder: "ค้นหาหมวดหมู่..."
+        col_transaction: "รายการธุรกรรม"
+        col_date: "วันที่"
+        col_amount: "จำนวนเงิน"
+        col_category: "หมวดหมู่"
+        type_income: "รายรับ"
+        type_expense: "รายจ่าย"
+        create_rule_label: "สร้างกฎการจัดหมวดหมู่"
+        rule_description_prefix: "รายการธุรกรรม%{type}ในอนาคตที่ชื่อมีคำว่า"
+        rule_description_suffix: "ควรได้หมวดหมู่นี้ด้วย"
+        no_categories: "ไม่พบหมวดหมู่ที่ตรงกัน"
+        all_done: "จัดหมวดหมู่รายการธุรกรรมทั้งหมดแล้ว"
+      create:
+        categorized:
+          one: "จัดหมวดหมู่ 1 รายการธุรกรรมแล้ว"
+          other: "จัดหมวดหมู่ %{count} รายการธุรกรรมแล้ว"
+        rule_creation_failed: "จัดหมวดหมู่รายการธุรกรรมแล้ว แต่สร้างกฎไม่สำเร็จ (อาจมีกฎนี้อยู่แล้ว)"
+      entry_row:
+        include_checkbox: "รวม %{name}"
+        assign_category_select: "กำหนดหมวดหมู่ให้ %{name}"
+    list:
+      drag_drop_title: วางไฟล์ CSV เพื่อนำเข้า
+      drag_drop_subtitle: อัปโหลดรายการธุรกรรมโดยตรง
+      transaction: รายการธุรกรรม
+      transactions: รายการธุรกรรม
+    toggle_recurring_section: สลับการแสดงรายการธุรกรรมประจำที่กำลังจะมาถึง
+    search:
+      filters:
+        account: บัญชี
+        date: วันที่
+        type: ประเภท
+        status: สถานะ
+        amount: จำนวนเงิน
+        category: หมวดหมู่
+        tag: แท็ก
+        merchant: ร้านค้า
+        ai: AI
+        attachment: ไฟล์แนบ
+    convert_to_trade:
+      title: แปลงเป็นการซื้อขายหลักทรัพย์
+      description: แปลงรายการธุรกรรมนี้เป็นการซื้อขายพร้อมรายละเอียดหลักทรัพย์
+      date_label: "วันที่:"
+      account_label: "บัญชี:"
+      amount_label: "จำนวนเงิน:"
+      security_label: หลักทรัพย์
+      security_prompt: เลือกหลักทรัพย์...
+      security_custom: "+ กรอกสัญลักษณ์เอง"
+      security_not_listed_hint: ไม่เห็นหลักทรัพย์ของคุณ? เลือก "กรอกสัญลักษณ์เอง" ที่ท้ายรายการ
+      ticker_placeholder: AAPL
+      ticker_hint: กรอกสัญลักษณ์หุ้น/ETF (เช่น AAPL, MSFT)
+      ticker_search_placeholder: ค้นหาสัญลักษณ์...
+      ticker_search_hint: ค้นหาตามสัญลักษณ์หรือชื่อบริษัท หรือพิมพ์สัญลักษณ์เอง
+      price_mismatch_title: ราคาอาจไม่ตรงกัน
+      price_mismatch_message: "ราคาของคุณ (%{entered_price}/หุ้น) ต่างจากราคาตลาดปัจจุบันของ %{ticker} (%{market_price}) มาก หากดูไม่ถูกต้อง คุณอาจเลือกหลักทรัพย์ผิด — ลองใช้ \"กรอกสัญลักษณ์เอง\" เพื่อระบุที่ถูกต้อง"
+      quantity_label: จำนวน (หุ้น)
+      quantity_placeholder: เช่น 20
+      quantity_hint: จำนวนหุ้นที่ซื้อขาย
+      price_label: ราคาต่อหุ้น
+      price_placeholder: เช่น 52.15
+      price_hint: ราคาต่อหุ้น (%{currency})
+      qty_or_price_hint: กรอกอย่างน้อยจำนวนหรือราคา อีกค่าหนึ่งจะคำนวณจากจำนวนเงินของรายการธุรกรรม (%{amount})
+      trade_type_label: ประเภทการซื้อขาย
+      trade_type_hint: ซื้อหรือขายหุ้นของหลักทรัพย์
+      exchange_label: ตลาด (ไม่บังคับ)
+      exchange_placeholder: XNAS
+      exchange_hint: เว้นว่างไว้เพื่อตรวจจับอัตโนมัติ
+      cancel: ยกเลิก
+      submit: แปลงเป็นการซื้อขาย
+      success: แปลงรายการธุรกรรมเป็นการซื้อขายแล้ว
+      conversion_note: "แปลงจากรายการธุรกรรม: %{original_name} (%{original_date})"
+      errors:
+        not_investment_account: แปลงเป็นการซื้อขายได้เฉพาะรายการธุรกรรมในบัญชีลงทุน
+        already_converted: รายการธุรกรรมนี้ถูกแปลงหรือไม่รวมไปแล้ว
+        enter_ticker: โปรดกรอกสัญลักษณ์หลักทรัพย์
+        security_not_found: หลักทรัพย์ที่เลือกไม่มีอยู่แล้ว โปรดเลือกอันอื่น
+        select_security: โปรดเลือกหรือกรอกหลักทรัพย์
+        enter_qty_or_price: โปรดกรอกจำนวนหรือราคาต่อหุ้นอย่างใดอย่างหนึ่ง อีกค่าหนึ่งจะคำนวณจากจำนวนเงินของรายการธุรกรรม
+        invalid_qty_or_price: จำนวนหรือราคาไม่ถูกต้อง โปรดกรอกค่าบวกที่ถูกต้อง
+        conversion_failed: "แปลงรายการธุรกรรมไม่สำเร็จ: %{error}"
+        unexpected_error: "เกิดข้อผิดพลาดที่ไม่คาดคิดระหว่างการแปลง: %{error}"
+    searches:
+      filters:
+        account_filter:
+          filter_accounts: กรองบัญชี
+        category_filter:
+          filter_category: กรองหมวดหมู่
+        date_filter:
+          start_date: "วันเริ่มต้น"
+          end_date: "วันสิ้นสุด"
+        merchant_filter:
+          filter_merchants: กรองร้านค้า
+        tag_filter:
+          filter_tags: กรองแท็ก
+        amount_filter:
+          equal_to: เท่ากับ
+          greater_than: มากกว่า
+          less_than: น้อยกว่า
+          placeholder: '0'
+        badge:
+          expense: รายจ่าย
+          income: รายรับ
+          on_or_after: ตั้งแต่ %{date} เป็นต้นไป
+          on_or_before: ถึง %{date}
+          transfer: โอน
+          confirmed: ยืนยันแล้ว
+          pending: รอดำเนินการ
+          ai_current: AI
+          ai_history: ประวัติ AI
+          attachment_with: มีไฟล์แนบ
+          attachment_without: ไม่มีไฟล์แนบ
+        attachment_filter:
+          with: มีไฟล์แนบ
+          without: ไม่มีไฟล์แนบ
+        ai_filter:
+          current: AI
+          current_description: หมวดหมู่ยังเป็นค่าที่กำหนดอัตโนมัติ (AI หรือ Bayes)
+          history: ประวัติ AI
+          history_description: เคยถูกจัดหมวดหมู่อัตโนมัติ แต่หมวดหมู่ถูกเปลี่ยนภายหลัง
+        type_filter:
+          expense: รายจ่าย
+          income: รายรับ
+          transfer: โอน
+        status_filter:
+          confirmed: ยืนยันแล้ว
+          pending: รอดำเนินการ
+      menu:
+        account_filter: บัญชี
+        amount_filter: จำนวนเงิน
+        apply: ใช้
+        cancel: ยกเลิก
+        category_filter: หมวดหมู่
+        clear_filters: ล้างตัวกรอง
+        date_filter: วันที่
+        merchant_filter: ร้านค้า
+        status_filter: สถานะ
+        tag_filter: แท็ก
+        type_filter: ประเภท
+      search:
+        equal_to: เท่ากับ
+        greater_than: มากกว่า
+        less_than: น้อยกว่า
+      form:
+        toggle_selection_checkboxes: สลับกล่องเลือกทั้งหมด
+        search_placeholder: "ค้นหารายการธุรกรรม ..."
+        filter: "กรอง"
+    attachments:
+      cannot_exceed: "แนบได้ไม่เกิน %{count} ไฟล์ต่อรายการธุรกรรม"
+      uploaded_one: "อัปโหลดไฟล์แนบเรียบร้อยแล้ว"
+      uploaded_many: "อัปโหลดไฟล์แนบ %{count} ไฟล์เรียบร้อยแล้ว"
+      failed_upload: "อัปโหลดไฟล์แนบไม่สำเร็จ: %{error}"
+      no_files_selected: "ไม่ได้เลือกไฟล์ที่จะอัปโหลด"
+      attachment_deleted: "ลบไฟล์แนบเรียบร้อยแล้ว"
+      failed_delete: "ลบไฟล์แนบไม่สำเร็จ: %{error}"
+      upload_failed: "อัปโหลดไฟล์แนบไม่สำเร็จ โปรดลองอีกครั้งหรือติดต่อฝ่ายสนับสนุน"
+      delete_failed: "ลบไฟล์แนบไม่สำเร็จ โปรดลองอีกครั้งหรือติดต่อฝ่ายสนับสนุน"
+      upload: "อัปโหลด"
+      no_attachments: "ยังไม่มีไฟล์แนบ"
+      select_up_to: "เลือกได้สูงสุด %{count} ไฟล์ (รูปภาพหรือ PDF ไฟล์ละไม่เกิน %{size}MB) • ใช้ไปแล้ว %{used} จาก %{count}"
+      files:
+        one: "ไฟล์ (1)"
+        other: "ไฟล์ (%{count})"
+      browse_to_add: "เรียกดูเพื่อเพิ่มไฟล์"
+      max_reached: "ถึงขีดจำกัดจำนวนไฟล์แล้ว (%{count}/%{max}) ลบไฟล์ที่มีอยู่เพื่ออัปโหลดไฟล์อื่น"

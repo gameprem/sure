@@ -1,0 +1,53 @@
+---
+th:
+  recurring_occurrences:
+    history_status:
+      paid: จ่ายแล้ว
+      skipped: ข้าม
+      missed: พลาด
+      scheduled: เปิดอยู่
+    show:
+      due_on: "ครบกำหนด %{date}"
+      paid_of: "จ่ายแล้ว %{paid} จาก %{expected}"
+      paid_headline: "จ่ายแล้ว %{amount}"
+      remaining: "คงเหลือ %{amount}"
+      settled: จ่ายครบแล้ว
+      overpaid: มากกว่าที่คาดไว้
+      skipped: ข้าม
+      missed: ทำเครื่องหมายว่าพลาด
+      payments: การชำระเงิน
+      manual_payment: การชำระเงินด้วยตนเอง
+      unlink: ยกเลิกการเชื่อมโยง
+      review_heading: ตรวจสอบการชำระเงิน
+      find_heading: ค้นหาการชำระเงิน
+      add_heading: เพิ่มการชำระเงินอีกครั้ง
+      other_matches: รายการอื่นที่น่าจะตรงกัน
+      no_ranked_candidates: ยังไม่มีรายการที่ดูเหมือนการชำระบิลนี้
+      search_all: ค้นหารายการธุรกรรมทั้งหมด
+      search_placeholder: ค้นหารายการธุรกรรม
+      no_candidates: ไม่มีรายการธุรกรรมใกล้เคียงให้เชื่อมโยง
+      no_search_results: "ไม่มีรายการที่ตรงกับ %{query}"
+      link_payment: เชื่อมโยงการชำระเงิน
+      not_this_one: ไม่ใช่รายการนี้
+      cant_find: หารายการธุรกรรมไม่เจอ?
+      manual_explainer: บันทึกการชำระเงินที่คุณรู้ว่าเกิดขึ้นเมื่อไม่มีรายการธุรกรรมที่นี่ตรงกัน
+      manual_amount_label: จำนวนเงิน
+      manual_date_label: วันที่
+      record_payment: บันทึกการชำระเงิน
+      mark_paid: ทำเครื่องหมายว่าจ่ายแล้ว
+      mark_paid_hint: ปิดยอดที่เหลือโดยไม่บันทึกรายการธุรกรรม
+      skip: ข้าม
+      snooze_week: เลื่อนไปหนึ่งสัปดาห์
+      reopen: เปิดอีกครั้ง
+      view_bill: ดูบิล
+    mark_paid:
+      success: ทำเครื่องหมายบิลว่าจ่ายแล้ว
+    skip:
+      success: ข้ามบิลแล้ว
+    reopen:
+      success: เปิดบิลอีกครั้งแล้ว
+    snooze:
+      success: "เลื่อนถึง %{date}"
+      invalid_date: อ่านวันที่นั้นไม่ได้
+    override_amount:
+      success: อัปเดตจำนวนเงินที่คาดไว้แล้ว

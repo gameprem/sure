@@ -1,0 +1,29 @@
+---
+th:
+  depositories:
+    edit:
+      edit: แก้ไข %{account}
+    form:
+      none: ไม่มี
+      subtype_prompt: เลือกประเภทบัญชี
+    new:
+      title: กรอกยอดคงเหลือของบัญชี
+    subtypes:
+      cash:
+        long: เงินสด
+        short: เงินสด
+      cd:
+        long: ใบรับฝากเงิน (CD)
+        short: CD
+      checking:
+        long: กระแสรายวัน
+        short: กระแสรายวัน
+      hsa:
+        long: บัญชีออมเพื่อสุขภาพ
+        short: HSA
+      money_market:
+        long: ตลาดเงิน
+        short: MM
+      savings:
+        long: ออมทรัพย์
+        short: ออมทรัพย์

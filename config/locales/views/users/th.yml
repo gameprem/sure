@@ -1,0 +1,29 @@
+---
+th:
+  users:
+    destroy:
+      success: ลบบัญชีของคุณแล้ว
+    update:
+      email_change_failed: เปลี่ยนที่อยู่อีเมลไม่สำเร็จ
+      email_change_initiated: โปรดตรวจสอบอีเมลใหม่ของคุณเพื่อดูวิธียืนยัน
+      success: อัปเดตโปรไฟล์ของคุณแล้ว
+    resend_confirmation_email:
+      success: อีเมลยืนยันฉบับใหม่ถูกจัดคิวเพื่อส่งแล้ว
+      no_pending_change: ไม่มีการเปลี่ยนอีเมลที่รอดำเนินการ!
+    reset:
+      success: รีเซ็ตบัญชีของคุณแล้ว ข้อมูลจะถูกลบในเบื้องหลังในอีกสักครู่
+      unauthorized: คุณไม่ได้รับอนุญาตให้ทำสิ่งนี้
+    reset_with_sample_data:
+      success: รีเซ็ตบัญชีของคุณแล้วและกำลังเตรียมข้อมูลตัวอย่าง คุณจะเห็นข้อมูลเดโมในไม่ช้า
+    roles:
+      admin: ผู้ดูแลระบบ
+      member: สมาชิก
+      super_admin: ซูเปอร์แอดมิน
+    user_menu:
+      aria_label: เปิดเมนูบัญชี
+      version: เวอร์ชัน
+      settings: การตั้งค่า
+      changelog: บันทึกการเปลี่ยนแปลง
+      feedback: ข้อเสนอแนะ
+      contact: ติดต่อ
+      log_out: ออกจากระบบ

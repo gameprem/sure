@@ -1,0 +1,823 @@
+---
+th:
+  views:
+    settings:
+      payments:
+        renewal: "เงินสมทบของคุณจะดำเนินต่อในวันที่ %{date}"
+        cancellation: "เงินสมทบของคุณจะสิ้นสุดในวันที่ %{date}"
+  settings:
+    encryption_migration_guide: คู่มือการตั้งค่าและย้ายการเข้ารหัส
+    background_jobs:
+      show:
+        page_title: "งานเบื้องหลัง"
+        title: "สถานะ worker"
+        subtitle: "สถานะรันไทม์ของ Sidekiq แบบสด: โพรเซส worker ความลึกของคิว และชุด retry/dead"
+        redis_unreachable: "ไม่มีสถานะ Sidekiq (เชื่อมต่อ Redis ไม่ได้) จึงไม่ทราบสถานะการทำงาน ปุ่มดำเนินการจึงถูกปิดใช้งาน"
+        operations_title: "การดำเนินการที่กำลังทำงาน"
+        operations_subtitle: "การซิงค์ การนำเข้า และการส่งออกของทุกครอบครัวที่ยังไม่ถึงสถานะสิ้นสุด การดำเนินการที่ว่างเกิน 30 นาทีโดยไม่มีงานให้เห็นจะถือว่าสูญหายและทำเครื่องหมายได้"
+        empty: "ไม่มีการดำเนินการที่กำลังทำงาน"
+        missing_value: "-"
+        stats:
+          workers: "Worker"
+          busy: "ไม่ว่าง"
+          enqueued: "อยู่ในคิว"
+          retries: "ลองใหม่"
+          scheduled: "ตั้งเวลาไว้"
+          dead: "ตาย"
+          queue_label: "%{name}: %{size} · หน่วง %{latency} วินาที"
+        table:
+          type: "การดำเนินการ"
+          family: "ครอบครัว"
+          status: "สถานะ"
+          last_activity: "กิจกรรมล่าสุด"
+          liveness: "สถานะการทำงาน"
+          action: "ดำเนินการ"
+      operation:
+        ago: "%{time} ที่แล้ว"
+        sync_label: "ซิงค์ · %{type}"
+        running: "กำลังทำงาน"
+        queued: "อยู่ในคิว"
+        recent: "ล่าสุด"
+        unknown: "ไม่ทราบ"
+        stuck: "ค้าง — ถือว่าสูญหาย"
+        confirm: "ทำเครื่องหมายการดำเนินการนี้ว่าสูญหาย? ระเบียนจะถูกย้ายไปสถานะสิ้นสุดเพื่อให้ลองใหม่ได้ ข้อมูลเบื้องหลังจะไม่ถูกแตะต้อง"
+        missing_value: "-"
+        actions:
+          mark_stale: "ทำเครื่องหมายว่าค้าง"
+          mark_failed: "ทำเครื่องหมายว่าล้มเหลว"
+          release_claim: "ปล่อยการจอง"
+      cancel:
+        cancelled: "ทำเครื่องหมาย %{type} ว่าสูญหายแล้ว"
+        not_cancellable: "ตอนนี้ไม่สามารถแก้ไขการดำเนินการนี้ได้ — งานอาจยังอยู่ในคิวหรือกำลังทำงาน ลองอีกครั้งเมื่อว่างมาแล้ว 30 นาที"
+        cancelled_error: "ผู้ดูแลระบบทำเครื่องหมายว่าล้มเหลว — งานเบื้องหลังถือว่าสูญหาย"
+    debugs:
+      show:
+        page_title: "ดีบัก"
+        title: "บันทึกเหตุการณ์ดีบัก"
+        subtitle: "เหตุการณ์การดำเนินงานที่สำคัญสำหรับซูเปอร์แอดมิน ใหม่สุดก่อน"
+        empty: "ไม่พบเหตุการณ์ดีบัก"
+        missing_value: "-"
+        filters:
+          all: "ทั้งหมด"
+          category: "หมวดหมู่"
+          level: "ระดับ"
+          source: "แหล่งที่มา"
+          provider: "ผู้ให้บริการ"
+          start_date: "ตั้งแต่"
+          end_date: "ถึง"
+          family_id: "Family ID"
+          account_id: "Account ID"
+          user_id: "User ID"
+          account_provider_id: "Account provider ID"
+          submit: "กรอง"
+          reset: "รีเซ็ต"
+        table:
+          time: "เวลา"
+          level: "ระดับ"
+          category: "หมวดหมู่"
+          source: "แหล่งที่มา"
+          message: "ข้อความ"
+          context: "บริบท"
+          metadata: "เมทาดาทา"
+          view_metadata: "ดู"
+        context:
+          provider: "provider=%{value}"
+          family: "family=%{value}"
+          account: "account=%{value}"
+          user: "user=%{value}"
+          account_provider: "account_provider=%{value}"
+    llm_usages:
+      show:
+        page_title: "การใช้งานและค่าใช้จ่าย LLM"
+        subtitle: "ติดตามการใช้งาน AI และค่าใช้จ่ายโดยประมาณของคุณ"
+        start_date: "วันเริ่มต้น"
+        end_date: "วันสิ้นสุด"
+        filter: "กรอง"
+        total_requests: "คำขอทั้งหมด"
+        total_tokens: "โทเคนทั้งหมด"
+        prompt: "พรอมต์"
+        completion: "คำตอบ"
+        total_cost: "ค่าใช้จ่ายรวม"
+        avg_cost_per_request: "ค่าใช้จ่ายเฉลี่ย/คำขอ"
+        based_on_requests: "อิงจาก %{with_cost} จาก %{total} คำขอที่มีข้อมูลค่าใช้จ่าย"
+        cost_by_operation: "ค่าใช้จ่ายตามการดำเนินการ"
+        cost_by_model: "ค่าใช้จ่ายตามโมเดล"
+        recent_usage: "การใช้งานล่าสุด"
+        col_date: "วันที่"
+        col_operation: "การดำเนินการ"
+        col_model: "โมเดล"
+        col_tokens: "โทเคน"
+        col_cost: "ค่าใช้จ่าย"
+        failed: "ล้มเหลว"
+        no_usage_data: "ไม่พบข้อมูลการใช้งานในช่วงเวลาที่เลือก"
+        cost_estimates_title: "เกี่ยวกับค่าใช้จ่ายโดยประมาณ"
+        cost_estimates_description: "ค่าใช้จ่ายประมาณจากราคาที่ผู้ให้บริการเผยแพร่ซึ่งตรวจสอบล่าสุดเมื่อ %{date} ค่าใช้จ่ายจริงอาจต่างออกไป ราคาคิดต่อ 1 ล้านโทเคนและต่างกันตามโมเดล โมเดลที่กำหนดเองหรือโฮสต์เองจะแสดง \"N/A\" และไม่รวมในยอดค่าใช้จ่าย"
+    ai_prompts:
+      prompt_field:
+        provider_label: ผู้ให้บริการ
+        prompt_label: พรอมต์
+        provider_openai: OpenAI
+        provider_anthropic: Anthropic
+        reset: รีเซ็ตเป็นค่าเริ่มต้น
+        reset_confirm_title: รีเซ็ตเป็นพรอมต์เริ่มต้น?
+        reset_confirm_body: การดำเนินการนี้จะทิ้งพรอมต์ที่คุณกำหนดเองและคืนค่าคำสั่งเริ่มต้นในตัว
+        status_custom: ใช้พรอมต์ที่คุณกำหนดเอง
+        status_default: ใช้ค่าเริ่มต้นในตัว
+        format_risk: 'พรอมต์ %{provider} ของคุณตัดตัวอย่าง {"%{key}": ...} ออก แต่ทุกคำขอยังขอรูปแบบนั้นอยู่ การแยกวิเคราะห์จึงมักยังใช้ได้ แต่การแทนที่ที่ขอรูปแบบผลลัพธ์อื่นจะทำให้พัง'
+      show:
+        page_title: พรอมต์ AI
+        disable_ai: ปิดผู้ช่วย AI
+        save: บันทึกพรอมต์
+        save_confirm:
+          title: "บันทึกพรอมต์ AI ที่กำหนดเอง?"
+          body: "พรอมต์ที่กำหนดเองจะแทนที่คำสั่งระบบและเกราะป้องกันความปลอดภัยในตัว (เช่น ข้อจำกัดการให้คำแนะนำทางการเงิน) สำหรับครอบครัวของคุณ"
+          dont_show_again: "ไม่ต้องแสดงคำเตือนนี้อีก"
+          cancel: "ยกเลิก"
+          confirm: "ยืนยัน"
+        main_system_prompt:
+          title: พรอมต์ระบบหลัก
+          subtitle: คำสั่งหลักที่กำหนดพฤติกรรมของผู้ช่วย AI ในทุกการสนทนา
+          label: พรอมต์ระบบของแชต
+        transaction_categorizer:
+          title: ตัวจัดหมวดหมู่รายการธุรกรรม
+          subtitle: AI จัดหมวดหมู่รายการธุรกรรมของคุณโดยอัตโนมัติตามหมวดหมู่ที่คุณกำหนด
+        merchant_detector:
+          title: ตัวตรวจจับร้านค้า
+          subtitle: AI ระบุและเพิ่มข้อมูลร้านค้าให้กับข้อมูลรายการธุรกรรม
+        insight_dig_in:
+          title: เจาะลึกข้อมูลเชิงลึก
+          subtitle: ข้อความแรกในแชตเมื่อคุณเจาะลึกข้อมูลเชิงลึกด้วย AI
+          label: ข้อความเจาะลึก
+      update:
+        success: อัปเดตพรอมต์ AI แล้ว
+        multiple_errors: "มีหลายพรอมต์ที่ยาวเกินไป (สูงสุด %{count} ตัวอักษร)"
+    payments:
+      show:
+        page_title: การชำระเงิน
+        subscription_subtitle: อัปเดตรายละเอียดบัตรเครดิตของคุณ
+        subscription_title: จัดการเงินสมทบ
+        currently_on_plan: "ขณะนี้อยู่ในแพ็กเกจ"
+        trialing: "ขณะนี้ใช้เดโมแบบเปิดของ %{product_name}"
+        trial_days_left:
+          one: "ข้อมูลจะถูกลบใน %{count} วัน"
+          other: "ข้อมูลจะถูกลบใน %{count} วัน"
+        not_contributing_prefix: "ขณะนี้คุณ"
+        not_contributing_emphasis: "ไม่ได้สมทบ"
+        contributions_note: "เงินสมทบให้ %{product_name} จะแสดงที่นี่"
+        manage: "จัดการ"
+        choose_level: "เลือกระดับ"
+        payment_via_stripe: "ชำระเงินผ่าน Stripe"
+    appearances:
+      show:
+        page_title: การแสดงผล
+        theme_title: ธีม
+        theme_subtitle: เลือกธีมที่ต้องการสำหรับแอป
+        theme_dark: มืด
+        theme_light: สว่าง
+        theme_system: ตามระบบ
+        modals_title: หน้าต่างป๊อปอัป
+        modals_subtitle: ปรับแต่งพฤติกรรมของหน้าต่างป๊อปอัป
+        disable_modal_click_outside_title: เปิดหน้าต่างป๊อปอัปไว้เมื่อคลิกด้านนอก
+        disable_modal_click_outside_description: ป้องกันไม่ให้หน้าต่างป๊อปอัปปิดเมื่อคลิกด้านนอก มีประโยชน์เพื่อไม่ให้เผลอทำการเปลี่ยนแปลงที่ยังไม่บันทึกหาย
+        transactions_title: รายการธุรกรรม
+        transactions_subtitle: ปรับแต่งการแสดงรายการธุรกรรม
+        dashboard_title: แดชบอร์ด
+        dashboard_subtitle: ปรับแต่งการแสดงแดชบอร์ด
+        dashboard_two_column_title: เลย์เอาต์สองคอลัมน์
+        dashboard_two_column_description: แสดงวิดเจ็ตแดชบอร์ดเป็นสองคอลัมน์บนหน้าจอใหญ่ พร้อมตัวควบคุมความกว้างและความสูงของแต่ละวิดเจ็ตที่ส่วนหัวของวิดเจ็ต เมื่อปิด วิดเจ็ตจะเรียงเป็นคอลัมน์เดียว
+        dashboard_account_groups_title: เริ่มต้นแบบขยายไว้
+        dashboard_account_groups_description: ส่วนบัญชีเหล่านี้จะเริ่มต้นแบบขยายบนแดชบอร์ดและแถบด้านข้างบัญชี คุณยังย่อเองได้ทุกเมื่อ
+        split_grouped_title: จัดกลุ่มรายการธุรกรรมที่แบ่ง
+        split_grouped_description: แสดงรายการธุรกรรมที่แบ่งเป็นกลุ่มใต้รายการแม่ในรายการธุรกรรม เมื่อปิด รายการย่อยจะแสดงเป็นแถวแยก
+        auto_generate_transaction_names_title: สร้างชื่อรายการธุรกรรมอัตโนมัติ
+        auto_generate_transaction_names_description: เมื่อเว้นว่างชื่อของรายการธุรกรรมที่กรอกเอง ระบบจะเติมจากหมวดหมู่และร้านค้าที่เลือก (เช่น "บันเทิง - Netflix") หากไม่ได้เลือกทั้งสองอย่างก็ยังต้องระบุชื่อ ใช้กับทั้งครอบครัวและมีผลกับรายการธุรกรรมใหม่เท่านั้น
+    preferences:
+      show:
+        country: ประเทศ
+        currency: สกุลเงิน
+        date_format: รูปแบบวันที่
+        general_subtitle: กำหนดการตั้งค่าส่วนตัวของคุณ
+        general_title: ทั่วไป
+        default_period: ช่วงเวลาเริ่มต้น
+        default_account_order: ลำดับบัญชีเริ่มต้น
+        default_account_order_hint: เมื่อเลือกกำหนดเอง ให้ลากบัญชีในแถบด้านข้างเพื่อกำหนดลำดับ
+        language: ภาษา
+        language_auto: ภาษาของเบราว์เซอร์
+        page_title: การตั้งค่าส่วนตัว
+        timezone: เขตเวลา
+        translations_notice: โปรดทราบว่าเรากำลังปรับปรุงคำแปลของหลายภาษาอยู่
+        budget_title: งบประมาณ
+        budget_subtitle: กำหนดพฤติกรรมของงบประมาณ
+        month_start_day: เดือนของงบประมาณเริ่มต้นวันที่
+        month_start_day_hint: กำหนดวันเริ่มเดือนของงบประมาณ (เช่น วันเงินเดือนออก)
+        month_start_day_warning: งบประมาณและการคำนวณ MTD ของคุณจะใช้วันเริ่มต้นที่กำหนดนี้แทนวันที่ 1 ของทุกเดือน
+        investment_contributions_as_spending: นับการลงทุนเป็นการใช้จ่าย
+        investment_contributions_as_spending_hint: เงินที่ย้ายเข้าบัญชีลงทุนจะนับเป็นการใช้จ่ายในงบประมาณ รายงาน และแผนภูมิกระแสเงินสด ปิดเพื่อแสดงเป็นเงินที่ลงทุนแทน
+        personal_budgets: งบประมาณส่วนตัว
+        personal_budgets_hint: เปิดงบประมาณแยกของสมาชิกแต่ละคนในครอบครัว
+        household_budget_enabled: งบประมาณครัวเรือน
+        household_budget_enabled_hint: ใช้งบประมาณครัวเรือนร่วมกันควบคู่กับงบประมาณส่วนตัว ปิดเพื่อใช้เฉพาะงบประมาณส่วนตัว
+        budget_sharing_title: การแชร์งบประมาณ
+        budget_sharing_subtitle: ให้สมาชิกคนอื่นดูหรือแก้ไขงบประมาณส่วนตัวของคุณได้
+        budget_sharing_no_members: ไม่มีสมาชิกอื่นใน%{moniker}ของคุณให้แชร์
+        budget_sharing_permission_label: "สิทธิ์ของ %{name}"
+        budget_sharing_permissions:
+          none: ไม่มีสิทธิ์
+          read_only: ดูได้อย่างเดียว
+          read_write: แก้ไขได้
+        currencies_title: "สกุลเงินของ%{moniker}"
+        currencies_subtitle: เลือกสกุลเงินที่จะแสดงในช่องจำนวนเงินของ%{moniker}ของคุณ
+        base_currency_label: สกุลเงินหลัก
+        base_currency_badge: สกุลเงินหลัก
+        additional_currencies_label: สกุลเงินเพิ่มเติม
+        no_additional_currencies: ไม่ได้เลือก
+        currencies_more: "+อีก %{count}"
+        manage_currencies: จัดการสกุลเงิน
+        manage_currencies_subtitle: ยกเลิกการเลือกสกุลเงินที่คุณไม่เคยใช้ หรือลดรายการให้เหลือเพียงไม่กี่สกุล
+        select_all_currencies: เลือกทั้งหมด
+        select_base_only: เฉพาะสกุลเงินหลัก
+        currency_search_placeholder: ค้นหาสกุลเงิน
+        no_matching_currencies: ไม่พบสกุลเงิน
+        selected_currencies_count:
+          one: "เลือกแล้ว %{count}"
+          other: "เลือกแล้ว %{count}"
+        save_currencies: บันทึกสกุลเงิน
+        sharing_title: "การแชร์ของ%{moniker}"
+        sharing_subtitle: "ควบคุมวิธีแชร์บัญชีใน%{moniker}ของคุณ"
+        sharing_default_label: การแชร์เริ่มต้นสำหรับบัญชีใหม่
+        sharing_shared: แชร์กับสมาชิกทั้งหมด
+        sharing_private: เก็บเป็นส่วนตัวโดยค่าเริ่มต้น
+        preview:
+          title: เปิดฟีเจอร์ทดลอง
+          description: เลือกใช้ฟีเจอร์ที่อยู่ระหว่างพัฒนาซึ่งติดป้าย preview หรือ canary
+    budget_shares:
+      update:
+        success: อัปเดตการตั้งค่าการแชร์งบประมาณแล้ว
+    profiles:
+      destroy:
+        cannot_remove_self: คุณไม่สามารถนำตัวเองออกจากบัญชีได้
+        member_owns_other_family_data: สมาชิกคนนี้ยังเป็นเจ้าของบัญชีในครัวเรือนอื่น จึงนำออกไม่ได้ โปรดโอนหรือลบบัญชีเหล่านั้นก่อน
+        member_removal_failed: เกิดปัญหาในการนำสมาชิกออก
+        member_removed: นำสมาชิกออกเรียบร้อยแล้ว
+        not_authorized: คุณไม่ได้รับอนุญาตให้นำสมาชิกออก
+      show:
+        confirm_delete:
+          body: คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีของคุณอย่างถาวร การดำเนินการนี้ย้อนกลับไม่ได้
+          title: ลบบัญชี?
+        confirm_reset:
+          body: คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตบัญชีของคุณ การดำเนินการนี้จะลบบัญชี หมวดหมู่ ร้านค้า แท็ก และข้อมูลอื่น ๆ ทั้งหมดของคุณ และไม่สามารถย้อนกลับได้
+          title: รีเซ็ตบัญชี?
+        confirm_reset_with_sample_data:
+          body: คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตบัญชีและโหลดข้อมูลตัวอย่าง การดำเนินการนี้จะลบข้อมูลที่มีอยู่ของคุณและแทนที่ด้วยข้อมูลเดโมเพื่อให้คุณสำรวจ Sure ได้อย่างปลอดภัย
+          title: รีเซ็ตบัญชีและโหลดข้อมูลตัวอย่าง?
+        confirm_remove_invitation:
+          body: คุณแน่ใจหรือไม่ว่าต้องการลบคำเชิญของ %{email}
+          title: ลบคำเชิญ
+        confirm_remove_member:
+          body: คุณแน่ใจหรือไม่ว่าต้องการนำ %{name} ออกจากบัญชีของคุณ
+          title: นำสมาชิกออก
+        danger_zone_title: โซนอันตราย
+        delete_account: ลบบัญชี
+        delete_account_warning: การลบบัญชีของคุณจะลบข้อมูลทั้งหมดอย่างถาวรและไม่สามารถย้อนกลับได้
+        reset_account: รีเซ็ตบัญชี
+        reset_account_warning: การรีเซ็ตบัญชีจะลบบัญชี หมวดหมู่ ร้านค้า แท็ก และข้อมูลอื่น ๆ ทั้งหมดของคุณ แต่ยังคงบัญชีผู้ใช้ของคุณไว้
+        reset_account_with_sample_data: รีเซ็ตและโหลดข้อมูลตัวอย่าง
+        reset_account_with_sample_data_warning: ลบข้อมูลที่มีอยู่ทั้งหมดของคุณ แล้วโหลดข้อมูลตัวอย่างใหม่เพื่อให้คุณสำรวจในสภาพแวดล้อมที่มีข้อมูลพร้อม
+        email: อีเมล
+        first_name: ชื่อ
+        group_form_input_placeholder: กรอกชื่อกลุ่ม
+        group_form_label: ชื่อกลุ่ม
+        group_title: สมาชิกกลุ่ม
+        household_form_input_placeholder: กรอกชื่อครัวเรือน
+        household_form_label: ชื่อครัวเรือน
+        household_subtitle: ผู้ที่ได้รับเชิญเข้าสู่ระบบบัญชี%{moniker}ของคุณและเข้าถึงทรัพยากรที่แชร์ได้
+        household_title: ครัวเรือน
+        invitation_link: ลิงก์คำเชิญ
+        invite_member: เพิ่มสมาชิก
+        last_name: นามสกุล
+        page_title: ข้อมูลโปรไฟล์
+        pending: รอดำเนินการ
+        profile_subtitle: ปรับแต่งวิธีที่คุณแสดงบน %{product_name}
+        profile_title: ส่วนตัว
+        remove_invitation: ลบคำเชิญ
+        remove_member: นำสมาชิกออก
+        resend_confirmation_link: ขออีเมลยืนยันฉบับใหม่
+        save: บันทึก
+        unconfirmed_email_notice_html: คุณขอเปลี่ยนอีเมลเป็น %{email} โปรดไปที่อีเมลของคุณและยืนยันเพื่อให้การเปลี่ยนแปลงมีผล หากยังไม่ได้รับอีเมล โปรดตรวจสอบโฟลเดอร์สแปม หรือ%{resend_link}
+    securities:
+      show:
+        page_title: ความปลอดภัย
+        encryption_warning:
+          title: ไม่มีคีย์เข้ารหัส
+          intro: "ข้อมูลที่ละเอียดอ่อน (คีย์ API โทเคนผู้ให้บริการ ความลับ MFA และข้อมูลส่วนบุคคล) ถูกเก็บโดยไม่เข้ารหัส หากต้องการเปิดการเข้ารหัส ให้ตั้งค่าคีย์ต่อไปนี้ในตัวแปรสภาพแวดล้อมหรือ Rails credentials:"
+          keys:
+            - ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY
+            - ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY
+            - ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT
+          generate: "สร้างชุดคีย์ด้วย: bin/rails db:encryption:init"
+        mfa_title: การยืนยันตัวตนสองขั้นตอน
+        mfa_description: เพิ่มความปลอดภัยอีกชั้นให้บัญชีของคุณด้วยการกำหนดให้ใช้รหัสจากแอปยืนยันตัวตนเมื่อเข้าสู่ระบบ
+        enable_mfa: เปิดใช้ 2FA
+        disable_mfa: ปิดใช้ 2FA
+        disable_mfa_confirm: คุณแน่ใจหรือไม่ว่าต้องการปิดการยืนยันตัวตนสองขั้นตอน
+        disable_mfa_password_label: ยืนยันด้วยรหัสผ่านของคุณ
+        disable_mfa_password_placeholder: กรอกรหัสผ่านของคุณ
+        mfa_sso_only: การยืนยันตัวตนสองขั้นตอนถูกจัดการผ่านผู้ให้บริการระบุตัวตนของคุณ
+        sso_title: บัญชีที่เชื่อมต่อ
+        sso_subtitle: จัดการการเชื่อมต่อบัญชีลงชื่อเข้าใช้แบบครั้งเดียวของคุณ
+        sso_disconnect: ยกเลิกการเชื่อมต่อ
+        sso_last_used: ใช้ล่าสุด
+        sso_never: ไม่เคย
+        sso_no_email: ไม่มีอีเมล
+        sso_no_identities: ไม่มีบัญชี SSO ที่เชื่อมต่อ
+        sso_connect_hint: ออกจากระบบแล้วเข้าสู่ระบบด้วยผู้ให้บริการ SSO เพื่อเชื่อมต่อบัญชี
+        sso_confirm_title: ยกเลิกการเชื่อมต่อบัญชี?
+        sso_confirm_body: คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อบัญชี %{provider} ของคุณ คุณเชื่อมต่อใหม่ภายหลังได้โดยเข้าสู่ระบบด้วยผู้ให้บริการนั้นอีกครั้ง
+        sso_confirm_button: ยกเลิกการเชื่อมต่อ
+        sso_warning_message: นี่คือวิธีเข้าสู่ระบบเพียงวิธีเดียวของคุณ ควรตั้งรหัสผ่านในการตั้งค่าความปลอดภัยก่อนยกเลิกการเชื่อมต่อ ไม่เช่นนั้นคุณอาจเข้าบัญชีไม่ได้
+    mcp:
+      show:
+        page_title: เซิร์ฟเวอร์ MCP
+        connect_title: เชื่อมต่อผู้ช่วย AI
+        connect_subtitle: วาง URL นี้ลงใน Claude.ai (หรือไคลเอนต์ที่รองรับ MCP) เพื่อเชื่อมต่อกับบัญชี Sure ของคุณ
+        copy_url: คัดลอก
+        copied: คัดลอกแล้ว!
+        how_to_connect_title: วิธีเชื่อมต่อ Claude
+        step_1: "เปิด Claude.ai แล้วไปที่ Settings → Customize → Connectors"
+        step_2: คลิก "Add connector" แล้ววาง URL เซิร์ฟเวอร์ MCP ด้านบน
+        step_3: คลิก Connect — คุณจะถูกเปลี่ยนเส้นทางมาที่ Sure เพื่อเข้าสู่ระบบและอนุญาตการเข้าถึง
+        step_4: เมื่ออนุญาตแล้ว Claude จะอ่านบัญชี รายการธุรกรรม และข้อมูลยอดคงเหลือของคุณได้
+        connected_title: ไคลเอนต์ที่เชื่อมต่อ
+        connected_subtitle: แอปเหล่านี้เข้าถึงข้อมูล Sure ของคุณได้ในขณะนี้ เพิกถอนรายการที่คุณไม่ได้ใช้แล้ว
+        unknown_client: ไคลเอนต์ที่ไม่รู้จัก
+        connected_ago: "เชื่อมต่อเมื่อ %{time} ที่แล้ว"
+        revoke: เพิกถอน
+        revoke_confirm: เพิกถอนการเข้าถึงของไคลเอนต์นี้?
+      revoke:
+        revoked: เพิกถอนการเชื่อมต่อแล้ว
+    settings_nav:
+      accounts_label: บัญชี
+      advanced_section_title: ขั้นสูง
+      ai_prompts_label: พรอมต์ AI
+      auto_matches_label: การจับคู่อัตโนมัติ
+      classifier_label: ตัวจัดประเภท
+      background_jobs_label: งานเบื้องหลัง
+      api_key_label: คีย์ API
+      payment_label: การชำระเงิน
+      categories_label: หมวดหมู่
+      feedback_label: ข้อเสนอแนะ
+      general_section_title: ทั่วไป
+      imports_label: การนำเข้า
+      exports_label: การส่งออก
+      llm_usage_label: การใช้งาน LLM
+      logout: ออกจากระบบ
+      merchants_label: ร้านค้า
+      providers_label: ผู้ให้บริการ
+      guides_label: คู่มือ
+      other_section_title: เพิ่มเติม
+      preferences_label: การตั้งค่าส่วนตัว
+      profile_label: ข้อมูลโปรไฟล์
+      recurring_transactions_label: รายการประจำ
+      rules_label: กฎ
+      mcp_label: MCP
+      security_label: ความปลอดภัย
+      self_hosting_label: การโฮสต์เอง
+      sso_providers_label: ผู้ให้บริการ SSO
+      statement_vault_label: คลังใบแจ้งยอด
+      system_health_label: สถานะระบบ
+      tags_label: แท็ก
+      transactions_section_title: รายการธุรกรรม
+      users_label: ผู้ใช้
+      whats_new_label: มีอะไรใหม่
+      api_keys_label: คีย์ API
+      appearance_label: การแสดงผล
+      bank_sync_label: การซิงค์ธนาคาร
+      debug_label: ดีบัก
+    settings_nav_link_large:
+      next: ถัดไป
+      previous: กลับ
+    user_avatar_field:
+      accepted_formats: JPG หรือ PNG ไม่เกิน 5MB
+      choose: อัปโหลดรูป
+      choose_label: (ไม่บังคับ)
+      change: เปลี่ยนรูป
+    providers:
+      update:
+        updated_successfully: อัปเดตการตั้งค่าผู้ให้บริการเรียบร้อยแล้ว
+        no_changes: ไม่มีการเปลี่ยนแปลง
+      not_authorized: ไม่ได้รับอนุญาต
+      bank_sync:
+        page_title: การซิงค์ธนาคาร
+        lede: เชื่อมต่อบัญชีภายนอกเพื่อให้รายการธุรกรรม ยอดคงเหลือ และสินทรัพย์ที่ถือครองไหลเข้า Sure โดยอัตโนมัติ
+      status:
+        ok: เชื่อมต่อแล้ว
+        warn: ต้องดำเนินการ
+        err: ข้อผิดพลาด
+        "off": ยังไม่ได้ตั้งค่า
+      maturity:
+        beta: เบตา
+        alpha: อัลฟา
+      drawer_trust_statement: "เข้าถึงแบบอ่านอย่างเดียว Sure ไม่สามารถย้ายเงินได้ และข้อมูลรับรองของคุณถูกเก็บแบบเข้ารหัส"
+      drawer_trust_statement_encryption_unconfigured: "เข้าถึงแบบอ่านอย่างเดียว Sure ไม่สามารถย้ายเงินได้ ตั้งค่าคีย์เข้ารหัสให้ชัดเจนก่อนเก็บข้อมูลรับรองผู้ให้บริการในระบบจริง"
+      provider_setup_encryption_warning:
+        title: ไม่มีคีย์เข้ารหัส
+        message: "การติดตั้งแบบโฮสต์เองนี้ยังไม่ได้ตั้งค่าคีย์เข้ารหัส Active Record อย่างชัดเจน ตั้งค่า primary_key, deterministic_key และ key_derivation_salt ก่อนบันทึกข้อมูลรับรองผู้ให้บริการในระบบจริง"
+      setup_steps:
+        eyebrow: ตั้งค่า
+        need_help: "ต้องการความช่วยเหลือ?"
+      connect: เชื่อมต่อ
+      financekit:
+        app_store: App Store
+        coming_soon: เร็ว ๆ นี้!
+        description: "จัดการการเชื่อมต่อ Apple Wallet ในแอป Sure บน iOS ข้อมูล Wallet จะซิงค์ขณะเปิดแอป ยังไม่รองรับการซิงค์เบื้องหลังโดยไม่ต้องเปิดแอป"
+        summary: การซิงค์ Wallet
+        accounts: บัญชีที่เชื่อมโยง
+        linked_accounts:
+          one: เชื่อมโยง 1 บัญชี
+          other: "เชื่อมโยง %{count} บัญชี"
+        status:
+          active: การซิงค์ทำงานอยู่
+          repair_required: ต้องซ่อมแซม — เปิดแอป Sure บน iOS
+        last_accepted_at: Sure รับล่าสุดเมื่อ
+        last_imported_at: นำเข้าสู่ครอบครัวของคุณล่าสุดเมื่อ
+        not_yet: ยังไม่มี
+      groups:
+        your_connections: การเชื่อมต่อของคุณ
+        available: ที่ใช้ได้
+        empty_available: เชื่อมต่อผู้ให้บริการที่ใช้ได้ทั้งหมดแล้ว
+      health_strip:
+        connected: เชื่อมต่อแล้ว
+        needs_attention: ต้องตรวจสอบ
+        accounts_syncing: บัญชีกำลังซิงค์
+        last_synced: ซิงค์ล่าสุด %{time} ที่แล้ว
+      meta:
+        sync_error: ข้อผิดพลาดการซิงค์
+        no_recent_sync: ซิงค์เกินกำหนด
+        reconsent_required: ต้องให้ความยินยอมใหม่
+        login_required: ต้องเข้าสู่ระบบ
+        login_expires_soon: "การเข้าสู่ระบบหมดอายุใน %{time} (%{at})"
+        reconsent_needed:
+          one: ต้องให้ความยินยอมใหม่ภายใน 1 วัน
+          other: ต้องให้ความยินยอมใหม่ภายใน %{count} วัน
+        last_synced: ซิงค์เมื่อ %{time} ที่แล้ว
+      sync_all: ซิงค์ทั้งหมด
+      sync_all_in_progress: กำลังซิงค์ผู้ให้บริการที่เชื่อมต่อทั้งหมด…
+      sync_all_recently: กำลังซิงค์อยู่แล้ว ลองอีกครั้งในสักครู่
+      sync_provider: ซิงค์ตอนนี้
+      sync_provider_in_progress: เริ่มซิงค์แล้ว
+      recently_synced: เพิ่งซิงค์ ลองอีกครั้งในสักครู่
+      taglines:
+        financekit: ซิงค์บัญชี FinanceKit (บางส่วน) ผ่านแอป Sure บน iOS
+        akahu: ซิงค์สถาบันการเงินในนิวซีแลนด์ผ่าน Akahu
+        simplefin: เชื่อมต่อบัญชีธนาคารสหรัฐอเมริกาผ่านโปรโตคอลเปิด SimpleFIN
+        lunchflow: เชื่อมต่อธนาคารกว่า 20,000 แห่งจาก 40+ ประเทศ (สหราชอาณาจักร สหภาพยุโรป สหรัฐอเมริกา และอื่น ๆ!)
+        redbark: ซิงค์บัญชีธนาคารออสเตรเลียผ่านโอเพนแบงกิ้งของ Redbark
+        up: ซิงค์บัญชีธนาคาร Up ของออสเตรเลียด้วยโทเคนการเข้าถึงส่วนบุคคล
+        monobank: ซิงค์บัตรและ jar ของ Monobank ยูเครนด้วยโทเคน API ส่วนบุคคล
+        fio: ซิงค์บัญชี Fio banka ด้วยโทเคน API แบบอ่านอย่างเดียว
+        enable_banking: ซิงค์บัญชีธนาคารยุโรปผ่านโอเพนแบงกิ้ง PSD2
+        coinstats: ติดตามพอร์ตคริปโตทั้งหมดของคุณข้ามกระเป๋าและแพลตฟอร์มแลกเปลี่ยน
+        wise: ซิงค์ยอดคงเหลือหลายสกุลเงินและการโอนระหว่างประเทศของ Wise โดยอัตโนมัติ
+        mercury: ซิงค์บัญชีธนาคารธุรกิจ Mercury ของคุณโดยอัตโนมัติ
+        brex: ซิงค์กิจกรรมเงินสดและบัตรองค์กรของ Brex ด้วยการเข้าถึงแบบอ่านอย่างเดียว
+        coinbase: นำเข้าคริปโตที่ถือครองใน Coinbase และติดตามผลงาน
+        binance: ซิงค์ยอดคงเหลือ spot ของ Binance ด้วยคีย์ API แบบอ่านอย่างเดียว
+        kraken: ซิงค์ยอดคงเหลือและรายการซื้อขาย spot ของ Kraken ด้วยคีย์ API แบบอ่านอย่างเดียว
+        coinspot: ซิงค์ยอดคงเหลือ มูลค่า AUD การโอน การฝาก การถอน และประวัติคำสั่งซื้อขายของ CoinSpot ด้วยคีย์ API แบบอ่านอย่างเดียว
+        onchain_wallet: ติดตามกระเป๋า Bitcoin, EVM, Solana, Cosmos และ Polkadot ที่ดูแลเองจากที่อยู่สาธารณะ
+        snaptrade: เชื่อมต่อบัญชีนายหน้าซื้อขายผ่านเครือข่ายรวบรวมของ SnapTrade
+        trading212: ซิงค์พอร์ตการลงทุน Trading 212 ของคุณด้วยคีย์ API แบบอ่านอย่างเดียว
+        trade_republic: ซิงค์บัญชีลงทุน Trade Republic ผ่านการเข้าสู่ระบบเว็บแบบอ่านอย่างเดียวที่ปลอดภัย
+        ibkr: ซิงค์บัญชีลงทุน Interactive Brokers ผ่านการนำเข้า Flex Query
+        questrade: ซิงค์บัญชีลงทุน Questrade ของคุณโดยตรงผ่าน Questrade API
+        indexa_capital: ติดตามพอร์ตการลงทุนอัตโนมัติ Indexa Capital ของคุณ
+        sophtron: เชื่อมต่อธนาคารและสาธารณูปโภคในสหรัฐอเมริกาและแคนาดา
+        plaid: เชื่อมต่อสถาบันการเงินในสหรัฐอเมริกานับพันแห่งผ่าน Plaid
+        plaid_eu: เชื่อมต่อสถาบันการเงินยุโรปผ่าน Plaid (PSD2 / Open Banking)
+      search_filters:
+        aria_label: ค้นหาผู้ให้บริการ
+        placeholder: ค้นหาผู้ให้บริการ
+        chips:
+          all: ทั้งหมด
+          bank: ธนาคาร
+          crypto: คริปโต
+          investment: การลงทุน
+      empty_filter: ไม่มีผู้ให้บริการที่ตรงกับตัวกรองของคุณ
+      clear_filter: ล้างตัวกรอง
+      encryption_error:
+        title: ไม่มีคีย์เข้ารหัส
+        message: "การซิงค์ธนาคารต้องตั้งค่าการเข้ารหัส Active Record ตั้งค่า primary_key, deterministic_key และ key_derivation_salt ใน Rails credentials หรือตัวแปรสภาพแวดล้อมของคุณ"
+      provider_form:
+        save_and_connect: "บันทึกและเชื่อมต่อ"
+      coinbase_panel:
+        setup_instructions: "วิธีเชื่อมต่อ Coinbase:"
+        step1_html: ไปที่ <a href="https://portal.cdp.coinbase.com/projects/api-keys" target="_blank" rel="noopener noreferrer" class="text-primary underline">การตั้งค่า API ของ Coinbase</a>
+        step2: สร้างคีย์ API ใหม่ที่มีสิทธิ์แบบอ่านอย่างเดียว (ดูบัญชี ดูรายการธุรกรรม)
+        step3: คัดลอกคีย์ API และ API secret แล้ววางด้านล่าง
+        api_key_label: คีย์ API
+        api_key_placeholder: กรอกคีย์ API ของ Coinbase
+        api_secret_label: API Secret
+        api_secret_placeholder: กรอก API secret ของ Coinbase
+        connect_button: เชื่อมต่อ Coinbase
+        syncing: กำลังซิงค์...
+        sync: ซิงค์
+        disconnect: ยกเลิกการเชื่อมต่อ
+        disconnect_confirm: คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ Coinbase นี้ บัญชีที่ซิงค์ไว้จะกลายเป็นบัญชีแบบกรอกเอง
+      binance_panel:
+        setup_instructions: "หากต้องการเชื่อมต่อ Binance ให้สร้างคีย์ API แบบอ่านอย่างเดียว:"
+        step1_html: 'ไปที่ <a href="https://www.binance.com/en/my/settings/api-management" target="_blank" rel="noopener noreferrer" class="underline">Binance API Management</a>'
+        step2: "สร้างคีย์ API ใหม่โดยเปิดเฉพาะสิทธิ์ Enable Reading"
+        step3: "วางคีย์ API และ Secret ด้านล่าง"
+        no_withdraw_title: "ใช้คีย์แบบอ่านอย่างเดียวเท่านั้น"
+        no_withdraw_body: "อย่าเปิดสิทธิ์การถอนเงินเมื่อสร้างคีย์ API ของ Binance Sure ต้องการเพียงสิทธิ์อ่าน"
+        ip_hint_title: "ต้องจำกัด IP ที่อนุญาต"
+        ip_hint_body: "เพิ่ม IP ขาออกของเซิร์ฟเวอร์แอปลงใน whitelist ของคีย์ API Binance:"
+        ip_hint_contact_admin: "ติดต่อผู้ดูแลระบบเพื่อขอ IP ขาออกของเซิร์ฟเวอร์แอป"
+        api_key_label: คีย์ API
+        api_key_placeholder: วางคีย์ API ของ Binance
+        api_secret_label: API Secret
+        api_secret_placeholder: วาง API Secret ของ Binance
+        connect_button: เชื่อมต่อ Binance
+        syncing: กำลังซิงค์...
+        sync: ซิงค์
+        historical_import: "การตั้งค่าการนำเข้าข้อมูลย้อนหลัง"
+        sync_start_date_label: "นำเข้าข้อมูลตั้งแต่"
+        sync_start_date_help: "เลือกว่าจะดึงรายการซื้อขายย้อนหลังไปไกลแค่ไหน"
+        disconnect: ยกเลิกการเชื่อมต่อ
+        disconnect_confirm: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ Binance?"
+      kraken_panel:
+        step1_html: 'ไปที่ <a href="https://pro.kraken.com/app/settings/api" target="_blank" rel="noopener noreferrer" class="underline">การตั้งค่า API ของ Kraken</a>'
+        step2: "สร้างคีย์ API ที่มีสิทธิ์เฉพาะ Query Funds และ Query Closed Orders & Trades"
+        step3: "วางคีย์ API และคีย์ส่วนตัวด้านล่าง"
+        read_only_title: "ซิงค์แพลตฟอร์มแลกเปลี่ยนแบบอ่านอย่างเดียวเท่านั้น"
+        read_only_body: "อย่าให้สิทธิ์การเทรด การยกเลิก การถอน การส่งออก บัญชีแยกประเภท Earn การสเตก หรือการโอน Sure นำเข้าเฉพาะยอดคงเหลือ สินทรัพย์ที่ถือครอง และรายการซื้อขาย spot"
+        default_connection_name: Kraken
+        add_connection: เพิ่มการเชื่อมต่อ Kraken
+        update_connection: อัปเดตการเชื่อมต่อ
+        connection_name_label: ชื่อการเชื่อมต่อ
+        connection_name_placeholder: Kraken หลัก
+        api_key_label: คีย์ API
+        api_key_placeholder: วางคีย์ API ของ Kraken
+        keep_api_key_placeholder: เว้นว่างไว้เพื่อใช้คีย์ API เดิม
+        api_secret_label: คีย์ส่วนตัว
+        api_secret_placeholder: วางคีย์ส่วนตัวของ Kraken
+        keep_api_secret_placeholder: เว้นว่างไว้เพื่อใช้คีย์ส่วนตัวเดิม
+        setup_accounts: ตั้งค่าบัญชี
+        syncing: กำลังซิงค์...
+        sync: ซิงค์
+        disconnect: ยกเลิกการเชื่อมต่อ
+        disconnect_confirm: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ %{name}?"
+      coinspot_panel:
+        step1_html: 'ไปที่ <a href="https://www.coinspot.com.au/my/api" target="_blank" rel="noopener noreferrer" class="underline">การตั้งค่า API ของ CoinSpot</a>'
+        step2: "สร้างคีย์ API ที่มีสิทธิ์อ่านอย่างเดียวสำหรับยอดคงเหลือและประวัติ"
+        step3: "วางคีย์ API และ secret ด้านล่าง"
+        read_only_title: "ซิงค์แพลตฟอร์มแลกเปลี่ยนแบบอ่านอย่างเดียวเท่านั้น"
+        read_only_body: "อย่าให้สิทธิ์การส่ง การถอน การเทรด หรือการโอน Sure นำเข้าเฉพาะยอดคงเหลือ มูลค่า AUD การโอน การฝาก การถอน และประวัติคำสั่งซื้อขายที่เสร็จสิ้น"
+        default_connection_name: CoinSpot
+        add_connection: เพิ่มการเชื่อมต่อ CoinSpot
+        update_connection: อัปเดตการเชื่อมต่อ
+        connection_name_label: ชื่อการเชื่อมต่อ
+        connection_name_placeholder: CoinSpot หลัก
+        api_key_label: คีย์ API
+        api_key_placeholder: วางคีย์ API ของ CoinSpot
+        keep_api_key_placeholder: เว้นว่างไว้เพื่อใช้คีย์ API เดิม
+        api_secret_label: API Secret
+        api_secret_placeholder: วาง API secret ของ CoinSpot
+        keep_api_secret_placeholder: เว้นว่างไว้เพื่อใช้ API secret เดิม
+        setup_accounts: ตั้งค่าบัญชี
+        syncing: กำลังซิงค์...
+        sync: ซิงค์
+        disconnect: ยกเลิกการเชื่อมต่อ
+        disconnect_confirm: "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเชื่อมต่อ %{name}?"
+      onchain_wallet_panel:
+        add_wallet: เพิ่มกระเป๋า
+        advanced: ขั้นสูง
+        disconnect_all: ยกเลิกการเชื่อมต่อกระเป๋าทั้งหมด
+        disconnect_all_confirm: การดำเนินการนี้จะลบที่อยู่ที่ติดตามและบัญชีของที่อยู่เหล่านั้นทั้งหมด ดำเนินการต่อหรือไม่?
+        etherscan_api_key_label: คีย์ API ของ Etherscan (ไม่บังคับ)
+        etherscan_api_key_placeholder: วางคีย์ API ของ Etherscan
+        etherscan_hint: การอ่านข้อมูล Ethereum ใช้ได้โดยไม่ต้องมีคีย์ การเพิ่มคีย์ Etherscan เพียงเพิ่มขีดจำกัดอัตราสำหรับ Ethereum
+        keep_etherscan_api_key: เว้นว่างไว้เพื่อใช้คีย์เดิม
+        manage_wallets: จัดการกระเป๋า
+        keyless_body: Sure อ่านเฉพาะข้อมูลสาธารณะบนเชนเท่านั้น ไม่เกี่ยวข้องกับคีย์ วลีกู้คืน หรือลายเซ็น และไม่สามารถใช้จ่ายเงินได้
+        keyless_title: อ่านอย่างเดียว ไม่ต้องใช้คีย์
+        save: บันทึก
+        sync_start_date_hint: การโอนก่อนวันที่นี้จะถูกละเว้น เว้นว่างไว้เพื่อนำเข้าทุกอย่างที่ explorer รายงาน
+        sync_start_date_label: ละเว้นการโอนก่อน
+      enable_banking_panel:
+        callback_url_instruction: "สำหรับ callback URL ให้ใช้ %{callback_url}"
+        connection_error: ข้อผิดพลาดการเชื่อมต่อ
+        step_1_html: "ไปที่ %{link} และรับข้อมูลรับรองนักพัฒนาของคุณ"
+        step_2: "เลือกประเทศของคุณ แล้ววาง Application ID + Client Certificate ด้านล่าง"
+        step_3: "บันทึก แล้วใช้ เพิ่มการเชื่อมต่อ เพื่อเชื่อมโยงธนาคารของคุณ"
+        config_locked_title: "การตั้งค่าถูกล็อก"
+        config_locked_message: "ยกเลิกการเชื่อมต่อธนาคารที่เชื่อมโยงทั้งหมดก่อนเปลี่ยนข้อมูลรับรองเหล่านี้"
+        application_id_label: "Application ID"
+        application_id_placeholder_new: "กรอก application ID"
+        application_id_placeholder_update: "กรอก ID ใหม่เพื่ออัปเดต"
+        client_certificate_label: "Client Certificate (พร้อมคีย์ส่วนตัว)"
+        keep_client_certificate_hint: "เว้นว่างไว้เพื่อใช้ใบรับรองเดิม"
+        save_and_connect: "บันทึกและเชื่อมต่อ"
+        update_connection: "อัปเดตการเชื่อมต่อ"
+        connected_bank: "ธนาคารที่เชื่อมต่อ"
+        session_expires: "เซสชันหมดอายุ: %{date}"
+        unknown: "ไม่ทราบ"
+        connection: "การเชื่อมต่อ"
+        session_expired_reconnect: "เซสชันหมดอายุ - เชื่อมต่อใหม่"
+        configured: "ตั้งค่าแล้ว"
+        ready_to_link: "พร้อมเชื่อมโยงบัญชี"
+        sync: "ซิงค์"
+        reconnect: "เชื่อมต่อใหม่"
+        connect_bank: "เชื่อมต่อธนาคาร"
+        remove: "ลบ"
+        remove_confirm: "คุณแน่ใจหรือไม่ว่าต้องการลบการเชื่อมต่อนี้?"
+        add_connection: "เพิ่มการเชื่อมต่อ"
+        syncing: "กำลังซิงค์"
+        select_country: "เลือกประเทศ..."
+        country_label: "ประเทศ"
+      lunchflow_panel:
+        step_1_html: "ไปที่ %{link} และสร้างคีย์ API"
+        step_2: "วางคีย์ของคุณด้านล่างแล้วเชื่อมต่อ"
+        step_3: "จากนั้นไปที่ บัญชี เพื่อเชื่อมโยงบัญชีที่ซิงค์"
+        api_key_label: "คีย์ API"
+        api_key_placeholder_new: "วางคีย์ API ที่นี่"
+        api_key_placeholder_update: "กรอกคีย์ API ใหม่เพื่ออัปเดต"
+        base_url_label: "Base URL (ไม่บังคับ)"
+        base_url_placeholder: "https://lunchflow.app/api/v1 (ค่าเริ่มต้น)"
+        sync_start_date_label: "นำเข้ารายการธุรกรรมตั้งแต่"
+        sync_start_date_help: "เว้นว่างไว้เพื่อนำเข้าทุกอย่างที่ Lunch Flow มี การย้อนวันที่ให้เร็วขึ้นจะนำเข้าช่วงที่ขาดในการซิงค์ครั้งถัดไป การเลื่อนให้ช้าลงไม่กระทบรายการธุรกรรมที่นำเข้าแล้ว"
+        save_and_connect: "บันทึกและเชื่อมต่อ"
+        update_connection: "อัปเดตการเชื่อมต่อ"
+      akahu_panel:
+        step_1_html: "ไปที่ %{link} และสร้างแอปส่วนตัว"
+        step_2: "คัดลอก app token และ user token ของคุณ"
+        step_3: "วางโทเคนด้านล่าง บันทึก แล้วเชื่อมโยงบัญชีที่ซิงค์"
+      up_panel:
+        step_1_html: "ไปที่ %{link} และสร้างโทเคนการเข้าถึงส่วนบุคคล"
+        step_2: "คัดลอกโทเคนการเข้าถึงส่วนบุคคลของคุณ"
+        step_3: "วางโทเคนด้านล่าง บันทึก แล้วเชื่อมโยงบัญชีที่ซิงค์"
+      monobank_panel:
+        step_1_html: "ไปที่ %{link} เข้าสู่ระบบด้วยแอป Monobank และสร้างโทเคนส่วนบุคคล"
+        step_2: "คัดลอกโทเคน — แสดงเพียงครั้งเดียว"
+        step_3: "วางโทเคนด้านล่าง บันทึก แล้วเชื่อมโยงบัตรและ jar ที่ต้องการติดตาม"
+      fio_panel:
+        step_1_html: "เข้าสู่ระบบอินเทอร์เน็ตแบงกิ้ง %{link} แล้วเปิด Settings → API"
+        step_2: 'สร้างโทเคนที่มีสิทธิ์อ่านอย่างเดียว ("Sledování účtu") ต้องใช้การยืนยันตัวตนที่เข้มงวดและใช้ได้นานสูงสุด 180 วัน'
+        step_3: "วางโทเคนด้านล่างแล้วบันทึก หนึ่งโทเคนเข้าถึงได้หนึ่งบัญชี จึงต้องเพิ่มการเชื่อมต่อสำหรับแต่ละบัญชี Fio"
+      simplefin_panel:
+        step_1_html: "ไปที่ %{link} เพื่อรับ setup token แบบใช้ครั้งเดียว"
+        step_2: "วางโทเคนด้านล่างแล้วเชื่อมต่อ"
+        step_3: "จากนั้นไปที่ บัญชี เพื่อเชื่อมโยงบัญชีที่ซิงค์"
+        setup_token_label: "Setup Token"
+        setup_token_placeholder: "วาง setup token ของ SimpleFIN"
+        save_and_connect: "บันทึกและเชื่อมต่อ"
+      plaid_panel:
+        step_1_html: "เปิด %{link} แล้วคัดลอก Client ID และ Secret Key ของคุณ"
+        step_2: "เลือกสภาพแวดล้อม ใช้ sandbox สำหรับการทดสอบและ production สำหรับบัญชีจริง"
+        step_3: "วางข้อมูลรับรองของคุณด้านล่างแล้วเชื่อมต่อ"
+      plaid_eu_panel:
+        step_1_html: "เปิด %{link} แล้วคัดลอก EU Client ID และ Secret Key ของคุณ"
+      not_found: ไม่พบผู้ให้บริการ
+      sync_provider_no_items: ไม่มีการเชื่อมต่อที่จะซิงค์
+      ibkr_panel:
+        steps:
+          step_1: 'ใน IBKR Client Portal ไปที่ "Performance & Reports" > "Flex Queries"'
+          step_2: 'คลิกไอคอน "+" ในส่วน "Activity Flex Query" เพื่อสร้างคิวรีใหม่'
+          step_3: 'ตั้งชื่อคิวรีของคุณ (เช่น "Sure Sync") จากนั้นดูรายละเอียด Flex Query ด้านล่างและเปิดส่วน ฟิลด์ และตัวเลือกการตั้งค่าที่ระบุ'
+          step_4: 'บันทึกคิวรี จด "Query ID" ของคุณ แล้วใช้ไอคอนฟันเฟืองในส่วน "Flex Web Service Configuration" เพื่อสร้างโทเคนการเข้าถึง'
+          step_5: "วาง Query ID และโทเคนของคุณด้านล่าง บันทึกการตั้งค่า แล้วไปที่ บัญชี เพื่อเชื่อมโยงบัญชี IBKR ที่พบ"
+        flex_query_details:
+          eyebrow: Flex Query
+          title: ส่วน ฟิลด์ และการตั้งค่า
+          summary: ขยายเพื่อดูส่วน ฟิลด์ และการตั้งค่าที่ IBKR Activity Flex Query ของคุณต้องมี
+          sections_heading: เปิดส่วนและฟิลด์เหล่านี้
+          configuration_heading: ตั้งค่าตัวเลือกคิวรีเหล่านี้
+        sections:
+          account_information: "Account Information: Account ID, Currency"
+          cash_report: "Cash Report:"
+          cash_report_options: "Options: None"
+          cash_report_fields: "Fields: Currency, Ending Cash"
+          cash_transactions: "Cash Transactions:"
+          cash_transactions_options: "Options: Dividends, Deposits & Withdrawals, Detail"
+          cash_transactions_fields: "Fields: Amount, Conid, Currency, FX Rate To Base, Report Date, Transaction ID, Type"
+          change_in_position_value_summary: "Change In Position Value Summary: Currency, End Of Period Value"
+          net_asset_value: "Net Asset Value (NAV) in Base:"
+          net_asset_value_options: "Options: None"
+          net_asset_value_fields: "Fields: Currency, Report Date, Total"
+          open_positions: "Open Positions:"
+          open_positions_options: "Options: Summary"
+          open_positions_fields: "Fields: Asset Class, Conid, Cost Basis Price, Currency, FX Rate To Base, Mark Price, Quantity, Report Date, Security ID, Security ID Type, Side, Symbol"
+          trades: "Trades:"
+          trades_options: "Options: Execution"
+          trades_fields: "Fields: Asset Class, Buy/Sell, Conid, Currency, FX Rate To Base, IB Commission, IB Commission Currency, Quantity, Symbol, Trade Date, Trade ID, TradePrice, Transaction ID"
+        configuration:
+          models: "Models: Optional"
+          format: "Format: XML"
+          period: "Period: Last 365 Calendar Days"
+          date_format: "Date Format: yyyy-MM-dd"
+          time_format: "Time Format: HH:mm:ss"
+          date_time_separator: "Date/Time Separator: ; (semi-colon)"
+          profit_and_loss: "Profit and Loss: Default"
+          all_other_options: 'All other configuration options: "No"'
+        report_window_note: "รายงาน IBKR Flex จำกัดอยู่ในช่วงคิวรีที่คุณตั้งไว้ใน IBKR Sure จะนำเข้าสินทรัพย์ที่ถือครองปัจจุบันทั้งหมดและกิจกรรมย้อนหลังสูงสุด 365 วันจากรายงานนี้"
+        sync: ซิงค์
+        disconnect_confirm: ยกเลิกการเชื่อมต่อ Interactive Brokers?
+        query_id_label: Query ID
+        query_id_placeholder_new: กรอก IBKR Flex Query ID ของคุณ
+        query_id_placeholder_existing: เว้นว่างไว้เพื่อใช้ Query ID เดิม
+        token_label: โทเคน
+        token_placeholder_new: กรอกโทเคน IBKR Flex Web Service ของคุณ
+        token_placeholder_existing: เว้นว่างไว้เพื่อใช้โทเคนเดิม
+        save_configuration: บันทึกการตั้งค่า
+        update_configuration: อัปเดตการตั้งค่า
+        status_configured_prefix: "%{summary} ไปที่แท็บ"
+        accounts_tab: บัญชี
+        status_configured_suffix: เพื่อจัดการบัญชีที่พบ
+        not_configured: ยังไม่ได้ตั้งค่า
+      trade_republic_panel:
+        encryption_warning:
+          title: ยังไม่ได้ตั้งค่าการเข้ารหัส
+          message: ไม่สามารถเก็บข้อมูลรับรองและข้อมูลเซสชันของ Trade Republic อย่างปลอดภัยได้ จนกว่าจะตั้งค่า Active Record Encryption
+        steps:
+          step_1: กรอกหมายเลขโทรศัพท์และ PIN หรือรหัสผ่านที่คุณใช้กับแอป Trade Republic แล้วบันทึก
+          step_2: กรอกรหัสจากแอปยืนยันตัวตนของคุณเมื่อระบบร้องขอ
+          step_3: อนุมัติการเข้าสู่ระบบในแอป Trade Republic ของคุณเมื่อระบบแจ้ง
+        phone_number_label: หมายเลขโทรศัพท์
+        phone_number_placeholder_new: "+49 170 1234567"
+        phone_number_placeholder_existing: เว้นว่างไว้เพื่อใช้หมายเลขโทรศัพท์เดิม
+        pin_label: PIN หรือรหัสผ่าน
+        pin_placeholder_new: PIN หรือรหัสผ่าน Trade Republic ของคุณ
+        pin_placeholder_existing: เว้นว่างไว้เพื่อใช้ PIN หรือรหัสผ่านเดิม
+        currency_label: สกุลเงินของบัญชี
+        connect: เข้าสู่ระบบ
+        confirm_login: ตรวจสอบการเข้าสู่ระบบ
+        complete_login: ดำเนินการต่อ
+        authenticator_code_label: รหัสยืนยันตัวตน (หากถูกถาม)
+        authenticator_code_placeholder: "รหัส 6 หลัก"
+        push_login_notice: อนุมัติการเข้าสู่ระบบในแอป Trade Republic ของคุณตอนนี้ Sure ตรวจสอบโดยอัตโนมัติเบื้องหลัง คุณตรวจสอบสถานะเองก็ได้
+        check_login_status: ตรวจสอบสถานะตอนนี้
+        authenticator_code_notice: กรอกรหัสจากแอปยืนยันตัวตนของคุณ
+        approval_pending: เริ่มการเข้าสู่ระบบแล้ว อนุมัติในแอป Trade Republic Sure กำลังตรวจสอบโดยอัตโนมัติ
+        awaiting_confirmation: กำลังรอการอนุมัติในแอป Trade Republic
+        awaiting_authenticator_code: ต้องใช้รหัสยืนยันตัวตน
+        login_expired: คำขออนุมัติหมดอายุแล้ว
+        restart_login: เริ่มเข้าสู่ระบบอีกครั้ง
+        connection_success:
+          title: เชื่อมต่อ Trade Republic สำเร็จ
+          message: การเชื่อมต่อ Trade Republic ของคุณพร้อมใช้งานแล้ว
+          description: Sure กำลังซิงค์ข้อมูล Trade Republic ของคุณเบื้องหลัง
+          close: เสร็จสิ้น
+        qr_login: เข้าสู่ระบบด้วยคิวอาร์โค้ด
+        qr_cancel: ยกเลิกการเข้าสู่ระบบด้วยคิวอาร์โค้ด
+        qr_back_to_credentials: กลับไปใช้หมายเลขโทรศัพท์และ PIN หรือรหัสผ่าน
+        qr_loading: กำลังเตรียมคิวอาร์โค้ด …
+        qr_instruction: สแกนคิวอาร์โค้ดด้วยกล้องโทรศัพท์ของคุณ แล้วอนุมัติการเข้าสู่ระบบในแอป Trade Republic
+        qr_success: อนุมัติการเข้าสู่ระบบแล้ว Sure กำลังรีเฟรชหน้าผู้ให้บริการ
+        qr_error: เริ่มการเข้าสู่ระบบด้วยคิวอาร์โค้ดไม่ได้ โปรดลองอีกครั้ง
+        requires_update: เข้าสู่ระบบอีกครั้งเพื่อซิงค์ต่อ
+        session_expires_in: "การเข้าสู่ระบบหมดอายุใน %{time} (%{at})"
+        add_account: เพิ่มการเชื่อมต่ออื่น
+        save_configuration: บันทึกและเริ่มเข้าสู่ระบบ
+        update_configuration: อัปเดตการตั้งค่า
+        sync: ซิงค์
+        syncing: กำลังซิงค์...
+        disconnect: ยกเลิกการเชื่อมต่อ Trade Republic
+        disconnect_confirm: ยกเลิกการเชื่อมต่อ Trade Republic? บัญชีที่ซิงค์ไว้จะกลายเป็นบัญชีแบบกรอกเอง
+        disconnect_confirm_with_identifier: "ยกเลิกการเชื่อมต่อ Trade Republic ที่ลงท้ายด้วย %{last4}? บัญชีที่ซิงค์ไว้จะกลายเป็นบัญชีแบบกรอกเอง"
+        identifier_phone: โทรศัพท์
+        identifier_account: บัญชี
+        status_configured_prefix: "เชื่อมต่อแล้ว ไปที่แท็บ"
+        accounts_tab: บัญชี
+        setup_accounts: ตั้งค่าบัญชี
+        accounts_discovered:
+          one: พบบัญชี Trade Republic 1 บัญชี
+          other: "พบบัญชี Trade Republic %{count} บัญชี"
+        status_configured_suffix: เพื่อจัดการบัญชีที่พบ
+        not_configured: ยังไม่ได้ตั้งค่า
+      trading212_panel:
+        steps:
+          step_1: ไปที่ Trading 212 → Settings → API (เว็บหรือแอปมือถือ)
+          step_2: สร้างคีย์ API ใหม่ — Trading 212 จะแสดง API ID และ Secret Key ให้คุณ
+          step_3: วางทั้งสองด้านล่าง เลือกสภาพแวดล้อมและสกุลเงินของบัญชี แล้วบันทึก
+        api_key_label: API ID
+        api_key_placeholder_new: วาง API ID ของ Trading 212
+        api_key_placeholder_existing: เว้นว่างไว้เพื่อใช้ API ID เดิม
+        api_secret_label: Secret Key
+        api_secret_placeholder_new: วาง Secret Key ของ Trading 212
+        api_secret_placeholder_existing: เว้นว่างไว้เพื่อใช้ Secret Key เดิม
+        environment_label: สภาพแวดล้อม
+        environment_live: บัญชีจริง
+        environment_demo: บัญชีเดโม
+        currency_label: สกุลเงินของบัญชี
+        save_configuration: บันทึกการตั้งค่า
+        update_configuration: อัปเดตการตั้งค่า
+        sync: ซิงค์
+        syncing: กำลังซิงค์...
+        disconnect: ยกเลิกการเชื่อมต่อบัญชี Trading 212
+        disconnect_confirm: ยกเลิกการเชื่อมต่อ Trading 212?
+        default_account_name: บัญชี Trading 212
+        add_account: เพิ่มบัญชีอื่น
+        status_configured_prefix: "ตั้งค่าแล้ว ไปที่แท็บ"
+        accounts_tab: บัญชี
+        status_configured_suffix: เพื่อจัดการบัญชีที่พบ
+        not_configured: ยังไม่ได้ตั้งค่า

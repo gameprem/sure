@@ -1,0 +1,37 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        rule:
+          min_actions: "ต้องมีอย่างน้อยหนึ่งการดำเนินการ"
+          duplicate_actions: "กฎต้องไม่มีการดำเนินการซ้ำกัน %{types}"
+          nested_conditions: "เงื่อนไขแบบรวมไม่สามารถซ้อนกันได้"
+          split_not_alone: "กฎแบ่งรายการต้องไม่มีการดำเนินการอื่น"
+        rule/action:
+          attributes:
+            value:
+              invalid_config: "ต้องเป็นการตั้งค่าการแบ่งรายการที่ถูกต้อง"
+              invalid_split_count: "ต้องมีการแบ่งระหว่าง %{min} ถึง %{max} ส่วน"
+              split_name_required: "การแบ่งรายการที่ #%{index} ไม่มีชื่อ"
+              split_name_too_long: "ชื่อการแบ่งรายการที่ #%{index} ยาวเกินไป (สูงสุด 255 ตัวอักษร)"
+              split_name_invalid: "ชื่อการแบ่งรายการที่ #%{index} มีอักขระที่ไม่ถูกต้อง"
+              split_type_invalid: "ประเภทการแบ่งรายการที่ #%{index} ต้องเป็นจำนวนคงที่หรือเปอร์เซ็นต์"
+              split_share_invalid: "สัดส่วนการแบ่งรายการที่ #%{index} ต้องเป็นจำนวนบวก"
+              split_category_invalid: "หมวดหมู่ของการแบ่งรายการที่ #%{index} ไม่ได้เป็นของครอบครัวนี้"
+              split_merchant_invalid: "ร้านค้าของการแบ่งรายการที่ #%{index} ไม่ได้เป็นของครอบครัวนี้"
+              split_tags_invalid: "การแบ่งรายการที่ #%{index} มีแท็กที่ไม่ได้เป็นของครอบครัวนี้"
+              percentages_must_total_100: "เปอร์เซ็นต์ต้องรวมกันได้ 100 (ได้ %{total})"
+              fixed_requires_exact_amount_condition: "การแบ่งแบบจำนวนคงที่ต้องมีเงื่อนไขของกฎที่ตรงกับจำนวนเงินของรายการธุรกรรมแบบตรงตัว (เช่น จำนวนเงิน = 42.00) ไม่เช่นนั้นสัดส่วนจะรวมเป็นยอดของทุกรายการธุรกรรมที่ตรงกันได้ไม่แน่นอน"
+              fixed_shares_must_equal_condition_amount: "สัดส่วนการแบ่งรายการต้องรวมกันได้ %{amount} ซึ่งเป็นจำนวนเงินที่แน่นอนตามเงื่อนไขของกฎนี้"
+
+        rule/condition:
+          attributes:
+            value:
+              regex_invalid: "ไม่ใช่นิพจน์ปรกติที่ถูกต้อง"
+              regex_too_complex: "ซับซ้อนเกินกว่าจะรันได้อย่างปลอดภัย"
+              regex_too_long: "ยาวเกินไป (สูงสุด %{count} ตัวอักษร)"
+              regex_backreference: "ไม่สามารถใช้การอ้างอิงย้อนกลับ (\\1 ถึง \\9) ได้"
+  rule:
+    conditions:
+      unsupported_label: "ไม่รองรับ (%{type})"

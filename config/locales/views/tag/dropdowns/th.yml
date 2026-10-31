@@ -1,0 +1,9 @@
+---
+th:
+  tag:
+    dropdowns:
+      show:
+        empty: ยังไม่มีแท็ก
+        manage: จัดการแท็ก
+        no_tags: ไม่พบแท็ก
+        search_placeholder: ค้นหา

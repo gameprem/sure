@@ -1,0 +1,31 @@
+---
+th:
+  tags:
+    create:
+      created: สร้างแท็กแล้ว
+      error: 'สร้างแท็กไม่สำเร็จ: %{error}'
+    destroy:
+      deleted: ลบแท็กแล้ว
+    destroy_all:
+      all_deleted: ลบแท็กทั้งหมดแล้ว
+    edit:
+      edit: แก้ไขแท็ก
+    form:
+      placeholder: ชื่อแท็ก
+    index:
+      empty: ยังไม่มีแท็ก
+      new: แท็กใหม่
+      tags: แท็ก
+      delete_all: ลบทั้งหมด
+    menu:
+      label: แก้ไขแท็ก
+    new:
+      new: แท็กใหม่
+    summary:
+      add: เพิ่มแท็ก
+      title: 'แท็ก: %{names}'
+    tag:
+      delete: ลบ
+      edit: แก้ไข
+    update:
+      updated: อัปเดตแท็กแล้ว

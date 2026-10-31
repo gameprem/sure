@@ -1,0 +1,30 @@
+---
+th:
+  activerecord:
+    attributes:
+      account_statement:
+        account: บัญชี
+        account_last4_hint: เลข 4 ตัวท้ายของบัญชี
+        account_name_hint: คำใบ้ชื่อบัญชี
+        closing_balance: ยอดคงเหลือปิดงวด
+        content_sha256: ค่าแฮชของเนื้อหา
+        currency: สกุลเงิน
+        filename: ชื่อไฟล์
+        institution_name_hint: คำใบ้สถาบันการเงิน
+        opening_balance: ยอดคงเหลือต้นงวด
+        original_file: ไฟล์ใบแจ้งยอด
+        period_end_on: สิ้นสุดงวด
+        period_start_on: เริ่มต้นงวด
+    errors:
+      models:
+        account_statement:
+          attributes:
+            checksum:
+              duplicate_statement_file: ถูกอัปโหลดสำหรับครอบครัวนี้แล้ว
+            content_sha256:
+              duplicate_statement_file: ถูกอัปโหลดสำหรับครอบครัวนี้แล้ว
+            original_file:
+              invalid_format: ต้องเป็นไฟล์ PDF, CSV หรือ XLSX
+              too_large: มีขนาดใหญ่เกินไป ขนาดสูงสุดคือ %{max_mb}MB
+            period_end_on:
+              on_or_after_start: ต้องเป็นวันเดียวกับหรือหลังวันเริ่มต้นงวด

@@ -1,0 +1,36 @@
+---
+th:
+  activerecord:
+    attributes:
+      goal:
+        name: ชื่อ
+        target_amount: จำนวนเงินเป้าหมาย
+        currency: สกุลเงิน
+        target_date: วันที่เป้าหมาย
+        color: สี
+        notes: บันทึก
+        state: สถานะ
+        linked_accounts: บัญชีที่เชื่อมโยง
+    errors:
+      models:
+        goal:
+          attributes:
+            base:
+              missing_exchange_rate: ยังไม่มีอัตราแลกเปลี่ยนสำหรับบัญชีหนึ่งของเป้าหมายนี้ จึงไม่สามารถทำให้เสร็จสมบูรณ์ได้
+              at_least_one_linked_account_required: เลือกอย่างน้อยหนึ่งบัญชีเพื่อสนับสนุนเป้าหมายนี้
+              whole_account_conflict_on_restore: "ไม่สามารถกู้คืนเป้าหมายนี้ได้: “%{account_name}” ถูกจัดสรรให้ “%{goal_name}” ทั้งหมดแล้ว โปรดกรอกจำนวนเงินในหนึ่งในสองเป้าหมายก่อน"
+            target_mode:
+              months_requires_maintained: เฉพาะเงินสำรองที่คุณรักษาไว้เท่านั้นที่ตั้งเป้าหมายเป็นจำนวนเดือนของค่าใช้จ่ายได้
+            target_months:
+              blank: ระบุว่าเงินสำรองนี้ควรครอบคลุมค่าใช้จ่ายกี่เดือน
+              only_with_months_mode: จำนวนเดือนของค่าใช้จ่ายใช้ได้เฉพาะเมื่อตั้งเป้าหมายแบบนั้น
+            linked_accounts:
+              must_be_fundable: บัญชีที่เชื่อมโยงทั้งหมดต้องเป็นบัญชีเงินสด การลงทุน หรือคริปโต
+              must_belong_to_family: บัญชีที่เชื่อมโยงต้องเป็นของครอบครัวเดียวกับเป้าหมาย
+            kind:
+              locked_while_released: เปิดเป้าหมายนี้ใหม่ก่อนเปลี่ยนเป็นเงินสำรอง
+              locked_once_consumed: เป้าหมายนี้บันทึกการใช้จ่ายไปแล้ว จึงไม่สามารถเปลี่ยนเป็นเงินสำรองได้
+            target_amount:
+              below_consumed: ไม่สามารถตั้งเป้าหมายต่ำกว่าจำนวนที่เป้าหมายนี้บันทึกว่าใช้ไปแล้ว
+            currency:
+              locked_after_linked: ไม่สามารถเปลี่ยนสกุลเงินได้หลังจากเชื่อมโยงเป้าหมายกับบัญชีแล้ว

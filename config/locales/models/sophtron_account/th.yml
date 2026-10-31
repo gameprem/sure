@@ -1,0 +1,7 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        sophtron_account:
+          no_balance: "บัญชี Sophtron ต้องมียอดคงเหลือปัจจุบันหรือยอดคงเหลือที่ใช้ได้อย่างใดอย่างหนึ่ง"

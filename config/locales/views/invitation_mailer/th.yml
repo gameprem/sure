@@ -1,0 +1,8 @@
+---
+th:
+  invitation_mailer:
+    invite_email:
+      accept_button: ตอบรับคำเชิญ
+      body: "%{inviter} เชิญคุณเข้าร่วม%{moniker} %{family} บน %{product_name}!"
+      expiry_notice: คำเชิญนี้จะหมดอายุใน %{days} วัน
+      greeting: ยินดีต้อนรับสู่ %{product_name}!

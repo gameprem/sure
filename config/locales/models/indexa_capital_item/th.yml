@@ -1,0 +1,7 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        indexa_capital_item:
+          credentials_required: "ต้องมีตัวแปรสภาพแวดล้อม INDEXA_API_TOKEN หรือข้อมูลรับรองแบบชื่อผู้ใช้/เอกสาร/รหัสผ่าน อย่างใดอย่างหนึ่ง"

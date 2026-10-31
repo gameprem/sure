@@ -1,0 +1,29 @@
+---
+th:
+  models:
+    category:
+      uncategorized: ไม่ได้จัดหมวดหมู่
+      other_investments: การลงทุนอื่น ๆ
+      investment_contributions: เงินสมทบการลงทุน
+      defaults:
+        income: รายได้
+        food_and_drink: อาหารและเครื่องดื่ม
+        groceries: ของใช้ในครัวเรือน
+        shopping: ช้อปปิ้ง
+        transportation: การเดินทาง
+        travel: ท่องเที่ยว
+        entertainment: บันเทิง
+        healthcare: สุขภาพ
+        personal_care: ดูแลตัวเอง
+        home_improvement: ปรับปรุงบ้าน
+        mortgage_rent: ผ่อนบ้าน / ค่าเช่า
+        utilities: ค่าสาธารณูปโภค
+        subscriptions: ค่าสมาชิกรายเดือน
+        insurance: ประกันภัย
+        sports_and_fitness: กีฬาและฟิตเนส
+        gifts_and_donations: ของขวัญและการบริจาค
+        taxes: ภาษี
+        loan_payments: ชำระสินเชื่อ
+        services: บริการ
+        fees: ค่าธรรมเนียม
+        savings_and_investments: การออมและการลงทุน

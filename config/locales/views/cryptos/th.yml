@@ -1,0 +1,20 @@
+---
+th:
+  cryptos:
+    edit:
+      edit: แก้ไข %{account}
+    form:
+      subtype_label: ประเภทบัญชี
+      subtype_prompt: เลือกประเภทบัญชี
+      subtype_none: ไม่มี
+      tax_treatment_label: การปฏิบัติทางภาษี
+      tax_treatment_hint: คริปโตส่วนใหญ่ถือในบัญชีที่ต้องเสียภาษี เลือกตัวเลือกอื่นหากถือในบัญชีที่ได้รับสิทธิประโยชน์ทางภาษี
+    new:
+      title: กรอกยอดคงเหลือของบัญชี
+    subtypes:
+      wallet:
+        short: กระเป๋า
+        long: กระเป๋าคริปโต
+      exchange:
+        short: แพลตฟอร์มแลกเปลี่ยน
+        long: แพลตฟอร์มแลกเปลี่ยนคริปโต

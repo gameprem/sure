@@ -1,0 +1,22 @@
+---
+th:
+  activerecord:
+    errors:
+      models:
+        transfer:
+          attributes:
+            base:
+              inflow_cannot_be_in_multiple_transfers: รายการเงินเข้าไม่สามารถเป็นส่วนหนึ่งของการโอนหลายรายการได้
+              must_be_from_different_accounts: การโอนต้องมาจากคนละบัญชี
+              must_be_from_same_family: การโอนต้องมาจากครอบครัวเดียวกัน
+              must_be_within_date_range: วันที่ของรายการธุรกรรมการโอนต้องห่างกันไม่เกิน 4 วัน
+              must_have_opposite_amounts: รายการธุรกรรมการโอนต้องมีจำนวนเงินตรงข้ามกัน
+              must_have_single_currency: การโอนต้องใช้สกุลเงินเดียว
+              outflow_cannot_be_in_multiple_transfers: รายการเงินออกไม่สามารถเป็นส่วนหนึ่งของการโอนหลายรายการได้
+          different_accounts: "ต้องมาจากคนละบัญชี"
+          same_family: "ต้องมาจากครอบครัวเดียวกัน"
+          opposite_amounts: "ต้องมีจำนวนเงินตรงข้ามกัน"
+          within_days: "ต้องอยู่ภายใน %{count} วัน"
+  transfer:
+    name: โอนไปยัง %{to_account}
+    payment_name: ชำระเงินให้ %{to_account}

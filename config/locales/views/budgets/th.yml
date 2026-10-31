@@ -1,0 +1,136 @@
+---
+th:
+  budgets:
+    switcher:
+      aria_label: "สลับงบประมาณ"
+      household: "ครัวเรือน"
+    budget_donut:
+      spent: "ใช้ไปแล้ว"
+      new_budget: "งบประมาณใหม่"
+      of_budget: "จาก %{amount}"
+      unused: "ยังไม่ได้ใช้"
+    budget_header:
+      today: "วันนี้"
+    budget_nav:
+      categories: หมวดหมู่
+      setup: ตั้งค่า
+    over_allocation_warning:
+      over_allocated_message: "คุณจัดสรรงบประมาณเกิน โปรดแก้ไขการจัดสรร"
+      fix_allocations: "แก้ไขการจัดสรร"
+    actuals_summary:
+      income: "รายรับ"
+      expenses: "รายจ่าย"
+    budgeted_summary:
+      expected_income: "รายรับที่คาดไว้"
+      budgeted: "ตั้งงบไว้"
+      earned: "ได้รับ %{amount}"
+      over: "เกิน %{amount}"
+      left: "เหลือ %{amount}"
+      spent: "ใช้ไป %{amount}"
+    edit:
+      setup_title: "ตั้งค่างบประมาณของคุณ"
+      setup_description: "กรอกรายได้รายเดือนและการใช้จ่ายที่วางแผนไว้ด้านล่างเพื่อตั้งค่างบประมาณ"
+      budgeted_spending: "การใช้จ่ายที่ตั้งงบไว้"
+      expected_income: "รายรับที่คาดไว้"
+      autosuggest_title: "แนะนำรายรับและงบการใช้จ่ายอัตโนมัติ"
+      autosuggest_description: "จะอิงจากประวัติรายการธุรกรรม AI อาจผิดพลาดได้ โปรดตรวจสอบก่อนดำเนินการต่อ"
+      continue: "ดำเนินการต่อ"
+    name:
+      custom_range: "%{start} - %{end_date}"
+      month_year: "%{month}"
+    available_cash:
+      heading: เงินสดในมือ
+      subtitle: อยู่นอกแผนด้านบน ไม่เป็นส่วนหนึ่งของแผน
+      available: เงินสดที่ใช้ได้
+      earmarked: จัดสรรให้เป้าหมายแล้ว
+      free: เงินว่างจริง ๆ
+      goals_link: ดูเป้าหมาย
+      currency_warning: "ยอดคงเหลือ %{currencies} ไม่ถูกรวม เพราะยังไม่มีอัตราแลกเปลี่ยนเป็น %{currency}"
+    show:
+      categories:
+        amount: จำนวนเงิน
+        edit: แก้ไข
+        title: หมวดหมู่
+      on_track_categories:
+        short_title: เป็นไปตามแผน
+        title: เป็นไปตามแผน
+      over_budget_categories:
+        short_title: เกินงบ
+        title: เกินงบ
+      filter:
+        all: ทั้งหมด
+        aria_label: กรองหมวดหมู่งบประมาณ
+        on_track: เป็นไปตามแผน
+        over_budget: เกินงบ
+      tabs:
+        actual: ที่เกิดขึ้นจริง
+        budgeted: ตั้งงบไว้
+    copy_previous_prompt:
+      title: "ตั้งค่างบประมาณของคุณ"
+      description: "คุณคัดลอกงบประมาณจาก %{source_name} หรือเริ่มใหม่ก็ได้"
+      copy_button: "คัดลอกจาก %{source_name}"
+      fresh_button: "เริ่มใหม่"
+    copy_previous:
+      success: "คัดลอกงบประมาณจาก %{source_name} แล้ว"
+      no_source: "ไม่พบงบประมาณก่อนหน้าที่จะคัดลอก"
+      already_initialized: "งบประมาณนี้ถูกตั้งค่าไปแล้ว"
+  budget_categories:
+    bills_reserved: "บิลสำรองไว้ %{amount}"
+    bills_reserved_unconvertible:
+      one: "มี 1 บิลที่ไม่ได้สำรองไว้ เพราะไม่มีอัตราแลกเปลี่ยน"
+      other: "มี %{count} บิลที่ไม่ได้สำรองไว้ เพราะไม่มีอัตราแลกเปลี่ยน"
+    allocation_progress:
+      budget_exceeded_html: 'งบประมาณเกิน <span class="text-red-500 privacy-sensitive">%{amount}</span>'
+      left_to_allocate: ที่เหลือให้จัดสรร
+      over_set: "> ตั้งไว้เกิน 100%"
+      percent_set: "ตั้งไว้ %{percent}"
+    budget_category:
+      rolled_over: "+%{amount} ยกยอดมา"
+    budget_category_form:
+      monthly_average: "เฉลี่ย %{amount}/เดือน"
+      rollover_label: ยกยอด
+      rollover_title: เก็บเงินที่ยังไม่ได้ใช้ของหมวดหมู่นี้ไว้ข้ามเดือน
+      shared_placeholder: ใช้ร่วม
+      shared_title: เว้นว่างไว้เพื่อใช้งบประมาณของหมวดหมู่แม่ร่วมกัน
+    confirm_button:
+      confirm: "ยืนยัน"
+    move:
+      button_title: ย้ายเงินจากหมวดหมู่นี้
+      cancel: ยกเลิก
+      dialog_title: ย้ายเงิน
+      no_destination: ขณะนี้ซองนี้เป็นซองเดียวที่ย้ายเงินระหว่างกันได้ — หมวดหมู่ไม่สามารถส่งให้หมวดหมู่แม่หรือหมวดหมู่ย่อยของตัวเอง
+      submit: ย้าย
+      amount_label: จำนวนเงิน
+      available: "ใช้ได้ %{amount}"
+      from_label: จาก
+      to_label: ไปยัง
+      success: ย้ายเงินแล้ว
+      errors:
+        different_budgets: ทั้งสองหมวดหมู่ต้องอยู่ในงบประมาณเดียวกัน
+        insufficient_funds: มากกว่าที่หมวดหมู่นี้ได้รับจัดสรรไว้
+        non_positive_amount: กรอกจำนวนเงินที่มากกว่าศูนย์
+        parent_child: ไม่สามารถย้ายเงินระหว่างหมวดหมู่กับหมวดหมู่ย่อยของตัวเองได้ — ปรับหมวดหมู่ย่อยโดยตรง
+        same_category: เลือกหมวดหมู่อื่นเพื่อย้ายเงินไป
+        uncategorized: 'ไม่ได้จัดหมวดหมู่ ไม่ใช่ซองจริง จึงย้ายเงินเข้าหรือออกไม่ได้'
+    no_categories:
+      oops: "อุ๊ปส์!"
+      no_categories_message: "คุณยังไม่ได้สร้างหรือกำหนดหมวดหมู่รายจ่ายให้รายการธุรกรรมของคุณ"
+      use_defaults: "ใช้ค่าเริ่มต้น (แนะนำ)"
+      new_category: "หมวดหมู่ใหม่"
+    index:
+      title: "แก้ไขงบประมาณตามหมวดหมู่ของคุณ"
+      description: "ปรับงบประมาณตามหมวดหมู่เพื่อกำหนดเพดานการใช้จ่าย เงินที่ยังไม่ได้จัดสรรจะถูกกำหนดเป็น \"ไม่ได้จัดหมวดหมู่\" โดยอัตโนมัติ"
+    show:
+      category: "หมวดหมู่"
+      overview: "ภาพรวม"
+      spending: "การใช้จ่าย %{date}"
+      status: "สถานะ"
+      overspent: "ใช้เกิน"
+      left: "เหลือ"
+      budgeted: "ตั้งงบไว้"
+      rolled_over: "ยกยอดมา"
+      monthly_average_spending: "ค่าเฉลี่ยการใช้จ่ายรายเดือน"
+      monthly_median_spending: "ค่ามัธยฐานการใช้จ่ายรายเดือน"
+      recent_transactions: "รายการธุรกรรมล่าสุด"
+      view_all_transactions: "ดูรายการธุรกรรมทั้งหมดของหมวดหมู่"
+      no_transactions: "ไม่พบรายการธุรกรรมในช่วงงบประมาณนี้"

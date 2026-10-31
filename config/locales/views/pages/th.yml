@@ -1,0 +1,173 @@
+---
+th:
+  pages:
+    feedback:
+      title: ข้อเสนอแนะ
+      heading: ส่งข้อเสนอแนะ
+      description: บอกเราหากคุณมีข้อเสนอแนะ สามารถแนบลิงก์วิดีโอหรือภาพหน้าจอได้
+      feature_request: เขียนคำขอฟีเจอร์
+      bug_report: แจ้งข้อบกพร่อง
+      discuss: "พูดคุยเกี่ยวกับ %{product} กับผู้อื่น"
+    intro:
+      not_authorized: "หน้าแนะนำใช้ได้เฉพาะผู้ใช้ที่เป็นผู้เยี่ยมชม"
+      welcome: "ยินดีต้อนรับ!"
+      coming_soon: ประสบการณ์แนะนำเร็ว ๆ นี้
+      description: "เรากำลังสร้างขั้นตอนเริ่มต้นใช้งานที่ละเอียดขึ้นเพื่อทำความเข้าใจเป้าหมาย หลักไมล์ และความต้องการประจำวันของคุณ ตอนนี้ไปที่แถบแชตด้านข้างเพื่อเริ่มสนทนากับ Sure และบอกเราว่าคุณอยู่ในจุดไหนของเส้นทางการเงิน"
+      start_chatting: เริ่มแชต
+    redis_configuration_error:
+      page_title: ต้องตั้งค่า Redis - Sure
+      heading: ต้องตั้งค่า Redis
+      subheading: การติดตั้ง Sure แบบโฮสต์เองของคุณต้องตั้งค่า Redis ให้ถูกต้อง
+      why_required_title: ทำไมต้องใช้ Redis?
+      why_required_body: Sure ใช้ Redis เพื่อขับเคลื่อนงานเบื้องหลังของ Sidekiq เช่น การซิงค์ข้อมูลบัญชี การประมวลผลการนำเข้า และงานเบื้องหลังอื่น ๆ ที่ทำให้ข้อมูลการเงินของคุณเป็นปัจจุบัน
+      view_setup_guide: ดูคู่มือการตั้งค่า
+      setup_guide_hint: ทำตามคู่มือตั้งค่า Docker ฉบับสมบูรณ์เพื่อกำหนดค่า Redis
+      refresh_hint: "เมื่อตั้งค่า Redis แล้ว ให้รีเฟรชหน้านี้เพื่อดำเนินการต่อ"
+      refresh_page: รีเฟรชหน้า
+    changelog:
+      title: มีอะไรใหม่
+    release_notes_unavailable:
+      name: ไม่มีบันทึกการออกเวอร์ชัน
+      body_html: "<p>ไม่สามารถดึงบันทึกการออกเวอร์ชันล่าสุดได้ในขณะนี้ โปรดกลับมาตรวจสอบภายหลัง หรือเยี่ยมชม<a href='https://github.com/we-promise/sure/releases' target='_blank' rel='noopener noreferrer'>หน้า GitHub releases</a>โดยตรง</p>"
+    privacy:
+      title: นโยบายความเป็นส่วนตัว
+      heading: นโยบายความเป็นส่วนตัว
+      placeholder: เนื้อหานโยบายความเป็นส่วนตัวจะแสดงที่นี่
+    terms:
+      title: ข้อกำหนดการให้บริการ
+      heading: ข้อกำหนดการให้บริการ
+      placeholder: เนื้อหาข้อกำหนดการให้บริการจะแสดงที่นี่
+    dashboard:
+      welcome: "ยินดีต้อนรับกลับ %{name}"
+      subtitle: "นี่คือสิ่งที่เกิดขึ้นกับการเงินของคุณ"
+      new: "ใหม่"
+      sections_aria_label: "ส่วนต่าง ๆ ของแดชบอร์ด"
+      toggle_section: "สลับการแสดงส่วนนี้"
+      customize:
+        start: "ปรับแต่ง"
+        done: "เสร็จสิ้น"
+        hide: "ซ่อน %{title}"
+        hidden_title: "วิดเจ็ตที่ซ่อนอยู่"
+        hidden_description: "เพิ่มวิดเจ็ตกลับเข้าแดชบอร์ด"
+        none_hidden: "แสดงวิดเจ็ตทั้งหมดอยู่ ซ่อนได้ด้วยปุ่มรูปตา"
+        all_hidden_title: "ซ่อนวิดเจ็ตทั้งหมดอยู่"
+        all_hidden_description: "ปรับแต่งแดชบอร์ดเพื่อเพิ่มวิดเจ็ตกลับมา"
+      widget_size:
+        label: "ปรับขนาด"
+        width_label: "ความกว้าง"
+        half: "ครึ่งหนึ่ง"
+        full: "เต็ม"
+        height_label: "ความสูง"
+        compact: "กะทัดรัด"
+        auto: "อัตโนมัติ"
+        tall: "สูง"
+      net_worth_chart:
+        data_not_available: ไม่มีข้อมูลสำหรับช่วงเวลาที่เลือก
+        title: มูลค่าสุทธิ
+      no_account_empty_state:
+        new_account: บัญชีใหม่
+        no_account_subtitle: เนื่องจากยังไม่ได้เพิ่มบัญชี จึงไม่มีข้อมูลให้แสดง เพิ่มบัญชีแรกของคุณเพื่อเริ่มดูข้อมูลบนแดชบอร์ด
+        no_account_title: ยังไม่มีบัญชี
+      balance_sheet:
+        title: "งบดุล"
+        no_items: "ยังไม่มี%{name}"
+        add_accounts: "เพิ่มบัญชี%{name}ของคุณเพื่อดูรายละเอียดทั้งหมด"
+        no_asset: "ยังไม่มีสินทรัพย์"
+        no_liability: "ยังไม่มีหนี้สิน"
+        add_asset_accounts: "เพิ่มบัญชีสินทรัพย์ของคุณเพื่อดูรายละเอียดทั้งหมด"
+        add_liability_accounts: "เพิ่มบัญชีหนี้สินของคุณเพื่อดูรายละเอียดทั้งหมด"
+        name: "ชื่อ"
+        weight: "สัดส่วน"
+        value: "มูลค่า"
+        expand_all: "ขยายทั้งหมด"
+        collapse_all: "ย่อทั้งหมด"
+        classifications:
+          asset: "สินทรัพย์"
+          liability: "หนี้สิน"
+      insights_feed:
+        title: "ข้อมูลเชิงลึก"
+      cashflow_preview:
+        opt_in_title: "แสดงแผนภูมิใหม่"
+        opt_in_description: "เปรียบเทียบแผนภูมิ Sankey แบบทดลองกับแผนภูมิด้านบน ปิดได้ทุกเมื่อ"
+        node_labels:
+          cash_flow: "กระแสเงินสด"
+          surplus: "ส่วนเกิน"
+          deficit: "ส่วนขาด"
+          invested: "ลงทุนแล้ว"
+        title: "แผนภูมิ Sankey ใหม่"
+        preview: "ตัวอย่าง"
+        preview_tooltip: "ส่วนนี้จะมาแทนที่ภาพด้านบน เนื่องจากใช้ API ร่วมแบบใหม่กับไคลเอนต์ Swift บนมือถือ"
+        group_by_label: "แสดงกระแสตาม"
+        group_by_category: "หมวดหมู่"
+        group_by_account: "บัญชี"
+        feedback_prompt: "เปรียบเทียบแผนภูมินี้กับแผนภูมิเดิมด้านบน แล้วบอกเราหากดูต่างกันนอกเหนือจากการเรียงลำดับ"
+        positive: "ดูถูกต้อง"
+        negative: "มีบางอย่างผิดปกติ"
+        feedback_title: "ข้อเสนอแนะเกี่ยวกับแผนภูมิกระแสเงินสด"
+        feedback_loading: "กำลังโหลดแบบฟอร์มข้อเสนอแนะ…"
+        feedback_unavailable: "ขณะนี้ไม่สามารถส่งข้อเสนอแนะได้ โปรดลองอีกครั้งภายหลัง"
+        feedback_thanks: "ขอบคุณที่ช่วยปรับปรุงแผนภูมินี้!"
+        feedback_privacy: "คำตอบของคุณจะถูกส่งไปยัง PostHog โปรดอธิบายปัญหาโดยไม่ระบุเลขบัญชี ยอดคงเหลือ หรือรายละเอียดทางการเงินส่วนตัวอื่น ๆ"
+        feedback_submit: "ส่งข้อเสนอแนะ"
+        sort_label: "เรียงลำดับกระแส"
+        sort_auto: "อัตโนมัติ"
+        sort_ascending: "เล็กไปใหญ่"
+        sort_descending: "ใหญ่ไปเล็ก"
+      cashflow_sankey:
+        loading: "กำลังโหลดกระแสเงินสด…"
+        load_error: "โหลดกระแสเงินสดไม่สำเร็จ โปรดลองอีกครั้ง"
+        retry: "ลองอีกครั้ง"
+        title: "กระแสเงินสด"
+        zoom_out: "กลับไปดูกระแสเงินสดทั้งหมด"
+        no_data_title: "ไม่มีข้อมูลกระแสเงินสดในช่วงเวลานี้"
+        no_data_description: "เพิ่มรายการธุรกรรมเพื่อแสดงข้อมูลกระแสเงินสด หรือขยายช่วงเวลา"
+        add_transaction: "เพิ่มรายการธุรกรรม"
+      no_accounts:
+        title: "ยังไม่มีบัญชี"
+        description: "เพิ่มบัญชีเพื่อแสดงข้อมูลมูลค่าสุทธิ"
+        add_account: "เพิ่มบัญชี"
+      outflows_donut:
+        title: "เงินออก"
+        total_outflows: "เงินออกทั้งหมด"
+        categories: "หมวดหมู่"
+        value: "มูลค่า"
+        weight: "สัดส่วน"
+      investment_summary:
+        title: "การลงทุน"
+        total_return: "ผลตอบแทนรวม"
+        holding: "สินทรัพย์ที่ถือ"
+        weight: "สัดส่วน"
+        value: "มูลค่า"
+        return: "ผลตอบแทน"
+        period_activity: "กิจกรรม %{period}"
+        contributions: "เงินสมทบ"
+        withdrawals: "การถอน"
+        trades: "การซื้อขาย"
+        no_investments: "ไม่มีบัญชีลงทุน"
+        add_investment: "เพิ่มบัญชีลงทุนเพื่อติดตามพอร์ตของคุณ"
+      money_flow:
+        title: "เงินเข้า / เงินออก"
+        date_range: "%{start_date} ถึง %{end_date}"
+        month_picker_aria_label: "เลือกเดือน"
+        filter_accounts: "กรองบัญชี (%{count})"
+        filter_accounts_all: "ทุกบัญชี"
+        period_scope_hint: "แสดงเดือนที่คุณเลือกที่นี่ โดยไม่ขึ้นกับช่วงเวลาของแดชบอร์ดด้านบน"
+        search_accounts: "ค้นหาบัญชี"
+        apply: "ใช้"
+        balance: "ยอดคงเหลือของรายการธุรกรรม"
+        chart_span: "%{count} เดือนที่ผ่านมา"
+        income: "รายรับ"
+        expenses: "รายจ่าย"
+      spending_trend:
+        title: "การใช้จ่าย"
+        date_range: "%{start_date} ถึง %{end_date}"
+        date_range_short: "%{start_date} - %{end_day} %{year}"
+        date_range_short_single: "%{date} %{year}"
+        month_picker_aria_label: "เลือกเดือน"
+        filter_categories: "กรองหมวดหมู่ (%{count})"
+        filter_categories_all: "ทุกหมวดหมู่"
+        search_categories: "ค้นหาหมวดหมู่"
+        apply: "ใช้"
+        period_scope_hint: "แสดงเดือนที่คุณเลือกที่นี่ โดยไม่ขึ้นกับช่วงเวลาของแดชบอร์ดด้านบน"
+        no_data: "ไม่มีข้อมูลการใช้จ่ายสำหรับเดือนนี้"
+        previous_comparison_days: "(1-%{end_day})"

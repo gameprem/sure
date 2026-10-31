@@ -1,0 +1,181 @@
+---
+th:
+  lunchflow_items:
+    api_error:
+      title: ข้อผิดพลาดการเชื่อมต่อ Lunch Flow
+      unable_to_connect: เชื่อมต่อ Lunch Flow ไม่ได้
+      common_issues: "ปัญหาที่พบบ่อย:"
+      invalid_api_key_label: คีย์ API ไม่ถูกต้อง
+      invalid_api_key_desc: ตรวจสอบคีย์ API ของคุณในการตั้งค่าผู้ให้บริการ
+      expired_credentials_label: ข้อมูลรับรองหมดอายุ
+      expired_credentials_desc: สร้างคีย์ API ใหม่จาก Lunch Flow
+      network_issue_label: ปัญหาเครือข่าย
+      network_issue_desc: ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ
+      service_down_label: บริการล่ม
+      service_down_desc: Lunch Flow API อาจไม่พร้อมใช้งานชั่วคราว
+      check_provider_settings: ตรวจสอบการตั้งค่าผู้ให้บริการ
+      unexpected_error: เกิดข้อผิดพลาดที่ไม่คาดคิด โปรดลองอีกครั้งภายหลัง
+    setup_required:
+      title: ต้องตั้งค่า Lunch Flow
+      api_key_not_configured: ยังไม่ได้ตั้งค่าคีย์ API
+      api_key_description: ก่อนเชื่อมโยงบัญชี Lunch Flow คุณต้องตั้งค่าคีย์ API ของ Lunch Flow
+      setup_steps_title: "ขั้นตอนการตั้งค่า:"
+      setup_step_1_html: "ไปที่ <strong>การตั้งค่า → ผู้ให้บริการ</strong>"
+      setup_step_2_html: "ค้นหาส่วน <strong>Lunch Flow</strong>"
+      setup_step_3: กรอกคีย์ API ของ Lunch Flow ของคุณ
+      setup_step_4: กลับมาที่นี่เพื่อเชื่อมโยงบัญชีของคุณ
+      go_to_provider_settings: ไปที่การตั้งค่าผู้ให้บริการ
+    create:
+      success: สร้างการเชื่อมต่อ Lunch Flow เรียบร้อยแล้ว
+    destroy:
+      success: นำการเชื่อมต่อ Lunch Flow ออกแล้ว
+    index:
+      title: การเชื่อมต่อ Lunch Flow
+    loading:
+      loading_message: กำลังโหลดบัญชี Lunch Flow...
+      loading_title: กำลังโหลด
+    link_accounts:
+      all_already_linked:
+        one: "บัญชีที่เลือก (%{names}) เชื่อมโยงแล้ว"
+        other: "บัญชีที่เลือกทั้ง %{count} บัญชีเชื่อมโยงแล้ว: %{names}"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      invalid_account_names:
+        one: "เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้"
+        other: "เชื่อมโยง %{count} บัญชีที่ไม่มีชื่อไม่ได้"
+      link_failed: เชื่อมโยงบัญชีไม่สำเร็จ
+      no_accounts_selected: โปรดเลือกอย่างน้อยหนึ่งบัญชี
+      partial_invalid: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว %{invalid_count} บัญชีมีชื่อไม่ถูกต้อง"
+      partial_success: "เชื่อมโยง %{created_count} บัญชีสำเร็จ %{already_linked_count} บัญชีเชื่อมโยงอยู่แล้ว: %{already_linked_names}"
+      success:
+        one: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+        other: "เชื่อมโยง %{count} บัญชีสำเร็จ"
+    lunchflow_item:
+      accounts_need_setup: บัญชีต้องตั้งค่า
+      delete: ลบการเชื่อมต่อ
+      deletion_in_progress: กำลังลบ...
+      error: ข้อผิดพลาด
+      no_accounts_description: การเชื่อมต่อนี้ยังไม่มีบัญชีที่เชื่อมโยง
+      no_accounts_title: ไม่มีบัญชี
+      setup_action: ตั้งค่าบัญชีใหม่
+      setup_description: "เชื่อมโยง %{linked} จาก %{total} บัญชี เลือกประเภทบัญชีสำหรับบัญชี Lunch Flow ที่เพิ่งนำเข้า"
+      setup_needed: บัญชีใหม่พร้อมตั้งค่า
+      status: "ซิงค์เมื่อ %{timestamp} ที่แล้ว"
+      status_never: ไม่เคยซิงค์
+      status_with_summary: "ซิงค์ล่าสุด %{timestamp} ที่แล้ว • %{summary}"
+      syncing: กำลังซิงค์...
+      sync_status:
+        no_accounts: ไม่พบบัญชี
+        synced:
+          one: "ซิงค์ %{count} บัญชีแล้ว"
+          other: "ซิงค์ %{count} บัญชีแล้ว"
+        partial_setup:
+          one: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+          other: "ซิงค์แล้ว %{linked} ต้องตั้งค่า %{unlinked}"
+      total: ทั้งหมด
+      unlinked: ยังไม่เชื่อมโยง
+    subtype_select:
+      placeholder:
+        subtype: เลือกประเภทย่อย
+        type: เลือกประเภท
+    select_accounts:
+      accounts_selected: บัญชีที่เลือก
+      api_error: "ข้อผิดพลาด API: %{message}"
+      cancel: ยกเลิก
+      configure_name_in_lunchflow: นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Lunchflow
+      description: เลือกบัญชีที่คุณต้องการเชื่อมโยงกับบัญชี %{product_name} ของคุณ
+      link_accounts: เชื่อมโยงบัญชีที่เลือก
+      no_accounts_found: ไม่พบบัญชี โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ
+      no_api_key: ยังไม่ได้ตั้งค่าคีย์ API ของ Lunch Flow โปรดตั้งค่าในการตั้งค่า
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      title: เลือกบัญชี Lunch Flow
+    select_existing_account:
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      all_accounts_already_linked: บัญชี Lunch Flow ทั้งหมดเชื่อมโยงแล้ว
+      api_error: "ข้อผิดพลาด API: %{message}"
+      cancel: ยกเลิก
+      configure_name_in_lunchflow: นำเข้าไม่ได้ - โปรดตั้งชื่อบัญชีใน Lunchflow
+      description: เลือกบัญชี Lunch Flow เพื่อเชื่อมโยงกับบัญชีนี้ รายการธุรกรรมจะถูกซิงค์และกำจัดรายการซ้ำโดยอัตโนมัติ
+      link_account: เชื่อมโยงบัญชี
+      no_account_specified: ไม่ได้ระบุบัญชี
+      no_accounts_found: ไม่พบบัญชี Lunch Flow โปรดตรวจสอบการตั้งค่าคีย์ API ของคุณ
+      no_api_key: ยังไม่ได้ตั้งค่าคีย์ API ของ Lunch Flow โปรดตั้งค่าในการตั้งค่า
+      no_name_placeholder: "(ไม่มีชื่อ)"
+      title: "เชื่อมโยง %{account_name} กับ Lunch Flow"
+    link_existing_account:
+      account_already_linked: บัญชีนี้เชื่อมโยงกับผู้ให้บริการแล้ว
+      api_error: "ข้อผิดพลาด API: %{message}"
+      invalid_account_name: เชื่อมโยงบัญชีที่ไม่มีชื่อไม่ได้
+      lunchflow_account_already_linked: บัญชี Lunch Flow นี้เชื่อมโยงกับบัญชีอื่นแล้ว
+      lunchflow_account_not_found: ไม่พบบัญชี Lunch Flow
+      missing_parameters: ขาดพารามิเตอร์ที่จำเป็น
+      success: "เชื่อมโยง %{account_name} กับ Lunch Flow สำเร็จ"
+    setup_accounts:
+      account_type_label: "ประเภทบัญชี:"
+      all_accounts_linked: "บัญชี Lunch Flow ทั้งหมดของคุณถูกตั้งค่าแล้ว"
+      api_error: "ข้อผิดพลาด API: %{message}"
+      fetch_failed: "ดึงบัญชีไม่สำเร็จ"
+      no_accounts_to_setup: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      no_api_key: "ยังไม่ได้ตั้งค่าคีย์ API ของ Lunch Flow โปรดตรวจสอบการตั้งค่าการเชื่อมต่อของคุณ"
+      page_title: ตั้งค่าบัญชี Lunch Flow
+      account_types:
+        skip: ข้ามบัญชีนี้
+        depository: บัญชีกระแสรายวันหรือออมทรัพย์
+        credit_card: บัตรเครดิต
+        investment: บัญชีลงทุน
+        loan: สินเชื่อหรือสินเชื่อบ้าน
+        other_asset: สินทรัพย์อื่น ๆ
+      subtype_labels:
+        depository: "ประเภทย่อยของบัญชี:"
+        credit_card: ""
+        investment: "ประเภทการลงทุน:"
+        loan: "ประเภทสินเชื่อ:"
+        other_asset: ""
+      subtype_messages:
+        credit_card: "บัตรเครดิตจะถูกตั้งค่าเป็นบัญชีบัตรเครดิตโดยอัตโนมัติ"
+        other_asset: "สินทรัพย์อื่น ๆ ไม่ต้องมีตัวเลือกเพิ่มเติม"
+      subtypes:
+        depository:
+          checking: กระแสรายวัน
+          savings: ออมทรัพย์
+          hsa: บัญชีออมเพื่อสุขภาพ
+          cd: ใบรับฝากเงิน
+          money_market: ตลาดเงิน
+        investment:
+          brokerage: บัญชีนายหน้า
+          pension: บำนาญ
+          retirement: เกษียณ
+          "401k": "401(k)"
+          roth_401k: "Roth 401(k)"
+          "403b": "403(b)"
+          tsp: Thrift Savings Plan
+          "529_plan": "529 Plan"
+          hsa: บัญชีออมเพื่อสุขภาพ
+          mutual_fund: กองทุนรวม
+          ira: Traditional IRA
+          roth_ira: Roth IRA
+          angel: เอ็นเจิล
+        loan:
+          mortgage: สินเชื่อบ้าน
+          student: สินเชื่อการศึกษา
+          auto: สินเชื่อรถยนต์
+          other: สินเชื่ออื่น ๆ
+      balance: ยอดคงเหลือ
+      cancel: ยกเลิก
+      choose_account_type: "เลือกประเภทบัญชีที่ถูกต้องสำหรับแต่ละบัญชี Lunch Flow:"
+      create_accounts: สร้างบัญชี
+      creating_accounts: กำลังสร้างบัญชี...
+      historical_data_range: "ช่วงข้อมูลย้อนหลัง:"
+      subtitle: เลือกประเภทบัญชีที่ถูกต้องสำหรับบัญชีที่นำเข้า
+      sync_start_date_help: เลือกว่าจะซิงค์ประวัติรายการธุรกรรมย้อนหลังไปไกลแค่ไหน ย้อนหลังได้สูงสุด 3 ปี
+      sync_start_date_label: "เริ่มซิงค์รายการธุรกรรมตั้งแต่:"
+      title: ตั้งค่าบัญชี Lunch Flow ของคุณ
+    complete_account_setup:
+      all_skipped: "ข้ามบัญชีทั้งหมด ไม่ได้สร้างบัญชี"
+      creation_failed: "สร้างบัญชีไม่สำเร็จ: %{error}"
+      no_accounts: "ไม่มีบัญชีที่ต้องตั้งค่า"
+      success: "สร้าง %{count} บัญชีสำเร็จ"
+      unexpected_error: เกิดข้อผิดพลาดที่ไม่คาดคิด
+    sync:
+      success: เริ่มซิงค์แล้ว
+    update:
+      success: อัปเดตการเชื่อมต่อ Lunch Flow แล้ว

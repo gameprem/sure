@@ -1,0 +1,80 @@
+---
+th:
+  valuations:
+    names:
+      current_account_value: มูลค่าบัญชีปัจจุบัน
+      current_balance: ยอดคงเหลือปัจจุบัน
+      current_loan_balance: ยอดสินเชื่อคงเหลือปัจจุบัน
+      current_market_value: มูลค่าตลาดปัจจุบัน
+      manual_balance_update: การอัปเดตยอดคงเหลือด้วยตนเอง
+      manual_principal_update: การอัปเดตเงินต้นด้วยตนเอง
+      manual_value_update: การอัปเดตมูลค่าด้วยตนเอง
+      opening_account_value: มูลค่าบัญชีเริ่มต้น
+      opening_balance: ยอดคงเหลือเริ่มต้น
+      original_principal: เงินต้นเดิม
+      original_purchase_price: ราคาซื้อเดิม
+    confirmation_contents:
+      this_will: "การดำเนินการนี้จะ%{action_verb}มูลค่าบัญชีในวันที่"
+      to_colon: "เป็น:"
+      total_account_value: มูลค่าบัญชีรวม
+      holdings_value: มูลค่าสินทรัพย์ที่ถือครอง
+      brokerage_cash: เงินสดในบัญชีนายหน้า
+      account_balance: ยอดคงเหลือบัญชี
+      credit_card_balance: ยอดบัตรเครดิต
+      loan_balance: ยอดสินเชื่อ
+      property_value: มูลค่าอสังหาริมทรัพย์
+      vehicle_value: มูลค่ายานพาหนะ
+      crypto_balance: ยอดคริปโต
+      asset_value: มูลค่าสินทรัพย์
+      liability_balance: ยอดหนี้สิน
+      balance: ยอดคงเหลือ
+      "on": "วันที่"
+      to: "เป็น"
+      recalculate_notice: "รายการธุรกรรมและยอดคงเหลือในอนาคตทั้งหมดจะถูกคำนวณใหม่ตาม%{change_or_update}นี้"
+      change: การเปลี่ยนแปลง
+      update: การอัปเดต
+      action_set: ตั้ง
+      action_update: อัปเดต
+    create:
+      account_updated: อัปเดตบัญชีแล้ว
+    update:
+      account_updated: อัปเดตบัญชีแล้ว
+      entry_updated: อัปเดตรายการแล้ว
+    errors:
+      amount_required: ต้องระบุจำนวนเงิน
+    form:
+      amount: จำนวนเงิน
+      submit: เพิ่มการอัปเดตยอดคงเหลือ
+    header:
+      balance: ยอดคงเหลือ
+    index:
+      change: การเปลี่ยนแปลง
+      date: วันที่
+      new_entry: รายการใหม่
+      no_valuations: บัญชีนี้ยังไม่มีการประเมินมูลค่า
+      valuations: มูลค่า
+      value: มูลค่า
+    new:
+      title: ยอดคงเหลือใหม่
+    show:
+      amount: จำนวนเงิน
+      amount_label: มูลค่าบัญชีในวันที่
+      date_label: วันที่
+      delete: ลบ
+      delete_subtitle: การดำเนินการนี้ไม่สามารถย้อนกลับได้
+      delete_title: ลบรายการ
+      details: รายละเอียด
+      name_label: ชื่อ
+      name_placeholder: กรอกชื่อสำหรับรายการนี้
+      note_label: บันทึก
+      note_placeholder: เพิ่มรายละเอียดเพิ่มเติมเกี่ยวกับรายการนี้
+      overview: ภาพรวม
+      settings: การตั้งค่า
+      opening_balance: "ยอดคงเหลือเริ่มต้น"
+      update_value: อัปเดตมูลค่า
+    confirm_create:
+      confirm: ยืนยัน
+      title: ยืนยันยอดคงเหลือใหม่
+    confirm_update:
+      title: อัปเดตยอดคงเหลือ
+      update: อัปเดต

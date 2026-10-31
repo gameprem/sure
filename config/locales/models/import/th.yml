@@ -1,0 +1,18 @@
+---
+th:
+  activerecord:
+    attributes:
+      import:
+        col_sep: ตัวคั่นคอลัมน์
+        col_seps:
+          comma: จุลภาค (,)
+          semicolon: อัฒภาค (;)
+        currency: สกุลเงิน
+        number_format: รูปแบบตัวเลข
+    errors:
+      models:
+        import:
+          duplicate_headers: "หัวคอลัมน์ CSV ซ้ำกันหลังปรับรูปแบบ: %{columns}"
+          attributes:
+            raw_file_str:
+              invalid_csv_format: ไม่ใช่รูปแบบ CSV ที่ถูกต้อง

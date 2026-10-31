@@ -1,0 +1,66 @@
+---
+th:
+  onboardings:
+    header:
+      sign_out: ออกจากระบบ
+      setup: ตั้งค่า
+      preferences: การตั้งค่าส่วนตัว
+      goals: เป้าหมาย
+      start: เริ่มต้น
+    logout:
+      sign_out: ออกจากระบบ
+    show:
+      title: มาตั้งค่าบัญชีของคุณกัน
+      subtitle: เริ่มจากตั้งค่าโปรไฟล์ของคุณก่อน
+      first_name: ชื่อ
+      first_name_placeholder: ชื่อ
+      last_name: นามสกุล
+      last_name_placeholder: นามสกุล
+      group_name: ชื่อกลุ่ม
+      group_name_placeholder: ชื่อกลุ่ม
+      household_name: ชื่อครัวเรือน
+      household_name_placeholder: ชื่อครัวเรือน
+      moniker_prompt: "คุณจะใช้ %{product_name} กับ ..."
+      moniker_family: สมาชิกในครอบครัว (ใช้คนเดียว หรือกับคู่ครอง ลูก ฯลฯ)
+      moniker_group: กลุ่มคน (บริษัท ชมรม สมาคม หรือกลุ่มอื่น ๆ)
+      country: ประเทศ
+      submit: ดำเนินการต่อ
+    preferences:
+      title: กำหนดการตั้งค่าส่วนตัวของคุณ
+      subtitle: มากำหนดการตั้งค่าส่วนตัวของคุณกัน
+      example: บัญชีตัวอย่าง
+      preview: ดูตัวอย่างการแสดงข้อมูลตามการตั้งค่าของคุณ
+      color_theme: ธีมสี
+      theme_system: ตามระบบ
+      theme_light: สว่าง
+      theme_dark: มืด
+      locale: ภาษา
+      currency: สกุลเงิน
+      date_format: รูปแบบวันที่
+      submit: เสร็จสิ้น
+    goals:
+      title: อะไรพาคุณมาที่นี่?
+      subtitle: เลือกเป้าหมายอย่างน้อยหนึ่งข้อที่คุณต้องการเมื่อใช้ %{product_name} เป็นเครื่องมือการเงินส่วนบุคคล
+      unified_accounts: ดูบัญชีทั้งหมดของฉันในที่เดียว
+      cashflow: เข้าใจกระแสเงินสดและค่าใช้จ่าย
+      budgeting: จัดการแผนการเงินและงบประมาณ
+      partner: จัดการการเงินร่วมกับคู่ครอง
+      investments: ติดตามการลงทุน
+      ai_insights: ให้ AI ช่วยทำความเข้าใจการเงินของฉัน
+      optimization: วิเคราะห์และปรับปรุงบัญชี
+      reduce_stress: ลดความเครียดหรือความกังวลทางการเงิน
+      submit: ถัดไป
+    trial:
+      title: ทดลองใช้ Sure 45 วัน
+      data_deletion: ข้อมูลจะถูกลบเมื่อถึงเวลานั้น
+      description_html: ตั้งแต่วันนี้คุณสามารถลองใช้ผลิตภัณฑ์ได้เต็มที่<br/>หากถูกใจ ให้โฮสต์เองหรือร่วมสนับสนุนเพื่อใช้งานต่อที่นี่
+      try_button: ทดลองใช้ Sure 45 วัน
+      continue_trial: ทดลองใช้ต่อ
+      upgrade: อัปเกรด
+      how_it_works: ที่นี่ทำงานอย่างไร
+      today: วันนี้
+      today_description: คุณจะได้ใช้ Sure ฟรี 45 วันบน AWS ของเรา
+      in_40_days: ในอีก 40 วัน (%{date})
+      in_40_days_description: เราจะแจ้งเตือนให้คุณส่งออกข้อมูล
+      in_45_days: ในอีก 45 วัน (%{date})
+      in_45_days_description: เราจะลบข้อมูลของคุณ — ร่วมสนับสนุนเพื่อใช้ Sure ที่นี่ต่อ!
